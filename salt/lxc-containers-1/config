@@ -1,0 +1,30 @@
+lxc.utsname = {{ id }}
+# Handled by lxc@.service
+lxc.start.auto = 0
+lxc.rootfs = /var/lib/lxc/{{ id }}/rootfs
+lxc.rootfs.backend = dir
+
+lxc.autodev = 1
+lxc.kmsg = 0
+
+{% for interface in container.interfaces %}
+lxc.network.type={{ interface['type'] }}
+lxc.network.flags=up
+{% if interface['type'] == 'veth' %}
+lxc.network.veth.pair={{ id }}-{{ interface['type'] }}
+{% endif %}
+{% if interface.get('v4') %}
+lxc.network.ipv4={{ interface['v4'] }}
+{% endif %}
+{% if interface.get('bridge') %}
+lxc.network.link={{ interface['bridge'] }}
+{% endif %}
+{% if interface.get('name') %}
+lxc.network.name={{ interface['name'] }}
+{% endif %}
+#lxc.network.ipv4.gateway=
+#lxc.network.ipv6=
+#lxc.network.ipv6.gateway=fe80::1
+{% endfor %}
+
+## TODO: limits + caps
