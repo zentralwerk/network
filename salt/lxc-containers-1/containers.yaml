@@ -1,38 +1,31 @@
-public:
+pub-gw:
   interfaces:
-    - type: veth
-      bridge: br-core
-      name: core
-      v4: 172.20.72.1/26
-    - type: phys
-      bridge: bond0.2
-      name: public
-      v4: 172.20.76.1/23
+    core:
+      type: veth
+    pub:
+      type: phys
 
-servers:
+serv-gw:
   interfaces:
-    - type: veth
-      bridge: br-core
-      name: core
-      v4: 172.20.72.2/26
+    core:
+      type: veth
 
-priv1:
+priv1-gw:
   interfaces:
-    - type: veth
-      bridge: br-core
-      name: core
-      v4: 172.20.72.3/26
+    core:
+      type: veth
 
-priv2:
+priv2-gw:
   interfaces:
-    - type: veth
-      bridge: br-core
-      name: core
-      v4: 172.20.72.4/26
+    core:
+      type: veth
 
 upstream1:
   interfaces:
-    - type: veth
-      bridge: br-core
-      name: core
-      v4: 172.20.72.5/26
+    core:
+      type: veth
+
+anon1:
+  interface:
+    core:
+      type: veth

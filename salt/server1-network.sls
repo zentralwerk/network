@@ -27,26 +27,25 @@ bond0.{{ vlan }}:
         - network: bond0
 {% endfor %}
 
-br-core:
+{%- for net in ['core', 'public'] %}
+{%- set vlan = pillar['vlans'][net] %}
+br-{{ net }}:
   network.managed:
     - type: bridge
-      ports: bond0.1
+      ports: bond0.{{ vlan }}
+{%- set ip_addr = pillar['hosts-inet'][net].get('server1') %}
+{%- if ip_addr %}
+{%- set prefix_len = pillar['subnets-inet'][net].split('/')[1] %}
       proto: manual
+      address: {{ ip_addr }}/{{ prefix_len }}
+{%- else %}
+      proto: static
+{%- endif %}
+      address: {{ pillar['subnets-inet']['core'] }}
       bypassfirewall: True
       use:
-        - network: bond0.1
+        - network: bond0.{{ vlan }}
       require:
-        - network: bond0.1
-    
-
-br-public:
-  network.managed:
-    - type: bridge
-      ports: bond0.2
-      proto: manual
-      bypassfirewall: True
-      use:
-        - network: bond0.2
-      require:
-        - network: bond0.2
+        - network: bond0.{{ vlan}}
+{%- endfor %}
     

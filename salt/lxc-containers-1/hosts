@@ -1,0 +1,10 @@
+127.0.0.1       localhost
+::1             localhost ip6-localhost ip6-loopback
+
+{% for net, hosts in pillar['hosts-inet'].items() %}
+{% if hosts.get(id) %}
+{{ hosts[id] }}                {{ id }}
+{% endif %}
+{% endfor %}
+
+{{ pillar['hosts-inet']['core']['server1'] }}     salt

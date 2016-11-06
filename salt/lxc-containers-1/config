@@ -7,24 +7,24 @@ lxc.rootfs.backend = dir
 lxc.autodev = 1
 lxc.kmsg = 0
 
-{% for interface in container.interfaces %}
-lxc.network.type={{ interface['type'] }}
+{%- for net, type in container.interfaces.items() %}
+lxc.network.type={{ type }}
 lxc.network.flags=up
-{% if interface['type'] == 'veth' %}
-lxc.network.veth.pair={{ id }}-{{ interface['type'] }}
-{% endif %}
-{% if interface.get('v4') %}
-lxc.network.ipv4={{ interface['v4'] }}
-{% endif %}
-{% if interface.get('bridge') %}
-lxc.network.link={{ interface['bridge'] }}
-{% endif %}
-{% if interface.get('name') %}
-lxc.network.name={{ interface['name'] }}
-{% endif %}
+{% if type == 'veth' %}
+lxc.network.veth.pair={{ id }}-{{ net }}
+{%- endif %}
+{%- set inet_addr = pillar['hosts-inet'][net].get(id) %}
+{%- if inet_addr %}
+{%- set prefix_len = pillar['subnets-inet'][net].split('/')[1] %}
+lxc.network.ipv4={{ inet_addr }}/{{ prefix_len }}
+{%- endif %}
+{%- if type == 'veth' %}
+lxc.network.link=br-{{ net }}
+{%- endif %}
+lxc.network.name={{ net }}
 #lxc.network.ipv4.gateway=
 #lxc.network.ipv6=
 #lxc.network.ipv6.gateway=fe80::1
-{% endfor %}
+{%- endfor %}
 
 ## TODO: limits + caps

@@ -7,7 +7,7 @@ lxc:
 
 /var/lib/lxc/{{ id }}:
   cmd.run:
-    - name: lxc-create -n {{ id }} -B dir -t download -- -d debian -r jessie -a amd64 --  --packages salt-minion
+    - name: lxc-create -n {{ id }} -B dir -t debian -- -r stretch --packages=salt-minion
     - require:
         - pkg: lxc
     - creates: /var/lib/lxc/{{ id }}
@@ -15,6 +15,14 @@ lxc:
 /var/lib/lxc/{{ id }}/config:
   file.managed:
     - source: salt://lxc-containers-1/config
+    - template: 'jinja'
+    - context:
+        id: {{ id }}
+        container: {{ container }}
+
+/var/lib/lxc/{{ id }}/rootfs/etc/hosts:
+  file.managed:
+    - source: salt://lxc-containers-1/hosts
     - template: 'jinja'
     - context:
         id: {{ id }}
