@@ -26,6 +26,6 @@ upstream1:
       type: veth
 
 anon1:
-  interface:
+  interfaces:
     core:
       type: veth
