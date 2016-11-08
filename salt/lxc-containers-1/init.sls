@@ -39,5 +39,5 @@ start-{{ id }}:
       - name: lxc@{{ id }}
         require:
           - service: autostart-{{ id }}
-        
+
 {% endfor %}

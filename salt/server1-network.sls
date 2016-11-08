@@ -1,3 +1,4 @@
+{%- import_yaml "netmasks.yaml" as netmasks -%}
 {% set bond_slaves = ['eth1', 'eth2'] %}
 
 {% for slave in bond_slaves %}
@@ -17,17 +18,18 @@ bond0:
       slaves: {{ ' '.join(bond_slaves) }}
       miimon: 100
 
-{% for vlan in range(1, 15) %}
+{% for name, vlan in pillar['vlans'].items() %}
 bond0.{{ vlan }}:
   network.managed:
     - type: vlan
+      proto: manual
       use:
         - network: bond0
       require:
         - network: bond0
 {% endfor %}
 
-{%- for net in ['core', 'public'] %}
+{%- for net in ['core'] %}
 {%- set vlan = pillar['vlans'][net] %}
 br-{{ net }}:
   network.managed:
@@ -36,13 +38,12 @@ br-{{ net }}:
 {%- set ip_addr = pillar['hosts-inet'][net].get('server1') %}
 {%- if ip_addr %}
 {%- set prefix_len = pillar['subnets-inet'][net].split('/')[1] %}
-      proto: manual
-      address: {{ ip_addr }}/{{ prefix_len }}
-{%- else %}
       proto: static
+      address: {{ ip_addr }}
+      netmask: {{ netmasks[prefix_len] }}
+{%- else %}
+      proto: manual
 {%- endif %}
-      address: {{ pillar['subnets-inet']['core'] }}
-      bypassfirewall: True
       use:
         - network: bond0.{{ vlan }}
       require:

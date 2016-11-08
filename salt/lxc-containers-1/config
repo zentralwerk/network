@@ -10,7 +10,7 @@ lxc.kmsg = 0
 {%- for net, conf in container['interfaces'].items() %}
 lxc.network.type={{ conf['type'] }}
 lxc.network.flags=up
-{% if conf['type'] == 'veth' %}
+{%- if conf['type'] == 'veth' %}
 lxc.network.veth.pair={{ id }}-{{ net }}
 {%- endif %}
 {%- set inet_addr = pillar['hosts-inet'][net].get(id) %}
@@ -20,11 +20,16 @@ lxc.network.ipv4={{ inet_addr }}/{{ prefix_len }}
 {%- endif %}
 {%- if conf['type'] == 'veth' %}
 lxc.network.link=br-{{ net }}
+{%- elif conf['type'] == 'phys' %}
+lxc.network.link=bond0.{{ pillar['vlans'].get(net) }}
 {%- endif %}
 lxc.network.name={{ net }}
-#lxc.network.ipv4.gateway=
+{%- if net == 'core' %}
+lxc.network.ipv4.gateway=172.20.72.1
+{%- endif %}
 #lxc.network.ipv6=
 #lxc.network.ipv6.gateway=fe80::1
 {%- endfor %}
 
 ## TODO: limits + caps
+## TODO: include Debian.common.conf

@@ -1,0 +1,9 @@
+[Unit]
+Requires = zebra.service
+After = network.target
+
+[Service]
+ExecStart = /usr/lib/quagga/ospfd
+
+[Install]
+WantedBy = default.target

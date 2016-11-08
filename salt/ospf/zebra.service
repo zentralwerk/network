@@ -1,0 +1,8 @@
+[Unit]
+After = network.target
+
+[Service]
+ExecStart = /usr/lib/quagga/zebra
+
+[Install]
+WantedBy = default.target

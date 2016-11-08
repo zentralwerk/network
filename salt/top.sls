@@ -6,12 +6,15 @@ base:
     - ospf
   '*-gw':
     - no-ssh
+    - forwarding
     - ospf
   'upstream*':
     - no-ssh
+    - forwarding
     - ospf
     - unbound
   'anon*':
     - no-ssh
+    - forwarding
     - ospf
     - unbound

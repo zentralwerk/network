@@ -9,6 +9,8 @@ serv-gw:
   interfaces:
     core:
       type: veth
+    serv:
+      type: veth
 
 priv1-gw:
   interfaces:

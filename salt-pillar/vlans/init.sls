@@ -1,4 +1,4 @@
 vlans:
   core: 1
-  server: 2
-  public: 3
+  serv: 2
+  pub: 3
