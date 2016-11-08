@@ -8,6 +8,7 @@ base:
     - no-ssh
     - forwarding
     - ospf
+    - dhcp
   'upstream*':
     - no-ssh
     - forwarding
