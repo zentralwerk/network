@@ -29,7 +29,7 @@ bond0.{{ vlan }}:
         - network: bond0
 {% endfor %}
 
-{%- for net in ['core'] %}
+{%- for net in ['core', 'serv'] %}
 {%- set vlan = pillar['vlans'][net] %}
 br-{{ net }}:
   network.managed:

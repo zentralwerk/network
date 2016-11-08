@@ -17,6 +17,7 @@ autostart-{{ daemon }}:
       require_in:
         - file: /etc/systemd/system/{{ daemon }}.service
         - file: /etc/quagga/{{ daemon }}.conf
+        - file: /var/run/quagga
 
 start-{{ daemon }}:
   service.running:
@@ -25,4 +26,10 @@ start-{{ daemon }}:
         - service: autostart-{{ daemon }}
 
 {%- endfor %}
+
+/var/run/quagga:
+  file.directory:
+    - user: quagga
+      group: quagga
+
           

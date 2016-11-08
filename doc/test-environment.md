@@ -18,3 +18,17 @@ apt-get install salt-master salt-minion
 
 Set `master` to `localhost` in `/etc/salt/minion`, restart the
 minion. `salt-key -A` to accept the minion in the master.
+
+```shell
+salt \* state.apply
+```
+
+Then accept the container minions:
+```shell
+salt-key -A
+```
+
+And again:
+```shell
+salt \* state.apply
+```
