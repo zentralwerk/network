@@ -13,9 +13,9 @@ base:
     - no-ssh
     - forwarding
     - ospf
+    - upstream.dhcp
     - unbound
   'anon*':
     - no-ssh
     - forwarding
     - ospf
-    - unbound

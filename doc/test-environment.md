@@ -8,6 +8,13 @@ kvm -hda salt.hda -m 1024 -smp 2 -net nic,model=e1000 -net user -cdrom
 
 Now run the Debian installation. Hostname: `server1`
 
+```shell
+brctl addbr br-up1
+ifdown eth0
+brctl addif br-up1 eth0
+dhclient br-up1
+```
+
 # Bootstrap
 
 Configure a recent version, eg. *stretch*
