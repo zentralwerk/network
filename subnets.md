@@ -1,6 +1,6 @@
 Machine-readable here: [salt-pillar/subnets](./salt-pillar/subnets/init.sls)
 
-## 172.20.72.0/21
+## RFC 1918: 172.20.72.0/21
 
 * 172.20.72.0-172.20.72.63/26 CORE
 * 172.20.72.64/26 RESERVED FOR EPXANDING CORE
@@ -29,7 +29,31 @@ Machine-readable here: [salt-pillar/subnets](./salt-pillar/subnets/init.sls)
 * 172.20.76.0-172.20.77.255/23 PUBLIC
 * 172.20.78.0-172.20.79.255/23 RESERVED FOR EXPANDING PUBLIC
 
-## Non-routed:
+## RFC 1918: non-routed
 
 * 10.0.0.0/24 HW-MGMT
 * 192.168.*.0/24 PRIVs?
+
+## ULA: fd23:42:c3d2:500::/56
+
+* fd23:42:c3d2:523::/64 C3D2
+
+* fd23:42:c3d2:581::/64 CORE
+* fd23:42:c3d2:582::/64 SERV
+* fd23:42:c3d2:583::/64 PUBLIC
+* fd23:42:c3d2:5c0::/64 PRIV1
+* fd23:42:c3d2:5c1::/64 PRIV2
+* fd23:42:c3d2:5c2::/64 PRIV3
+* fd23:42:c3d2:5c3::/64 PRIV4
+* fd23:42:c3d2:5c4::/64 PRIV5
+* fd23:42:c3d2:5c5::/64 PRIV6
+* fd23:42:c3d2:5c6::/64 PRIV7
+* fd23:42:c3d2:5c7::/64 PRIV8
+* fd23:42:c3d2:5c8::/64 PRIV9
+* fd23:42:c3d2:5c9::/64 PRIV10
+* fd23:42:c3d2:5ca::/64 PRIV11
+* fd23:42:c3d2:5cb::/64 PRIV12
+* fd23:42:c3d2:5cc::/64 PRIV13
+* fd23:42:c3d2:5cd::/64 PRIV14
+* fd23:42:c3d2:5ce::/64 PRIV15
+* fd23:42:c3d2:5cf::/64 PRIV16
