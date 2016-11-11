@@ -1,0 +1,108 @@
+{# http://static.tp-link.com/res/down/doc/TL-SG3210(UN)_V2.0_CLI_.pdf #}
+{%- import_yaml "netmasks.yaml" as netmasks -%}
+#!/usr/bin/expect -f
+
+#spawn cu -s 38400  -l /dev/ttyUSB0
+#stty raw -echo
+spawn telnet {{ pillar['hosts-inet']['mgmt'][hostname] }}
+expect "Password:"
+send "secret\r"
+expect ">"
+send "\r"
+expect ">"
+send "enable\r"
+expect "Password:"
+send "secret\r"
+expect "#"
+send "configure\r"
+expect "(config)#"
+
+send "enable secret 0 secret\r"
+expect "(config)#"
+#send "enable password 0 secret\r"
+#expect "(config)#"
+send "service password-encryption\r"
+expect "(config)#"
+send "user name admin privilege admin secret 0 secret\r"
+expect "(config)#"
+
+send "hostname \"{{ hostname }}\"\r"
+expect "(config)#"
+send "location \"{{ switch['location'] }}\"\r"
+expect "(config)#"
+
+{%- set mgmt_vlan = pillar['vlans']['mgmt'] %}
+send "ip management-vlan {{ mgmt_vlan }}\r"
+expect "(config)#"
+send "ip ssh server\r"
+expect "(config)#"
+send "telnet enable\r"
+expect "(config)#"
+send "line vty 0 15\r"
+expect "(config-line)#"
+send "password 0 secret\r"
+expect "(config-line)#"
+send "exit\r"
+expect "(config)#"
+
+{%- for name, vlan in pillar['vlans'].items() %}
+{%- if name != 'mgmt' %}
+send "vlan {{ vlan }}\r"
+expect "(config-vlan)#"
+send "name \"{{ name }}\"\r"
+expect "(config-vlan)#"
+send "exit\r"
+expect "(config)#"
+{%- endif %}
+
+{# Actually only used for mgmt_vlan, switches are not routers #}
+send "interface vlan {{ vlan }}\r"
+expect "(config-if)#"
+{%- set net_hosts = pillar['hosts-inet'].get(name) %}
+{%- set ipaddr = net_hosts and net_hosts.get(hostname) %}
+{%- if ipaddr %}
+send "ip address {{ ipaddr }} {{ netmasks[pillar['subnets-inet'][name].split('/')[1]] }}\r"
+expect "(config-if)#"
+{%- endif %}
+send "exit\r"
+expect "(config)#"
+{%- endfor %}
+
+{%- set group = 0 %}
+{%- for name, conf in switch['ports'].items() %}
+{%- if conf['mode'] == 'trunk' %}
+send "interface range gigabitEthernet 1/0/{{ conf['ports'] }}\r"
+expect "(config-if-range)#"
+send "switchport mode {{ conf['mode'] }}\r"
+expect "(config-if-range)#"
+{%- set group = group + 1 %}
+send "channel-group {{ group }} mode passive\r"
+expect "(config-if-range)#"
+#send "port-channel load-balance src-dst-ip\r"
+#expect "(config-if-range)#"
+{%- set vlan_ids = [] %}
+{%- for name in conf['vlans'] %}
+{%-  if vlan_ids.append('' ~ pillar['vlans'][name]) %}
+{%-  endif %}
+{%- endfor %}
+send "switchport trunk allowed vlan {{ ','.join(vlan_ids) }}\r"
+expect "(config-if-range)#"
+{%- elif conf['mode'] == 'access' %}
+send "interface range gigabitEthernet 1/0/{{ conf['ports'] }}\r"
+expect "(config-if-range)#"
+send "switchport mode access\r"
+expect "(config-if-range)#"
+send "switchport access vlan {{ pillar['vlans'][name] }}\r"
+expect "(config-if-range)#"
+{%- endif %}
+send "exit\r"
+expect "(config)#"
+{%- endfor %}
+
+send "exit\r"
+expect "#"
+send "copy running-config startup-config\r"
+expect "#"
+send "exit\r"
+expect ">"
+send "exit\r"
