@@ -1,0 +1,101 @@
+{# http://h20628.www2.hp.com/km-ext/kmcsdirect/emr_na-c02586144-1.pdf #}
+{%- import_yaml "netmasks.yaml" as netmasks -%}
+#!/usr/bin/expect -f
+
+spawn telnet {{ pillar['hosts-inet']['mgmt'][hostname] }}
+expect "Password:"
+send "secret\r"
+expect ">"
+send "system-view\r"
+expect "]"
+
+send "sysname {{ hostname }}\r"
+expect "]"
+
+send "user-interface vty 0 4\r"
+expect "ui-vty0-4]"
+send "screen-length 0\r"
+expect "ui-vty0-4]"
+send "user privilege level 3\r"
+expect "ui-vty0-4]"
+send "set authentication password simple secret\r"
+expect "ui-vty0-4]"
+send "quit\r"
+expect "{{ hostname }}]"
+
+send "local-user admin\r"
+expect -- "-luser-admin]"
+send "password simple secret\r"
+expect -- "-luser-admin]"
+send "quit\r"
+expect "{{ hostname }}]"
+
+{%- for name, vlan in pillar['vlans'].items() %}
+
+send "vlan {{ vlan }}\r"
+expect -- "-vlan{{ vlan }}]"
+send "description {{ name }}\r"
+expect -- "-vlan{{ vlan }}]"
+send "quit\r"
+expect "{{ hostname }}]"
+
+{# Actually only used for mgmt_vlan, switches are not routers #}
+send "interface Vlan-interface {{ vlan }}\r"
+expect "]"
+send "description {{ name }}\r"
+expect "]"
+{%- set net_hosts = pillar['hosts-inet'].get(name) %}
+{%- set ipaddr = net_hosts and net_hosts.get(hostname) %}
+{%- if ipaddr %}
+send "ip address {{ ipaddr }} {{ netmasks[pillar['subnets-inet'][name].split('/')[1]] }}\r"
+expect "]"
+{%- endif %}
+send "quit\r"
+expect "{{ hostname }}]"
+
+{%- endfor %}
+
+{%- set group = 0 %}
+{%- for name, conf in switch['ports'].items() %}
+{%- if conf['mode'] == 'trunk' %}
+{%- set group = group + 1 %}
+{%- for port in conf['ports'] %}
+send "interface gigabitEthernet 1/0/{{ port }}\r"
+expect "]"
+send "lacp enable\r"
+expect "]"
+send "port link-aggregation group {{ group }}\r"
+expect "]"
+send "port link-type trunk\r"
+expect "]"
+{%- for vlan_name in conf['vlans'] %}
+send "port trunk permit vlan {{ pillar['vlans'][vlan_name] }}\r"
+expect "]"
+{%- endfor %}
+send "quit\r"
+expect "{{ hostname }}]"
+{%- endfor %}
+
+{%- elif conf['mode'] == 'access' %}
+{%- for port in conf['ports'] %}
+send "interface gigabitEthernet 1/0/{{ port }}\r"
+expect "]"
+send "port link-type access\r"
+expect "]"
+send "port access vlan {{ pillar['vlans'][name] }}\r"
+send "quit\r"
+expect "{{ hostname }}]"
+{%- endfor %}
+
+{%- endif %}
+{%- endfor %}
+
+send "save main\r"
+expect "Y/N]"
+send "YES\r"
+expect "press the enter key):"
+send "\r"
+expect "]"
+send "quit\r"
+expect ">"
+send "quit\r"

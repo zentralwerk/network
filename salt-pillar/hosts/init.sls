@@ -1,4 +1,10 @@
 hosts-inet:
+  mgmt:
+    server1: 10.0.0.1
+    switch-b1: 10.0.0.10
+    switch-b2: 10.0.0.11
+    switch-c1: 10.0.0.12
+    switch-d1: 10.0.0.13
   core:
     server1: 172.20.72.1
     serv-gw: 172.20.72.2

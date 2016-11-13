@@ -8,8 +8,6 @@ spawn telnet {{ pillar['hosts-inet']['mgmt'][hostname] }}
 expect "Password:"
 send "secret\r"
 expect ">"
-send "\r"
-expect ">"
 send "enable\r"
 expect "Password:"
 send "secret\r"
