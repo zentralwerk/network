@@ -8,6 +8,8 @@ spawn telnet {{ pillar['hosts-inet']['mgmt'][hostname] }}
 expect "Password:"
 send "secret\r"
 expect ">"
+send "\r"
+expect ">"
 send "enable\r"
 expect "Password:"
 send "secret\r"
@@ -86,12 +88,14 @@ expect "(config-if-range)#"
 send "switchport trunk allowed vlan {{ ','.join(vlan_ids) }}\r"
 expect "(config-if-range)#"
 {%- elif conf['mode'] == 'access' %}
-send "interface range gigabitEthernet 1/0/{{ conf['ports'] }}\r"
+{%- for port in conf['ports'] %}
+send "interface range gigabitEthernet 1/0/{{ port }}\r"
 expect "(config-if-range)#"
 send "switchport mode access\r"
 expect "(config-if-range)#"
 send "switchport access vlan {{ pillar['vlans'][name] }}\r"
 expect "(config-if-range)#"
+{%- endfor %}
 {%- endif %}
 send "exit\r"
 expect "(config)#"

@@ -4,6 +4,7 @@ base:
     - server1-network
     - lxc-containers-1
     - ospf
+    - switches
   '*-gw':
     - no-ssh
     - forwarding
