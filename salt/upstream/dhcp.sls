@@ -17,3 +17,13 @@ iptables:
     - mode: 744
     - require:
         - pkg: iptables
+
+/etc/network/if-pre-up.d/iptables:
+  file.managed:
+    - source: salt://upstream/iptables
+    - template: 'jinja'
+    - context:
+        upstream_iface: {{ dhcp_iface }}
+    - mode: 744
+    - require:
+        - pkg: iptables

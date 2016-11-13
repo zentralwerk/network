@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ "$IFACE" = "{{ upstream_iface }}" ]; then
+   iptables -A INPUT -i "$IFACE" -j DROP
+   iptables -P INPUT ACCEPT
+fi
