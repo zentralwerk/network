@@ -6,5 +6,6 @@
     - context:
         hostname: {{ hostname }}
         switch: {{ switch }}
-    
+    - mode: 744
+
 {%- endfor %}
