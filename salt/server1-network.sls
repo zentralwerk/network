@@ -1,5 +1,5 @@
 {%- import_yaml "netmasks.yaml" as netmasks -%}
-{% set bond_slaves = ['eth1', 'eth2'] %}
+{% set bond_slaves = ['eno1', 'eno2', 'eno3', 'eno4'] %}
 
 {% for slave in bond_slaves %}
 {{ slave }}:
