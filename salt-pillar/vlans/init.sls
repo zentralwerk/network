@@ -7,3 +7,19 @@ vlans:
   up2: 11
   up3: 12
   up4: 13
+  priv1: 40
+  priv2: 41
+  priv3: 42
+  priv4: 43
+  priv5: 44
+  priv6: 45
+  priv7: 46
+  priv8: 47
+  priv9: 48
+  priv10: 49
+  priv11: 50
+  priv12: 51
+  priv13: 52
+  priv14: 53
+  priv15: 54
+  priv16: 55

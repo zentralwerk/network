@@ -19,8 +19,8 @@ lxc:
     - context:
         id: {{ id }}
         container: {{ container }}
-    - require_in:
-        cmd: /var/lib/lxc/{{ id }}
+    - require:
+        - cmd: /var/lib/lxc/{{ id }}
 
 /var/lib/lxc/{{ id }}/rootfs/etc/hosts:
   file.managed:
@@ -29,8 +29,8 @@ lxc:
     - context:
         id: {{ id }}
         container: {{ container }}
-    - require_in:
-        cmd: /var/lib/lxc/{{ id }}
+    - require:
+        - cmd: /var/lib/lxc/{{ id }}
 
 autostart-{{ id }}:
   service.enabled:

@@ -33,6 +33,22 @@ switches:
         vlans:
           - mgmt
           - pub
+          - up1
+      server1:
+        mode: trunk
+        ports:
+          - '37'
+          - '38'
+          - '39'
+          - '40'
+        vlans:
+          - mgmt
+          - pub
+          - core
+          - up1
+          - priv1
+          - priv2
+          - serv
       mgmt:
         mode: access
         ports:
@@ -43,8 +59,6 @@ switches:
           - '2'
           - '3'
           - '24'
-          - '37'
-          - '48'
   switch-b2:
     model: '3com-4200G'
     location: Haus B Souterrain
@@ -81,6 +95,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - up1
       up1:
         mode: access
         ports:

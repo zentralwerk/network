@@ -29,7 +29,7 @@ bond0.{{ vlan }}:
         - network: bond0
 {% endfor %}
 
-{%- for net in ['core', 'serv'] %}
+{%- for net in ['core', 'serv', 'mgmt'] %}
 {%- set vlan = pillar['vlans'][net] %}
 br-{{ net }}:
   network.managed:
@@ -41,6 +41,9 @@ br-{{ net }}:
       proto: static
       address: {{ ip_addr }}
       netmask: {{ netmasks[prefix_len] }}
+{%- if net == 'core' %}
+      gateway: {{ pillar['hosts-inet']['core']['upstream1'] }}
+{%- endif %}
 {%- else %}
       proto: manual
 {%- endif %}

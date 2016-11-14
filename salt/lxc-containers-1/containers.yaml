@@ -31,7 +31,7 @@ upstream1:
     core:
       type: veth
     up1:
-      type: veth
+      type: phys
 
 anon1:
   interfaces:
