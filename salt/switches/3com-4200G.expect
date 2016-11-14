@@ -70,6 +70,8 @@ send "port link-aggregation group {{ group }}\r"
 expect "]"
 send "port link-type trunk\r"
 expect "]"
+send "port trunk pvid vlan 4094\r"
+expect "]"
 {%- for vlan_name in conf['vlans'] %}
 send "port trunk permit vlan {{ pillar['vlans'][vlan_name] }}\r"
 expect "]"
