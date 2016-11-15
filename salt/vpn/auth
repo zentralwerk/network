@@ -1,0 +1,3 @@
+{%- set conf = pillar['openvpn'][name] -%}
+{{ conf['user'] }}
+{{ conf['password'] }}

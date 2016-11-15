@@ -1,2 +1,2 @@
 upstream:
-  dhcp_interface: up1
+  interface: up1

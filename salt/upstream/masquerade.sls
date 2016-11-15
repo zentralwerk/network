@@ -1,16 +1,11 @@
 {%- set interface = pillar['upstream']['interface'] %}
-{{ interface }}:
-  network.managed:
-    - enabled: True
-      type: eth
-      proto: dhcp
 
-include:
-  - upstream.masquerade
+iptables:
+  pkg.installed: []
 
-/etc/network/if-pre-up.d/iptables:
+/etc/network/if-pre-up.d/masquerade:
   file.managed:
-    - source: salt://upstream/iptables
+    - source: salt://upstream/masquerade
     - template: 'jinja'
     - context:
         interface: {{ interface }}

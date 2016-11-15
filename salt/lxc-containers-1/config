@@ -35,3 +35,6 @@ lxc.network.ipv4.gateway={{ pillar['hosts-inet'][net][gw] }}
 
 ## TODO: limits + caps
 ## TODO: include Debian.common.conf
+
+# tuntap
+lxc.cgroup.devices.allow = c 10:200 rw

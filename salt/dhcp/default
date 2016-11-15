@@ -1,0 +1,9 @@
+{%- set ifaces = [] %}
+{%- for iface, ips in salt['grains.get']('ip_interfaces').items() %}
+{%-   if iface not in ['core', 'lo'] %}
+{%-     set ifaces = ifaces.append(iface) %}
+{%-   endif %}
+{%- endfor %}
+
+INTERFACESv4="{{ ' '.join(ifaces) }}"
+INTERFACESv6=""

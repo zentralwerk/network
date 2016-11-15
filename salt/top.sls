@@ -20,3 +20,5 @@ base:
     - no-ssh
     - forwarding
     - ospf
+    - vpn.openvpn
+    - upstream.masquerade

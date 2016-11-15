@@ -1,5 +1,5 @@
 #!/bin/sh
 
-if [ "$IFACE" = "{{ upstream_iface }}" ]; then
+if [ "$IFACE" = "{{ interface }}" ]; then
    iptables -t nat -A POSTROUTING -o "$IFACE" -j MASQUERADE
 fi
