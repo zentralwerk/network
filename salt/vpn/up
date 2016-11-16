@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export IFACE={{ name }}
+for f in /etc/network/if-pre-up.d/*; do
+    $f
+done
+for f in /etc/network/if-up.d/*; do
+    $f
+done

@@ -7,6 +7,10 @@ vlans:
   up2: 11
   up3: 12
   up4: 13
+  up5: 14
+  up6: 15
+  up7: 16
+  up8: 17
   priv1: 40
   priv2: 41
   priv3: 42
@@ -23,3 +27,19 @@ vlans:
   priv14: 53
   priv15: 54
   priv16: 55
+  iso1: 101
+  iso2: 102
+  iso3: 103
+  iso4: 104
+  iso5: 105
+  iso6: 106
+  iso7: 107
+  iso8: 108
+  iso9: 109
+  iso10: 110
+  iso11: 111
+  iso12: 112
+  iso13: 113
+  iso14: 114
+  iso15: 115
+  iso16: 116

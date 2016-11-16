@@ -4,7 +4,7 @@
 
 spawn telnet {{ pillar['hosts-inet']['mgmt'][hostname] }}
 expect "Password:"
-send "secret\r"
+send "{{ switch['password'] }}\r"
 expect ">"
 send "system-view\r"
 expect "]"
@@ -18,14 +18,14 @@ send "screen-length 0\r"
 expect "ui-vty0-4]"
 send "user privilege level 3\r"
 expect "ui-vty0-4]"
-send "set authentication password simple secret\r"
+send "set authentication password simple {{ switch['password'] }}\r"
 expect "ui-vty0-4]"
 send "quit\r"
 expect "{{ hostname }}]"
 
 send "local-user admin\r"
 expect -- "-luser-admin]"
-send "password simple secret\r"
+send "password simple {{ switch['password'] }}\r"
 expect -- "-luser-admin]"
 send "quit\r"
 expect "{{ hostname }}]"
@@ -70,6 +70,7 @@ send "port link-aggregation group {{ group }}\r"
 expect "]"
 send "port link-type trunk\r"
 expect "]"
+# Set dummy default vlan
 send "port trunk pvid vlan 4094\r"
 expect "]"
 {%- for vlan_name in conf['vlans'] %}

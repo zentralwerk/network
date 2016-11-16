@@ -1,0 +1,88 @@
+{#  #}
+{%- import_yaml "netmasks.yaml" as netmasks -%}
+#!/usr/bin/expect -f
+
+spawn ssh admin@{{ pillar['hosts-inet']['mgmt'][hostname] }}
+expect "password: "
+send "{{ switch['password'] }}\r"
+expect "Press any key to continue"
+send "\r"
+expect "# "
+send "configure terminal\r"
+expect "(config)# "
+
+send "hostname {{ hostname }}\r"
+expect "(config)# "
+send "snmp-server location \"{{ switch['location'] }}\"\r"
+expect "(config)# "
+send "snmp-server contact \"astro@spaceboyz.net\"\r"
+expect "(config)# "
+send "password manager\r"
+expect "New password for Manager: "
+send "{{ switch['password'] }}\r"
+expect "Please retype new password for Manager: "
+send "{{ switch['password'] }}\r"
+expect "(config)# "
+
+# TODO: ssh, password
+
+{%- for name, vlan in pillar['vlans'].items() %}
+send "vlan {{ vlan }}\r"
+expect "(vlan-{{ vlan }})#"
+
+send "name {{ name }}\r"
+expect "(vlan-{{ vlan }})#"
+
+{# Actually only used for mgmt_vlan, switches are not routers #}
+{%-   set net_hosts = pillar['hosts-inet'].get(name) %}
+{%-   set ipaddr = net_hosts and net_hosts.get(hostname) %}
+{%-   if ipaddr %}
+send "ip address {{ ipaddr }} {{ netmasks[pillar['subnets-inet'][name].split('/')[1]] }}\r"
+expect "(vlan-{{ vlan }})#"
+{%-   endif %}
+
+send "exit\r"
+expect "(config)# "
+
+{%-   if name == 'mgmt' %}
+send "management-vlan {{ vlan }}\r"
+expect "(config)# "
+{%-   else %}
+# If not mgmt, reset all VLAN mappings
+send "no vlan {{ vlan }} tagged all\r"
+expect "(config)# "
+send "no vlan {{ vlan }} untagged all\r"
+expect "(config)# "
+{%-   endif %}
+
+{%- endfor %}
+
+{%- set group = 0 %}
+{%- for name, conf in switch['ports'].items() %}
+{%-   if conf['mode'] == 'trunk' %}
+{%-   set group = group + 1 %}
+
+send "no trunk {{ conf['ports'] }}\r"
+expect "(config)# "
+send "trunk {{ conf['ports'] }} trk{{ group }} lacp\r"
+expect "(config)# "
+{%-   for vlan_name in conf['vlans'] %}
+send "vlan {{ pillar['vlans'][vlan_name] }} tagged trk{{ group }}\r"
+expect "(config)# "
+{%-   endfor %}
+
+{%- elif conf['mode'] == 'access' %}
+send "vlan {{ pillar['vlans'][name] }} untagged {{ conf['ports'] }}\r"
+expect "(config)# "
+
+{%-   endif %}
+{%- endfor %}
+
+send "write memory\r"
+expect "{{ hostname }}# "
+send "exit\r"
+expect "{{ hostname }}> "
+send "exit\r"
+expect "Do you want to log out "
+expect "y/n]? "
+send "y"

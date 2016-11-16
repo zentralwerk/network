@@ -1,6 +1,19 @@
 openvpn:
   pkg.installed: []
 
+/dev/net:
+  file.directory:
+    - mode: 0755
+
+/dev/net/tun:
+  file.mknod:
+    - ntype: 'c'
+    - major: 10
+    - minor: 200
+    - mode: 0666
+    - require:
+      - file: /dev/net
+
 {%- for name, conf in pillar['openvpn'].items() %}
 
 hostroutes-{{ name }}:
@@ -28,6 +41,14 @@ hostroutes-{{ name }}:
         name: {{ name }}
     - mode: 600
 
+/etc/openvpn/{{ name }}.up:
+  file.managed:
+    - source: salt://vpn/up
+    - template: 'jinja'
+    - context:
+        name: {{ name }}
+    - mode: 755
+
 
 autostart-{{ name }}:
   service.enabled:
@@ -35,6 +56,8 @@ autostart-{{ name }}:
         require_in:
           - file: /etc/openvpn/{{ name }}.conf
           - file: /etc/openvpn/{{ name }}.auth
+        require:
+          - file: /dev/net/tun
 
 start-{{ name }}:
   service.running:
@@ -42,6 +65,8 @@ start-{{ name }}:
         require_in:
           - file: /etc/openvpn/{{ name }}.conf
           - file: /etc/openvpn/{{ name }}.auth
+        require:
+          - file: /dev/net/tun
       
 {%- endfor %}
 

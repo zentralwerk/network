@@ -9,6 +9,6 @@ iptables:
     - template: 'jinja'
     - context:
         interface: {{ interface }}
-    - mode: 744
+    - mode: 755
     - require:
         - pkg: iptables
