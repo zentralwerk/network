@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ "$IFACE" = "{{ pillar['upstream']['interface'] }}" ]; then
-   tc qdisc del dev $IF_WAN root    2> /dev/null >  /dev/null
-   tc qdisc add dev $IF_WAN root       handle  1   hfsc default 1
-   tc class add dev $IF_WAN parent 1:  classid 1:1  hfsc sc rate ${UP_RATE}kbit ul rate {{ pillar['upstream']['up-bandwidth'] }}kbit
-   tc qdisc add dev $IF_WAN parent 1:1 handle 11: fq_codel
-   tc filter add dev $IF_WAN parent 11: handle 11 protocol all flow hash keys {{ pillar['upstream']['flow-keys'] }} divisor {{ pillar['upstream']['flows'] }}
+   tc qdisc del dev $IFACE root    2> /dev/null >  /dev/null
+   tc qdisc add dev $IFACE root       handle  1   hfsc default 1
+   tc class add dev $IFACE parent 1:  classid 1:1  hfsc sc rate ${UP_RATE}kbit ul rate {{ pillar['upstream']['up-bandwidth'] }}kbit
+   tc qdisc add dev $IFACE parent 1:1 handle 11: fq_codel
+   tc filter add dev $IFACE parent 11: handle 11 protocol all flow hash keys {{ pillar['upstream']['flow-keys'] }} divisor {{ pillar['upstream']['flows'] }}
 fi
