@@ -1,2 +1,0 @@
-unbound:
-  pkg.installed: []

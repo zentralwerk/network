@@ -67,10 +67,31 @@ switches:
           - mgmt
           - pub
           - core
+          - serv
           - up1
+          - up2
+          - up3
+          - up4
+          - up5
+          - up6
+          - up7
+          - up8
           - priv1
           - priv2
-          - serv
+          - priv3
+          - priv4
+          - priv5
+          - priv6
+          - priv7
+          - priv8
+          - priv9
+          - priv10
+          - priv11
+          - priv12
+          - priv13
+          - priv14
+          - priv15
+          - priv16
       mgmt:
         mode: access
         ports:
@@ -103,18 +124,19 @@ switches:
           - GigabitEthernet 1/0/24
     password: |
       -----BEGIN PGP MESSAGE-----
-      
-      hQEMA2PKcvDMvlKLAQgAlqHX0k6S4NiBxHQg6i2hdM7m5o+QNuNsEQJcJHmPJlri
-      jNnYYmv5XDyYvLX6oHSbV9eeKO+Pi9GkiRJE+hMqo3Spuu41fp8m1TnvXZFgR3F1
-      koL7M+GGZH9wA2EeFJ+/aKldppT+k/VYG55OKn9um3wzZZraP6aKv2896AOXwond
-      R/jhjGXjcdATRDZ2aeYbNW/WQxZXaPRLCKISfftZ7CNDFV3rAX/SgphHnKRP7LZS
-      xFGbSHkc/451ZXIl0DrelrKzngQMVa9dTqCCF6hfjPj/0RuCwByuIyYpDMMWcXxs
-      nnMuiY2t9OM1D2BWsVHluk7MHymn+MxayPYCPuox2dJbAd2k674qx2Kc65TIpClm
-      yMsW1bBAqU07/kEB+oKdTkqUBoAfa0pBxC+62MREA0LFl7YavBHx9ksa8at8PzU1
-      +Dfb4gaZHlR4X2oQOUinVf9qC66gkY1Ndiz7CQ==
-      =9Zfy
+
+      hQEMA2PKcvDMvlKLAQf/c9ysLI/ePzYtqz7AyoKBZQKFau/pEpQDswA5hdJiRSgh
+      TQ73u7NVVYTGk/sZ2awAVLQ/KUM7JPMHMXK1+uPIQq0/+Xg/v5zJdaWwRUUIGtCz
+      Sg3BpV41a/NgxlJbh0bJw0CjlgTHF7qIhiQNoHx/DnYECab8bMr8i7NziWXZl1kf
+      6A5BqAu5siaaqngn5wYmMdstl48lejiDNgtZSeti/1FV9fk4D2w9zEMHZnTS2M+O
+      TzDk2lsAA4CEXeQBsBOSMsbHDy6yo4CzuNk61ALfH8a3Tn1sQjfSLo021xAvqj5U
+      nS9/L/57ffRILzz1hfURBV0N/VnDqi5enSZIvVU2WtJLAZEAghgXjE7rfjsN1ypG
+      mYUz1OQ9cLG8ttSL9+fhYc8rCW0jx8KD5HKPiNHnR1x0s2RbUnprQdlFgC4go8U7
+      DRE15mc7GkkYbvIl
+      =/BZc
       -----END PGP MESSAGE-----
-  switch-b2:
+
+switch-b2:
     model: '3com-4200G'
     location: Haus B Souterrain
     ports:
@@ -157,16 +179,16 @@ switches:
           - GigabitEthernet 1/0/24
     password: |
       -----BEGIN PGP MESSAGE-----
-      
-      hQEMA2PKcvDMvlKLAQf/V8QXXiydFBlm5j8ETQ/bXzToHGZWx7I4mC2i9r1pHZA2
-      diDYSGXPEJpiNJo6PTyIRYCMOyB18cVVRX3waga/dsx0KvAC1lwAibhQiV0frPCv
-      ELQ13gHEhfNt4HJveBRBNKjH4MkUIkTgtV98KoMc6+JRk2TPkJGmvG4oV3eTYW2I
-      TnG1SB9vgYCEfQUq8hY1FH+Wo7Kl8OGN2b+QUwmxc+vR67Hp3rLXlTPoLcrGPhGj
-      Vvj5lDTt8ScVd9NKLjmlNV646+XYuMO9FyTfbAq1yTDUpWdCAfaIt25dyss7xbu5
-      rl/bJzjT20KUraYehHQqcd3c0+/40CQYoJZOVgPojdJbAU7Nlju2xM9WE0CgQHLD
-      tUjwm10xMBdBPfWEDGxlZNnITWT/bf4y2CRm60uxGpHWNO2TKab9bwobS4PQcD4M
-      4FiceoeOxxKJHQ0aJL3POfe15nXvkqsSbwfDhQ==
-      =h3Vr
+
+      hQEMA2PKcvDMvlKLAQf+N6p+ZuZsx1AF7CI2TKsxxEU1EyM1DIqtk7d5DoidTIZ4
+      zYnL9X72VSQiNRtkk955wU5sStanDjQMxBUcEO/bEQq6Cjy7tgWZZXEfCedM3Xzq
+      MEs861JCHdpBfL/zehHZxjmGe+St0xRGn4yBZcP/835Sl6t6q4znPFabcgDmIItX
+      ZsjaQfKd0La8GclHI1Pib7UuI6fvD70GkcQHoKoM1cOw8HQRpY953RnTNDKUk7is
+      ZjvhHkPUU2smLxJhCCwAiARq7TZceI0orfCkjQ87sRXavO82dn2Vq3mD9iVwnYY+
+      mVuYBhqguwq0HoOomHKf/JbQc7Gz8E+SBHWvjCUvVtJLARwt3KUvZGY28oKm7pcs
+      ITJJEiVPfnS2CtIm7T0nCm4LMiE20GWhhJIh8gIQuORlUvtMX0R29v3cVcNYCbIh
+      +2WKG1F/gum7at/q
+      =On3v
       -----END PGP MESSAGE-----
 
   switch-d1:

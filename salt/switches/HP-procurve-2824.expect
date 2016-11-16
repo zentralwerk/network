@@ -77,6 +77,8 @@ expect "(config)# "
 
 {%-   endif %}
 {%- endfor %}
+send "exit\r"
+expect "{{ hostname }}# "
 
 send "write memory\r"
 expect "{{ hostname }}# "
