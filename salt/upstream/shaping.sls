@@ -1,6 +1,6 @@
 {%- set upstream = pillar['upstream'] %}
 
-iptables:
+tc:
   pkg.installed: []
 
 /etc/network/if-up.d/shaping:
