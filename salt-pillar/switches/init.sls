@@ -7,20 +7,17 @@ switches:
       switch-b2:
         mode: trunk
         ports:
-          - '25'
-          - '26'
-          - '27'
-          - '28'
+          - TenGigabitEthernet1/1/1
         vlans:
           - mgmt
           - pub
       switch-c1:
         mode: trunk
         ports:
-          - '29'
-          - '30'
-          - '31'
-          - '32'
+          - GigabitEthernet1/0/29
+          - GigabitEthernet1/0/30
+          - GigabitEthernet1/0/31
+          - GigabitEthernet1/0/32
         vlans:
           - mgmt
           - pub
@@ -51,10 +48,10 @@ switches:
       switch-d1:
         mode: trunk
         ports:
-          - '33'
-          - '34'
-          - '35'
-          - '36'
+          - GigabitEthernet1/0/33
+          - GigabitEthernet1/0/34
+          - GigabitEthernet1/0/35
+          - GigabitEthernet1/0/36
         vlans:
           - mgmt
           - pub
@@ -62,10 +59,10 @@ switches:
       server1:
         mode: trunk
         ports:
-          - '37'
-          - '38'
-          - '39'
-          - '40'
+          - GigabitEthernet1/0/37
+          - GigabitEthernet1/0/38
+          - GigabitEthernet1/0/39
+          - GigabitEthernet1/0/40
         vlans:
           - mgmt
           - pub
@@ -77,13 +74,33 @@ switches:
       mgmt:
         mode: access
         ports:
-          - '1'
+          - GigabitEthernet1/0/1
       pub:
         mode: access
         ports:
-          - '2'
-          - '3'
-          - '24'
+          - GigabitEthernet 1/0/2
+          - GigabitEthernet 1/0/3
+          - GigabitEthernet 1/0/4
+          - GigabitEthernet 1/0/5
+          - GigabitEthernet 1/0/6
+          - GigabitEthernet 1/0/7
+          - GigabitEthernet 1/0/8
+          - GigabitEthernet 1/0/9
+          - GigabitEthernet 1/0/10
+          - GigabitEthernet 1/0/11
+          - GigabitEthernet 1/0/12
+          - GigabitEthernet 1/0/13
+          - GigabitEthernet 1/0/14
+          - GigabitEthernet 1/0/15
+          - GigabitEthernet 1/0/16
+          - GigabitEthernet 1/0/17
+          - GigabitEthernet 1/0/18
+          - GigabitEthernet 1/0/19
+          - GigabitEthernet 1/0/20
+          - GigabitEthernet 1/0/21
+          - GigabitEthernet 1/0/22
+          - GigabitEthernet 1/0/23
+          - GigabitEthernet 1/0/24
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -101,28 +118,43 @@ switches:
     model: '3com-4200G'
     location: Haus B Souterrain
     ports:
-      switch-b2:
+      switch-b1:
         mode: trunk
         ports:
-          - '25'
-          - '26'
-          - '27'
-          - '28'
+          - TenGigabitEthernet1/1/1
         vlans:
           - mgmt
           - pub
       mgmt:
         mode: access
         ports:
-          - '1'
+          - GigabitEthernet1/0/1
       pub:
         mode: access
         ports:
-          - '2'
-          - '3'
-          - '24'
-          - '37'
-          - '48'
+          - GigabitEthernet 1/0/2
+          - GigabitEthernet 1/0/3
+          - GigabitEthernet 1/0/4
+          - GigabitEthernet 1/0/5
+          - GigabitEthernet 1/0/6
+          - GigabitEthernet 1/0/7
+          - GigabitEthernet 1/0/8
+          - GigabitEthernet 1/0/9
+          - GigabitEthernet 1/0/10
+          - GigabitEthernet 1/0/11
+          - GigabitEthernet 1/0/12
+          - GigabitEthernet 1/0/13
+          - GigabitEthernet 1/0/14
+          - GigabitEthernet 1/0/15
+          - GigabitEthernet 1/0/16
+          - GigabitEthernet 1/0/17
+          - GigabitEthernet 1/0/18
+          - GigabitEthernet 1/0/19
+          - GigabitEthernet 1/0/20
+          - GigabitEthernet 1/0/21
+          - GigabitEthernet 1/0/22
+          - GigabitEthernet 1/0/23
+          - GigabitEthernet 1/0/24
     password: |
       -----BEGIN PGP MESSAGE-----
       

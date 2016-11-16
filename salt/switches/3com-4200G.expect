@@ -60,7 +60,7 @@ expect "{{ hostname }}]"
 {%- if conf['mode'] == 'trunk' %}
 {%- set group = group + 1 %}
 {%- for port in conf['ports'] %}
-send "interface gigabitEthernet 1/0/{{ port }}\r"
+send "interface {{ port }}\r"
 expect "]"
 send "lacp enable\r"
 expect "]"
@@ -83,7 +83,7 @@ expect "{{ hostname }}]"
 
 {%- elif conf['mode'] == 'access' %}
 {%- for port in conf['ports'] %}
-send "interface gigabitEthernet 1/0/{{ port }}\r"
+send "interface {{ port }}\r"
 expect "]"
 send "port link-type access\r"
 expect "]"
