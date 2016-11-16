@@ -33,6 +33,13 @@ upstream1:
     up1:
       type: phys
 
+upstream2:
+  interfaces:
+    core:
+      type: veth
+    up1:
+      type: phys
+
 anon1:
   interfaces:
     core:

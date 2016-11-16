@@ -15,6 +15,7 @@ base:
     - forwarding
     - ospf
     - upstream.dhcp
+    - upstream.shaping
     - unbound
   'anon*':
     - no-ssh
@@ -22,3 +23,4 @@ base:
     - ospf
     - vpn.openvpn
     - upstream.masquerade
+    - upstream.shaping

@@ -136,7 +136,7 @@ switches:
       =/BZc
       -----END PGP MESSAGE-----
 
-switch-b2:
+  switch-b2:
     model: '3com-4200G'
     location: Haus B Souterrain
     ports:
