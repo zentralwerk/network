@@ -1,0 +1,8 @@
+#!/bin/sh
+
+F=/sys/class/net/$IFACE/bonding/slaves
+[ -f "$F" ] || exit 0
+
+for slave in `cat "$F"`; do
+    ip link set $slave up
+done

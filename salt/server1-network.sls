@@ -1,6 +1,11 @@
 {%- import_yaml "netmasks.yaml" as netmasks -%}
 {% set bond_slaves = ['eno1', 'eno2', 'eno3', 'eno4'] %}
 
+/etc/network/if-up.d/bond-slaves:
+  file.managed:
+    - source: salt://bond-slaves
+    - mode: 744
+
 {% for slave in bond_slaves %}
 {{ slave }}:
   network.managed:
@@ -17,6 +22,8 @@ bond0:
       mode: 802.3ad
       slaves: {{ ' '.join(bond_slaves) }}
       miimon: 100
+      require:
+        - file: /etc/network/if-up.d/bond-slaves
 
 {% for name, vlan in pillar['vlans'].items() %}
 bond0.{{ vlan }}:
