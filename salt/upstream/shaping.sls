@@ -1,6 +1,6 @@
 {%- set upstream = pillar['upstream'] %}
 
-tc:
+iproute2:
   pkg.installed: []
 
 /etc/network/if-up.d/shaping:
@@ -9,4 +9,4 @@ tc:
     - template: 'jinja'
     - mode: 755
     - require:
-        - pkg: tc
+        - pkg: iproute2
