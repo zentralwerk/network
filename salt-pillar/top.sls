@@ -3,6 +3,7 @@ base:
     - hosts
     - subnets
     - vlans
+    - ospf
   '*gw':
     - dhcp
   'anon1':
