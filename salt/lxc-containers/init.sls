@@ -1,9 +1,7 @@
-{%- import_yaml "lxc-containers-1/containers.yaml" as containers -%}
-
 lxc:
   pkg.installed: []
 
-{% for id, container in containers.items() %}
+{% for id, container in pillar['containers'].items() %}
 
 /var/lib/lxc/{{ id }}:
   cmd.run:
@@ -14,7 +12,7 @@ lxc:
 
 /var/lib/lxc/{{ id }}/config:
   file.managed:
-    - source: salt://lxc-containers-1/config
+    - source: salt://lxc-containers/config
     - template: 'jinja'
     - context:
         id: {{ id }}
@@ -37,7 +35,7 @@ lxc:
 
 /var/lib/lxc/{{ id }}/rootfs/etc/hosts:
   file.managed:
-    - source: salt://lxc-containers-1/hosts
+    - source: salt://lxc-containers/hosts
     - template: 'jinja'
     - context:
         id: {{ id }}
