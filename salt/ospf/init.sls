@@ -24,6 +24,8 @@ start-{{ daemon }}:
     - name: {{ daemon }}
       require:
         - service: autostart-{{ daemon }}
+      watch:
+        - file: /etc/quagga/{{ daemon }}.conf
 
 {%- endfor %}
 

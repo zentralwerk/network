@@ -65,8 +65,10 @@ start-{{ name }}:
         require_in:
           - file: /etc/openvpn/{{ name }}.conf
           - file: /etc/openvpn/{{ name }}.auth
+        watch:
+          - file: /etc/openvpn/{{ name }}.conf
+          - file: /etc/openvpn/{{ name }}.auth
         require:
           - file: /dev/net/tun
       
 {%- endfor %}
-

@@ -1,5 +1,7 @@
 isc-dhcp-server:
   pkg.installed: []
+  service:
+    - running
 
 /etc/dhcp/dhcpd.conf:
   file.managed:
@@ -20,8 +22,10 @@ autostart-dhcpd:
 
 start-dhcpd:
   service.running:
-      - name: isc-dhcp-server
-        require_in:
-          - file: /etc/dhcp/dhcpd.conf
-          - file: /etc/default/isc-dhcp-server
-
+    - name: isc-dhcp-server
+      require_in:
+        - file: /etc/dhcp/dhcpd.conf
+        - file: /etc/default/isc-dhcp-server
+      watch:
+        - pkg: isc-dhcp-server
+        - file: /etc/dhcp/dhcpd.conf
