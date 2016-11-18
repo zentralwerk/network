@@ -1,3 +1,6 @@
+# For lxcfs and sane defaults
+lxc.include = /usr/share/lxc/config/common.conf
+
 lxc.utsname = {{ id }}
 # Handled by lxc@.service
 lxc.start.auto = 0
@@ -33,8 +36,12 @@ lxc.network.ipv4.gateway={{ pillar['hosts-inet'][net][gw] }}
 #lxc.network.ipv6.gateway=fe80::1
 {%- endfor %}
 
-## TODO: limits + caps
-## TODO: include Debian.common.conf
+
+lxc.cap.drop = sys_module sys_time sys_nice sys_pacct sys_rawio sys_time
+
+lxc.cgroup.memory.limit_in_bytes = 512M
+lxc.cgroup.memory.kmem.tcp.limit_in_bytes = 128M
+
 
 # tuntap
 lxc.cgroup.devices.allow = c 10:200 rw
