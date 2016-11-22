@@ -62,8 +62,8 @@ expect "(config)# "
 {%-   if conf['mode'] == 'trunk' %}
 {%-   set group = group + 1 %}
 
-send "no trunk {{ conf['ports'] }}\r"
-expect "(config)# "
+# send "no trunk {{ conf['ports'] }}\r"
+# expect "(config)# "
 send "trunk {{ conf['ports'] }} trk{{ group }} lacp\r"
 expect "(config)# "
 {%-   for vlan_name in conf['vlans'] %}
