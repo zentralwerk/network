@@ -20,12 +20,16 @@ containers:
       core:
         type: veth
         gw: upstream1
+      priv1:
+        type: phys
 
   priv2-gw:
     interfaces:
       core:
         type: veth
-        gw: upstream1
+        gw: upstream2
+      priv2:
+        type: phys
 
   upstream1:
     interfaces:
