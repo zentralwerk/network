@@ -6,6 +6,7 @@ base:
     - ospf
   '*gw':
     - dhcp
+    - ospf.gw
   'anon1':
     - vpn.anon1
     - upstream.anon1
@@ -16,3 +17,4 @@ base:
   'server1':
     - lxc-containers.server1
     - switches
+    - ospf.gw

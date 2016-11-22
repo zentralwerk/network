@@ -1,0 +1,3 @@
+ospf:
+  redistribute:
+    - connected
