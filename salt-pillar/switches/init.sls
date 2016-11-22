@@ -3,6 +3,10 @@ switches:
   switch-b1:
     model: '3com-4200G'
     location: Haus B Souterrain
+    # Ports 1-24 oben
+    # Ports 25-48 unten
+    # Ports 49-52 unten seitlich (optisch)
+    # 10GE hinten
     ports:
       switch-b2:
         mode: trunk
@@ -11,6 +15,38 @@ switches:
         vlans:
           - mgmt
           - pub
+      mgmt:
+        mode: access
+        ports:
+          - GigabitEthernet1/0/1
+      iso1:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/2
+          - GigabitEthernet 1/0/3
+          - GigabitEthernet 1/0/4
+          - GigabitEthernet 1/0/5
+      iso2:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/2
+          - GigabitEthernet 1/0/3
+          - GigabitEthernet 1/0/4
+          - GigabitEthernet 1/0/5
+      iso3:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/6
+          - GigabitEthernet 1/0/7
+          - GigabitEthernet 1/0/8
+          - GigabitEthernet 1/0/9
+      iso4:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/10
+          - GigabitEthernet 1/0/11
+          - GigabitEthernet 1/0/12
+          - GigabitEthernet 1/0/13
       switch-c1:
         mode: trunk
         ports:
@@ -92,36 +128,20 @@ switches:
           - priv14
           - priv15
           - priv16
-      mgmt:
+      priv1:
         mode: access
         ports:
-          - GigabitEthernet1/0/1
-      pub:
+          - GigabitEthernet 1/0/41
+          - GigabitEthernet 1/0/42
+          - GigabitEthernet 1/0/43
+          - GigabitEthernet 1/0/44
+      priv2:
         mode: access
         ports:
-          - GigabitEthernet 1/0/2
-          - GigabitEthernet 1/0/3
-          - GigabitEthernet 1/0/4
-          - GigabitEthernet 1/0/5
-          - GigabitEthernet 1/0/6
-          - GigabitEthernet 1/0/7
-          - GigabitEthernet 1/0/8
-          - GigabitEthernet 1/0/9
-          - GigabitEthernet 1/0/10
-          - GigabitEthernet 1/0/11
-          - GigabitEthernet 1/0/12
-          - GigabitEthernet 1/0/13
-          - GigabitEthernet 1/0/14
-          - GigabitEthernet 1/0/15
-          - GigabitEthernet 1/0/16
-          - GigabitEthernet 1/0/17
-          - GigabitEthernet 1/0/18
-          - GigabitEthernet 1/0/19
-          - GigabitEthernet 1/0/20
-          - GigabitEthernet 1/0/21
-          - GigabitEthernet 1/0/22
-          - GigabitEthernet 1/0/23
-          - GigabitEthernet 1/0/24
+          - GigabitEthernet 1/0/45
+          - GigabitEthernet 1/0/46
+          - GigabitEthernet 1/0/47
+          - GigabitEthernet 1/0/48
     password: |
       -----BEGIN PGP MESSAGE-----
 
@@ -139,6 +159,10 @@ switches:
   switch-b2:
     model: '3com-4200G'
     location: Haus B Souterrain
+    # Ports 1-24 oben
+    # Ports 25-48 unten
+    # Ports 49-52 unten seitlich (optisch)
+    # 10GE hinten
     ports:
       switch-b1:
         mode: trunk
@@ -191,46 +215,12 @@ switches:
       =On3v
       -----END PGP MESSAGE-----
 
-  switch-d1:
-    model: 'TL-SG3210'
-    location: Turm D Keller
-    ports:
-      switch-b1:
-        mode: trunk
-        ports: 1-4
-        vlans:
-          - mgmt
-          - pub
-          - up1
-      up1:
-        mode: access
-        ports:
-          - '5'
-      mgmt:
-        mode: access
-        ports:
-          - '6'
-      pub:
-        mode: access
-        ports:
-          - 7-8
-    password: |
-      -----BEGIN PGP MESSAGE-----
-      
-      hQEMA2PKcvDMvlKLAQf+O1OB9gG4JKnASFfKCoAE75Gb4+PD8+ROzBvg18bzqD0j
-      qjhQL9Ye39oB5R5JmPBso5zgEhGr8vIB3VN3f6vABNaEGPkTh+jf/1X1vwfS0rvW
-      rQNulEFoq+F9vUfWFolAamVoqCxXsXtf8KyJHCazIIRKGKNysHOW/O+YSvcGgG4H
-      6YH94a1lZoRQCF/2wHEmDTA6FXSqBfijM0QoO2+i+VuUHXYYMZ/FIEDPWLM/wqSB
-      aLjMgrDRyUPLvAA88CXrLDT0aO3LzJINtTPVbnohYoFMKI66mAsWwXnJzT29x4sx
-      2xXwc3KvAgLIJtEvPnuHMl2ogkJZEO9rGP5D8Iuw7dJbAR6AXwVdttVIFY39octW
-      0Tj934ZZw2GDCNGDxfmV+kn3Ei15Qop8UmK6dsuzSd0M+4yg+yr3359y+s0cDGiW
-      QwbIX6EZR2TMw6nIf21MRYsXS03gmmfeKXM6Iw==
-      =ED5P
-      -----END PGP MESSAGE-----
-
   switch-c1:
     model: 'HP-procurve-2824'
-    location: Turm C Keller
+    location: Turm C Keller, bei Kabelanschluessen
+    # Ports 1-19 ungerade oben
+    # Ports 2-20 gerade unten
+    # Ports 21-24 unten seitlich (optional optisch)
     ports:
       switch-b1:
         mode: trunk
@@ -238,6 +228,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - priv2
           - up1
           - up2
           - up3
@@ -301,9 +292,13 @@ switches:
       mgmt:
         mode: access
         ports: '20'
+      # Schnelles Routing fuer Freifunk-Tunnel
+      priv2:
+        mode: access
+        ports: 13-15
       pub:
         mode: access
-        ports: 13-19
+        ports: 16-19
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -316,4 +311,36 @@ switches:
       z1P+6DJXliXS7dBdxH0bsB2qRZslmcj286D9bPgTsuvCzOaxcTtkM8y76gVVOVBI
       TN+j1/OdlXyVmTM=
       =XUUi
+      -----END PGP MESSAGE-----
+
+  switch-d1:
+    model: 'TL-SG3210'
+    location: Turm D Keller
+    ports:
+      switch-b1:
+        mode: trunk
+        ports: 1-4
+        vlans:
+          - mgmt
+          - pub
+      mgmt:
+        mode: access
+        ports:
+          - '5'
+      pub:
+        mode: access
+        ports:
+          - 6-8
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf+O1OB9gG4JKnASFfKCoAE75Gb4+PD8+ROzBvg18bzqD0j
+      qjhQL9Ye39oB5R5JmPBso5zgEhGr8vIB3VN3f6vABNaEGPkTh+jf/1X1vwfS0rvW
+      rQNulEFoq+F9vUfWFolAamVoqCxXsXtf8KyJHCazIIRKGKNysHOW/O+YSvcGgG4H
+      6YH94a1lZoRQCF/2wHEmDTA6FXSqBfijM0QoO2+i+VuUHXYYMZ/FIEDPWLM/wqSB
+      aLjMgrDRyUPLvAA88CXrLDT0aO3LzJINtTPVbnohYoFMKI66mAsWwXnJzT29x4sx
+      2xXwc3KvAgLIJtEvPnuHMl2ogkJZEO9rGP5D8Iuw7dJbAR6AXwVdttVIFY39octW
+      0Tj934ZZw2GDCNGDxfmV+kn3Ei15Qop8UmK6dsuzSd0M+4yg+yr3359y+s0cDGiW
+      QwbIX6EZR2TMw6nIf21MRYsXS03gmmfeKXM6Iw==
+      =ED5P
       -----END PGP MESSAGE-----
