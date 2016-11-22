@@ -22,6 +22,9 @@ bond0:
       mode: 802.3ad
       slaves: {{ ' '.join(bond_slaves) }}
       miimon: 100
+      updelay: 1000
+      downdelay: 1000
+      xmit_hash_policy: layer3+4
       require:
         - file: /etc/network/if-up.d/bond-slaves
 
@@ -42,6 +45,7 @@ br-{{ net }}:
   network.managed:
     - type: bridge
       ports: bond0.{{ vlan }}
+      delay: 0
 {%- set ip_addr = pillar['hosts-inet'][net].get('server1') %}
 {%- if ip_addr %}
 {%- set prefix_len = pillar['subnets-inet'][net].split('/')[1] %}
