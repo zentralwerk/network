@@ -18,3 +18,7 @@ hosts-inet:
     pub-gw: 172.20.76.1
   serv:
     serv-gw: 172.20.73.1
+  priv1:
+    priv1-gw: 172.20.74.1
+  priv2:
+    priv2-gw: 172.20.75.1

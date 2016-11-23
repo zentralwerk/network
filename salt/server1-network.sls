@@ -39,14 +39,19 @@ bond0.{{ vlan }}:
         - network: bond0
 {% endfor %}
 
-{%- for net in ['core', 'serv', 'mgmt'] %}
+{%- set nets = ['mgmt', 'core', 'serv', 'pub'] %}
+{%- for i in range(1, 9) %}
+{%-   set nets_ = nets.append('priv' ~ i) %}
+{%-   set nets_ = nets.append('up' ~ i) %}
+{%- endfor %}
+{%- for net in nets %}
 {%- set vlan = pillar['vlans'][net] %}
 br-{{ net }}:
   network.managed:
     - type: bridge
       ports: bond0.{{ vlan }}
       delay: 0
-{%- set ip_addr = pillar['hosts-inet'][net].get('server1') %}
+{%- set ip_addr = pillar['hosts-inet'].get(net) and pillar['hosts-inet'][net].get('server1') %}
 {%- if ip_addr %}
 {%- set prefix_len = pillar['subnets-inet'][net].split('/')[1] %}
       proto: static
@@ -57,6 +62,8 @@ br-{{ net }}:
 {%- endif %}
 {%- else %}
       proto: manual
+      ipv6_autoconf: no
+      enable_ipv6: false
 {%- endif %}
       use:
         - network: bond0.{{ vlan }}
