@@ -5,5 +5,5 @@ if [ "$IFACE" = "{{ pillar['upstream']['interface'] }}" ]; then
    tc qdisc add dev $IFACE root       handle  1   hfsc default 1
    tc class add dev $IFACE parent 1:  classid 1:1  hfsc sc rate {{ pillar['upstream']['up-bandwidth'] }}kbit ul rate {{ pillar['upstream']['up-bandwidth'] }}kbit
    tc qdisc add dev $IFACE parent 1:1 handle 11: fq_codel
-   tc filter add dev $IFACE parent 11: handle 11 protocol all flow hash keys {{ pillar['upstream']['flow-keys'] }} divisor {{ pillar['upstream']['flows'] }}
+   tc filter add dev $IFACE parent 11: handle 11 protocol all flow hash keys {{ pillar['upstream']['flow-keys'] }} divisor 1024
 fi
