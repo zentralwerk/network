@@ -77,7 +77,7 @@ expect "(config)# "
 
 {%-   endif %}
 
-{%-   if conf['nostp'] %}
+{%-   if conf.get('nostp') %}
 send "spanning-tree {{ conf['ports'] }} bpdu-filter\r"
 expect "(config)# "
 {%-   endif %}
