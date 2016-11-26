@@ -1,7 +1,8 @@
 lxc:
   pkg.installed: []
 
-{% for id, container in pillar['containers'].items() %}
+{%- set n = 0 %}
+{%- for id, container in pillar['containers'].items() %}
 
 /var/lib/lxc/{{ id }}:
   cmd.run:
@@ -17,6 +18,7 @@ lxc:
     - context:
         id: {{ id }}
         container: {{ container }}
+        hwaddr_prefix: '0A:14:48:01:{{ n.__str__().rjust(2, '0') }}'
     - require:
         - cmd: /var/lib/lxc/{{ id }}
 
@@ -55,4 +57,5 @@ start-{{ id }}:
         require:
           - service: autostart-{{ id }}
 
+{%- set n = n + 1 %}
 {% endfor %}

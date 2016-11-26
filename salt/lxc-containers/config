@@ -10,9 +10,11 @@ lxc.rootfs.backend = dir
 lxc.autodev = 1
 lxc.kmsg = 0
 
+{%- set n = 0 %}
 {%- for net, conf in container['interfaces'].items() %}
 lxc.network.type={{ conf['type'] }}
 lxc.network.flags=up
+lxc.network.hwaddr={{ hwaddr_prefix }}:{{ n.__str()__.rjust(2, '0') }}
 {%- if conf['type'] == 'veth' %}
 lxc.network.veth.pair={{ id }}-{{ net }}
 {%- endif %}
@@ -34,6 +36,8 @@ lxc.network.ipv4.gateway={{ pillar['hosts-inet'][net][gw] }}
 {%- endif %}
 #lxc.network.ipv6=
 #lxc.network.ipv6.gateway=fe80::1
+
+{%- set n = n + 1 %}
 {%- endfor %}
 
 
