@@ -257,27 +257,35 @@ switches:
       up1:
         mode: access
         ports: '1'
+        nostp: true
       up2:
         mode: access
         ports: '2'
+        nostp: true
       up3:
         mode: access
         ports: '3'
+        nostp: true
       up4:
         mode: access
         ports: '4'
+        nostp: true
       up5:
         mode: access
         ports: '5'
+        nostp: true
       up6:
         mode: access
         ports: '6'
+        nostp: true
       up7:
         mode: access
         ports: '7'
+        nostp: true
       up8:
         mode: access
         ports: '8'
+        nostp: true
       iso1:
         mode: access
         ports: '9'

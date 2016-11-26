@@ -76,6 +76,12 @@ send "vlan {{ pillar['vlans'][name] }} untagged {{ conf['ports'] }}\r"
 expect "(config)# "
 
 {%-   endif %}
+
+{%-   if conf['nostp'] %}
+send "spanning-tree {{ conf['ports'] }} bpdu-filter\r"
+expect "(config)# "
+{%-   endif %}
+
 {%- endfor %}
 send "exit\r"
 expect "{{ hostname }}# "
