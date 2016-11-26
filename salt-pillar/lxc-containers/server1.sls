@@ -21,7 +21,7 @@ containers:
         type: veth
         gw: upstream1
       priv1:
-        type: veth
+        type: phys
 
   priv2-gw:
     interfaces:
@@ -29,21 +29,21 @@ containers:
         type: veth
         gw: upstream2
       priv2:
-        type: veth
+        type: phys
 
   upstream1:
     interfaces:
       core:
         type: veth
       up1:
-        type: veth
+        type: phys
 
   upstream2:
     interfaces:
       core:
         type: veth
       up2:
-        type: veth
+        type: phys
 
   anon1:
     interfaces:
