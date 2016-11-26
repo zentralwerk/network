@@ -1,4 +1,4 @@
-{#  #}
+{# http://ftp.hp.com/pub/networking/software/2600-2800-4100-6108-MgmtConfig-Oct2005-59906023.pdf #}
 {%- import_yaml "netmasks.yaml" as netmasks -%}
 #!/usr/bin/expect -f
 
