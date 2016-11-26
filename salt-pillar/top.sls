@@ -4,7 +4,7 @@ base:
     - subnets
     - vlans
     - ospf
-  '*gw':
+  '*-gw':
     - dhcp
     - ospf.gw
   'anon1':
@@ -17,4 +17,3 @@ base:
   'server1':
     - lxc-containers.server1
     - switches
-    - ospf.gw
