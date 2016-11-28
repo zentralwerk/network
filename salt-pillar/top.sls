@@ -17,3 +17,4 @@ base:
   'server1':
     - lxc-containers.server1
     - switches
+    - cpe.aps

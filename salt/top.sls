@@ -5,6 +5,7 @@ base:
     - lxc-containers
     - ospf
     - switches
+    - cpe
   '*-gw':
     - no-ssh
     - forwarding
