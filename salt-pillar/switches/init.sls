@@ -47,6 +47,14 @@ switches:
           - GigabitEthernet 1/0/11
           - GigabitEthernet 1/0/12
           - GigabitEthernet 1/0/13
+      ap1:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/14
+        vlans:
+          - mgmt
+          - pub
+          - priv1
       switch-c1:
         mode: trunk
         ports:
