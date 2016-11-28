@@ -70,10 +70,10 @@ expect "(config)#"
 
 {%- set group = 0 %}
 {%- for name, conf in switch['ports'].items() %}
-{%- if conf['mode'] == 'trunk' || conf['mode'] == 'bond' %}
+{%- if conf['mode'] == 'trunk' or conf['mode'] == 'bond' %}
 send "interface range gigabitEthernet 1/0/{{ conf['ports'] }}\r"
 expect "(config-if-range)#"
-send "switchport mode {{ conf['mode'] }}\r"
+send "switchport mode trunk\r"
 expect "(config-if-range)#"
 {%- set group = group + 1 %}
 send "channel-group {{ group }} mode passive\r"
