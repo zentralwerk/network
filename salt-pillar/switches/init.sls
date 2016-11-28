@@ -9,7 +9,7 @@ switches:
     # 10GE hinten
     ports:
       switch-b2:
-        mode: trunk
+        mode: bond
         ports:
           - TenGigabitEthernet1/1/1
         vlans:
@@ -56,7 +56,7 @@ switches:
           - pub
           - priv1
       switch-c1:
-        mode: trunk
+        mode: bond
         ports:
           - GigabitEthernet1/0/29
           - GigabitEthernet1/0/30
@@ -91,7 +91,7 @@ switches:
           - iso15
           - iso16
       switch-d1:
-        mode: trunk
+        mode: bond
         ports:
           - GigabitEthernet1/0/33
           - GigabitEthernet1/0/34
@@ -102,7 +102,7 @@ switches:
           - pub
           - up1
       server1:
-        mode: trunk
+        mode: bond
         ports:
           - GigabitEthernet1/0/37
           - GigabitEthernet1/0/38
@@ -174,7 +174,7 @@ switches:
     # 10GE hinten
     ports:
       switch-b1:
-        mode: trunk
+        mode: bond
         ports:
           - TenGigabitEthernet1/1/1
         vlans:
@@ -232,7 +232,7 @@ switches:
     # Ports 21-24 unten seitlich (optional optisch)
     ports:
       switch-b1:
-        mode: trunk
+        mode: bond
         ports: 21-24
         vlans:
           - mgmt
@@ -335,7 +335,7 @@ switches:
     location: Turm D Keller
     ports:
       switch-b1:
-        mode: trunk
+        mode: bond
         ports: 1-4
         vlans:
           - mgmt

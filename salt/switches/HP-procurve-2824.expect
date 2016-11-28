@@ -59,13 +59,16 @@ expect "(config)# "
 
 {%- set group = 0 %}
 {%- for name, conf in switch['ports'].items() %}
-{%-   if conf['mode'] == 'trunk' %}
+{%-   if conf['mode'] == 'trunk' or conf['mode'] == 'bond' %}
 {%-   set group = group + 1 %}
 
-# send "no trunk {{ conf['ports'] }}\r"
-# expect "(config)# "
+{%- if conf['mode'] == 'bond' %}
 send "trunk {{ conf['ports'] }} trk{{ group }} lacp\r"
+{%- else %}
+send "no trunk {{ conf['ports'] }}\r"
+{%- endif %}
 expect "(config)# "
+
 {%-   for vlan_name in conf['vlans'] %}
 send "vlan {{ pillar['vlans'][vlan_name] }} tagged trk{{ group }}\r"
 expect "(config)# "
