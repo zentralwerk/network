@@ -37,6 +37,8 @@ containers:
         type: veth
       up1:
         type: phys
+        # Change (eg. auto-generation) requires reboot of the cable modem
+        hwaddr: 00:23:74:D7:2D:7C
 
   upstream2:
     interfaces:
