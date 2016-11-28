@@ -6,14 +6,6 @@
     - source: salt://bond-slaves
     - mode: 744
 
-{% for slave in bond_slaves %}
-{{ slave }}:
-  network.managed:
-    - enabled: True
-      type: slave
-      master: bond0
-{% endfor %}
-
 bond0:
   network.managed:
     - name: bond0
@@ -24,6 +16,7 @@ bond0:
       miimon: 100
       updelay: 1000
       downdelay: 1000
+      lacp_rate: 1
       xmit_hash_policy: layer3+4
       require:
         - file: /etc/network/if-up.d/bond-slaves
