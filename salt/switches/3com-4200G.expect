@@ -68,8 +68,6 @@ send "lacp enable\r"
 send "undo lacp enable\r"
 {%- endif %}
 expect "]"
-send "undo port link-aggregation group\r"
-expect "]"
 send "port link-aggregation group {{ group }}\r"
 expect "]"
 send "port link-type trunk\r"
@@ -88,6 +86,8 @@ expect "{{ hostname }}]"
 {%- elif conf['mode'] == 'access' %}
 {%- for port in conf['ports'] %}
 send "interface {{ port }}\r"
+expect "]"
+send "undo port link-aggregation group\r"
 expect "]"
 send "port link-type access\r"
 expect "]"

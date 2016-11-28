@@ -75,6 +75,10 @@ expect "(config)# "
 {%-   endfor %}
 
 {%- elif conf['mode'] == 'access' %}
+
+send "no trunk {{ conf['ports'] }}\r"
+expect "(config)# "
+
 send "vlan {{ pillar['vlans'][name] }} untagged {{ conf['ports'] }}\r"
 expect "(config)# "
 
