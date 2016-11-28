@@ -10,14 +10,15 @@ quagga:
   file.managed:
     - source: salt://ospf/{{ daemon }}.conf
     - template: 'jinja'
+    - require:
+      - pkg: quagga
 
 autostart-{{ daemon }}:
   service.enabled:
     - name: {{ daemon }}
-      require_in:
+      require:
         - file: /etc/systemd/system/{{ daemon }}.service
         - file: /etc/quagga/{{ daemon }}.conf
-        - file: /var/run/quagga
 
 start-{{ daemon }}:
   service.running:
@@ -28,10 +29,3 @@ start-{{ daemon }}:
         - file: /etc/quagga/{{ daemon }}.conf
 
 {%- endfor %}
-
-/var/run/quagga:
-  file.directory:
-    - user: quagga
-      group: quagga
-
-          
