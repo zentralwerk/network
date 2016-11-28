@@ -41,7 +41,7 @@ lxc.network.ipv4.gateway={{ pillar['hosts-inet'][net][gw] }}
 {%- endfor %}
 
 
-lxc.cap.drop = sys_module sys_time sys_nice sys_pacct sys_rawio sys_time
+lxc.cap.drop = sys_module sys_time sys_nice sys_pacct sys_rawio sys_time mknod
 
 lxc.cgroup.memory.limit_in_bytes = 512M
 lxc.cgroup.memory.kmem.tcp.limit_in_bytes = 128M
@@ -49,3 +49,4 @@ lxc.cgroup.memory.kmem.tcp.limit_in_bytes = 128M
 
 # tuntap
 lxc.cgroup.devices.allow = c 10:200 rw
+lxc.hook.autodev = /var/lib/lxc/autodev.sh

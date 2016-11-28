@@ -1,19 +1,6 @@
 openvpn:
   pkg.installed: []
 
-/dev/net:
-  file.directory:
-    - mode: 0755
-
-/dev/net/tun:
-  file.mknod:
-    - ntype: 'c'
-    - major: 10
-    - minor: 200
-    - mode: 0666
-    - require:
-      - file: /dev/net
-
 {%- for name, conf in pillar['openvpn'].items() %}
 
 hostroutes-{{ name }}:
@@ -56,8 +43,6 @@ autostart-{{ name }}:
         require_in:
           - file: /etc/openvpn/{{ name }}.conf
           - file: /etc/openvpn/{{ name }}.auth
-        require:
-          - file: /dev/net/tun
 
 start-{{ name }}:
   service.running:
@@ -68,7 +53,5 @@ start-{{ name }}:
         watch:
           - file: /etc/openvpn/{{ name }}.conf
           - file: /etc/openvpn/{{ name }}.auth
-        require:
-          - file: /dev/net/tun
       
 {%- endfor %}

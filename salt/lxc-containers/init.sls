@@ -1,6 +1,11 @@
 lxc:
   pkg.installed: []
 
+/var/lib/lxc/autodev.sh:
+  file.managed:
+    - source: salt://lxc-containers/autodev.sh
+      mode: 0755
+
 {%- set n = 0 %}
 {%- for id, container in pillar['containers'].items() %}
 
@@ -21,19 +26,6 @@ lxc:
         hwaddr_prefix: '0A:14:48:01:{{ n.__str__().rjust(2, '0') }}'
     - require:
         - cmd: /var/lib/lxc/{{ id }}
-
-/var/lib/lxc/{{ id }}/rootfs/dev/net:
-  file.directory:
-    - mode: 0755
-
-/var/lib/lxc/{{ id }}/rootfs/dev/net/tun:
-  file.mknod:
-    - ntype: 'c'
-    - major: 10
-    - minor: 200
-    - mode: 0666
-    - require:
-      - file: /var/lib/lxc/{{ id }}/rootfs/dev/net
 
 /var/lib/lxc/{{ id }}/rootfs/etc/hosts:
   file.managed:
