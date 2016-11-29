@@ -1,4 +1,4 @@
 upstream:
   interface: up1
   up-bandwidth: 6000
-  flow-keys: nfct-src,nfct-dst
+  flow-keys: nfct-src
