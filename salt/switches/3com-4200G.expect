@@ -78,6 +78,9 @@ expect "]"
 send "port trunk pvid vlan 4094\r"
 expect "]"
 {%- for vlan_name in conf['vlans'] %}
+# Deconfigure all but mgmt vlan
+send "undo port trunk permit vlan 2 to 4094\r"
+expect "]"
 send "port trunk permit vlan {{ pillar['vlans'][vlan_name] }}\r"
 expect "]"
 {%- endfor %}
