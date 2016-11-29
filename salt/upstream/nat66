@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ "$IFACE" = "{{ interface }}" ]; then
+   ip6tables -t nat -A POSTROUTING -o "$IFACE" -j MASQUERADE
+fi

@@ -15,9 +15,15 @@ base:
     - no-ssh
     - forwarding
     - ospf
+    - unbound
     - upstream.dhcp
     - upstream.shaping
-    - unbound
+  'upstream1':
+    - upstream.6to4
+    - upstream.nat66
+  'upstream2':
+    - upstream.6slac
+    - upstream.nat66
   'anon*':
     - no-ssh
     - forwarding
@@ -25,3 +31,4 @@ base:
     - vpn.openvpn
     - upstream.masquerade
     - upstream.shaping
+    - upstream.nat66

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+INET=$(ip addr show dev {{ interface }} | \
+    egrep -oe '[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+' | \
+    head -n 1)
+PREFIX=$(printf "2002:%02x%02x:%02x%02x:\n" $(echo $INET | tr . ' '))
+
+ip tunnel add 6to4 mode sit remote 192.88.99.1 local $INET
+ip addr add "${PREFIX}:1/128" dev 6to4
+ip link set 6to4 up
+ip route add 2000::/3 dev 6to4 via ::192.88.99.1

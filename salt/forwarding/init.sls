@@ -5,7 +5,7 @@ procps:
   file.managed:
     - source: "salt://forwarding/forwarding.conf"
 
-apply:
+apply-forwarding:
   cmd.run:
     - name: sysctl -p /etc/sysctl.d/80-forwarding.conf
       require:
