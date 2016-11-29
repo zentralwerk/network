@@ -16,13 +16,13 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR841N
     location: abhanden
-    access-ports: pub
+    lan-access: pub
     radios:
       'platform/qca953x_wmac':
         channel: 1
         htmode: HT40+
         ssids:
-          'Zentralwerk':
+          'ZW public':
             net: pub
           'C3D2 legacy':
             net: priv1
@@ -57,14 +57,15 @@ cpe:
       =Tlu+
       -----END PGP MESSAGE-----
 
-    model: TL-Archer-C7
+    model: TL-WDR4300  # TL-Archer-C7
     location: Netzbiotop Main
-    access-ports: priv1
+    lan-access: priv1
     radios:
       radio0:
         channel: 1
+        htmode: HT40+
         ssids:
-          'Zentralwerk':
+          'ZW public':
             net: pub
           'C3D2 legacy':
             net: priv1
@@ -82,9 +83,10 @@ cpe:
               =TEEI
               -----END PGP MESSAGE-----
       radio1:
-        channel: 130
+        channel: 36
+        htmode: HT40+
         ssids:
-          'Zentralwerk':
+          'ZW public':
             net: pub
           'C3D2':
             net: priv1
@@ -103,7 +105,6 @@ cpe:
               -----END PGP MESSAGE-----
 
   ap3:
-    firstboot: true
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -118,14 +119,15 @@ cpe:
       =kpf2
       -----END PGP MESSAGE-----
 
-    model: TL-WR1043ND
+    model: TL-WDR4300
     location: weg
-    access-ports: priv1
+    lan-access: priv1
     radios:
-      radio0:
-        channel: 1
+      'platform/ar934x_wmac':
+        channel: 6
+        htmode: HT40+
         ssids:
-          'Zentralwerk':
+          'ZW public':
             net: pub
           'C3D2 legacy':
             net: priv1
@@ -142,10 +144,11 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
-      radio1:
-        channel: 130
+      'pci0000:00/0000:00:00.0':
+        channel: 36
+        htmode: HT40+
         ssids:
-          'Zentralwerk':
+          'ZW public':
             net: pub
           'C3D2':
             net: priv1
