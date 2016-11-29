@@ -33,7 +33,7 @@ expect "{{ hostname }}]"
 {%- for name, vlan in pillar['vlans'].items() %}
 send "vlan {{ vlan }}\r"
 expect -- "-vlan{{ vlan }}]"
-send "description {{ name }}\r"
+send "name {{ name }}\r"
 expect -- "-vlan{{ vlan }}]"
 
 {%-   if name == 'mgmt' %}
