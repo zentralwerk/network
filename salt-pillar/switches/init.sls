@@ -55,6 +55,14 @@ switches:
           - mgmt
           - pub
           - priv1
+      ap3:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/15
+        vlans:
+          - mgmt
+          - pub
+          - priv1
       switch-c1:
         mode: bond
         ports:
