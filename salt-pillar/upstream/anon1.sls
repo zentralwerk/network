@@ -1,4 +1,5 @@
 upstream:
   interface: ipredator
-  up-bandwidth: 2000
+  up-bandwidth: 4000
   flow-keys: nfct-src
+  flows: 4096
