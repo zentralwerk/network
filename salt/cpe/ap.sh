@@ -27,43 +27,6 @@ delete network.wan6
 delete wireless.default_radio0
 delete wireless.default_radio1
 
-{%- if conf['model'] == 'TL-WDR4300' %}
-# These models have a shared Ethernet chip for LAN/WAN and therefore
-# need switching
-set network.@switch[0]=switch
-set network.@switch[0].reset=1
-set network.@switch[0].enable=1
-set network.@switch[0].enable_vlan=1
-set network.@switch[0].name=switch0
-set network.@switch_vlan[0]=switch_vlan
-set network.@switch_vlan[0].device='switch0'
-set network.@switch_vlan[0].vlan='1'
-set network.@switch_vlan[0].ports='0t 2 3 4 5'
-set network.@switch_vlan[0].comment='LAN ports'
-set network.@switch_vlan[1]=switch_vlan
-set network.@switch_vlan[1].device='switch0'
-set network.@switch_vlan[1].vlan='2'
-set network.@switch_vlan[1].ports='0t 1'
-set network.@switch_vlan[1].comment='WAN port'
-{%- set lan_port = 'eth0.1' %}
-{%- set wan_port = 'eth0.2' %}
-
-{%- else %}
-# All other models may have separate Ethernet chips for LAN/WAN
-set network.@switch[0].reset=1
-set network.@switch[0].enable=1
-set network.@switch[0].enable_vlan=0
-{%- set lan_port = 'eth0' %}
-{%- set wan_port = 'eth1' %}
-
-{%- endif %}
-
-set network.mgmt=interface
-set network.mgmt.ifname={{ wan_port }}.1
-set network.mgmt.proto=static
-set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
-set network.mgmt.netmask=255.255.255.0
-
 {%- set bridges = {} %}
 {%- if conf.get('lan-access') %}
 {%-   do bridges.__setitem__(conf['lan-access'], True) %}
@@ -74,17 +37,73 @@ set network.mgmt.netmask=255.255.255.0
 {%-   endfor %}
 {%- endfor %}
 
+{%- if conf['model'] == 'TL-WDR4300' %}
+{# These models have a shared Ethernet chip for LAN/WAN and therefore need switching #}
+set network.@switch[0]=switch
+set network.@switch[0].reset=1
+set network.@switch[0].enable=1
+set network.@switch[0].enable_vlan=1
+set network.@switch[0].name=switch0
+set network.@switch_vlan[0]=switch_vlan
+set network.@switch_vlan[0].device='switch0'
+set network.@switch_vlan[0].vlan='1'
+set network.@switch_vlan[0].ports='0t 1t'
+set network.@switch_vlan[0].comment='mgmt'
+{%    set switchnum = 1 %}
+{%-   for net in bridges.keys() %}
+set network.@switch_vlan[{{ switchnum }}]=switch_vlan
+set network.@switch_vlan[{{ switchnum }}].device='switch0'
+set network.@switch_vlan[{{ switchnum }}].vlan='{{ pillar['vlans'][net] }}'
+{%-     if conf.get('lan-access') == net %}
+set network.@switch_vlan[{{ switchnum }}].ports='0t 1t 2 3 4 5'
+{%-     else %}
+set network.@switch_vlan[{{ switchnum }}].ports='0t 1t'
+{%-     endif %}
+set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
+{%    set switchnum = switchnum + 1 %}
+{%- endfor %}
+
+set network.mgmt=interface
+set network.mgmt.ifname=eth0.1
+set network.mgmt.proto=static
+set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
+set network.mgmt.netmask=255.255.255.0
+
 {%- for net in bridges.keys() %}
+set network.{{ net }}=interface
+set network.{{ net }}.type=bridge
+set network.{{ net }}.proto=static
+set network.{{ net }}.ifname='eth0.{{ pillar['vlans'][net] }}'
+{%- endfor %}
+
+{%- else %}
+{# All other models may have separate Ethernet chips for LAN/WAN #}
+set network.@switch[0].reset=1
+set network.@switch[0].enable=1
+set network.@switch[0].enable_vlan=0
+
+set network.mgmt=interface
+set network.mgmt.ifname=eth1.1
+set network.mgmt.proto=static
+set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
+set network.mgmt.netmask=255.255.255.0
+
+{%-   for net in bridges.keys() %}
 
 set network.{{ net }}=interface
 set network.{{ net }}.type=bridge
 set network.{{ net }}.proto=static
-{%- set ports = [wan_port ~ '.' ~ pillar['vlans'][net]] %}
-{%- if conf.get('lan-access') == net %}
-{%-   do ports.append(lan_port) %}
-{%- endif %}
+{# Add WAN VLAN to bridge #}
+{%-     set ports = ['eth1.' ~ pillar['vlans'][net]] %}
+{# Add LAN ports to bridge #}
+{%-     if conf.get('lan-access') == net %}
+{%-       do ports.append('eth0') %}
+{%-     endif %}
+
 set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
-{%- endfor %}
+{%-   endfor %}
+
+{%- endif %}
 
 {%- set radionum = 0 %}
 {%- set ifnum = 0 %}
