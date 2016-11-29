@@ -31,18 +31,16 @@ send "quit\r"
 expect "{{ hostname }}]"
 
 {%- for name, vlan in pillar['vlans'].items() %}
-{%-   if name == 'mgmt' %}
 send "vlan {{ vlan }}\r"
 expect -- "-vlan{{ vlan }}]"
 send "description {{ name }}\r"
 expect -- "-vlan{{ vlan }}]"
-send "quit\r"
-expect "{{ hostname }}]"
 
+{%-   if name == 'mgmt' %}
 {# Actually only used for mgmt_vlan, switches are not routers #}
 send "interface Vlan-interface {{ vlan }}\r"
 expect "]"
-send "description {{ name }}\r"
+send "name {{ name }}\r"
 expect "]"
 {%-     set net_hosts = pillar['hosts-inet'].get(name) %}
 {%-     set ipaddr = net_hosts and net_hosts.get(hostname) %}
@@ -50,9 +48,9 @@ expect "]"
 send "ip address {{ ipaddr }} {{ netmasks[pillar['subnets-inet'][name].split('/')[1]] }}\r"
 expect "]"
 {%-     endif %}
+{%-   endif %}
 send "quit\r"
 expect "{{ hostname }}]"
-{%-   endif %}
 {%- endfor %}
 
 {%- set group = 0 %}
@@ -68,7 +66,11 @@ send "lacp enable\r"
 send "undo lacp enable\r"
 {%- endif %}
 expect "]"
+{%- if conf['mode'] == 'bond' %}
 send "port link-aggregation group {{ group }}\r"
+{%- else %}
+send "undo port link-aggregation group\r"
+{%- endif %}
 expect "]"
 send "port link-type trunk\r"
 expect "]"
