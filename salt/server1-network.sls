@@ -52,7 +52,7 @@ br-{{ net }}:
       netmask: {{ netmasks[prefix_len] }}
 {%- if net == 'core' %}
       gateway: {{ pillar['hosts-inet']['core']['upstream1'] }}
-      dns-nameservers: gateway: {{ pillar['hosts-inet']['core']['upstream1'] }} {{ pillar['hosts-inet']['core']['upstream2'] }}
+      dns-nameservers: "{{ pillar['hosts-inet']['core']['upstream1'] }} {{ pillar['hosts-inet']['core']['upstream2'] }}"
 {%- endif %}
 {%- else %}
       proto: manual
