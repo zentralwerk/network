@@ -1,10 +1,15 @@
 {%- import_yaml "netmasks.yaml" as netmasks -%}
 {% set bond_slaves = ['eno1', 'eno2', 'eno3', 'eno4'] %}
 
+/etc/modules-load.d/server1.conf:
+  file.managed:
+    - source: salt://modules.conf
+    - mode: 644
+
 /etc/network/if-up.d/bond-slaves:
   file.managed:
     - source: salt://bond-slaves
-    - mode: 744
+    - mode: 755
 
 bond0:
   network.managed:
