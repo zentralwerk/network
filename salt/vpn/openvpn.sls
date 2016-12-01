@@ -36,6 +36,16 @@ hostroutes-{{ name }}:
         name: {{ name }}
     - mode: 755
 
+/etc/systemd/system/openvpn@{{ name }}.service.d:
+  file.directory:
+    - user: root
+
+/etc/systemd/system/openvpn@{{ name }}.service.d/restart.conf:
+  file.managed:
+    - source: salt://vpn/systemd-restart.conf
+    - mode: 644
+    - require:
+      - file: /etc/systemd/system/openvpn@{{ name }}.service.d
 
 autostart-{{ name }}:
   service.enabled:
