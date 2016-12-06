@@ -56,7 +56,6 @@ expect "{{ hostname }}]"
 {%- set group = 0 %}
 {%- for name, conf in switch['ports'].items() %}
 {%- if conf['mode'] == 'trunk' or conf['mode'] == 'bond' %}
-{%- set group = group + 1 %}
 {%- for port in conf['ports'] %}
 send "interface {{ port }}\r"
 expect "]"
@@ -67,6 +66,7 @@ send "undo lacp enable\r"
 {%- endif %}
 expect "]"
 {%- if conf['mode'] == 'bond' %}
+{%-   set group = group + 1 %}
 send "port link-aggregation group {{ group }}\r"
 {%- else %}
 send "undo port link-aggregation group\r"
