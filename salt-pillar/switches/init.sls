@@ -124,6 +124,8 @@ switches:
           - GigabitEthernet1/0/38
           - GigabitEthernet1/0/39
           - GigabitEthernet1/0/40
+          - GigabitEthernet1/0/41
+          - GigabitEthernet1/0/42
         vlans:
           - mgmt
           - pub
@@ -153,12 +155,13 @@ switches:
           - priv14
           - priv15
           - priv16
+      up1:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/43
       priv1:
         mode: access
         ports:
-          - GigabitEthernet 1/0/41
-          - GigabitEthernet 1/0/42
-          - GigabitEthernet 1/0/43
           - GigabitEthernet 1/0/44
       priv2:
         mode: access
