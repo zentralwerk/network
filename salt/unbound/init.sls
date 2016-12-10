@@ -16,3 +16,7 @@ dns-root-data:
 /etc/unbound/unbound.conf.d/root.conf:
   file.managed:
     - source: salt://unbound/root.conf
+
+/etc/unbound/unbound.conf.d/verbose.conf:
+  file.managed:
+    - source: salt://unbound/verbose.conf
