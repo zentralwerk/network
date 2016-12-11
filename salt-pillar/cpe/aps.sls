@@ -57,13 +57,13 @@ cpe:
       =Tlu+
       -----END PGP MESSAGE-----
 
-    model: TL-WDR4300  # TL-Archer-C7
+    model: TL-Archer-C7v2
     location: Netzbiotop Main
     lan-access: priv1
     radios:
-      radio0:
-        channel: 1
-        htmode: HT40+
+      'platform/qca955x_wmac':
+        channel: 11
+        htmode: HT40-
         ssids:
           'ZW public':
             net: pub
@@ -82,9 +82,9 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
-      radio1:
+      'pci0000:01/0000:01:00.0':
         channel: 36
-        htmode: HT40+
+        htmode: VHT80
         ssids:
           'ZW public':
             net: pub

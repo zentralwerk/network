@@ -120,6 +120,50 @@ set network.{{ net }}.ifname='eth0.{{ pillar['vlans'][net] }}'
 {%-   endif %}
 {%- endfor %}
 
+{%- elif conf['model'] == 'TL-Archer-C7v2' %}
+{# These models have a shared Ethernet chip with separate CPU ports for LAN/WAN and therefore need switching #}
+set network.@switch[0]=switch
+set network.@switch[0].reset=1
+set network.@switch[0].enable=1
+set network.@switch[0].enable_vlan=1
+set network.@switch[0].name=switch0
+set network.@switch_vlan[0]=switch_vlan
+set network.@switch_vlan[0].device='switch0'
+set network.@switch_vlan[0].vlan='1'
+set network.@switch_vlan[0].ports='1t 6t'
+set network.@switch_vlan[0].comment='mgmt'
+{%    set switchnum = 1 %}
+{%-   for net in bridges.keys() %}
+set network.@switch_vlan[{{ switchnum }}]=switch_vlan
+set network.@switch_vlan[{{ switchnum }}].device='switch0'
+set network.@switch_vlan[{{ switchnum }}].vlan='{{ pillar['vlans'][net] }}'
+# 0: eth1; 1: WAN port; 2-5: LAN ports; 6: eth0
+{%-     if conf.get('lan-access') == net %}
+set network.@switch_vlan[{{ switchnum }}].ports='0 1t 2 3 4 5'
+{%-     else %}
+set network.@switch_vlan[{{ switchnum }}].ports='1t 6t'
+{%-     endif %}
+set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
+{%    set switchnum = switchnum + 1 %}
+{%- endfor %}
+
+set network.mgmt=interface
+set network.mgmt.ifname=eth0.1
+set network.mgmt.proto=static
+set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
+set network.mgmt.netmask=255.255.255.0
+
+{%- for net in bridges.keys() %}
+set network.{{ net }}=interface
+set network.{{ net }}.type=bridge
+set network.{{ net }}.proto=static
+{%-   if conf.get('lan-access') == net %}
+set network.{{ net }}.ifname='eth1'
+{%-     else %}
+set network.{{ net }}.ifname='eth0.{{ pillar['vlans'][net] }}'
+{%-   endif %}
+{%- endfor %}
+
 {%- else %}
 {# All other models may have separate Ethernet chips for LAN/WAN #}
 set network.@switch[0].reset=1
