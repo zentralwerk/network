@@ -228,10 +228,38 @@ set wireless.wifi{{ ifnum }}.encryption=none
 commit
 __UCI__
 
+# Cronjob that makes sure WiFi is only visible when server with all
+# the gateways is reachable
+WIFI_ON_LINK=/usr/sbin/wifi-on-link.sh
+cat >/etc/crontabs/root <<__CRON__
+* * * * *	$WIFI_ON_LINK
+__CRON__
+cat >$WIFI_ON_LINK <<__SH__
+#!/bin/sh
+
+if (ping -c 1 -W 3 {{ pillar['hosts-inet']['mgmt']['server1'] }}) ; then
+        REACHABLE=y
+else
+        REACHABLE=n
+fi
+
+if [ "\$(cat /sys/class/net/wlan0/operstate)" == "up" ] ; then
+        UP=y
+else
+        UP=n
+fi
+
+[ \$REACHABLE = y ] && [ \$UP = n ] && wifi up
+[ \$REACHABLE = n ] && [ \$UP = y ] && wifi down
+
+exit 0
+__SH__
+chmod a+rx $WIFI_ON_LINK
+
 # TODO: install pkgs (collectd...)
 
 {%- if conf.get('firstboot') %}
-reboot
+reboot /usr/sbin/wifi-on-link.sh
 {%- endif %}
 
 __SSH__
