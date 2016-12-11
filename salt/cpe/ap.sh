@@ -1,13 +1,13 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
 
 {%- if conf.get('firstboot') %}
 ssh-keygen -R 192.168.1.1
 
 ssh root@192.168.1.1 \
-    "ash -e" <<__SSH__
+    "ash -e -x" <<__SSH__
 {%- else %}
 ssh root@{{ pillar['hosts-inet']['mgmt'][hostname] }} \
-    "ash -e" <<__SSH__
+    "ash -e -x" <<__SSH__
 {%- endif %}
 
 # Set root password
@@ -231,11 +231,10 @@ __UCI__
 
 # Cronjob that makes sure WiFi is only visible when server with all
 # the gateways is reachable
-WIFI_ON_LINK=/usr/sbin/wifi-on-link.sh
 cat >/etc/crontabs/root <<__CRON__
-* * * * *	$WIFI_ON_LINK
+* * * * *	/usr/sbin/wifi-on-link.sh
 __CRON__
-cat >$WIFI_ON_LINK <<__SH__
+cat >/usr/sbin/wifi-on-link.sh <<__SH__
 #!/bin/sh
 
 if (ping -c 1 -W 3 {{ pillar['hosts-inet']['mgmt']['server1'] }}) ; then
@@ -244,18 +243,19 @@ else
         REACHABLE=n
 fi
 
-if [ "\$(cat /sys/class/net/wlan0/operstate)" == "up" ] ; then
+if [ "\\\$(cat /sys/class/net/wlan0/operstate)" == "up" ] ; then
         UP=y
 else
         UP=n
 fi
 
-[ \$REACHABLE = y ] && [ \$UP = n ] && wifi up
-[ \$REACHABLE = n ] && [ \$UP = y ] && wifi down
+[ \\\$REACHABLE = y ] && [ \\\$UP = n ] && wifi up
+[ \\\$REACHABLE = n ] && [ \\\$UP = y ] && wifi down
 
 exit 0
 __SH__
-chmod a+rx $WIFI_ON_LINK
+chmod a+rx /usr/sbin/wifi-on-link.sh
+/etc/init.d/cron restart
 
 # TODO: install pkgs (collectd...)
 
