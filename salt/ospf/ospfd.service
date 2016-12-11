@@ -3,8 +3,8 @@ Requires = zebra.service
 After = network.target
 
 [Service]
-ExecStartPre=-/usr/bin/mkdir /var/run/quagga
-ExecStartPre=/usr/bin/chown -R quagga:quagga /var/run/quagga/
+ExecStartPre=mkdir /var/run/quagga
+ExecStartPre=chown -R quagga:quagga /var/run/quagga/
 ExecStart = /usr/lib/quagga/ospfd
 
 [Install]
