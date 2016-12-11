@@ -42,7 +42,6 @@ cpe:
 
 
   ap2:
-    firstboot: true
     password: |
       -----BEGIN PGP MESSAGE-----
       
