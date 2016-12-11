@@ -198,6 +198,7 @@ set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
 {%- for path, radio in conf['radios'].items() %}
 set wireless.radio{{ radionum }}=wifi-device
 set wireless.radio{{ radionum }}.type=mac80211
+set wireless.radio{{ radionum }}.country=DE
 set wireless.radio{{ radionum }}.channel={{ radio['channel'] }}
 set wireless.radio{{ radionum }}.path={{ path }}
 set wireless.radio{{ radionum }}.hwmode={{ radio.get('hwmode') or '11n' }}

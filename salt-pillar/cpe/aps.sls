@@ -15,7 +15,7 @@ cpe:
       =QPF0
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: abhanden
+    location: In stock
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
@@ -58,12 +58,12 @@ cpe:
       -----END PGP MESSAGE-----
 
     model: TL-Archer-C7v2
-    location: Netzbiotop Main
+    location: C3D2 Main
     lan-access: priv1
     radios:
       'platform/qca955x_wmac':
-        channel: 11
-        htmode: HT40-
+        channel: 1
+        htmode: HT40+
         ssids:
           'ZW public':
             net: pub
@@ -120,12 +120,12 @@ cpe:
       -----END PGP MESSAGE-----
 
     model: TL-WDR4300
-    location: weg
+    location: C3D2 Kammer
     lan-access: priv1
     radios:
       'platform/ar934x_wmac':
-        channel: 6
-        htmode: HT40+
+        channel: 13
+        htmode: HT40-
         ssids:
           'ZW public':
             net: pub
@@ -145,7 +145,7 @@ cpe:
               =TEEI
               -----END PGP MESSAGE-----
       'pci0000:00/0000:00:00.0':
-        channel: 36
+        channel: 149
         htmode: HT40+
         ssids:
           'ZW public':
@@ -181,7 +181,7 @@ cpe:
       =JLKE
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
-    location: abhanden
+    location: In stock
     lan-access: priv1
     radios:
       'platform/qca955x_wmac':
@@ -221,7 +221,7 @@ cpe:
       =JLKE
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
-    location: abhanden
+    location: In stock
     lan-access: priv1
     radios:
       'platform/qca955x_wmac':
