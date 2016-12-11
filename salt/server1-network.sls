@@ -37,12 +37,8 @@ bond0.{{ vlan }}:
         - network: bond0
 {% endfor %}
 
-{%- set nets = ['mgmt', 'core', 'serv', 'pub'] %}
-{%- for i in range(1, 9) %}
-{%-   set nets_ = nets.append('priv' ~ i) %}
-{%-   set nets_ = nets.append('up' ~ i) %}
-{%- endfor %}
-{%- for net in nets %}
+{%- set bridge_nets = ['mgmt', 'core', 'serv', 'pub'] %}
+{%- for net in bridge_nets %}
 {%- set vlan = pillar['vlans'][net] %}
 br-{{ net }}:
   network.managed:
@@ -69,4 +65,3 @@ br-{{ net }}:
       require:
         - network: bond0.{{ vlan}}
 {%- endfor %}
-    
