@@ -6,11 +6,15 @@ base:
     - ospf
     - switches
     - cpe
-  '*-gw':
+  'priv*-gw':
     - no-ssh
     - forwarding
     - ospf
     - dhcp
+  'c3d2-gw or c3d2-anon':
+    - no-ssh
+    - forwarding
+    - ospf
   'upstream*':
     - no-ssh
     - forwarding

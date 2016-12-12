@@ -51,3 +51,19 @@ containers:
     interfaces:
       core:
         type: veth
+
+  c3d2-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: upstream1
+      c3d2:
+        type: veth
+
+  c3d2-anon:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+      c3d2:
+        type: veth

@@ -4,8 +4,10 @@ base:
     - subnets
     - vlans
     - ospf
-  '*-gw':
+  'priv*-gw':
     - dhcp
+    - ospf.gw
+  'c3d2-gw or c3d2-anon':
     - ospf.gw
   'anon1':
     - vpn.anon1

@@ -58,22 +58,23 @@ expect "{{ hostname }}]"
 {%-   if conf['mode'] == 'trunk' or conf['mode'] == 'bond' %}
 {%-     if conf['mode'] == 'bond' %}
 {%-       set group = group + 1 %}
-{%-   endif %}
-{%-   for port in conf['ports'] %}
+{%-     endif %}
+{%-     for port in conf['ports'] %}
 send "interface {{ port }}\r"
 expect "]"
-{%-     if conf['mode'] == 'bond' %}
+{%-       if conf['mode'] == 'bond' %}
 send "lacp enable\r"
-{%-     else %}
+{%-       else %}
 send "undo lacp enable\r"
-{%-     endif %}
+{%-       endif %}
 expect "]"
-{%-     if conf['mode'] == 'bond' %}
+{%-       if conf['mode'] == 'bond' %}
 send "port link-aggregation group {{ group }}\r"
-{%-     else %}
+{%-       else %}
 send "undo port link-aggregation group\r"
-{%-     endif %}
+{%-       endif %}
 expect "]"
+{%-       if conf.get('vlans') %}
 send "port link-type trunk\r"
 expect "]"
 # Set dummy default vlan
@@ -82,16 +83,22 @@ expect "]"
 # Deconfigure all but mgmt vlan
 send "undo port trunk permit vlan 2 to 4094\r"
 expect "]"
-{%- for vlan_name in conf['vlans'] %}
+{%-         for vlan_name in conf['vlans'] %}
 send "port trunk permit vlan {{ pillar['vlans'][vlan_name] }}\r"
 expect "]"
-{%- endfor %}
+{%-         endfor %}
+{%-       else %}
+send "port link-type access\r"
+expect "]"
+send "port access vlan {{ pillar['vlans'][conf['access']] }}\r"
+expect "]"
+{%-       endif %}
 send "quit\r"
 expect "{{ hostname }}]"
-{%- endfor %}
+{%-     endfor %}
 
-{%- elif conf['mode'] == 'access' %}
-{%- for port in conf['ports'] %}
+{%-   elif conf['mode'] == 'access' %}
+{%-     for port in conf['ports'] %}
 send "interface {{ port }}\r"
 expect "]"
 send "undo port link-aggregation group\r"
@@ -99,11 +106,12 @@ expect "]"
 send "port link-type access\r"
 expect "]"
 send "port access vlan {{ pillar['vlans'][name] }}\r"
+expect "]"
 send "quit\r"
 expect "{{ hostname }}]"
-{%- endfor %}
+{%-     endfor %}
 
-{%- endif %}
+{%-   endif %}
 {%- endfor %}
 
 send "save main\r"

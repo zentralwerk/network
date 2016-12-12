@@ -47,13 +47,15 @@ switches:
           - GigabitEthernet 1/0/11
           - GigabitEthernet 1/0/12
           - GigabitEthernet 1/0/13
-      ap1:
+      ap2:
         mode: trunk
         ports:
           - GigabitEthernet 1/0/14
         vlans:
           - mgmt
           - pub
+          - c3d2
+          # obsolete:
           - priv1
       ap3:
         mode: trunk
@@ -62,6 +64,8 @@ switches:
         vlans:
           - mgmt
           - pub
+          - c3d2
+          # obsolete:
           - priv1
       ap4:
         mode: trunk
@@ -155,21 +159,18 @@ switches:
           - priv14
           - priv15
           - priv16
-      up1:
-        mode: access
+      c3d2-flatbert:
+        mode: bond
         ports:
-          - GigabitEthernet 1/0/43
-      priv1:
-        mode: access
+          - GigabitEthernet1/0/43
+          - GigabitEthernet1/0/44
+        access: c3d2
+      c3d2-storage:
+        mode: bond
         ports:
-          - GigabitEthernet 1/0/44
-      priv2:
-        mode: access
-        ports:
-          - GigabitEthernet 1/0/45
-          - GigabitEthernet 1/0/46
-          - GigabitEthernet 1/0/47
-          - GigabitEthernet 1/0/48
+          - GigabitEthernet1/0/45
+          - GigabitEthernet1/0/46
+        access: c3d2
     password: |
       -----BEGIN PGP MESSAGE-----
 

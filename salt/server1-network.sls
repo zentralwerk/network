@@ -37,7 +37,7 @@ bond0.{{ vlan }}:
         - network: bond0
 {% endfor %}
 
-{%- set bridge_nets = ['mgmt', 'core', 'serv', 'pub'] %}
+{%- set bridge_nets = ['mgmt', 'core', 'serv', 'pub', 'c3d2'] %}
 {%- for net in bridge_nets %}
 {%- set vlan = pillar['vlans'][net] %}
 br-{{ net }}:
