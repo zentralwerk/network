@@ -1,8 +1,15 @@
 vlans:
+  # switches and CPE only have IP addresses configured in the management vlan
   mgmt: 1
+  # routers, OSPF area 0
   core: 2
+  # servers...
   serv: 3
+  # ZW public
   pub: 4
+  # C3D2 home network
+  c3d2: 5
+  # Modems
   up1: 10
   up2: 11
   up3: 12
@@ -11,6 +18,7 @@ vlans:
   up6: 15
   up7: 16
   up8: 17
+  # Neighbor subnets
   priv1: 40
   priv2: 41
   priv3: 42
@@ -27,6 +35,7 @@ vlans:
   priv14: 53
   priv15: 54
   priv16: 55
+  # Isolated neighbors directly connection with their modems
   iso1: 101
   iso2: 102
   iso3: 103
