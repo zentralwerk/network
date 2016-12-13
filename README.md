@@ -13,8 +13,8 @@ Lies das: [Hallo, neuer Nachbar!](doc/hello.md)
 * [Planung der IP-Adressbereiche](subnets.md)
 * [Kontaktdaten der Nutzer](contact.md.gpg), verschlüsselt
 * Dokumentation
-  * [Hallo, neuer Nutzer!](doc/hello.md)
-  * [Einrichtung einer Testumgebung für neue Nutzer](doc/test-environment.md)
+  * [WiFi-Provisionierung](doc/wifi-provisioning.md)
+  * [Einrichtung einer Testumgebung für Entwickler](doc/test-environment.md)
 * Unterverzeichnis [salt/](salt): Skripte (*salt states*) zum Aufbau des zentralen Services
 * Unterverzeichnis [salt-pillar/](salt-pillar) enthält individuelle Konfigurationsdaten
   * **vlans** bildet Netznamen auf VLAN-IDs ab
