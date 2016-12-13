@@ -1,33 +1,34 @@
-Willkommen bei der Datenvernetzung im Zentralwerk!
+Willkommen zur (groben) Vorstellung der Gegebenheiten und Möglichkeiten vom Netzwerk im [Zentralwerk](http://zentralwerk.de).
 
-## Unsere Ziele
+## Projekt
 
-* Internet-Grundversorgung
-* Öffentlich zugängliches Gäste-WLAN
-* Datenverkehr zwischen Nachbarn ermöglichen und fördern (kein NAT, sondern Ende-zu-Ende-Erreichbarkeit)
-* Teilen von Internetanschlüssen zwischen Nachbarn
-* Geschwindigkeit (Latenz und Bandbreite)
-* Lokale Dienste mit 1000 Mbit/s anbieten
+Als Zentralwerk betreiben wir gemeinsam das Netzwerk in unserem Haus. Es gibt eine Gruppe von Menschen im Zentralwerk, die das Netzwerk aufbaut und verwaltet. Maßgeblich findet das Engagement beim [C3D2](https://c3d2.de/) - als eine der Gruppen im Zentralwerk - statt. Menschen, die sich gern zum Betreiben des Netzewrkes mit einbringen möchten, sind selbstverständlich willkommen.
 
-## Du hast eine Datendose im Raum
+**Ziele**
 
-Sie ist der Anschluß und damit Voraussetzung.
+* Zugang zum Internet
+* gute Abdeckung mit WLAN, wo WLAN verfügar sein soll
+* barrierearmer Zugang zum Netzwerk (mit Zugang zum Internet)
+ * etwa öffentliches WLAN (freier Zugang ohne die Notwendigkeit von Anmeldedaten)
+ * etwa kein Aufwändiges Konfigurieren von Geräten
+* Möglichkeit zum Datenaustausch zwischen einzelnen Anschlüssen im Haus
+ * Ende-zu-Ende-Erreichbarkeit (nicht NAT)
+* gemeinschaftliches Nutzen von Anschüsseln ans Internet
+* gute Geschwindigkeit (etwa hinsichtlich Latenz und Bandbreite)
+* Anbieten von gemeinsamen lokale Diensten
+ * mit 1000 Mbit/s
+
+## Anschluss
+
+Alle Räume im Haus sollten bis zu einer Datendose im Raum angebunden sein, die Voraussetzung für einen Anschluss ans Netzwerk ist.
 
 ![Datendose mit zwei RJ45-Anschlüssen](https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/UAE_AP_geschlossen.JPG/240px-UAE_AP_geschlossen.JPG)
 
-Wir können darüber erstmal das Gästenetz anbieten. Daran kannst du
-einen PC, einen Router oder ein Switch anschliessen. Sag uns die
-Nummer die auf der Dose steht!
+Grundsätzlich erscheinen bisher folgende Fälle vorstellbar.
 
-Wir können dir auch ein eigenes Subnetz auf die Dose legen. Dadurch
-wird etwas Abtrennung von Gästenetz erreicht, wobei Geräte über
-IP-Adressen weiterhin miteinander kommunizieren können.
-
-Mit deinem eigenen Netz kannst du auf Wunsch auch eine Firewall haben,
-welche eingehende Verbindungen verbietet. Wenn du keine Serverdienste
-für deine Nachbarn betreiben möchtest, wären deine Computer damit so
-abgeschottet wie hinter einem gewöhnlichen Internetzugang.
-
+1. Pauschal kann erst einmal zu jedem Raum das (allgemeine) gemeinschaftliche Netz angeschlossen werden. Daran können dann einzelne Rechner, ein Router oder ein Switch angeschlossen werden. Hierfür braucht nur einfach - mit Benennung des Raumes - Bescheid gegeben werden.
+1. Es kann dem Anschluss auch ein eigenes Netz zugeordnet werden. Mit einem solchen eigenen Netz wäre dann ein bewusstes Abtrennen vom allgemeinen Netz möglich. Ein Kommunizieren mit den Geräten im allgemeinen Netz ist weiterhin möglich.
+1. Bei einem eigenen Netz für den Anschluss kann auch das pauschale oder gezielte Abschotten von Verbindungen mit dem Netzwerk (eine Firewall) eingerichtet werden. Das ist der Fall, wenn du keine Dienste mit Anderen im Haus betreiben oder nutzen willst. Der Anschluss vom Computer wäre dann so isoliert, wie wenn er allein an einem alleinigen Zugang zum Internet angebunden wäre.
 
 ## WLAN
 
