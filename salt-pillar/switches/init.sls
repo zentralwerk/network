@@ -15,6 +15,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - priv1
       mgmt:
         mode: access
         ports:
@@ -197,14 +198,18 @@ switches:
         vlans:
           - mgmt
           - pub
+          - priv1
       mgmt:
         mode: access
         ports:
           - GigabitEthernet1/0/1
-      pub:
+      priv1:
         mode: access
         ports:
           - GigabitEthernet 1/0/2
+      pub:
+        mode: access
+        ports:
           - GigabitEthernet 1/0/3
           - GigabitEthernet 1/0/4
           - GigabitEthernet 1/0/5

@@ -19,7 +19,7 @@ containers:
     interfaces:
       core:
         type: veth
-        gw: upstream1
+        gw: anon1
       priv1:
         type: phys
 
@@ -27,7 +27,7 @@ containers:
     interfaces:
       core:
         type: veth
-        gw: upstream2
+        gw: anon1
       priv2:
         type: phys
 
