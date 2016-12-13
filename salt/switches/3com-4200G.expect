@@ -69,7 +69,7 @@ send "undo lacp enable\r"
 {%-       endif %}
 expect "]"
 {%-       if conf['mode'] == 'bond' %}
-send "port link-aggregation group {{ group }}\r"
+send "undo port link-aggregation group\rport link-aggregation group {{ group }}\r"
 {%-       else %}
 send "undo port link-aggregation group\r"
 {%-       endif %}
