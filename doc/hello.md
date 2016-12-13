@@ -51,6 +51,22 @@ bestellen und konfigurieren wir ihn.
 ![TL-WR841N](https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/TP-Link_TL-WR841N-2920.jpg/240px-TP-Link_TL-WR841N-2920.jpg)
 
 
+### Alternative: Eigener alter WLAN-Router
+
+Selbstverständlich wollen wir nichts brauchbares wegwerfen. Zuerst
+würden wir uns das Gerät anschauen und uns für einen der folgenden
+Wege entscheiden:
+
+1. Entweder das Gerät wird von [OpenWRT](https://openwrt.org/)
+   oder [LEDE](https://lede-project.org/) unterstützt, dann können wir
+   das Gerät analog zu den obigen Modellen mit privatem und Gäste-WLAN
+   einrichten.
+   
+2. Alternativ versuchen wir einfach Kabelanschlüsse und WLAN direkt zu
+   verbinden. Damit könnten wir entweder Gästenetz oder dein privates
+   Netz auf WLAN und Kabelanschlüsse legen.
+
+
 ## Mehr Geschwindigkeit mit einem eigenen Internetanschluß
 
 Der Internetzugang des Gästenetzes wird zu Stoßzeiten intensiv genutzt
