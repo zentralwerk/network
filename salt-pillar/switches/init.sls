@@ -55,8 +55,6 @@ switches:
           - mgmt
           - pub
           - c3d2
-          # obsolete:
-          - priv1
       ap3:
         mode: trunk
         ports:
@@ -65,8 +63,6 @@ switches:
           - mgmt
           - pub
           - c3d2
-          # obsolete:
-          - priv1
       ap4:
         mode: trunk
         ports:
@@ -135,6 +131,7 @@ switches:
           - pub
           - core
           - serv
+          - c3d2
           - up1
           - up2
           - up3

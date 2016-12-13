@@ -58,7 +58,7 @@ cpe:
 
     model: TL-Archer-C7v2
     location: C3D2 Main
-    lan-access: priv1
+    lan-access: c3d2
     radios:
       'platform/qca955x_wmac':
         channel: 1
@@ -67,7 +67,7 @@ cpe:
           'ZW public':
             net: pub
           'C3D2 legacy':
-            net: priv1
+            net: c3d2
             psk: |
               -----BEGIN PGP MESSAGE-----
               
@@ -88,7 +88,7 @@ cpe:
           'ZW public':
             net: pub
           'C3D2':
-            net: priv1
+            net: c3d2
             psk: |
               -----BEGIN PGP MESSAGE-----
               
@@ -120,7 +120,7 @@ cpe:
 
     model: TL-WDR4300
     location: C3D2 Kammer
-    lan-access: priv1
+    lan-access: c3d2
     radios:
       'platform/ar934x_wmac':
         channel: 13
@@ -129,7 +129,7 @@ cpe:
           'ZW public':
             net: pub
           'C3D2 legacy':
-            net: priv1
+            net: c3d2
             psk: |
               -----BEGIN PGP MESSAGE-----
               
@@ -150,7 +150,7 @@ cpe:
           'ZW public':
             net: pub
           'C3D2':
-            net: priv1
+            net: c3d2
             psk: |
               -----BEGIN PGP MESSAGE-----
               
