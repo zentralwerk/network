@@ -44,10 +44,10 @@ hosts-inet:
     priv1-gw: 172.20.72.4
     priv2-gw: 172.20.72.5
     upstream1: 172.20.72.6
-    upstream2: 172.20.72.8 #address conflict
     anon1: 172.20.72.7
     c3d2-gw: 172.20.72.8
     c3d2-anon: 172.20.72.9
+    upstream2: 172.20.72.10
   pub:
     pub-gw: 172.20.76.1
   serv:
