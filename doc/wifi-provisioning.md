@@ -3,7 +3,7 @@
 1.  Kontaktdaten und Dosennummer in `contacts.md` vermerken
 2.  Nachbar will Privatnetz?
    
-   1. priv* allokieren
+   1. privX allokieren
    2. `privX-gw` in `salt-pillar/lxc-containers` anlegen
    3. `salt server1 state.apply lxc-containers`
    4. `salt-key -A`
