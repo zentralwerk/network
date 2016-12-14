@@ -20,6 +20,7 @@ switches:
         mode: access
         ports:
           - GigabitEthernet1/0/1
+#warum mehrere ports pro iso?
       iso1:
         mode: access
         ports:
@@ -30,18 +31,11 @@ switches:
       iso2:
         mode: access
         ports:
-          - GigabitEthernet 1/0/2
-          - GigabitEthernet 1/0/3
-          - GigabitEthernet 1/0/4
-          - GigabitEthernet 1/0/5
-      iso3:
-        mode: access
-        ports:
           - GigabitEthernet 1/0/6
           - GigabitEthernet 1/0/7
           - GigabitEthernet 1/0/8
           - GigabitEthernet 1/0/9
-      iso4:
+      iso3:
         mode: access
         ports:
           - GigabitEthernet 1/0/10
@@ -332,6 +326,7 @@ switches:
         mode: access
         ports: '20'
       # Schnelles Routing fuer Freifunk-Tunnel
+      # TODO name weil verwendung an anderer stelle
       priv2:
         mode: access
         ports: 13-15
