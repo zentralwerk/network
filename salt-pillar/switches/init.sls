@@ -16,6 +16,7 @@ switches:
           - mgmt
           - pub
           - priv1
+          #- priv2 notwendig? netzdiagramm
       mgmt:
         mode: access
         ports:
@@ -193,6 +194,7 @@ switches:
           - mgmt
           - pub
           - priv1
+          - priv2
       mgmt:
         mode: access
         ports:
@@ -201,10 +203,13 @@ switches:
         mode: access
         ports:
           - GigabitEthernet 1/0/2
-      pub:
+      priv2:
         mode: access
         ports:
           - GigabitEthernet 1/0/3
+      pub:
+        mode: access
+        ports:
           - GigabitEthernet 1/0/4
           - GigabitEthernet 1/0/5
           - GigabitEthernet 1/0/6
