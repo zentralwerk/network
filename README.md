@@ -18,7 +18,7 @@ Lies das: [Hallo, neuer Nachbar!](doc/hello.md)
 * Unterverzeichnis [salt/](salt): Skripte (*salt states*) zum Aufbau des zentralen Services
 * Unterverzeichnis [salt-pillar/](salt-pillar) enthält individuelle Konfigurationsdaten
   * **vlans** bildet Netznamen auf VLAN-IDs ab
-  * **subnets** enthält unsere IP-Netzplanung
+  * **subnets** und ../subnets.md enthält unsere IP-Netzplanung
   * **hosts** sind alle statisch konfigurierten IP-Adressen
   * **dhcp** enthält die zur Verfügung gestellten privaten Addressbereiche
   * **switches** dient zur Konfigurationserzeugung für alle Managed Switches
