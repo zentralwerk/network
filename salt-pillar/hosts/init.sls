@@ -37,6 +37,7 @@ hosts-inet:
     ap30: 10.0.0.70
     ap31: 10.0.0.71
     ap32: 10.0.0.72
+
   core:
     server1: 172.20.72.1
     serv-gw: 172.20.72.2
@@ -48,14 +49,60 @@ hosts-inet:
     c3d2-gw: 172.20.72.8
     c3d2-anon: 172.20.72.9
     upstream2: 172.20.72.10
+    upstream3: 172.20.72.11
+    upstream4: 172.20.72.12
+    priv3-gw: 172.20.72.13
+    priv4-gw: 172.20.72.14
+    priv5-gw: 172.20.72.15
+    priv6-gw: 172.20.72.16
+    priv7-gw: 172.20.72.17
+    priv8-gw: 172.20.72.18
+    priv9-gw: 172.20.72.19
+    priv10-gw: 172.20.72.20
+    priv11-gw: 172.20.72.21
+    priv12-gw: 172.20.72.22
+    priv13-gw: 172.20.72.23
+    priv14-gw: 172.20.72.24
+    priv15-gw: 172.20.72.25
+    priv16-gw: 172.20.72.26
+
   pub:
     pub-gw: 172.20.76.1
   serv:
     serv-gw: 172.20.73.1
   priv1:
     priv1-gw: 172.20.74.1
+  priv9:
+    priv9-gw: 172.20.74.33
+  priv5:
+    priv5-gw: 172.20.74.65
+  priv10:
+    priv10-gw: 172.20.74.97
+  priv3:
+    priv3-gw: 172.20.74.129
+  priv11:
+    priv11-gw: 172.20.74.161
+  priv6:
+    priv6-gw: 172.20.74.193
+  priv12:
+    priv12-gw: 172.20.74.225
   priv2:
     priv2-gw: 172.20.75.1
+  priv13:
+    priv13-gw: 172.20.75.33
+  priv7:
+    priv7-gw: 172.20.75.65
+  priv14:
+    priv14-gw: 172.20.75.97
+  priv4:
+    priv4-gw: 172.20.75.129
+  priv15:
+    priv15-gw: 172.20.75.161
+  priv8:
+    priv8-gw: 172.20.75.193
+  priv16:
+    priv16-gw: 172.20.75.225
+
   c3d2:
     c3d2-anon: 172.22.99.1
     c3d2-gw: 172.22.99.4

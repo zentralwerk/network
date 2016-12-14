@@ -31,6 +31,54 @@ containers:
       priv2:
         type: phys
 
+  priv3-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+      priv3:
+        type: phys
+
+  priv4-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+      priv4:
+        type: phys
+
+  priv5-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+      priv5:
+        type: phys
+
+  priv6-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+      priv6:
+        type: phys
+
+  priv7-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+      priv7:
+        type: phys
+
+  priv8-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+      priv8:
+        type: phys
+
   upstream1:
     interfaces:
       core:
