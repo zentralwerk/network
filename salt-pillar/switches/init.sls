@@ -16,33 +16,42 @@ switches:
           - mgmt
           - pub
           - priv1
-          #- priv2 notwendig? netzdiagramm
       mgmt:
         mode: access
         ports:
           - GigabitEthernet1/0/1
-#warum mehrere ports pro iso?
       iso1:
         mode: access
         ports:
           - GigabitEthernet 1/0/2
-          - GigabitEthernet 1/0/3
-          - GigabitEthernet 1/0/4
-          - GigabitEthernet 1/0/5
       iso2:
         mode: access
         ports:
-          - GigabitEthernet 1/0/6
-          - GigabitEthernet 1/0/7
-          - GigabitEthernet 1/0/8
-          - GigabitEthernet 1/0/9
+          - GigabitEthernet 1/0/3
       iso3:
         mode: access
         ports:
-          - GigabitEthernet 1/0/10
-          - GigabitEthernet 1/0/11
-          - GigabitEthernet 1/0/12
-          - GigabitEthernet 1/0/13
+          - GigabitEthernet 1/0/4
+      iso4:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/5
+      iso5:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/6
+      iso6:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/7
+      iso7:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/8
+      iso8:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/9
       ap2:
         mode: trunk
         ports:
@@ -77,7 +86,6 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv2
           - up1
           - up2
           - up3
@@ -327,17 +335,24 @@ switches:
       iso4:
         mode: access
         ports: '12'
+      iso5:
+        mode: access
+        ports: '13'
+      iso6:
+        mode: access
+        ports: '14'
+      iso7:
+        mode: access
+        ports: '15'
+      iso8:
+        mode: access
+        ports: '16'
       mgmt:
         mode: access
         ports: '20'
-      # Schnelles Routing fuer Freifunk-Tunnel
-      # TODO name weil verwendung an anderer stelle
-      priv2:
-        mode: access
-        ports: 13-15
       pub:
         mode: access
-        ports: 16-19
+        ports: 17-19
     password: |
       -----BEGIN PGP MESSAGE-----
       
