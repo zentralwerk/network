@@ -9,6 +9,8 @@ vlans:
   pub: 4
   # C3D2 home network
   c3d2: 5
+  # ??
+  priv: 6
   # Modems
   up1: 10
   up2: 11

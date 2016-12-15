@@ -77,7 +77,7 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv2
+          - priv
           - up1
           - up2
           - up3
@@ -136,6 +136,7 @@ switches:
           - up6
           - up7
           - up8
+          - priv
           - priv1
           - priv2
           - priv3
@@ -258,7 +259,7 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv2
+          - priv
           - up1
           - up2
           - up3
@@ -331,8 +332,7 @@ switches:
         mode: access
         ports: '20'
       # Schnelles Routing fuer Freifunk-Tunnel
-      # TODO name weil verwendung an anderer stelle
-      priv2:
+      priv:
         mode: access
         ports: 13-15
       pub:
