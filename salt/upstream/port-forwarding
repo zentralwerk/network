@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "$IFACE" = "{{ interface }}" ]; then
+{%- for fwd in ports %}
+   iptables -t nat -A PREROUTING -i {{ interface }} -p {{ fwd.proto }} --dport {{ fwd.port }} -j DNAT --to-destination {{ fwd.to }}
+{%- endfor %}
+fi

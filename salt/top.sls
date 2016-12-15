@@ -28,6 +28,7 @@ base:
   'upstream2':
     - upstream.6slac
     - upstream.nat66
+    - upstream.port-forwarding
   'anon*':
     - no-ssh
     - forwarding
