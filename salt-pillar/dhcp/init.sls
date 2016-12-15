@@ -5,8 +5,8 @@ dhcp:
     time: 7776000
     max-time: 31536000
     opts:
-      routers: 172.20.73.1
     host-opts:
+      routers: serv-gw.serv
       domain-name-servers: upstream1.core
     string-opts:
       domain-name: serv.zentralwerk.online
@@ -17,8 +17,8 @@ dhcp:
     time: 300
     max-time: 3600
     opts:
-      routers: 172.20.76.1
     host-opts:
+      routers: pub-gw.pub
       domain-name-servers: upstream1.core
     string-opts:
       domain-name: pub.zentralwerk.online
@@ -29,8 +29,8 @@ dhcp:
     time: 3600
     max-time: 86400
     opts:
-      routers: 172.20.74.1
     host-opts:
+      routers: priv1-gw.priv1
       domain-name-servers: upstream1.core
     string-opts:
       domain-name: priv1.zentralwerk.online
@@ -41,8 +41,8 @@ dhcp:
     time: 3600
     max-time: 86400
     opts:
-      routers: 172.20.75.1
     host-opts:
+      routers: priv2-gw.priv2
       domain-name-servers: upstream1.core
     string-opts:
       domain-name: priv2.zentralwerk.online
