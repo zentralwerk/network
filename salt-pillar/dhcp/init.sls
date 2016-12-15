@@ -16,6 +16,7 @@ dhcp:
     end: 172.20.77.254
     time: 30
     max-time: 3600
+    lower-max-time: 50
     opts:
     host-opts:
       routers: pub-gw.pub
