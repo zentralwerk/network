@@ -37,7 +37,7 @@ dhcp:
 
   priv2:
     start: 172.20.75.2
-    end: 172.20.75.14
+    end: 172.20.75.31
     time: 3600
     max-time: 86400
     opts:
