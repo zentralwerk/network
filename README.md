@@ -34,3 +34,24 @@ schützen muss. Stattdessen wollen wir freie Kommunikation für alle!
 Keine Sorge, wo private Daten stehen, haben wir sie
 verschlüsselt. Über den Geheimschlüssel zur Entschlüsselung verfügt
 nur der Kreis der Hausnetztechniker.
+
+
+## Dinge die stets schieflaufen
+
+### salt server1 state.apply server1-network
+
+Hier werden die Bridges abgerissen und neu erstellt. Danach hängen
+gestartete lxc-Container nicht mehr dran.
+
+**Lösung:** Manuell hinzufügen mit `brctl addif` oder einfach die
+Container neustarten.
+
+### Switch-Konfigurationsskripte ausgeführt, dabei ist das Netz gestorben
+
+Das tritt auf wenn man so doll die Konfiguration verändert, dass die
+Nummern der Link-Aggregation Groups sich ändern. Dabei landet server1,
+von welchem gerade konfiguriert wird, temporär in einer Gruppe die
+eigentlich zu was anderem gehört.
+
+**Lösung:** Skript auf eigenen Computer kopieren, direkt ans *mgmt*
+hängen und ausführen.
