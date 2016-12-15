@@ -1,6 +1,6 @@
 {%- set ifaces = [] %}
 {%- for iface, ips in salt['grains.get']('ip_interfaces').items() %}
-{%-   if iface not in ['core', 'lo'] %}
+{%-   if iface not in ['core', 'lo'] and pillar['subnets-inet'].get(iface) %}
 {%-     set ifaces = ifaces.append(iface) %}
 {%-   endif %}
 {%- endfor %}
