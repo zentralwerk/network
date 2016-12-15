@@ -43,6 +43,6 @@ dhcp:
     opts:
     host-opts:
       routers: priv2-gw.priv2
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv2.zentralwerk.online
