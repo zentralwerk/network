@@ -27,7 +27,7 @@ containers:
     interfaces:
       core:
         type: veth
-        gw: anon1
+        gw: upstream2
       priv2:
         type: phys
 
