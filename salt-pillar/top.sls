@@ -7,6 +7,12 @@ base:
   'priv*-gw':
     - dhcp
     - ospf.gw
+  'pub-gw':
+    - dhcp
+    - ospf.gw
+  'serv-gw':
+    - dhcp
+    - ospf.gw
   'c3d2-gw or c3d2-anon':
     - ospf.gw
   'anon1':
