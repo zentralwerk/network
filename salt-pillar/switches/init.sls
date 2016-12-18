@@ -18,6 +18,7 @@ switches:
           - priv1
           - priv2
           - priv3
+          - priv4
       mgmt:
         mode: access
         ports:
@@ -206,6 +207,7 @@ switches:
           - priv1
           - priv2
           - priv3
+          - priv4
       mgmt:
         mode: access
         ports:
@@ -223,10 +225,13 @@ switches:
         mode: access
         ports:
           - GigabitEthernet 1/0/5
-      pub:
+      priv4:
         mode: access
         ports:
           - GigabitEthernet 1/0/6
+      pub:
+        mode: access
+        ports:
           - GigabitEthernet 1/0/7
           - GigabitEthernet 1/0/8
           - GigabitEthernet 1/0/9
