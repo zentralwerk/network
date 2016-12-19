@@ -71,14 +71,6 @@ switches:
           - mgmt
           - pub
           - c3d2
-      ap4:
-        mode: trunk
-        ports:
-          - GigabitEthernet 1/0/16
-        vlans:
-          - mgmt
-          - pub
-          - priv1
       switch-c1:
         mode: bond
         ports:
@@ -225,10 +217,14 @@ switches:
         mode: access
         ports:
           - GigabitEthernet 1/0/5
-      priv4:
-        mode: access
+      ap4:
+        mode: trunk
         ports:
           - GigabitEthernet 1/0/6
+        vlans:
+          - mgmt
+          - pub
+          - priv4
       pub:
         mode: access
         ports:
