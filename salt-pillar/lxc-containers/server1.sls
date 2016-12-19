@@ -4,6 +4,7 @@ containers:
       core:
         type: veth
         gw: anon1
+        gw6: anon1
       pub:
         type: veth
 
@@ -20,6 +21,7 @@ containers:
       core:
         type: veth
         gw: anon1
+        gw6: anon1
       priv1:
         type: phys
 
@@ -28,6 +30,7 @@ containers:
       core:
         type: veth
         gw: upstream2
+        gw6: upstream2
       priv2:
         type: phys
 
@@ -36,6 +39,7 @@ containers:
       core:
         type: veth
         gw: anon1
+        gw6: anon1
       priv3:
         type: phys
 
@@ -44,6 +48,7 @@ containers:
       core:
         type: veth
         gw: anon1
+        gw6: anon1
       priv4:
         type: phys
 
@@ -52,6 +57,7 @@ containers:
       core:
         type: veth
         gw: anon1
+        gw6: anon1
       priv5:
         type: phys
 
@@ -60,6 +66,7 @@ containers:
       core:
         type: veth
         gw: anon1
+        gw6: anon1
       priv6:
         type: phys
 
@@ -68,6 +75,7 @@ containers:
       core:
         type: veth
         gw: anon1
+        gw6: anon1
       priv7:
         type: phys
 
@@ -76,6 +84,7 @@ containers:
       core:
         type: veth
         gw: anon1
+        gw6: anon1
       priv8:
         type: phys
 
@@ -114,5 +123,6 @@ containers:
       core:
         type: veth
         gw: anon1
+        gw6: anon1
       c3d2:
         type: veth

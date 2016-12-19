@@ -22,24 +22,35 @@ lxc.network.hwaddr={{ hwaddr_prefix }}:{{ n.__str__().rjust(2, '0') }}
 {%- if conf['type'] == 'veth' %}
 lxc.network.veth.pair={{ id }}-{{ net }}
 {%- endif %}
+
 {%- set hosts = pillar['hosts-inet'].get(net) %}
 {%- set inet_addr = hosts and hosts.get(id) %}
 {%- if inet_addr %}
 {%- set prefix_len = pillar['subnets-inet'][net].split('/')[1] %}
 lxc.network.ipv4={{ inet_addr }}/{{ prefix_len }}
 {%- endif %}
+{%- set gw = conf.get('gw') %}
+{%- if gw %}
+lxc.network.ipv4.gateway={{ pillar['hosts-inet'][net][gw] }}
+{%- endif %}
+
+{%- set hosts6 = pillar['hosts-inet6'].get(net) %}
+{%- set inet6_addr = hosts6 and hosts6.get(id) %}
+{%- if inet6_addr %}
+{%- set prefix6_len = pillar['subnets-inet6'][net].split('/')[1] %}
+lxc.network.ipv6={{ inet6_addr }}/{{ prefix6_len }}
+{%- endif %}
+{%- set gw6 = conf.get('gw6') %}
+{%- if gw6 %}
+lxc.network.ipv6.gateway={{ pillar['hosts-inet6'][net][gw] }}
+{%- endif %}
+
 {%- if conf['type'] == 'veth' %}
 lxc.network.link=br-{{ net }}
 {%- elif conf['type'] == 'phys' %}
 lxc.network.link=bond0.{{ pillar['vlans'].get(net) }}
 {%- endif %}
 lxc.network.name={{ net }}
-{%- set gw = conf.get('gw') %}
-{%- if gw %}
-lxc.network.ipv4.gateway={{ pillar['hosts-inet'][net][gw] }}
-{%- endif %}
-#lxc.network.ipv6=
-#lxc.network.ipv6.gateway=fe80::1
 
 {%- set n = n + 1 %}
 {%- endfor %}

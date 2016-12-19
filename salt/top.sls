@@ -5,6 +5,7 @@ base:
     - lxc-containers
     - quagga.zebra
     - quagga.ospfd
+    - quagga.ospf6d
     - switches
     - cpe
   'priv*-gw':
@@ -12,17 +13,27 @@ base:
     - forwarding
     - quagga.zebra
     - quagga.ospfd
+    - quagga.ospf6d
+    - dhcp
+  'pub-gw or serv-gw':
+    - no-ssh
+    - forwarding
+    - quagga.zebra
+    - quagga.ospfd
+    - quagga.ospf6d
     - dhcp
   'c3d2-gw or c3d2-anon':
     - no-ssh
     - forwarding
     - quagga.zebra
     - quagga.ospfd
+    - quagga.ospf6d
   'upstream*':
     - no-ssh
     - forwarding
     - quagga.zebra
     - quagga.ospfd
+    - quagga.ospf6d
     - unbound
     - upstream.dhcp
     - upstream.shaping
@@ -38,6 +49,7 @@ base:
     - forwarding
     - quagga.zebra
     - quagga.ospfd
+    - quagga.ospf6d
     - vpn.openvpn
     - upstream.masquerade
     - upstream.shaping

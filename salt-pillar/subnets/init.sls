@@ -20,3 +20,25 @@ subnets-inet:
   priv16: 172.20.75.224/28
   c3d2: 172.22.99.0/24
   mgmt: 10.0.0.0/24
+
+subnets-inet6:
+  core: fd23:42:c3d2:581::/64
+  serv: fd23:42:c3d2:582::/64
+  pub: fd23:42:c3d2:583::/64
+  priv1: fd23:42:c3d2:5c0::/64
+  priv2: fd23:42:c3d2:5c1::/64
+  priv3: fd23:42:c3d2:5c2::/64
+  priv4: fd23:42:c3d2:5c3::/64
+  priv5: fd23:42:c3d2:5c4::/64
+  priv6: fd23:42:c3d2:5c5::/64
+  priv7: fd23:42:c3d2:5c6::/64
+  priv8: fd23:42:c3d2:5c7::/64
+  priv9: fd23:42:c3d2:5c8::/64
+  priv10: fd23:42:c3d2:5c9::/64
+  priv11: fd23:42:c3d2:5ca::/64
+  priv12: fd23:42:c3d2:5cb::/64
+  priv13: fd23:42:c3d2:5cc::/64
+  priv14: fd23:42:c3d2:5cd::/64
+  priv15: fd23:42:c3d2:5ce::/64
+  priv16: fd23:42:c3d2:5cf::/64
+  c3d2: fd23:42:c3d2:523::/64
