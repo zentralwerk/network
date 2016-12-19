@@ -57,10 +57,11 @@ Selbstverständlich wollen wir nichts brauchbares wegwerfen. Zuerst
 würden wir uns das Gerät anschauen und uns für einen der folgenden
 Wege entscheiden:
 
-1. Entweder das Gerät wird von [OpenWRT](https://openwrt.org/)
-   oder [LEDE](https://lede-project.org/) unterstützt, dann können wir
-   das Gerät analog zu den obigen Modellen mit privatem und Gäste-WLAN
-   einrichten.
+1. Entweder das Gerät wird
+   von [OpenWRT](https://wiki.openwrt.org/toh/start)
+   oder [LEDE](https://lede-project.org/toh/views/toh_available_864)
+   unterstützt, dann können wir das Gerät analog zu den obigen
+   Modellen mit privatem und Gäste-WLAN einrichten.
    
 2. Alternativ versuchen wir einfach Kabelanschlüsse und WLAN direkt zu
    verbinden. Damit könnten wir entweder Gästenetz oder dein privates
