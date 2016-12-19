@@ -1,6 +1,3 @@
-quagga:
-  pkg.installed: []
-
 /etc/systemd/system/ospfd.service:
   file.managed:
     - source: salt://quagga/ospfd/ospfd.service
