@@ -3,18 +3,18 @@ base:
     - hosts
     - subnets
     - vlans
-    - ospf
+    - quagga.ospfd
   'priv*-gw':
     - dhcp
-    - ospf.gw
+    - quagga.ospfd.gw
   'pub-gw':
     - dhcp
-    - ospf.gw
+    - quagga.ospfd.gw
   'serv-gw':
     - dhcp
-    - ospf.gw
+    - quagga.ospfd.gw
   'c3d2-gw or c3d2-anon':
-    - ospf.gw
+    - quagga.ospfd.gw
   'anon1':
     - vpn.anon1
     - upstream.anon1
