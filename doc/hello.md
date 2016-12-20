@@ -109,7 +109,7 @@ Fritzbox. Um WLAN kümmern wir uns schließlich.
   das [Bufferbloat](https://en.wikipedia.org/wiki/Bufferbloat)-Problem
   zu umgehen.
 * Du könntest deinen Internetanschluß mit Nachbarn teilen.
-* Wir ermöglichen Zugang zum internen Zentralwerk-Netz.
+* Wir ermöglichen gleichzeitig Zugang zum internen Zentralwerk-Netz.
 
 
 ### Kabeldose in der Wohnung?
@@ -122,7 +122,7 @@ erreichen wenn du einen der von uns konfigurierten Router nutzt.
 
 Du willst weltweit erreichbar sein mit dem Internet-Protokoll der
 Zukunft? Kein Problem: wir verfügen über eine Menge statischer
-IPv6-Adressen über den Tunnel-Broker (SixXS)[https://www.sixxs.net/]
+IPv6-Adressen über den Tunnel-Broker [SixXS](https://www.sixxs.net/)
 mit mehreren schnellen Zugangspunkten in geographischer Nähe.
 
 
