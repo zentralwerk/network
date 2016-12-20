@@ -106,3 +106,76 @@ hosts-inet:
   c3d2:
     c3d2-anon: 172.22.99.1
     c3d2-gw: 172.22.99.4
+
+hosts-inet6:
+  core:
+    server1: fd23:42:c3d2:581::1
+
+    anon1: fd23:42:c3d2:581::9:1
+    serv-gw: fd23:42:c3d2:581::8:1
+    pub-gw: fd23:42:c3d2:581::8:2
+    c3d2-gw: fd23:42:c3d2:581::c3d2:1
+    c3d2-anon: fd23:42:c3d2:581::c3d2:a
+
+    upstream1: fd23:42:c3d2:581::b:0
+    upstream2: fd23:42:c3d2:581::b:1
+    upstream3: fd23:42:c3d2:581::b:2
+    upstream4: fd23:42:c3d2:581::b:3
+
+    priv1-gw: fd23:42:c3d2:581::c:0
+    priv2-gw: fd23:42:c3d2:581::c:1
+    priv3-gw: fd23:42:c3d2:581::c:2
+    priv4-gw: fd23:42:c3d2:581::c:3
+    priv5-gw: fd23:42:c3d2:581::c:4
+    priv6-gw: fd23:42:c3d2:581::c:5
+    priv7-gw: fd23:42:c3d2:581::c:6
+    priv8-gw: fd23:42:c3d2:581::c:7
+    priv9-gw: fd23:42:c3d2:581::c:8
+    priv10-gw: fd23:42:c3d2:581::c:9
+    priv11-gw: fd23:42:c3d2:581::c:a
+    priv12-gw: fd23:42:c3d2:581::c:b
+    priv13-gw: fd23:42:c3d2:581::c:c
+    priv14-gw: fd23:42:c3d2:581::c:d
+    priv15-gw: fd23:42:c3d2:581::c:e
+    priv16-gw: fd23:42:c3d2:581::c:d
+
+  serv:
+    serv-gw: fd23:42:c3d2:582::1
+  pub:
+    pub-gw: fd23:42:c3d2:583::1
+  priv1:
+    priv1-gw: fd23:42:c3d2:5c0::1
+  priv2:
+    priv2-gw: fd23:42:c3d2:5c1::1
+  priv3:
+    priv3-gw: fd23:42:c3d2:5c2::1
+  priv4:
+    priv4-gw: fd23:42:c3d2:5c3::1
+  priv5:
+    priv5-gw: fd23:42:c3d2:5c4::1
+  priv6:
+    priv6-gw: fd23:42:c3d2:5c5::1
+  priv7:
+    priv7-gw: fd23:42:c3d2:5c6::1
+  priv8:
+    priv8-gw: fd23:42:c3d2:5c7::1
+  priv9:
+    priv9-gw: fd23:42:c3d2:5c8::1
+  priv10:
+    priv10-gw: fd23:42:c3d2:5c9::1
+  priv11:
+    priv11-gw: fd23:42:c3d2:5ca::1
+  priv12:
+    priv12-gw: fd23:42:c3d2:5cb::1
+  priv13:
+    priv13-gw: fd23:42:c3d2:5cc::1
+  priv14:
+    priv14-gw: fd23:42:c3d2:5cd::1
+  priv15:
+    priv15-gw: fd23:42:c3d2:5ce::1
+  priv16:
+    priv16-gw: fd23:42:c3d2:5cf::1
+
+  c3d2:
+    c3d2-anon: fd23:42:c3d2:523::c3d2:1
+    c3d2-gw: fd23:42:c3d2:523::c3d2:4

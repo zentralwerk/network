@@ -50,6 +50,19 @@ bestellen und konfigurieren wir ihn.
 
 ![TL-WR841N](https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/TP-Link_TL-WR841N-2920.jpg/240px-TP-Link_TL-WR841N-2920.jpg)
 
+### Netzverteilung
+
+Auch möglich sind diese Konfigurationen:
+
+* Ihr wohnt nebenan und möchtet euch einen WLAN-Router teilen? Dann
+  könnt ihr trotzdem individuell verschlüsselte private Subnetze
+  haben.
+  
+* Du hast mehrere Büros oder Büro und Wohnung im Haus? Auf diese
+  Datendosen und WLAN-Router können wir dein Subnetz legen, auch wenn
+  sie an verschiedenen Orten im Haus sind. In einem Subnetz sind
+  Geräte wie zum Beispiel Drucker direkt auffindbar.
+
 
 ### Alternative: Eigener alter WLAN-Router
 
@@ -57,10 +70,11 @@ Selbstverständlich wollen wir nichts brauchbares wegwerfen. Zuerst
 würden wir uns das Gerät anschauen und uns für einen der folgenden
 Wege entscheiden:
 
-1. Entweder das Gerät wird von [OpenWRT](https://openwrt.org/)
-   oder [LEDE](https://lede-project.org/) unterstützt, dann können wir
-   das Gerät analog zu den obigen Modellen mit privatem und Gäste-WLAN
-   einrichten.
+1. Entweder das Gerät wird
+   von [OpenWRT](https://wiki.openwrt.org/toh/start)
+   oder [LEDE](https://lede-project.org/toh/views/toh_available_864)
+   unterstützt, dann können wir das Gerät analog zu den obigen
+   Modellen mit privatem und Gäste-WLAN einrichten.
    
 2. Alternativ versuchen wir einfach Kabelanschlüsse und WLAN direkt zu
    verbinden. Damit könnten wir entweder Gästenetz oder dein privates
@@ -87,6 +101,31 @@ Bei der Bestellung nehmt ihr das billigste Kabelmodem, nicht die
 Fritzbox. Um WLAN kümmern wir uns schließlich.
 
 
+### Warum Internetanschluß routen lassen…
+
+…statt direkt das Kabelmodem zu verwenden?
+
+* Wir optimieren die ausgehende Bandbreite um
+  das [Bufferbloat](https://en.wikipedia.org/wiki/Bufferbloat)-Problem
+  zu umgehen.
+* Du könntest deinen Internetanschluß mit Nachbarn teilen.
+* Wir ermöglichen gleichzeitig Zugang zum internen Zentralwerk-Netz.
+
+
+### Kabeldose in der Wohnung?
+
+…und nicht im Keller? Wir können die oben genannten Ziele trotzdem
+erreichen wenn du einen der von uns konfigurierten Router nutzt.
+
+
+## Statische IPv6-Adressen
+
+Du willst weltweit erreichbar sein mit dem Internet-Protokoll der
+Zukunft? Kein Problem: wir verfügen über eine Menge statischer
+IPv6-Adressen über den Tunnel-Broker [SixXS](https://www.sixxs.net/)
+mit mehreren schnellen Zugangspunkten in geographischer Nähe.
+
+
 # Alternative: Isolation
 
 Du trägst Bedenken und fühlst dich ohne uns im Internet besser aufgehoben?
@@ -101,3 +140,6 @@ Kabelmodem und deine Datendose bekommen.
 Dienstags und Donnerstags 16:00-18:00 Uhr
 
 [C3D2](https://www.c3d2.de/space.html), Haus B Souterrain, genau in der Mitte
+
+
+![Kernnetz visualisiert von eri!](core.png)
