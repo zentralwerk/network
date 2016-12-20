@@ -71,3 +71,15 @@ dhcp:
       domain-name-servers: upstream1.core
     string-opts:
       domain-name: priv4.zentralwerk.online
+
+  priv5:
+    start: 172.20.74.66
+    end: 172.20.74.78
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv5-gw.priv5
+      domain-name-servers: upstream1.core
+    string-opts:
+      domain-name: priv5.zentralwerk.online
