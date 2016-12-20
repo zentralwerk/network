@@ -140,3 +140,6 @@ Kabelmodem und deine Datendose bekommen.
 Dienstags und Donnerstags 16:00-18:00 Uhr
 
 [C3D2](https://www.c3d2.de/space.html), Haus B Souterrain, genau in der Mitte
+
+
+![Kernnetz visualisiert von eri!](core.png)
