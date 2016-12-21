@@ -23,6 +23,7 @@
     6. Kanäle je nach Umgebung des Nachbars optimieren
     7. `salt server1 state.apply cpe`
     8. `/root/apX.sh` zum Anwenden des Konfigurationsskripts
+    9. Wenn Fehler gezeigt werden (entry not found ist nicht schlimm, invalid schon!) dann "commit" entfernen und den Fehler suchen.
     
 4.  Switch-Port konfigurieren in `salt-pillar/switches`
 
