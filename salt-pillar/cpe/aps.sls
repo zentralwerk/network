@@ -219,8 +219,8 @@ cpe:
       =JLKE
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
-    location: In stock
-    lan-access: priv1
+    location: a
+    lan-access: priv5
     radios:
       'platform/qca955x_wmac':
         channel: 1
@@ -228,8 +228,8 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'C3D2 legacy':
-            net: priv1
+          'a':
+            net: priv5
             psk: |
               -----BEGIN PGP MESSAGE-----
               

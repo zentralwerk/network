@@ -19,6 +19,7 @@ switches:
           - priv2
           - priv3
           - priv4
+          - priv5
       mgmt:
         mode: access
         ports:
@@ -200,6 +201,7 @@ switches:
           - priv2
           - priv3
           - priv4
+          - priv5
       mgmt:
         mode: access
         ports:
@@ -225,10 +227,17 @@ switches:
           - mgmt
           - pub
           - priv4
+      ap5:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/7
+        vlans:
+          - mgmt
+          - priv5
+          - pub
       pub:
         mode: access
         ports:
-          - GigabitEthernet 1/0/7
           - GigabitEthernet 1/0/8
           - GigabitEthernet 1/0/9
           - GigabitEthernet 1/0/10
