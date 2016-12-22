@@ -260,7 +260,7 @@ chmod a+rx /usr/sbin/wifi-on-link.sh
 # TODO: install pkgs (collectd...)
 
 {%- if conf.get('firstboot') %}
-reboot /usr/sbin/wifi-on-link.sh
+reboot
 {%- endif %}
 
 __SSH__
