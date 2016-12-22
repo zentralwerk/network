@@ -228,18 +228,18 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'a':
+          'verbalwerk.de':
             net: priv5
             psk: |
               -----BEGIN PGP MESSAGE-----
-              
-              hQEMA2PKcvDMvlKLAQf/SO/v+xhO1yOG83uCcAN2r5ixNf8+Ksp1dPwBKQHUViwJ
-              /KZHBAUzjTtGFIcpEy3exZcAorJ8SeGaB0hv1zw1HZuHN7Els8KKDu4G5u31Sp8w
-              EFtuwujlkFAt3t57jp02O0qvXBCIA14eNlakc9fcPypibTrIEGp2SCzw/kty4r3g
-              EGUwn1sMPjeQxon5Y4JY4OmZBXsnZkKMwTYjAbL+RS300xV1Nh/WWSTRfueAmT5f
-              xfyHj4NlOoBNBILgm1qlrOdgqJSvHM6rw47BoiDuxeVtgmyPqSbHmN8d7xExbuxB
-              tdcnI6HfSv47ZhLARH08BiI7nLaKNygwgy6yKr0zctJAAetIX8BADb4W4QgyM7VD
-              pYqAfy5Igg342W+ZSMyybiZccncchv4opsyDFTjuby9mqL8OwaMWkeNcNPALaT9v
-              rA==
-              =TEEI
+
+              hQEMA2PKcvDMvlKLAQf+OG+j5ZvT32ZzsYsminJxmL+Mfju/hWoMegbjJfug+UT1
+              OJwkBMCM0iyJ7DK28HLmRNFBnpgA4Kv24BjOZhKOR9X8yQCdAnTyy/XyoqHjidBI
+              WrwDYjUYXWfdQW2q1oycd9X6RS8zlHoEugjnLWvzLt9jzZUXpgWp2+N9jiQGjhdF
+              CSGeRHs4fryQ3XZeGc7Fe3vVfl2r2p0fjAhgzslgQQ/K2whQwrP62fl7bBuVCr6F
+              ZhK/1UwpH87hNEBH161dI1qnEHXF4AtjaQ2F/cg8JpYIiTQYTbLVytxduUfDNRJY
+              Hu2v2FCuj46R6Kii9RyM2ZrNswvklUI+7nVwCSaeFNJFAcKdyQWQtCWmJ/V+dgpQ
+              M21rWr8j39wDhcX8FjBcLlz8ABtZMBlOABNljWc89FNMWQz+TiiQt10xK1UuKwMj
+              0tG1zaWX
+              =fTcQ
               -----END PGP MESSAGE-----
