@@ -25,7 +25,7 @@ cpe:
           'ZW public':
             net: pub
           'C3D2 legacy':
-            net: priv1
+            net: c3d2
             psk: |
               -----BEGIN PGP MESSAGE-----
               
@@ -144,7 +144,7 @@ cpe:
               =TEEI
               -----END PGP MESSAGE-----
       'pci0000:00/0000:00:00.0':
-        channel: 149
+        channel: 36
         htmode: HT40+
         ssids:
           'ZW public':
