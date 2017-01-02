@@ -5,7 +5,7 @@ After = network.target
 [Service]
 ExecStartPre = /bin/mkdir -p /var/run/quagga
 ExecStartPre = /bin/chown -R quagga:quagga /var/run/quagga/
-ExecStart = /usr/lib/quagga/ospfd
+ExecStart = /usr/sbin/ospfd
 
 [Install]
 WantedBy = default.target

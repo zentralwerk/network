@@ -4,7 +4,7 @@ After = network.target
 [Service]
 ExecStartPre = /bin/mkdir -p /var/run/quagga
 ExecStartPre = /bin/chown -R quagga:quagga /var/run/quagga/
-ExecStart = /usr/lib/quagga/zebra
+ExecStart = /usr/sbin/zebra
 
 [Install]
 WantedBy = default.target
