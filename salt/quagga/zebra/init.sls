@@ -1,4 +1,4 @@
-quagga:
+quagga-core:
   pkg.installed: []
 
 /etc/systemd/system/zebra.service:

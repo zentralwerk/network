@@ -1,3 +1,6 @@
+quagga-ospf6d:
+  pkg.installed: []
+
 /etc/systemd/system/ospf6d.service:
   file.managed:
     - source: salt://quagga/ospf6d/ospf6d.service
