@@ -10,7 +10,7 @@ quagga-core:
     - source: salt://quagga/zebra/zebra.conf
     - template: 'jinja'
     - require:
-      - pkg: quagga
+      - pkg: quagga-core
 
 autostart-zebra:
   service.enabled:

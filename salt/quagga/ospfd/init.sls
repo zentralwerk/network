@@ -10,7 +10,7 @@ quagga-ospfd:
     - source: salt://quagga/ospfd/ospfd.conf
     - template: 'jinja'
     - require:
-      - pkg: quagga
+      - pkg: quagga-ospfd
 
 autostart-ospfd:
   service.enabled:

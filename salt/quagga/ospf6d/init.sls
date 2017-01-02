@@ -10,7 +10,7 @@ quagga-ospf6d:
     - source: salt://quagga/ospf6d/ospf6d.conf
     - template: 'jinja'
     - require:
-      - pkg: quagga
+      - pkg: quagga-ospf6d
 
 autostart-ospf6d:
   service.enabled:
