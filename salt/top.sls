@@ -28,6 +28,13 @@ base:
     - quagga.zebra
     - quagga.ospfd
     - quagga.ospf6d
+  'bgp':
+    - no-ssh
+    - forwarding
+    - quagga.zebra
+    - quagga.ospfd
+    - quagga.ospf6d
+    - quagga.bgpd
   'upstream*':
     - no-ssh
     - forwarding

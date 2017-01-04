@@ -126,3 +126,11 @@ containers:
         gw6: anon1
       c3d2:
         type: veth
+
+  bgp:
+    interfaces:
+      core:
+        type: veth
+        gw: upstream1
+      c3d2:
+        type: veth

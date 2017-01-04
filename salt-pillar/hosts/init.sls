@@ -67,6 +67,7 @@ hosts-inet:
     priv14-gw: 172.20.72.24
     priv15-gw: 172.20.72.25
     priv16-gw: 172.20.72.26
+    bgp: 172.20.72.27
 
   pub:
     pub-gw: 172.20.76.1
@@ -108,6 +109,7 @@ hosts-inet:
   c3d2:
     c3d2-anon: 172.22.99.1
     c3d2-gw: 172.22.99.4
+    bgp: 172.22.99.250
 
 hosts-inet6:
   core:
@@ -119,6 +121,7 @@ hosts-inet6:
     pub-gw: fd23:42:c3d2:581::8:2
     c3d2-gw: fd23:42:c3d2:581::c3d2:1
     c3d2-anon: fd23:42:c3d2:581::c3d2:a
+    bgp: fd23:42:c3d2:581::c3d2:b
 
     upstream1: fd23:42:c3d2:581::b:0
     upstream2: fd23:42:c3d2:581::b:1
@@ -182,3 +185,4 @@ hosts-inet6:
   c3d2:
     c3d2-anon: fd23:42:c3d2:523::c3d2:1
     c3d2-gw: fd23:42:c3d2:523::c3d2:4
+    bgp: fd23:42:c3d2:523::c3d2:ff0b

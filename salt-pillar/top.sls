@@ -15,6 +15,8 @@ base:
     - quagga.ospfd.gw
   'c3d2-gw or c3d2-anon':
     - quagga.ospfd.gw
+  'bgp':
+    - quagga.bgp
   'anon1':
     - vpn.anon1
     - upstream.anon1
