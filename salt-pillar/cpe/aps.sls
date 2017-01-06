@@ -3,7 +3,7 @@ cpe:
   ap1:
     password: |
       -----BEGIN PGP MESSAGE-----
-      
+
       hQEMA2PKcvDMvlKLAQf+KxWwNiC4VCjdkTUVRcfqzsGRXHUrfBqyoqpPahT7yu8v
       JiYAc8/zPO0oniP+tM+zCqnIq/kwUe+muh4RTPjcx7Yv4nVA4Y4bcGgbnGqACMjq
       AEZ8qiv+0yBSxqeVgwlfc/eOtyXlYELCwKM9zUnrmS+0J66zd4zKKbfT029izL0e
@@ -15,8 +15,8 @@ cpe:
       =QPF0
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: In stock
-    lan-access: pub
+    location: leihgabe
+    lan-access: priv6
     radios:
       'platform/qca953x_wmac':
         channel: 1
@@ -24,8 +24,8 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'C3D2 legacy':
-            net: c3d2
+          'uebergangsnetz':
+            net: priv6
             psk: |
               -----BEGIN PGP MESSAGE-----
               
@@ -39,7 +39,6 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
-
 
   ap2:
     password: |
@@ -204,6 +203,7 @@ cpe:
               cDHLAixhmoMc
               =A9lu
               -----END PGP MESSAGE-----
+
   ap5:
     password: |
       -----BEGIN PGP MESSAGE-----
