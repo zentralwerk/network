@@ -1,5 +1,7 @@
 # Provisionierung eines WLAN-Routers
 
+Sofern der Router durch uns provisioniert wird (ansonsten siehe unten)
+
 1.  Kontaktdaten und Dosennummer in `contacts.md` vermerken
 2.  Nachbar will Privatnetz?
    
@@ -34,3 +36,8 @@
     5. `vlans:` immer *mgmt* und *pub*, auch das *privX*
     6. `salt server1 state.apply switches`
     7. `/root/switch-X.sh` zum Anwenden des Konfigurationsskripts
+
+Wenn wir nicht provisionieren, sondern ein mitgebrachter Router verwendet wird:
+* kein ZW public konfigurieren!
+* bridge-mode verwenden, dhcpd aus
+* wenn vlan möglich: switchport mode auf "trunk"; wenn vlan nicht möglich: switchport mode auf "access"
