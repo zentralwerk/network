@@ -377,7 +377,13 @@ switches:
         ports: '20'
       pub:
         mode: access
-        ports: 17-19
+        ports: 17-18
+      ap6:
+        mode: trunk
+        ports: 19
+        vlans:
+          - mgmt
+          - pub
     password: |
       -----BEGIN PGP MESSAGE-----
       
