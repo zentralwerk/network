@@ -1,6 +1,7 @@
 hosts-inet:
   mgmt:
     server1: 10.0.0.1
+    server2: 10.0.0.2
     switch-b1: 10.0.0.10
     switch-b2: 10.0.0.11
     switch-c1: 10.0.0.12
