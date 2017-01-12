@@ -41,6 +41,7 @@ hosts-inet:
 
   core:
     server1: 172.20.72.1
+    server2: 172.20.72.102
     serv-gw: 172.20.72.2
     pub-gw: 172.20.72.3
     priv1-gw: 172.20.72.4
@@ -111,6 +112,7 @@ hosts-inet:
 hosts-inet6:
   core:
     server1: fd23:42:c3d2:581::1
+    server2: fd23:42:c3d2:581::102
 
     anon1: fd23:42:c3d2:581::9:1
     serv-gw: fd23:42:c3d2:581::8:1
