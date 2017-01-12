@@ -97,8 +97,8 @@ dhcp:
       domain-name: priv6.zentralwerk.online
 
   priv7:
-    start: 172.20.74.66
-    end: 172.20.74.78
+    start: 172.20.75.66
+    end: 172.20.75.78
     time: 120
     max-time: 86400
     opts:
