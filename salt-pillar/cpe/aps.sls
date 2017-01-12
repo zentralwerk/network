@@ -268,3 +268,44 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+
+
+  ap7:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf/eSXE1z6WQdP7+gpp3GJU3yVqg6sPV9nZPkaEgFfVQeDx
+      xs6mzCFphbRNJCAOqytzYCDJ7NqV5APjYoYHumxfjJcW0b5Aki1bSIgvMnczOyUg
+      PvHNcf7no5u7XnJf/OWgCJuKZN1rmdePYTXVVoHF3Z4xKcG1ybQsX90ulYNUHk1N
+      NIY3++t1xreHyGMzArpld289eztpCCPU2XcSJutDcuyPwTVzlhhn653FHEnKhs7c
+      qABHMKy0tpoAVgbl6K7GnBDrif+rEOVS5q846si6rHZ39VPkKQeLXJP/PxkbsKU0
+      Z8EL7H3lqRZG1GPZ3KPBa/WU0Czz67TDZGfMA40p5dJYAee5g/NUwqjFxag1Uj/r
+      AnLNzXDFrdrxRaJOSDLxC37GcIonMcVeLY/R+F812PUe/UgqzdOusdvTZUnco/63
+      rxgsW3bwIysHRYkg90GDmW505fNiC96aEA==
+      =Noqk
+      -----END PGP MESSAGE-----
+    model: TL-WR841N
+    location: turm d ganz oben
+    lan-access: priv7
+    radios:
+      'platform/qca953x_wmac':
+        channel: 1
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+          'Zippi':
+            net: priv7
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/aDuPsgzOYCjcDQg0w4q0m7YxXJXWBrjbVV3eo/b8O1oB
+              hlVDSioMliwsDmjJZijYZBpdlgNaQC7V3RG//UyY6T80ICE5mmL2R8jRRV/ZTsD5
+              OtyrozaKKwobgQfjADX7ZAxOfZgOm8pUXzk7qDMpWOximtm0MZKGRI5qxmvo0dMt
+              LBls0gwh4fvdI5eLZ/gJRaibSoEqWjuDkeuyhgitxUhOuPH94gtfPyXnKGNGTu/N
+              o9kM8r1801Pzxl59kmp2i5QCmiMRZYyv/ssfZ/6QnMxDVdAYX9fe22dGtgR9v753
+              6S6m/lCcfdTzPiYrVWNn4j2PVaemgiIN0dt8pd7WCtJGAS9ZTbM0XE/X5RKFRqx0
+              us+JpMtNPHwr+eHSnSyywUsjo1NE4+FtSZSeO9Y4hRCWkkaRI1mJnqZx4hd6fud9
+              znPHqRVtQQ==
+              =NWhp
+              -----END PGP MESSAGE-----
