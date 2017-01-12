@@ -110,7 +110,7 @@ dhcp:
 
   priv8:
     start: 172.20.75.194
-    end: 172.20.74.206
+    end: 172.20.75.206
     time: 120
     max-time: 86400
     opts:
