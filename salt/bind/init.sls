@@ -38,23 +38,20 @@ bind9:
 {%- endfor %}
 
 # IPv4 reverse
-{%- for subnet in pillar['bind']['reverse-zones-inet'] %}
-{%-   set domain = '.'.join(subnet.split('.').__reversed__()) ~ '.in-addr.arpa' %}
-/etc/bind/reverse4-{{ subnet }}.zone:
+{%- for domain in pillar['bind']['reverse-zones-inet'] %}
+/etc/bind/{{ domain }}.zone:
   file.managed:
-    - source: salt://bind/reverse4.zone
+    - source: salt://bind/reverse.zone
     - template: 'jinja'
     - context:
         domain: {{ domain }}
-        subnet: {{ subnet }}
-
 {%- endfor %}
 
 # IPv6 reverse
 {%- for domain in pillar['bind']['reverse-zones-inet6'] %}
-/etc/bind/reverse6-{{ domain }}.zone:
+/etc/bind/{{ domain }}.zone:
   file.managed:
-    - source: salt://bind/reverse6.zone
+    - source: salt://bind/reverse.zone
     - template: 'jinja'
     - context:
         domain: {{ domain }}

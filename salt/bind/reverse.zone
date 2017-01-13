@@ -12,6 +12,15 @@ $TTL 10M
 		IN NS	{{ ns }}.
 {%- endfor %}
 
+{%- for net, hosts in pillar['hosts-inet'].items() %}
+{%-   for host, aaaa in hosts.items() %}
+{%-     set reverse = salt['network.reverse_ip'](aaaa) %}
+{%-     if reverse.endswith(domain) %}
+{{ reverse.replace('.' ~ domain, '') }}	IN PTR	{{ host }}.{{ net }}.{{ pillar['bind']['root-domain'] }}.
+{%-     endif %}
+{%-   endfor %}
+{%- endfor %}
+
 {%- for net, hosts in pillar['hosts-inet6'].items() %}
 {%-   for host, aaaa in hosts.items() %}
 {%-     set reverse = salt['network.reverse_ip'](aaaa) %}
