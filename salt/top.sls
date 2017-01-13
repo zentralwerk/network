@@ -46,3 +46,6 @@ base:
     - upstream.masquerade
     - upstream.shaping
     - upstream.nat66
+  'dns':
+    - no-ssh
+    - bind

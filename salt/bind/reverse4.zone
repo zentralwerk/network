@@ -1,0 +1,26 @@
+$ORIGIN {{ domain }}.
+$TTL 10M
+
+@		IN SOA	{{ pillar['bind']['master-ns'] }}. astro.spaceboyz.net. (
+				{{ pillar['bind']['serial'] }} ; serial
+				1H ; refresh
+				1M ; retry
+				2H ; expire
+				5M ; minimum
+			)
+{%- for ns in pillar['bind']['public-ns'] %}
+		IN NS	{{ ns }}.
+{%- endfor %}
+
+{%- for i in range(1, 255) %}
+{%-   set addr = subnet ~ '.' ~ i %}
+
+{%-   for net, hosts in pillar['hosts-inet'].items() %}
+{%-     for host, a in hosts.items() %}
+{%-       if a == addr %}
+{{ i }}		IN PTR	{{ host }}.{{ net }}.{{ pillar['bind']['root-domain'] }}.
+{%-       endif %}
+{%-     endfor %}
+{%-   endfor %}
+
+{%- endfor %}

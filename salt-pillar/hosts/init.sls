@@ -71,38 +71,69 @@ hosts-inet:
 
   pub:
     pub-gw: 172.20.76.1
+{%- for i in range(2, 256) %}
+    guest{{ i }}: 172.20.76.{{ i }}
+{%- endfor %}
+{%- for i in range(0, 255) %}
+    guest{{ 256 + i }}: 172.20.77.{{ i }}
+{%- endfor %}
   serv:
     serv-gw: 172.20.73.1
+    dns: 172.20.73.2
   priv1:
     priv1-gw: 172.20.74.1
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 1 + i }}
+{%- endfor %}
   priv9:
     priv9-gw: 172.20.74.33
   priv5:
     priv5-gw: 172.20.74.65
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 65 + i }}
+{%- endfor %}
   priv10:
     priv10-gw: 172.20.74.97
   priv3:
     priv3-gw: 172.20.74.129
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.75.{{ 129 + i }}
+{%- endfor %}
   priv11:
     priv11-gw: 172.20.74.161
   priv6:
     priv6-gw: 172.20.74.193
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 193 + i }}
+{%- endfor %}
   priv12:
     priv12-gw: 172.20.74.225
   priv2:
     priv2-gw: 172.20.75.1
+{%- for i in range(1, 31) %}
+    dhcp{{ i }}: 172.20.75.{{ 1 + i }}
+{%- endfor %}
   priv13:
     priv13-gw: 172.20.75.33
   priv7:
     priv7-gw: 172.20.75.65
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.75.{{ 65 + i }}
+{%- endfor %}
   priv14:
     priv14-gw: 172.20.75.97
   priv4:
     priv4-gw: 172.20.75.129
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.75.{{ 129 + i }}
+{%- endfor %}
   priv15:
     priv15-gw: 172.20.75.161
   priv8:
     priv8-gw: 172.20.75.193
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.75.{{ 193 + i }}
+{%- endfor %}
   priv16:
     priv16-gw: 172.20.75.225
 
@@ -147,6 +178,7 @@ hosts-inet6:
 
   serv:
     serv-gw: fd23:42:c3d2:582::1
+    dns: fd23:42:c3d2:582:2:0:0:2
   pub:
     pub-gw: fd23:42:c3d2:583::1
   priv1:

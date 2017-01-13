@@ -29,3 +29,5 @@ base:
     - lxc-containers.server1
     - switches
     - cpe.aps
+  'dns':
+    - bind.dns

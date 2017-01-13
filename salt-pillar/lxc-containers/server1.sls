@@ -135,3 +135,10 @@ containers:
         gw: upstream1
       c3d2:
         type: veth
+
+  dns:
+    interfaces:
+      serv:
+        type: veth
+        gw: serv-gw
+        gw6: serv-gw
