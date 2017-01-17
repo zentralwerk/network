@@ -269,7 +269,6 @@ cpe:
           'ZW public':
             net: pub
 
-
   ap7:
     password: |
       -----BEGIN PGP MESSAGE-----
@@ -285,7 +284,7 @@ cpe:
       =Noqk
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: turm d ganz oben
+    location: gebaeude b oben
     lan-access: priv7
     radios:
       'platform/qca953x_wmac':
