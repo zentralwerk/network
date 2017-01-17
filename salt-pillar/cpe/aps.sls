@@ -284,7 +284,7 @@ cpe:
       =Noqk
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: gebaeude b oben
+    location: Turm D, vorletzte (4.?) Etage
     lan-access: priv7
     radios:
       'platform/qca953x_wmac':
@@ -298,15 +298,15 @@ cpe:
             psk: |
               -----BEGIN PGP MESSAGE-----
               
-              hQEMA2PKcvDMvlKLAQf/aDuPsgzOYCjcDQg0w4q0m7YxXJXWBrjbVV3eo/b8O1oB
-              hlVDSioMliwsDmjJZijYZBpdlgNaQC7V3RG//UyY6T80ICE5mmL2R8jRRV/ZTsD5
-              OtyrozaKKwobgQfjADX7ZAxOfZgOm8pUXzk7qDMpWOximtm0MZKGRI5qxmvo0dMt
-              LBls0gwh4fvdI5eLZ/gJRaibSoEqWjuDkeuyhgitxUhOuPH94gtfPyXnKGNGTu/N
-              o9kM8r1801Pzxl59kmp2i5QCmiMRZYyv/ssfZ/6QnMxDVdAYX9fe22dGtgR9v753
-              6S6m/lCcfdTzPiYrVWNn4j2PVaemgiIN0dt8pd7WCtJGAS9ZTbM0XE/X5RKFRqx0
-              us+JpMtNPHwr+eHSnSyywUsjo1NE4+FtSZSeO9Y4hRCWkkaRI1mJnqZx4hd6fud9
-              znPHqRVtQQ==
-              =NWhp
+              hQEMA2PKcvDMvlKLAQgAjnmaVwPChe6mDZI1yBKyBhsbuGabre05JWYYIReV4rnG
+              SJEp6Ei7kbm+2iEhrlXyhu9Ke2gILUFXbopRoaytOjvT9VcnBhWLPA4EuqsGLep5
+              t32XyK94BLTY3vRhZrvcloZAjXlaGnaEyAQ9Wk5IVoQu1S+TeVd2VOS67BQeeCLr
+              xFE7mzY8FQR01jBC0QEOXRdfwZ83Zm4JzwTm4ba6CABElmQoBbAPP86ydbNxl1n7
+              R/n6y/A6GjgR8HRLaISO0x6Vy6XCWBEhMPbGC8/7qF+1BdVo9qe9IyQBZAyfBQ2b
+              nTDna1wB4y7CSOEnVC5WRgmjrHr4+JB3/gPPqR6gddJGAYkw7BkNct7Xd8bWaOJP
+              LSzwuOSwP9ozjMD8RxfJ9ctfGTI4aJ8EcMJ6CAdbnMl0qrucTvlh/nZ/xNtzXplA
+              is+jAuMF8Q==
+              =MtC9
               -----END PGP MESSAGE-----
   ap8:
     firstboot: True
