@@ -63,9 +63,11 @@ expect "(config)# "
 {%-   set group = group + 1 %}
 
 {%- if conf['mode'] == 'bond' %}
+send "interface {{ conf['ports'] }} lacp active\r"
 send "trunk {{ conf['ports'] }} trk{{ group }} lacp\r"
 {%- else %}
 send "no trunk {{ conf['ports'] }}\r"
+send "no interface {{ conf['ports'] }} lacp\r"
 {%- endif %}
 expect "(config)# "
 
