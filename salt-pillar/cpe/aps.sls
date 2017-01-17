@@ -412,6 +412,18 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'Unbenannt':
+          'braeunigkoschnik':
             net: priv8
-            psk: changeme
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/QTQnu3Sy7TdsBQfYh2oX6ArEQNOc7Wmy/8fQLrI8CfPT
+              K7i09JxH6fVc3Kd8AW1+REUUZKmtdeJX5tQ73SKNCuH9iecKHAF5pNOdyFel0cMO
+              ToDTwIuvSPQc9uq7FzFWTFYxmw9E4blPWN1A8WKnz+8N4gyvl4BDLl0tAzUnPWuE
+              Yh91jO3kMxB4ycI6PZIBACh/00B/gx/7DAk/JyMmNmR3IO61iKXWM8STl62HEpeF
+              0Znx4oTYdi/z9oTT1fYWkAyRjOBmCsvCFavMAjbiSBPBq9Z2SfPhF5yXTRYlZaYD
+              lEC2a3N+intDV2jja5IgqQjI3Ax2bSk2CElheOSClNJKAUihQm2gRc6bu5r7npVw
+              IvaMo0bVcu+0S13lAGtS8emhZsiwVTPyNCuLN1OZFi383zv7woDcBZfA45OhiXOG
+              ALixMzJMuax7lwM=
+              =QmyY
+              -----END PGP MESSAGE-----
