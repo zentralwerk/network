@@ -9,7 +9,7 @@ switches:
     # 10GE hinten
     ports:
       switch-b2:
-        mode: bond
+        mode: trunk
         ports:
           - TenGigabitEthernet1/1/1
         vlans:
@@ -193,7 +193,7 @@ switches:
     # 10GE hinten
     ports:
       switch-b1:
-        mode: bond
+        mode: trunk
         ports:
           - TenGigabitEthernet1/1/1
         vlans:
