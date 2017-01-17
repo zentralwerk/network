@@ -308,3 +308,82 @@ cpe:
               znPHqRVtQQ==
               =NWhp
               -----END PGP MESSAGE-----
+  ap8:
+    firstboot: True
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf/eSXE1z6WQdP7+gpp3GJU3yVqg6sPV9nZPkaEgFfVQeDx
+      xs6mzCFphbRNJCAOqytzYCDJ7NqV5APjYoYHumxfjJcW0b5Aki1bSIgvMnczOyUg
+      PvHNcf7no5u7XnJf/OWgCJuKZN1rmdePYTXVVoHF3Z4xKcG1ybQsX90ulYNUHk1N
+      NIY3++t1xreHyGMzArpld289eztpCCPU2XcSJutDcuyPwTVzlhhn653FHEnKhs7c
+      qABHMKy0tpoAVgbl6K7GnBDrif+rEOVS5q846si6rHZ39VPkKQeLXJP/PxkbsKU0
+      Z8EL7H3lqRZG1GPZ3KPBa/WU0Czz67TDZGfMA40p5dJYAee5g/NUwqjFxag1Uj/r
+      AnLNzXDFrdrxRaJOSDLxC37GcIonMcVeLY/R+F812PUe/UgqzdOusdvTZUnco/63
+      rxgsW3bwIysHRYkg90GDmW505fNiC96aEA==
+      =Noqk
+      -----END PGP MESSAGE-----
+    model: TL-WDR4300
+    location: in stock derzeit nicht funktional, fuer turm c 5.etage
+    lan-access: pub
+    radios:
+      'platform/ar934x_wmac':
+        channel: 13
+        htmode: HT40-
+        ssids:
+          'ZW public':
+            net: pub
+      'pci0000:00/0000:00:00.0':
+        channel: 36
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+  ap9:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+
+      hQEMA2PKcvDMvlKLAQf+KxWwNiC4VCjdkTUVRcfqzsGRXHUrfBqyoqpPahT7yu8v
+      JiYAc8/zPO0oniP+tM+zCqnIq/kwUe+muh4RTPjcx7Yv4nVA4Y4bcGgbnGqACMjq
+      AEZ8qiv+0yBSxqeVgwlfc/eOtyXlYELCwKM9zUnrmS+0J66zd4zKKbfT029izL0e
+      r2Mxwe6ax9eRrruOImP1WY4rrGaA6/Ci/qY7mV1r9q2RROtkN4dnMs5j0ob9bu2j
+      JV6d3bC7LnZyIzz3Jv8dWGTISPj2UYCnqpR8wIyW46/+mCdZMYd3SFM1lifqJCoB
+      hlET/0qjRw7K+ozh6zP1GOgDXHS1YjfLDLXGuLLuMNJIAV6FIphe+t/Y+v6yHvqZ
+      8L+stbE0RFrqFBMBLxuqw6RTU+AIVwkH9sZ5AoAPF3g6uZCVq8+KU3d2K7K5WCST
+      4p+9mAt3NWq5
+      =QPF0
+      -----END PGP MESSAGE-----
+    model: TL-WR841N
+    location: turm d etage 2
+    lan-access: pub
+    radios:
+      'platform/qca953x_wmac':
+        channel: 1
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+  ap10:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+
+      hQEMA2PKcvDMvlKLAQf+KxWwNiC4VCjdkTUVRcfqzsGRXHUrfBqyoqpPahT7yu8v
+      JiYAc8/zPO0oniP+tM+zCqnIq/kwUe+muh4RTPjcx7Yv4nVA4Y4bcGgbnGqACMjq
+      AEZ8qiv+0yBSxqeVgwlfc/eOtyXlYELCwKM9zUnrmS+0J66zd4zKKbfT029izL0e
+      r2Mxwe6ax9eRrruOImP1WY4rrGaA6/Ci/qY7mV1r9q2RROtkN4dnMs5j0ob9bu2j
+      JV6d3bC7LnZyIzz3Jv8dWGTISPj2UYCnqpR8wIyW46/+mCdZMYd3SFM1lifqJCoB
+      hlET/0qjRw7K+ozh6zP1GOgDXHS1YjfLDLXGuLLuMNJIAV6FIphe+t/Y+v6yHvqZ
+      8L+stbE0RFrqFBMBLxuqw6RTU+AIVwkH9sZ5AoAPF3g6uZCVq8+KU3d2K7K5WCST
+      4p+9mAt3NWq5
+      =QPF0
+      -----END PGP MESSAGE-----
+    model: TL-WR841N
+    location: turm d etage 1
+    lan-access: pub
+    radios:
+      'platform/qca953x_wmac':
+        channel: 6
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
