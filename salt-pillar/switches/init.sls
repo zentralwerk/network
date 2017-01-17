@@ -119,7 +119,6 @@ switches:
         vlans:
           - mgmt
           - pub
-          - up1
       server1:
         mode: bond
         ports:
