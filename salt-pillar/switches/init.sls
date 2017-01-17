@@ -410,28 +410,25 @@ switches:
     ports:
       switch-b1:
         mode: bond
-        ports: 1-4
+        ports: 1-2
         vlans:
           - mgmt
           - pub
-      mgmt:
-        mode: access
-        ports:
-          - '5'
+          - priv7
       pub:
         mode: access
         ports:
-          - 6-8
+          - 3-8
     password: |
       -----BEGIN PGP MESSAGE-----
       
-      hQEMA2PKcvDMvlKLAQf+O1OB9gG4JKnASFfKCoAE75Gb4+PD8+ROzBvg18bzqD0j
-      qjhQL9Ye39oB5R5JmPBso5zgEhGr8vIB3VN3f6vABNaEGPkTh+jf/1X1vwfS0rvW
-      rQNulEFoq+F9vUfWFolAamVoqCxXsXtf8KyJHCazIIRKGKNysHOW/O+YSvcGgG4H
-      6YH94a1lZoRQCF/2wHEmDTA6FXSqBfijM0QoO2+i+VuUHXYYMZ/FIEDPWLM/wqSB
-      aLjMgrDRyUPLvAA88CXrLDT0aO3LzJINtTPVbnohYoFMKI66mAsWwXnJzT29x4sx
-      2xXwc3KvAgLIJtEvPnuHMl2ogkJZEO9rGP5D8Iuw7dJbAR6AXwVdttVIFY39octW
-      0Tj934ZZw2GDCNGDxfmV+kn3Ei15Qop8UmK6dsuzSd0M+4yg+yr3359y+s0cDGiW
-      QwbIX6EZR2TMw6nIf21MRYsXS03gmmfeKXM6Iw==
-      =ED5P
+      hQEMA2PKcvDMvlKLAQgAkS9jHdnqPPary/yduPsA3Ya1rrERxfZxJnvicexUKl7b
+      eJlLe8e1BQE3BTaqkvLcBrGztBBvrgnv+kzmSTCd5jbL2/fFOdhedBsNjWpYtA7A
+      o6PPfYHka/Km4J/MihzVac9XUbBFhN0ETGYbGi0upPHHEKht3bUNzqkzvHxhQ8lJ
+      D7dDPs3vJXx3Ey8taZawdLJ9IcthvSojt8Un5A/SpdroW2CF4u0Gubuz+9D5i0T5
+      vXDqDQqEewu7pofxZ8TR4PY9PNHT9kmHyI2sIq1AkqP0Mn8wKP7dJVrUS3Z+xBUt
+      /f0B+8a0EJDuQBB2p7yRlBcg5d58TGB59pptmLpQ39JDAbZxHQymPKy3R14k1wKa
+      fYvaMBkaGtcu/foCb1r3xfAZOJSF5MT754wjvxB1bl/iizqJQm+WN3YAkja/Gwh+
+      J31/Ng==
+      =e45t
       -----END PGP MESSAGE-----
