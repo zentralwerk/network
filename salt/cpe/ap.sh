@@ -164,6 +164,33 @@ set network.{{ net }}.ifname='eth0.{{ pillar['vlans'][net] }}'
 {%-   endif %}
 {%- endfor %}
 
+{%- elif conf['model'] == 'TL-WR841Nv8' %}
+{# Like v9 but with eth0/1 switched #}
+set network.@switch[0].reset=1
+set network.@switch[0].enable=1
+set network.@switch[0].enable_vlan=0
+
+set network.mgmt=interface
+set network.mgmt.ifname=eth0.1
+set network.mgmt.proto=static
+set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
+set network.mgmt.netmask=255.255.255.0
+
+{%-   for net in bridges.keys() %}
+
+set network.{{ net }}=interface
+set network.{{ net }}.type=bridge
+set network.{{ net }}.proto=static
+{# Add WAN VLAN to bridge #}
+{%-     set ports = ['eth0.' ~ pillar['vlans'][net]] %}
+{# Add LAN ports to bridge #}
+{%-     if conf.get('lan-access') == net %}
+{%-       do ports.append('eth1') %}
+{%-     endif %}
+
+set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
+{%-   endfor %}
+
 {%- else %}
 {# All other models may have separate Ethernet chips for LAN/WAN #}
 set network.@switch[0].reset=1

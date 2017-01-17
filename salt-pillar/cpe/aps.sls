@@ -442,7 +442,7 @@ cpe:
       BEELWgTZJzE=
       =ECvx
       -----END PGP MESSAGE-----
-    model: TL-WR841N
+    model: TL-WR841Nv8
     location: Turm C oberste Etage
     lan-access: pub
     radios:
