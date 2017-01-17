@@ -387,3 +387,31 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+
+  ap11:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf+NRr+k/Szfg+tRbLSIqBADBXJmZ0rFS0/mmDuV+FdGZhn
+      D/3fHmPuH9GVii1dMWjXrZV2+HG2S9a3ww/ACiKBVoKzoj3zpgmaTDhKX+g7syTe
+      pZ/4CAcrbs7K9YbYnkHmRZIRgv0sUOdLKhapEEhf59Q8yxzMYKup1IZKI7Il6sin
+      owma3JT0FE3omqYNK0EDyf/P/cgd+mOHQg1rQ3iDVNpwFHGHvBxC5Fav5+C8s3r0
+      9yl2ZjOZpSjUx/nvYU8y4ZW36du+tce5GFvCPeF+o6HqzCwZBaudZ61fXPneI3yR
+      JiW0nlhrIK9DCXn5nJNcpFNrSz93MnKiAYC9Vf12e9JHAdwuv4z47cdIjrnS4u3I
+      zYjHv9Epj5ktnjkMRxdZBGHR/WQIO/9o+az4oWJ9SRL5pVDMeWDCWfr6X9RApemJ
+      o5l9+IGeKMU=
+      =8sEk
+      -----END PGP MESSAGE-----
+    model: TL-WR1043ND
+    location: B 2.03.04
+    lan-access: priv8
+    radios:
+      'platform/qca955x_wmac':
+        channel: 1
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+          'Unbenannt':
+            net: priv8
+            psk: changeme
