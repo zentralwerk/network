@@ -390,10 +390,10 @@ switches:
         ports: '20'
       pub:
         mode: access
-        ports: 17
+        ports: 18
       ap12:
         mode: trunk
-        ports: 18
+        ports: 17
         vlans:
           - mgmt
           - pub
