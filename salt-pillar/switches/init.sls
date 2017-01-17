@@ -119,6 +119,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - priv7
       server1:
         mode: bond
         ports:
@@ -440,10 +441,17 @@ switches:
         vlans:
           - mgmt
           - pub
+      ap7:
+        mode: trunk
+        ports: 7
+        vlans:
+          - mgmt
+          - pub
+          - priv7
       pub:
         mode: access
         ports:
-          - 6-8
+          - 6,8
     password: |
       -----BEGIN PGP MESSAGE-----
       
