@@ -252,10 +252,17 @@ switches:
         mode: access
         ports:
           - GigabitEthernet 1/0/9
+      ap11:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/10
+        vlans:
+          - mgmt
+          - priv8
+          - pub
       pub:
         mode: access
         ports:
-          - GigabitEthernet 1/0/10
           - GigabitEthernet 1/0/11
           - GigabitEthernet 1/0/12
           - GigabitEthernet 1/0/13
