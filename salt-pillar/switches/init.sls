@@ -415,10 +415,22 @@ switches:
           - mgmt
           - pub
           - priv7
+      ap9:
+        mode: trunk
+        ports: 5
+        vlans:
+          - mgmt
+          - pub
+      ap10:
+        mode: trunk
+        ports: 4
+        vlans:
+          - mgmt
+          - pub
       pub:
         mode: access
         ports:
-          - 3-8
+          - 6-8
     password: |
       -----BEGIN PGP MESSAGE-----
       
