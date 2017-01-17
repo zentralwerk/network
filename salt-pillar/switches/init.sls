@@ -451,7 +451,7 @@ switches:
       pub:
         mode: access
         ports:
-          - 6,8
+          - 8
     password: |
       -----BEGIN PGP MESSAGE-----
       
