@@ -427,3 +427,28 @@ cpe:
               ALixMzJMuax7lwM=
               =QmyY
               -----END PGP MESSAGE-----
+
+  ap12:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+
+      hQEMA2PKcvDMvlKLAQf+KrhJQfg2IAJ2SHEL8x0iAAn1ZYJ4kFVGYkmoEbN6iM4O
+      d2/0f8/2voMHChSTheQ5Y+Vp8op5gzOhROOShfJG1khugiEPhza+4sV0WD8Oa6Vm
+      FPXTr1HJdF/LZkCAVBvJOgsUC1U1PrSiSeKp3ziZyByKw6Rox6Krw6fkR2miuixs
+      fV0EW/H9bIVGru7Dtrgw1zq4QopxuFikMp/YWbmX0TEff6ntFCVwrGRN8Iluyaoy
+      aLon/Wh4DW8KQkw+s0SWxq/lIkCdvXj8TnGY3h1HNSXEfPE4hWGgwGwhLgNcNGPb
+      MC3IYHbmy/640GGl/tmqSnKZFuCVebMdIQ/j2iLLM9JHAe57w79qwwXIlUZ4/0I8
+      gaGTRjFyub+6lP9cdR6nd4FuGZanXQAEND/bwIOQtt1+jgcrgaaF3uv3gWO6Mckl
+      BEELWgTZJzE=
+      =ECvx
+      -----END PGP MESSAGE-----
+    model: TL-WR841N
+    location: Turm C oberste Etage
+    lan-access: pub
+    radios:
+      'platform/qca953x_wmac':
+        channel: 6
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
