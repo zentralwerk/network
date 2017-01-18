@@ -246,6 +246,7 @@ set wireless.wifi{{ ifnum }}.key='{{ ssidconf['psk'] }}'
 {%-     else %}
 set wireless.wifi{{ ifnum }}.encryption=none
 {%-     endif %}
+set wireless.wifi{{ ifnum }}.mcast_rate=18000
 
 {%-   endfor %}
 
