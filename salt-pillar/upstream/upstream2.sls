@@ -8,4 +8,4 @@ upstream:
 port-forwarding:
   - proto: udp
     port: 1194
-    to: 172.20.74.9:1194
+    to: 172.20.75.9:1194
