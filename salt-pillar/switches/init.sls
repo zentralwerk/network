@@ -75,6 +75,14 @@ switches:
           - mgmt
           - pub
           - c3d2
+      ap8:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/16
+        vlans:
+          - mgmt
+          - pub
+          - c3d2
       switch-c1:
         mode: bond
         ports:
