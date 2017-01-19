@@ -2,7 +2,7 @@
 
 ```shell
 dd if=/dev/zero of=salt.hda bs=1M count=1 seek=10239
-wget http://cdimage.debian.org/debian-cd/8.6.0/amd64/iso-cd/debian-8.6.0-amd64-netinst.iso
+wget http://cdimage.debian.org/debian-cd/8.7.1/amd64/iso-cd/debian-8.7.1-amd64-netinst.iso
 kvm -hda salt.hda -m 1024 -smp 2 -net nic,model=e1000 -net user -cdrom
 ```
 
