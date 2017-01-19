@@ -21,6 +21,9 @@ base:
   'anon1':
     - vpn.anon1
     - upstream.anon1
+  'upstream*':
+    # for forward-zones in unbound
+    - bind.dns
   'upstream1':
     - upstream.upstream1
   'upstream2':

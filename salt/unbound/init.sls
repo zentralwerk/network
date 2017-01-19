@@ -20,3 +20,13 @@ dns-root-data:
 /etc/unbound/unbound.conf.d/verbose.conf:
   file.managed:
     - source: salt://unbound/verbose.conf
+
+/etc/unbound/unbound.conf.d/local-zones.conf:
+  file.managed:
+    - source: salt://unbound/local-zones.conf
+    - template: 'jinja'
+
+/etc/unbound/unbound.conf.d/dn42-zones.conf:
+  file.managed:
+    - source: salt://unbound/dn42-zones.conf
+    - template: 'jinja'
