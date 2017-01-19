@@ -89,6 +89,78 @@ containers:
       priv8:
         type: phys
 
+  priv9-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+      priv9:
+        type: phys
+
+  priv10-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+      priv10:
+        type: phys
+
+  priv11-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+      priv11:
+        type: phys
+
+  priv12-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+      priv12:
+        type: phys
+
+  priv13-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+      priv13:
+        type: phys
+
+  priv14-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+      priv14:
+        type: phys
+
+  priv15-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+      priv15:
+        type: phys
+
+  priv16-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+      priv16:
+        type: phys
+
   upstream1:
     interfaces:
       core:

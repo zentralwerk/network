@@ -119,3 +119,99 @@ dhcp:
       domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv8.zentralwerk.online
+
+  priv9:
+    start: 172.20.74.34
+    end: 172.20.74.46
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv9-gw.priv9
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv9.zentralwerk.online
+
+  priv10:
+    start: 172.20.74.98
+    end: 172.20.74.110
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv10-gw.priv10
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv10.zentralwerk.online
+
+  priv11:
+    start: 172.20.74.162
+    end: 172.20.74.174
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv11-gw.priv11
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv11.zentralwerk.online
+
+  priv12:
+    start: 172.20.74.226
+    end: 172.20.74.238
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv12-gw.priv12
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv12.zentralwerk.online
+
+  priv13:
+    start: 172.20.75.34
+    end: 172.20.75.46
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv13-gw.priv13
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv13.zentralwerk.online
+
+  priv14:
+    start: 172.20.75.98
+    end: 172.20.75.110
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv14-gw.priv14
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv14.zentralwerk.online
+
+  priv15:
+    start: 172.20.75.162
+    end: 172.20.75.174
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv15-gw.priv15
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv15.zentralwerk.online
+
+  priv16:
+    start: 172.20.75.226
+    end: 172.20.75.238
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv16-gw.priv16
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv16.zentralwerk.online
