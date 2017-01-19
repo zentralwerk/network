@@ -13,6 +13,7 @@ containers:
       core:
         type: veth
         gw: upstream1
+        gw6: upstream1
       serv:
         type: veth
 

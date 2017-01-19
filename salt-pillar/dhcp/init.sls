@@ -20,7 +20,7 @@ dhcp:
     opts:
     host-opts:
       routers: pub-gw.pub
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: pub.zentralwerk.online
 
@@ -32,7 +32,7 @@ dhcp:
     opts:
     host-opts:
       routers: priv1-gw.priv1
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv1.zentralwerk.online
 
@@ -56,7 +56,7 @@ dhcp:
     opts:
     host-opts:
       routers: priv3-gw.priv3
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv3.zentralwerk.online
 
@@ -68,7 +68,7 @@ dhcp:
     opts:
     host-opts:
       routers: priv4-gw.priv4
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv4.zentralwerk.online
 
@@ -80,7 +80,7 @@ dhcp:
     opts:
     host-opts:
       routers: priv5-gw.priv5
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv5.zentralwerk.online
 
@@ -92,7 +92,7 @@ dhcp:
     opts:
     host-opts:
       routers: priv6-gw.priv6
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv6.zentralwerk.online
 
@@ -104,7 +104,7 @@ dhcp:
     opts:
     host-opts:
       routers: priv7-gw.priv7
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv7.zentralwerk.online
 
@@ -116,6 +116,6 @@ dhcp:
     opts:
     host-opts:
       routers: priv8-gw.priv8
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv8.zentralwerk.online
