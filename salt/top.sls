@@ -3,44 +3,31 @@ base:
     - salt-master
     - server1-network
     - lxc-containers
-    - quagga.zebra
-    - quagga.ospfd
-    - quagga.ospf6d
+    - bird
     - switches
     - cpe
   'priv*-gw':
     - no-ssh
     - forwarding
-    - quagga.zebra
-    - quagga.ospfd
-    - quagga.ospf6d
+    - bird
     - dhcp
   'pub-gw or serv-gw':
     - no-ssh
     - forwarding
-    - quagga.zebra
-    - quagga.ospfd
-    - quagga.ospf6d
+    - bird
     - dhcp
   'c3d2-gw or c3d2-anon':
     - no-ssh
     - forwarding
-    - quagga.zebra
-    - quagga.ospfd
-    - quagga.ospf6d
+    - bird
   'bgp':
     - no-ssh
     - forwarding
-    - quagga.zebra
-    - quagga.ospfd
-    - quagga.ospf6d
-    - quagga.bgpd
+    - bird
   'upstream*':
     - no-ssh
     - forwarding
-    - quagga.zebra
-    - quagga.ospfd
-    - quagga.ospf6d
+    - bird
     - unbound
     - upstream.dhcp
     - upstream.shaping
@@ -54,9 +41,7 @@ base:
   'anon*':
     - no-ssh
     - forwarding
-    - quagga.zebra
-    - quagga.ospfd
-    - quagga.ospf6d
+    - bird
     - vpn.openvpn
     - upstream.masquerade
     - upstream.shaping

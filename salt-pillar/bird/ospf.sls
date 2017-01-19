@@ -1,6 +1,6 @@
 #!yaml|gpg
 ospf:
-  ospf_secret: |
+  secret: |
     -----BEGIN PGP MESSAGE-----
     
     hQEMA2PKcvDMvlKLAQf/UzB2wsDsIfUEIEx20IehQbTkw5A9gCYnuW09lvkzxlgY
