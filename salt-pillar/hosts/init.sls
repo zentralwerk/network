@@ -97,7 +97,7 @@ hosts-inet:
   priv3:
     priv3-gw: 172.20.74.129
 {%- for i in range(1, 14) %}
-    dhcp{{ i }}: 172.20.75.{{ 129 + i }}
+    dhcp{{ i }}: 172.20.74.{{ 129 + i }}
 {%- endfor %}
   priv11:
     priv11-gw: 172.20.74.161
