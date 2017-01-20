@@ -3,15 +3,17 @@ base:
     - hosts
     - subnets
     - vlans
-    - bird.ospf
   'priv*-gw':
     - dhcp
+    - bird.radv
     - bird.ospf
   'pub-gw':
     - dhcp
+    - bird.radv
     - bird.ospf
   'serv-gw':
     - dhcp
+    - bird.radv
     - bird.ospf
   'c3d2-gw or c3d2-anon':
     - bird.ospf
