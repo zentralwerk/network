@@ -263,8 +263,8 @@ cpe:
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
-        channel: 1
-        htmode: HT40+
+        channel: 13
+        htmode: HT40-
         ssids:
           'ZW public':
             net: pub
