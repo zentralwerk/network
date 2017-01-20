@@ -397,9 +397,12 @@ switches:
       mgmt:
         mode: access
         ports: '20'
-      pub:
-        mode: access
+      ap13:
+        mode: trunk
         ports: 18
+        vlans:
+          - mgmt
+          - pub
       ap12:
         mode: trunk
         ports: 17
