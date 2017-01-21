@@ -607,3 +607,53 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+
+  ap18:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf/couJwoTRzTEycGB3t2aa4NTjOxKmh/Q7ScvHbxEX1VhX
+      sg0bW+CXQag+zy00oAbXlK/vOSP+NvOlt7vn8X50kmYTHlcZtelry4tAZeBJyw29
+      Vb/VvrR6F8nft1q2hpiGzAWgy8rkyncAKwCdLfsdOC/A4/QH5jis9fMnkDLbwUb+
+      cruIIe977BlE1jC5s09F7ZSeHUby2lMhcsxuyS+DTsBIc37Qp/Tpeq/sY7wtbrE2
+      MbP4mZjtBOgUCCtvauONtKjt2Zg92scob8lHm4m77qh6b4rxJ3lEW+oapelHQGId
+      ULxd5KM48AqV3AVexmTXNVlU0ppIdPvjxV4WR5VQt9JJAevANNiEBSPbsQwF0QNO
+      4M1Fl6WH1WTjVf0WQPMmUowiH0hyJuSx46sju9bEJJCaueJtIhCvUbOeOURwZaVe
+      ZLBzZVhVZJoO9Q==
+      =bGE5
+      -----END PGP MESSAGE-----
+    model: TL-WR841N
+    location: Auf Halde
+    lan-access: pub
+    radios:
+      'platform/qca953x_wmac':
+        channel: 1
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+
+  ap19:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf/couJwoTRzTEycGB3t2aa4NTjOxKmh/Q7ScvHbxEX1VhX
+      sg0bW+CXQag+zy00oAbXlK/vOSP+NvOlt7vn8X50kmYTHlcZtelry4tAZeBJyw29
+      Vb/VvrR6F8nft1q2hpiGzAWgy8rkyncAKwCdLfsdOC/A4/QH5jis9fMnkDLbwUb+
+      cruIIe977BlE1jC5s09F7ZSeHUby2lMhcsxuyS+DTsBIc37Qp/Tpeq/sY7wtbrE2
+      MbP4mZjtBOgUCCtvauONtKjt2Zg92scob8lHm4m77qh6b4rxJ3lEW+oapelHQGId
+      ULxd5KM48AqV3AVexmTXNVlU0ppIdPvjxV4WR5VQt9JJAevANNiEBSPbsQwF0QNO
+      4M1Fl6WH1WTjVf0WQPMmUowiH0hyJuSx46sju9bEJJCaueJtIhCvUbOeOURwZaVe
+      ZLBzZVhVZJoO9Q==
+      =bGE5
+      -----END PGP MESSAGE-----
+    model: TL-WR841N
+    location: Auf Halde
+    lan-access: pub
+    radios:
+      'platform/qca953x_wmac':
+        channel: 1
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
