@@ -17,7 +17,7 @@ bind9:
     - template: 'jinja'
 
 # zentralwerk.online
-/etc/bind/{{ pillar['bind']['root-domain'] }}:
+/etc/bind/{{ pillar['bind']['root-domain'] }}.zone:
   file.managed:
     - source: salt://bind/root-domain.zone
     - template: 'jinja'
