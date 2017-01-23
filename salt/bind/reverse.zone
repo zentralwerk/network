@@ -8,9 +8,7 @@ $TTL 10M
 				2H ; expire
 				5M ; minimum
 			)
-{%- for ns in pillar['bind']['public-ns'] %}
-		IN NS	{{ ns }}.
-{%- endfor %}
+		IN NS	{{ pillar['bind']['master-ns'] }}.
 
 {%- for net, hosts in pillar['hosts-inet'].items() %}
 {%-   for host, aaaa in hosts.items() %}

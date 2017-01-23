@@ -4,7 +4,7 @@ bind:
   public-ns:
     - ns.c3d2.de
     - spaceboyz.net
-  serial: 2017011300
+  serial: 2017012300
   
   reverse-zones-inet:
     - 72.20.172.in-addr.arpa
