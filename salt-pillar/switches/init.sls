@@ -257,10 +257,14 @@ switches:
           - mgmt
           - priv6
           - pub
-      priv7:
-        mode: access
+      ap20:
+        mode: trunk
         ports:
           - GigabitEthernet 1/0/9
+        vlans:
+          - mgmt
+          - priv7
+          - pub
       ap11:
         mode: trunk
         ports:
