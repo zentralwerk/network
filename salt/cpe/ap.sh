@@ -191,6 +191,23 @@ set network.{{ net }}.proto=static
 set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
 {%-   endfor %}
 
+{%- elif conf['model'] == 'TL-WA901NDv3' %}
+{# Only eth0 exists, no switch #}
+set network.mgmt=interface
+set network.mgmt.ifname=eth0.1
+set network.mgmt.proto=static
+set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
+set network.mgmt.netmask=255.255.255.0
+
+{%-   for net in bridges.keys() %}
+
+set network.{{ net }}=interface
+set network.{{ net }}.type=bridge
+set network.{{ net }}.proto=static
+{# Add WAN VLAN to bridge #}
+set network.{{ net }}.ifname='{{ 'eth0.' ~ pillar['vlans'][net] }}'
+{%-   endfor %}
+
 {%- elif conf['model'] == 'DIR-615H1' %}
 delete network.lan_dev
 delete network.wan_dev
