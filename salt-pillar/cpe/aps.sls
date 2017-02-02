@@ -232,18 +232,17 @@ cpe:
             net: priv5
             psk: |
               -----BEGIN PGP MESSAGE-----
-
-              hQEMA2PKcvDMvlKLAQf+OG+j5ZvT32ZzsYsminJxmL+Mfju/hWoMegbjJfug+UT1
-              OJwkBMCM0iyJ7DK28HLmRNFBnpgA4Kv24BjOZhKOR9X8yQCdAnTyy/XyoqHjidBI
-              WrwDYjUYXWfdQW2q1oycd9X6RS8zlHoEugjnLWvzLt9jzZUXpgWp2+N9jiQGjhdF
-              CSGeRHs4fryQ3XZeGc7Fe3vVfl2r2p0fjAhgzslgQQ/K2whQwrP62fl7bBuVCr6F
-              ZhK/1UwpH87hNEBH161dI1qnEHXF4AtjaQ2F/cg8JpYIiTQYTbLVytxduUfDNRJY
-              Hu2v2FCuj46R6Kii9RyM2ZrNswvklUI+7nVwCSaeFNJFAcKdyQWQtCWmJ/V+dgpQ
-              M21rWr8j39wDhcX8FjBcLlz8ABtZMBlOABNljWc89FNMWQz+TiiQt10xK1UuKwMj
-              0tG1zaWX
-              =fTcQ
+              
+              hQEMA2PKcvDMvlKLAQf/QRJPWXaSBfbpX/YoEZhhlAae1WON615+sbfTbsVIPuSx
+              Cx6NeDoXprpxmLUuFg7L5wb7Ytno4bNYpUd1uvoxongH2oMmx+8vBPtg2R+h5p2q
+              TQPVGrXdn+9V6wLvIe8lQ+JRlSGLEb2Pz3GgcmxTXKYPNkkOlhCEJxqQ3KzBqVjJ
+              F2A13vVH0Jy2nHxqa9BSM59hEHKyNFu+fQz2OJw48n9BFXth1ciq+OG4ieCm/EBh
+              RVVYERbBtt2GoC+qsSpd2ckI3aWf0v4DNcRXNXyVlGDwhKKeHmz9wZDBjIQVjY92
+              HYr6cKL4bvLDzluow8iudDN3minEhcIgxXMSz6YP6tJGAYCkykJ2MRV0Cjba8Tb+
+              rP274e9dpaPRXmrUCVaiqEUHp44xs+AwBA/R4jFPeYlZjg8o7B0noYPMHj1lR3iN
+              XiKIC2CtZg==
+              =6HRg
               -----END PGP MESSAGE-----
-
   ap6:
     password: |
       -----BEGIN PGP MESSAGE-----
