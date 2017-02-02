@@ -283,7 +283,7 @@ cpe:
       =Noqk
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: Turm D, vorletzte (4.?) Etage
+    location: Turm D, 4. Etage
     lan-access: priv7
     radios:
       'platform/qca953x_wmac':
@@ -383,7 +383,7 @@ cpe:
       =QPF0
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: turm d etage 2
+    location: Turm D, 2. Etage
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
@@ -407,7 +407,7 @@ cpe:
       =QPF0
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: turm d etage 1
+    location: Turm D, 1. Etage
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
