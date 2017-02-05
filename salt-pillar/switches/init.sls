@@ -11,7 +11,10 @@ switches:
       switch-b2:
         mode: trunk
         ports:
-          - TenGigabitEthernet1/1/1
+          - GigabitEthernet 1/0/25
+          - GigabitEthernet 1/0/26
+          - GigabitEthernet 1/0/27
+          - GigabitEthernet 1/0/28
         vlans:
           - mgmt
           - pub
@@ -204,7 +207,10 @@ switches:
       switch-b1:
         mode: trunk
         ports:
-          - TenGigabitEthernet1/1/1
+          - GigabitEthernet 1/0/25
+          - GigabitEthernet 1/0/26
+          - GigabitEthernet 1/0/27
+          - GigabitEthernet 1/0/28
         vlans:
           - mgmt
           - pub
