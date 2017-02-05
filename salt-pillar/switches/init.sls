@@ -9,7 +9,7 @@ switches:
     # 10GE hinten
     ports:
       switch-b2:
-        mode: trunk
+        mode: bond
         ports:
           - GigabitEthernet 1/0/25
           - GigabitEthernet 1/0/26
@@ -205,7 +205,7 @@ switches:
     # 10GE hinten
     ports:
       switch-b1:
-        mode: trunk
+        mode: bond
         ports:
           - GigabitEthernet 1/0/25
           - GigabitEthernet 1/0/26
