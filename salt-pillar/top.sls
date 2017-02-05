@@ -8,6 +8,7 @@ base:
     - bird.ospf
     - switches
     - cpe.aps
+    - collectd.server1
   'priv*-gw':
     - dhcp
     - bird.radv
@@ -23,6 +24,7 @@ base:
     - bird.bgp
   'upstream*':
     - bird.ospf
+    - collectd.upstream
     # for forward-zones in unbound
     - bind.dns
   'upstream1':
@@ -33,5 +35,8 @@ base:
     - bird.ospf
     - vpn.anon1
     - upstream.anon1
+    - collectd.upstream
   'dns':
     - bind.dns
+  'stats':
+    - collectd.stats-server

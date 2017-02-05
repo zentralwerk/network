@@ -6,6 +6,7 @@ base:
     - bird
     - switches
     - cpe
+    - collectd
   'priv*-gw':
     - no-ssh
     - forwarding
@@ -31,6 +32,7 @@ base:
     - unbound
     - upstream.dhcp
     - upstream.shaping
+    - collectd
   'upstream1':
     - upstream.6to4
     - upstream.nat66
@@ -46,6 +48,10 @@ base:
     - upstream.masquerade
     - upstream.shaping
     - upstream.nat66
+    - collectd
   'dns':
     - no-ssh
     - bind
+  'stats':
+    - no-ssh
+    - collectd

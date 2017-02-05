@@ -142,3 +142,10 @@ containers:
         type: veth
         gw: serv-gw
         gw6: serv-gw
+
+  stats:
+    interfaces:
+      serv:
+        type: veth
+        gw: serv-gw
+        gw6: serv-gw
