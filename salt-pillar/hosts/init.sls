@@ -80,6 +80,7 @@ hosts-inet:
   serv:
     serv-gw: 172.20.73.1
     dns: 172.20.73.2
+    stats: 172.20.73.3
   priv1:
     priv1-gw: 172.20.74.1
 {%- for i in range(1, 14) %}
@@ -179,6 +180,7 @@ hosts-inet6:
   serv:
     serv-gw: fd23:42:c3d2:582::1
     dns: fd23:42:c3d2:582:2:0:0:2
+    stats: fd23:42:c3d2:582:2:0:0:3
   pub:
     pub-gw: fd23:42:c3d2:583::1
   priv1:
