@@ -149,3 +149,10 @@ containers:
         type: veth
         gw: serv-gw
         gw6: serv-gw
+
+  radius:
+    interfaces:
+      serv:
+        type: veth
+        gw: serv-gw
+        gw6: serv-gw
