@@ -16,4 +16,7 @@ if [ "$IFACE" = "{{ interface }}" ]; then
     # collectd
     iptables -A FORWARD -i $IFACE -p udp --dport 25826 -j ACCEPT
     ip6tables -A FORWARD -i $IFACE -p udp --dport 25826 -j ACCEPT
+    # downloads.lede-project.org
+    iptables -A FORWARD -i $IFACE --dest 148.251.78.235 -j ACCEPT
+    iptables -A FORWARD -i $IFACE --dest 2a01:4f8:202:43ea::3 -j ACCEPT
 fi
