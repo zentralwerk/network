@@ -1,0 +1,32 @@
+#!/bin/bash
+
+for HOST in $@ ; do
+    ssh root@$HOST \
+        "ash -e -x" <<__SSH__
+opkg update
+opkg install collectd collectd-mod-iwinfo collectd-mod-network
+cat > /etc/collectd.conf <<EOF
+Hostname "$HOSTNAME"
+FQDNLookup false
+Interval 10
+
+BaseDir "/var/run/collectd"
+Include "/etc/collectd/conf.d"
+PIDFile "/var/run/collectd.pid"
+PluginDir "/usr/lib/collectd"
+TypesDB "/usr/share/collectd/types.db"
+
+LoadPlugin load
+LoadPlugin iwinfo
+LoadPlugin network
+<Plugin network>
+        Server "{{ pillar['hosts-inet6']['serv']['stats']  }}" "25826"
+</Plugin>
+
+EOF
+
+/etc/init.d/collectd enable
+/etc/init.d/collectd start
+
+__SSH__
+done

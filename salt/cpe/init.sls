@@ -9,3 +9,9 @@
     - mode: 755
 
 {%- endfor %}
+
+/root/ap_install_collectd.sh:
+  file.managed:
+    - source: salt://cpe/ap_install_collectd.sh
+    - template: 'jinja'
+    - mode: 755
