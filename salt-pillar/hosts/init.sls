@@ -198,6 +198,7 @@ hosts-inet6:
     c3d2-gw: fd23:42:c3d2:581::c3d2:1
     c3d2-anon: fd23:42:c3d2:581::c3d2:a
     bgp: fd23:42:c3d2:581::c3d2:b
+    mgmt-gw: fd23:42:c3d2:581::8:3
 
     upstream1: fd23:42:c3d2:581::b:0
     upstream2: fd23:42:c3d2:581::b:1
