@@ -162,5 +162,6 @@ containers:
       core:
         type: veth
         gw: upstream1
+        gw6: anon1
       mgmt:
         type: veth
