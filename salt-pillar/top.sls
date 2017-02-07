@@ -9,6 +9,7 @@ base:
     - switches
     - cpe.aps
     - collectd.server1
+    - keys
   'priv*-gw':
     - dhcp
     - bird.radv

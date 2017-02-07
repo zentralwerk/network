@@ -13,7 +13,8 @@ ssh root@{{ pillar['hosts-inet']['mgmt'][hostname] }} \
 # Set root password
 echo -e '{{ conf['password'] }}\n{{ conf['password'] }}' | passwd
 
-# TODO: add ssh pubkey
+# add ssh pubkey
+echo "{{ pillar['ssh']['pubkey'] }}" > /etc/dropbear/authorized_keys
 
 # System configuration
 uci batch <<__UCI__
