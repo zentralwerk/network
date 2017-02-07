@@ -79,7 +79,7 @@ set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
 {%    set switchnum = switchnum + 1 %}
 {%- endfor %}
 
-{% uci_network_mgmt('eth0.1') %}
+{{ uci_network_mgmt('eth0.1') }}
 
 {%- for net in bridges.keys() %}
 set network.{{ net }}=interface
@@ -115,7 +115,7 @@ set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
 {%    set switchnum = switchnum + 1 %}
 {%- endfor %}
 
-{% uci_network_mgmt('eth0.1') %}
+{{ uci_network_mgmt('eth0.1') }}
 
 {%- for net in bridges.keys() %}
 set network.{{ net }}=interface
@@ -155,7 +155,7 @@ set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
 {%    set switchnum = switchnum + 1 %}
 {%- endfor %}
 
-{% uci_network_mgmt('eth0.1') %}
+{{ uci_network_mgmt('eth0.1') }}
 
 {%- for net in bridges.keys() %}
 set network.{{ net }}=interface
@@ -174,7 +174,7 @@ set network.@switch[0].reset=1
 set network.@switch[0].enable=1
 set network.@switch[0].enable_vlan=0
 
-{% uci_network_mgmt('eth0.1') %}
+{{ uci_network_mgmt('eth0.1') }}
 
 {%-   for net in bridges.keys() %}
 
@@ -194,7 +194,7 @@ set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
 {%- elif conf['model'] == 'TL-WA901NDv3' %}
 {# Only eth0 exists, no switch #}
 
-{% uci_network_mgmt('eth0.1') %}
+{{ uci_network_mgmt('eth0.1') }}
 
 {%-   for net in bridges.keys() %}
 
@@ -233,7 +233,7 @@ set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
 {%    set switchnum = switchnum + 1 %}
 {%- endfor %}
 
-{% uci_network_mgmt('eth0.1') %}
+{{ uci_network_mgmt('eth0.1') }}
 
 {%- for net in bridges.keys() %}
 set network.{{ net }}=interface
@@ -249,7 +249,7 @@ set network.@switch[0].reset=1
 set network.@switch[0].enable=1
 set network.@switch[0].enable_vlan=0
 
-{% uci_network_mgmt('eth1.1') %}
+{{ uci_network_mgmt('eth1.1') }}
 
 {%-   for net in bridges.keys() %}
 
