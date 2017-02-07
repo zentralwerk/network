@@ -1,5 +1,20 @@
 #!/usr/bin/env bash
 
+{% macro uci_network_mgmt(ifname) -%}
+set network.mgmt=interface
+set network.mgmt.ifname={{ ifname }}
+set network.mgmt.proto=static
+set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
+set network.mgmt.netmask=255.255.255.0
+set network.mgmt.ip6addr={{ pillar['hosts-inet6']['mgmt'][hostname] }}/64
+set network.mgmt.ip6gw={{ pillar['hosts-inet']['mgmt']['mgmt-gw'] }}
+delete network.mgmt.dns
+add_list network.mgmt.dns={{ pillar['hosts-inet']['core']['upstream1'] }}
+add_list network.mgmt.dns={{ pillar['hosts-inet6']['core']['upstream1'] }}
+add_list network.mgmt.dns={{ pillar['hosts-inet']['core']['upstream2'] }}
+add_list network.mgmt.dns={{ pillar['hosts-inet6']['core']['upstream2'] }}
+{%- endmacro %}
+
 {%- if conf.get('firstboot') %}
 ssh-keygen -R 192.168.1.1
 
@@ -64,11 +79,7 @@ set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
 {%    set switchnum = switchnum + 1 %}
 {%- endfor %}
 
-set network.mgmt=interface
-set network.mgmt.ifname=eth0.1
-set network.mgmt.proto=static
-set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
-set network.mgmt.netmask=255.255.255.0
+{% uci_network_mgmt('eth0.1') %}
 
 {%- for net in bridges.keys() %}
 set network.{{ net }}=interface
@@ -104,19 +115,7 @@ set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
 {%    set switchnum = switchnum + 1 %}
 {%- endfor %}
 
-set network.mgmt=interface
-set network.mgmt.ifname=eth0.1
-set network.mgmt.proto=static
-set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
-set network.mgmt.netmask=255.255.255.0
-set network.mgmt.gateway={{ pillar['hosts-inet']['mgmt']['mgmt-gw'] }}
-set network.mgmt.ip6addr={{ pillar['hosts-inet6']['mgmt'][hostname] }}/64
-set network.mgmt.ip6gw={{ pillar['hosts-inet']['mgmt']['mgmt-gw'] }}
-delete network.mgmt.dns
-add_list network.mgmt.dns={{ pillar['hosts-inet']['core']['upstream1'] }}
-add_list network.mgmt.dns={{ pillar['hosts-inet6']['core']['upstream1'] }}
-add_list network.mgmt.dns={{ pillar['hosts-inet']['core']['upstream2'] }}
-add_list network.mgmt.dns={{ pillar['hosts-inet6']['core']['upstream2'] }}
+{% uci_network_mgmt('eth0.1') %}
 
 {%- for net in bridges.keys() %}
 set network.{{ net }}=interface
@@ -156,11 +155,7 @@ set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
 {%    set switchnum = switchnum + 1 %}
 {%- endfor %}
 
-set network.mgmt=interface
-set network.mgmt.ifname=eth0.1
-set network.mgmt.proto=static
-set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
-set network.mgmt.netmask=255.255.255.0
+{% uci_network_mgmt('eth0.1') %}
 
 {%- for net in bridges.keys() %}
 set network.{{ net }}=interface
@@ -179,11 +174,7 @@ set network.@switch[0].reset=1
 set network.@switch[0].enable=1
 set network.@switch[0].enable_vlan=0
 
-set network.mgmt=interface
-set network.mgmt.ifname=eth0.1
-set network.mgmt.proto=static
-set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
-set network.mgmt.netmask=255.255.255.0
+{% uci_network_mgmt('eth0.1') %}
 
 {%-   for net in bridges.keys() %}
 
@@ -202,11 +193,8 @@ set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
 
 {%- elif conf['model'] == 'TL-WA901NDv3' %}
 {# Only eth0 exists, no switch #}
-set network.mgmt=interface
-set network.mgmt.ifname=eth0.1
-set network.mgmt.proto=static
-set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
-set network.mgmt.netmask=255.255.255.0
+
+{% uci_network_mgmt('eth0.1') %}
 
 {%-   for net in bridges.keys() %}
 
@@ -245,11 +233,7 @@ set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
 {%    set switchnum = switchnum + 1 %}
 {%- endfor %}
 
-set network.mgmt=interface
-set network.mgmt.ifname=eth0.1
-set network.mgmt.proto=static
-set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
-set network.mgmt.netmask=255.255.255.0
+{% uci_network_mgmt('eth0.1') %}
 
 {%- for net in bridges.keys() %}
 set network.{{ net }}=interface
@@ -265,11 +249,7 @@ set network.@switch[0].reset=1
 set network.@switch[0].enable=1
 set network.@switch[0].enable_vlan=0
 
-set network.mgmt=interface
-set network.mgmt.ifname=eth1.1
-set network.mgmt.proto=static
-set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
-set network.mgmt.netmask=255.255.255.0
+{% uci_network_mgmt('eth1.1') %}
 
 {%-   for net in bridges.keys() %}
 
