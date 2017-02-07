@@ -17,7 +17,7 @@ base:
     - bird.ospf
     - dhcp
     - bird.radv
-  'c3d2-gw or c3d2-anon':
+  'c3d2-gw or c3d2-anon or mgmt-gw':
     - bird.ospf
   'bgp':
     - bird.ospf
