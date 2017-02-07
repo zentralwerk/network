@@ -6,7 +6,7 @@ for HOST in $@ ; do
 opkg update
 opkg install collectd collectd-mod-iwinfo collectd-mod-network
 cat > /etc/collectd.conf <<EOF
-Hostname "$HOSTNAME"
+Hostname "\$HOSTNAME"
 FQDNLookup false
 Interval 10
 
@@ -25,8 +25,8 @@ LoadPlugin network
 
 EOF
 
+/etc/init.d/collectd restart
 /etc/init.d/collectd enable
-/etc/init.d/collectd start
 
 __SSH__
 done

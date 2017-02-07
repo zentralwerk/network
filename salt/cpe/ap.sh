@@ -353,12 +353,11 @@ __SH__
 chmod a+rx /usr/sbin/wifi-on-link.sh
 /etc/init.d/cron restart
 
-# TODO: install pkgs (collectd...)
-
 {%- if conf.get('firstboot') %}
 reboot
 {%- endif %}
 
 __SSH__
 
-echo "All done \\o/"
+echo "Base configuration done \\o/"
+echo "Later run: `dirname $0`/ap_install_collectd.sh {{ pillar['hosts-inet']['mgmt'][hostname] }}"
