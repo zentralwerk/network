@@ -4,7 +4,7 @@ for HOST in $@ ; do
     ssh root@$HOST \
         "ash -e -x" <<__SSH__
 opkg update
-opkg install collectd collectd-mod-iwinfo collectd-mod-network
+opkg install collectd collectd-mod-interface collectd-mod-load collectd-mod-cpu collectd-mod-iwinfo collectd-mod-network
 cat > /etc/collectd.conf <<EOF
 Hostname "\$HOSTNAME"
 FQDNLookup false
@@ -16,7 +16,9 @@ PIDFile "/var/run/collectd.pid"
 PluginDir "/usr/lib/collectd"
 TypesDB "/usr/share/collectd/types.db"
 
+LoadPlugin cpu
 LoadPlugin load
+LoadPlugin interface
 LoadPlugin iwinfo
 LoadPlugin network
 <Plugin network>
