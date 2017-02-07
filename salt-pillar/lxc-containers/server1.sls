@@ -156,3 +156,11 @@ containers:
         type: veth
         gw: serv-gw
         gw6: serv-gw
+
+  mgmt-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: upstream1
+      mgmt:
+        type: veth

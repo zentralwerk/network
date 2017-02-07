@@ -17,10 +17,12 @@ base:
     - forwarding
     - bird
     - dhcp
-  'c3d2-gw or c3d2-anon':
+  'c3d2-gw or c3d2-anon or mgmt-gw':
     - no-ssh
     - forwarding
     - bird
+  'mgmt-gw':
+    - firewall.mgmt-gw
   'bgp':
     - no-ssh
     - forwarding
