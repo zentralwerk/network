@@ -1,3 +1,6 @@
+iptables:
+  pkg.installed: []
+
 /etc/network/if-pre-up.d/firewall:
   file.managed:
     - source: salt://upstream/mgmt-gw.sh

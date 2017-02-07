@@ -22,6 +22,7 @@ subnets-inet:
   mgmt: 10.0.0.0/24
 
 subnets-inet6:
+  mgmt: fd23:42:c3d2:580::/64
   core: fd23:42:c3d2:581::/64
   serv: fd23:42:c3d2:582::/64
   pub: fd23:42:c3d2:583::/64
