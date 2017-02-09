@@ -308,7 +308,6 @@ cpe:
               =MtC9
               -----END PGP MESSAGE-----
   ap8:
-    firstboot: True
     password: |
       -----BEGIN PGP MESSAGE-----
       

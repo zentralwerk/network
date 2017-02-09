@@ -63,15 +63,9 @@ expect "{{ hostname }}]"
 send "interface {{ port }}\r"
 expect "]"
 {%-       if conf['mode'] == 'bond' %}
-send "lacp enable\r"
+send "undo lacp enable\rundo port link-aggregation group\rport link-aggregation group {{ group }}\rlacp enable\r"
 {%-       else %}
-send "undo lacp enable\r"
-{%-       endif %}
-expect "]"
-{%-       if conf['mode'] == 'bond' %}
-send "undo port link-aggregation group\rport link-aggregation group {{ group }}\r"
-{%-       else %}
-send "undo port link-aggregation group\r"
+send "undo lacp enable\rundo port link-aggregation group\r"
 {%-       endif %}
 expect "]"
 {%-       if conf.get('vlans') %}
