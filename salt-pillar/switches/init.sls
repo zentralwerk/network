@@ -11,6 +11,7 @@ switches:
       switch-b2:
         mode: bond
         ports:
+          - TenGigabitEthernet 1/1/1
           - GigabitEthernet 1/0/25
           - GigabitEthernet 1/0/26
           - GigabitEthernet 1/0/27
@@ -207,6 +208,7 @@ switches:
       switch-b1:
         mode: bond
         ports:
+          - TenGigabitEthernet 1/1/1
           - GigabitEthernet 1/0/25
           - GigabitEthernet 1/0/26
           - GigabitEthernet 1/0/27
