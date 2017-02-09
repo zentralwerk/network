@@ -143,7 +143,7 @@ cpe:
               =TEEI
               -----END PGP MESSAGE-----
       'pci0000:00/0000:00:00.0':
-        channel: 36
+        channel: 128
         htmode: HT40+
         ssids:
           'ZW public':
