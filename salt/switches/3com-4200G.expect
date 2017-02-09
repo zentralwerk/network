@@ -53,19 +53,17 @@ send "quit\r"
 expect "{{ hostname }}]"
 {%- endfor %}
 
-{%- set group = 0 %}
 {%- for name, conf in switch['ports'].items() %}
 {%-   if conf['mode'] == 'trunk' or conf['mode'] == 'bond' %}
-{%-     if conf['mode'] == 'bond' %}
-{%-       set group = group + 1 %}
-{%-     endif %}
 {%-     for port in conf['ports'] %}
 send "interface {{ port }}\r"
 expect "]"
+send "undo stp edged-port\r"
+expect "]"
 {%-       if conf['mode'] == 'bond' %}
-send "undo lacp enable\rundo port link-aggregation group\rport link-aggregation group {{ group }}\rlacp enable\r"
+send "lacp enable\r"
 {%-       else %}
-send "undo lacp enable\rundo port link-aggregation group\r"
+send "undo lacp enable\r"
 {%-       endif %}
 expect "]"
 {%-       if conf.get('vlans') %}
