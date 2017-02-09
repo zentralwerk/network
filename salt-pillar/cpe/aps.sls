@@ -571,8 +571,8 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
-    location: Auf Halde
-    lan-access: pub
+    location: Geborgt an B 4.04.01 anstelle ap20
+    lan-access: priv7
     radios:
       'platform/qca955x_wmac':
         channel: 1
@@ -580,6 +580,21 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+          'Zippi':
+            net: priv7
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQgAjnmaVwPChe6mDZI1yBKyBhsbuGabre05JWYYIReV4rnG
+              SJEp6Ei7kbm+2iEhrlXyhu9Ke2gILUFXbopRoaytOjvT9VcnBhWLPA4EuqsGLep5
+              t32XyK94BLTY3vRhZrvcloZAjXlaGnaEyAQ9Wk5IVoQu1S+TeVd2VOS67BQeeCLr
+              xFE7mzY8FQR01jBC0QEOXRdfwZ83Zm4JzwTm4ba6CABElmQoBbAPP86ydbNxl1n7
+              R/n6y/A6GjgR8HRLaISO0x6Vy6XCWBEhMPbGC8/7qF+1BdVo9qe9IyQBZAyfBQ2b
+              nTDna1wB4y7CSOEnVC5WRgmjrHr4+JB3/gPPqR6gddJGAYkw7BkNct7Xd8bWaOJP
+              LSzwuOSwP9ozjMD8RxfJ9ctfGTI4aJ8EcMJ6CAdbnMl0qrucTvlh/nZ/xNtzXplA
+              is+jAuMF8Q==
+              =MtC9
+              -----END PGP MESSAGE-----
 
   ap17:
     password: |
