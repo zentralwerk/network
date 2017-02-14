@@ -191,14 +191,14 @@ switches:
           - GigabitEthernet1/0/46
         access: c3d2
       server2:
-        mode: trunk 
+        mode: trunk
         ports:
           - GigabitEthernet1/0/22
         access: c3d2
       server2-mgmt:
         mode: trunk
         ports:
-          - GigabitEthernet1/0/22
+          - GigabitEthernet1/0/21
         access: c3d2
     password: |
       -----BEGIN PGP MESSAGE-----
