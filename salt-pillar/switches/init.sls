@@ -87,6 +87,13 @@ switches:
           - mgmt
           - pub
           - c3d2
+      ap18:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/18
+        vlans:
+          - mgmt
+          - pub
       switch-c1:
         mode: bond
         ports:
