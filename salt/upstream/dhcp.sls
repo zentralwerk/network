@@ -17,3 +17,11 @@ include:
     - mode: 744
     - require:
         - pkg: iptables
+
+/etc/network/interfaces:
+  file.managed:
+    - source: salt://upstream/interfaces
+    - template: 'jinja'
+    - context:
+        interface: {{ interface }}
+    - mode: 744
