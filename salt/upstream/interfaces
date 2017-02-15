@@ -1,5 +1,8 @@
 auto lo
 iface lo inet loopback
 
+auto core
+iface core inet manual
+
 auto {{ interface }}
 iface {{ interface }} inet dhcp
