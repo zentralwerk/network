@@ -105,6 +105,9 @@ containers:
         type: veth
       up2:
         type: phys
+        # Change (eg. auto-generation) requires reboot of the cable
+        # modem that is bridge mode
+        hwaddr: 00:23:74:D7:42:7C
 
   anon1:
     interfaces:
