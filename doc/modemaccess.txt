@@ -1,0 +1,11 @@
+auf upstream1:
+ip a a 192.168.100.2/24 dev up1
+iptables -t nat -A PREROUTING -p tcp --dport 12345 -j DNAT --to-destination 192.168.100.1:80
+
+lokal:
+ssh -L:12345:172.20.72.63:12345 $USER@172.20.72.1
+im browser: http://localhost:12345
+
+danach aufräumen:
+ip a d 192.168.100.2/24 dev up1
+iptables -t nat -D PREROUTING -p tcp --dport 12345 -j DNAT --to-destination 192.168.100.1:80
