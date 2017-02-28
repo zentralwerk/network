@@ -44,9 +44,9 @@ Von geeigneten Routern haben wir stets zu wenige übrig, so dass wir sie
 gemeinsam kaufen und bezahlen müssen. Such dir einen aus, dann
 bestellen und konfigurieren wir ihn.
 
-* TP-Link Archer C7 v2 (schnell, 85€)
-* TP-Link TL-1043ND v1/v2/v3 (okay, 45€)
-* TP-Link TL-WR841N (billigst, 20€)
+* TP-Link Archer C7 v2 (schnell, [85€](http://geizhals.de/tp-link-archer-c7-v2-a923544.html))
+* TP-Link TL-1043ND v1/v2/v3 (okay, [45€](http://geizhals.de/tp-link-tl-wr1043nd-v3-v4-a1296061.html))
+* TP-Link TL-WR841N (billigst, [20€](http://geizhals.de/tp-link-tl-wr841n-a340658.html))
 
 ![TL-WR841N](https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/TP-Link_TL-WR841N-2920.jpg/240px-TP-Link_TL-WR841N-2920.jpg)
 
