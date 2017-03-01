@@ -98,9 +98,8 @@ switches:
         mode: bond
         ports:
           - GigabitEthernet1/0/29
-          - GigabitEthernet1/0/30
-          - GigabitEthernet1/0/31
-          - GigabitEthernet1/0/32
+          - GigabitEthernet1/0/42
+          - GigabitEthernet1/0/43
         vlans:
           - mgmt
           - pub
@@ -131,10 +130,8 @@ switches:
       switch-d1:
         mode: bond
         ports:
-          - GigabitEthernet1/0/33
-          - GigabitEthernet1/0/34
-          - GigabitEthernet1/0/35
-          - GigabitEthernet1/0/36
+          - GigabitEthernet1/0/2
+          - GigabitEthernet1/0/3
         vlans:
           - mgmt
           - pub
@@ -142,12 +139,8 @@ switches:
       server1:
         mode: bond
         ports:
-          - GigabitEthernet1/0/37
-          - GigabitEthernet1/0/38
-          - GigabitEthernet1/0/39
-          - GigabitEthernet1/0/40
-          - GigabitEthernet1/0/41
-          - GigabitEthernet1/0/42
+          - GigabitEthernet1/0/23
+          - GigabitEthernet1/0/24
         vlans:
           - mgmt
           - pub
@@ -181,13 +174,13 @@ switches:
       c3d2-flatbert:
         mode: bond
         ports:
-          - GigabitEthernet1/0/43
+          - GigabitEthernet1/0/45
           - GigabitEthernet1/0/44
         access: c3d2
       c3d2-storage:
         mode: bond
         ports:
-          - GigabitEthernet1/0/45
+          - GigabitEthernet1/0/47
           - GigabitEthernet1/0/46
         access: c3d2
       server2:
