@@ -132,7 +132,9 @@ switches:
       server1:
         mode: bond
         ports:
-          - GigabitEthernet1/0/23
+          - GigabitEthernet1/0/46
+          - GigabitEthernet1/0/47
+          - GigabitEthernet1/0/48
           - GigabitEthernet1/0/24
         vlans:
           - mgmt
@@ -179,12 +181,7 @@ switches:
       server2:
         mode: trunk
         ports:
-          - GigabitEthernet1/0/22
-        access: c3d2
-      server2-mgmt:
-        mode: trunk
-        ports:
-          - GigabitEthernet1/0/21
+          - GigabitEthernet1/0/23
         access: c3d2
     password: |
       -----BEGIN PGP MESSAGE-----
