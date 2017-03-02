@@ -636,7 +636,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: Auf Halde
+    location: 1. Etage B-Gebäude West
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
