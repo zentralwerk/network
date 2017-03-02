@@ -95,8 +95,13 @@ send "undo port link-aggregation group\r"
 expect "]"
 send "port link-type access\r"
 expect "]"
+{%-       if name == 'mgmt' %}
+send "undo port access vlan\r"
+expect "]"
+{%-       else              %}
 send "port access vlan {{ pillar['vlans'][name] }}\r"
 expect "]"
+{%-       endif             %}
 send "quit\r"
 expect "{{ hostname }}]"
 {%-     endfor %}
