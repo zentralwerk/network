@@ -40,8 +40,6 @@ expect -- "-vlan{{ vlan }}]"
 {# Actually only used for mgmt_vlan, switches are not routers #}
 send "interface Vlan-interface {{ vlan }}\r"
 expect "]"
-send "name {{ name }}\r"
-expect "]"
 {%-     set net_hosts = pillar['hosts-inet'].get(name) %}
 {%-     set ipaddr = net_hosts and net_hosts.get(hostname) %}
 {%-     if ipaddr %}
