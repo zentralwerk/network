@@ -91,8 +91,9 @@ switches:
         mode: bond
         ports:
           - GigabitEthernet1/0/29
-          - GigabitEthernet1/0/42
-          - GigabitEthernet1/0/43
+          - GigabitEthernet1/0/30
+          - GigabitEthernet1/0/31
+          - GigabitEthernet1/0/32
         vlans:
           - mgmt
           - pub
