@@ -333,7 +333,6 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv2
           - up1
           - up2
           - up3
