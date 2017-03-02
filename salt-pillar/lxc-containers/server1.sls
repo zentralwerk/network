@@ -168,3 +168,10 @@ containers:
         gw6: anon1
       mgmt:
         type: veth
+
+  zeit:
+    interfaces:
+      serv:
+        type: veth
+        gw: serv-gw
+        gw6: serv-gw
