@@ -234,7 +234,6 @@ switches:
       priv1:
         mode: access
         ports:
-          - GigabitEthernet 1/0/2
           - GigabitEthernet 1/0/3
       priv2:
         mode: access
