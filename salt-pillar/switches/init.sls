@@ -123,8 +123,8 @@ switches:
       switch-d1:
         mode: bond
         ports:
-          - GigabitEthernet1/0/2
-          - GigabitEthernet1/0/3
+          - GigabitEthernet1/0/33
+          - GigabitEthernet1/0/34
         vlans:
           - mgmt
           - pub
