@@ -66,7 +66,7 @@ switches:
       ap2:
         mode: trunk
         ports:
-          - GigabitEthernet 1/0/14
+          - GigabitEthernet 1/0/17
         vlans:
           - mgmt
           - pub
@@ -167,14 +167,14 @@ switches:
       c3d2-flatbert:
         mode: bond
         ports:
-          - GigabitEthernet1/0/45
-          - GigabitEthernet1/0/44
+          - GigabitEthernet1/0/11
+          - GigabitEthernet1/0/12
         access: c3d2
       c3d2-storage:
         mode: bond
         ports:
-          - GigabitEthernet1/0/47
-          - GigabitEthernet1/0/46
+          - GigabitEthernet1/0/14
+          - GigabitEthernet1/0/13
         access: c3d2
       server2:
         mode: trunk
