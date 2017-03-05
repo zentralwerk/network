@@ -420,7 +420,7 @@ switches:
         vlans:
           - mgmt
           - pub
-      ap12:
+      ap19:
         mode: trunk
         ports: 17
         vlans:

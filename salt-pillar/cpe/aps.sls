@@ -471,7 +471,7 @@ cpe:
       =ECvx
       -----END PGP MESSAGE-----
     model: TL-WR841Nv8
-    location: Turm C oberste Etage
+    location: Dekommissioniert, r/o flash
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
@@ -661,7 +661,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: Auf Halde
+    location: Turm C oberste Etage
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
