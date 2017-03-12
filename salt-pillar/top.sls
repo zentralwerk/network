@@ -31,7 +31,6 @@ base:
   'upstream1':
     - upstream.upstream1
     - bind.dyndns.upstream1
-    - bind.dns
   'upstream2':
     - upstream.upstream2
     - bind.dyndns.upstream2
@@ -41,6 +40,7 @@ base:
     - upstream.anon1
     - collectd.upstream
     - bind.dyndns.anon1
+    - bind.dns
   'dns':
     - bind.dns
     - bind.dyndns.upstream1
