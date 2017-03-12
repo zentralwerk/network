@@ -1,4 +1,4 @@
-$ORIGIN {{ domain }}
+$ORIGIN {{ domain }}.
 $TTL 10M
 
 @		IN SOA	{{ pillar['bind']['master-ns'] }}. astro.spaceboyz.net. (
@@ -11,13 +11,3 @@ $TTL 10M
 {%- for ns in pillar['bind']['public-ns'] %}
 		IN NS	{{ ns }}.
 {%- endfor %}
-
-{%- for net, hosts in pillar['hosts-inet'].items() %}
-{%-   for ns in pillar['bind']['public-ns'] %}
-{{ net }}		IN NS	{{ ns }}.
-{%-   endfor %}
-{%- endfor %}
-
-{%-   for ns in pillar['bind']['public-ns'] %}
-dyn		IN NS	{{ ns }}.
-{%-   endfor %}

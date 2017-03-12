@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ "$IFACE" = "{{ interface }}" ]; then
+   IP=`ip a| grep inet |grep $IFACE|awk '{print $2}'|sed -e 's#/.*##'`
+
+   nsupdate -k /etc/dyndns.key << EOF
+server {{ pillar['hosts-inet']['serv']['dns'] }}
+update delete {{ hostname }}. IN A
+update add {{ hostname }}. 10 IN A $IP
+send
+EOF
+fi

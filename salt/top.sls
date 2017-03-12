@@ -34,6 +34,7 @@ base:
     - unbound
     - upstream.dhcp
     - upstream.shaping
+    - upstream.dyndns
     - collectd
   'upstream2':
     - upstream.port-forwarding
@@ -45,6 +46,7 @@ base:
     - upstream.masquerade
     - upstream.shaping
     - upstream.nat66
+    - upstream.dyndns
     - collectd
   'dns':
     - no-ssh

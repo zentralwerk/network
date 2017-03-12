@@ -37,6 +37,15 @@ bind9:
 
 {%- endfor %}
 
+# dyn.zentralwerk.online
+{%- set domain = 'dyn.' ~ pillar['bind']['root-domain'] %}
+/etc/bind/{{ domain }}.zone:
+  file.managed:
+    - source: salt://bind/dyn-domain.zone
+    - template: 'jinja'
+    - context:
+        domain: {{ domain }}
+
 # IPv4 reverse
 {%- for domain in pillar['bind']['reverse-zones-inet'] %}
 /etc/bind/{{ domain }}.zone:
@@ -56,3 +65,6 @@ bind9:
     - context:
         domain: {{ domain }}
 {%- endfor %}
+
+rndc reload:
+  cmd.run: []

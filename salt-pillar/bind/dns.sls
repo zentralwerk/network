@@ -11,7 +11,7 @@ bind:
     # dns.spaceboyz.net
     - 172.22.24.4
     - 2a01:4f8:a0:33d0::4
-  serial: 2017012300
+  serial: 2017031210
   
   reverse-zones-inet:
     - 72.20.172.in-addr.arpa

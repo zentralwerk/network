@@ -30,14 +30,21 @@ base:
     - bind.dns
   'upstream1':
     - upstream.upstream1
+    - bind.dyndns.upstream1
+    - bind.dns
   'upstream2':
     - upstream.upstream2
+    - bind.dyndns.upstream2
   'anon*':
     - bird.ospf
     - vpn.anon1
     - upstream.anon1
     - collectd.upstream
+    - bind.dyndns.anon1
   'dns':
     - bind.dns
+    - bind.dyndns.upstream1
+    - bind.dyndns.upstream2
+    - bind.dyndns.anon1
   'stats':
     - collectd.stats-server
