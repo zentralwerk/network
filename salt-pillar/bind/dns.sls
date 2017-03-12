@@ -3,7 +3,7 @@ bind:
   master-ns: dns.serv.zentralwerk.online
   public-ns:
     - ns.c3d2.de
-    - spaceboyz.net
+    - ns.spaceboyz.net
   slaves:
     # bind.wetu.c3d2.de
     - 172.22.100.9
