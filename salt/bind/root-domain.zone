@@ -1,4 +1,4 @@
-$ORIGIN {{ domain }}
+$ORIGIN {{ domain }}.
 $TTL 10M
 
 @		IN SOA	{{ pillar['bind']['master-ns'] }}. astro.spaceboyz.net. (
