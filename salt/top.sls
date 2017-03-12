@@ -35,12 +35,7 @@ base:
     - upstream.dhcp
     - upstream.shaping
     - collectd
-  'upstream1':
-    - upstream.6to4
-    - upstream.nat66
   'upstream2':
-    - upstream.6slac
-    - upstream.nat66
     - upstream.port-forwarding
   'anon*':
     - no-ssh
