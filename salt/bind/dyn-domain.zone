@@ -2,7 +2,7 @@ $ORIGIN {{ domain }}.
 $TTL 10M
 
 @		IN SOA	{{ pillar['bind']['master-ns'] }}. astro.spaceboyz.net. (
-				{{ pillar['bind']['serial'] }} ; serial
+				1  ; serial
 				1H ; refresh
 				1M ; retry
 				2H ; expire
