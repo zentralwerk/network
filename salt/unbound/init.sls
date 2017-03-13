@@ -17,6 +17,10 @@ dns-root-data:
   file.managed:
     - source: salt://unbound/root.conf
 
+/etc/unbound/unbound.conf.d/forward.conf:
+  file.managed:
+    - source: salt://unbound/forward.conf
+
 /etc/unbound/unbound.conf.d/verbose.conf:
   file.managed:
     - source: salt://unbound/verbose.conf
