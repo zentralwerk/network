@@ -405,18 +405,18 @@ switches:
       iso6:
         mode: access
         ports: '14'
-      iso7:
-        mode: access
-        ports: '15'
-      iso8:
-        mode: access
-        ports: '16'
       mgmt:
         mode: access
         ports: '20'
       ap13:
         mode: trunk
         ports: 18
+        vlans:
+          - mgmt
+          - pub
+      ap17:
+        mode: trunk
+        ports: '15,16'
         vlans:
           - mgmt
           - pub
