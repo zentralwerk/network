@@ -611,7 +611,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
-    location: Auf Halde
+    location: Saal A
     lan-access: pub
     radios:
       'platform/qca955x_wmac':

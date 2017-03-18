@@ -323,6 +323,7 @@ switches:
     location: Turm C Keller, bei Kabelanschluessen
     # Ports 1-19 ungerade oben
     # Ports 2-20 gerade unten
+    # (15, 16 gehen aktuell nach Haus A)
     # Ports 21-24 unten seitlich (optional optisch)
     ports:
       switch-b1:
@@ -416,7 +417,7 @@ switches:
           - pub
       ap17:
         mode: trunk
-        ports: '15,16'
+        ports: 16
         vlans:
           - mgmt
           - pub
