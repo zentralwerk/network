@@ -734,7 +734,7 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'Restaurierung Wolf/Kober':
+          'Restaurierung Wolff/Kober':
             net: priv9
             psk: |
               -----BEGIN PGP MESSAGE-----
@@ -755,7 +755,7 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'Restaurierung Wolf/Kober':
+          'Restaurierung Wolff/Kober':
             net: priv9
             psk: |
               -----BEGIN PGP MESSAGE-----
