@@ -119,3 +119,15 @@ dhcp:
       domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv8.zentralwerk.online
+
+  priv9:
+    start: 172.20.74.34
+    end: 172.20.74.46
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv9-gw.priv9
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv9.zentralwerk.online
