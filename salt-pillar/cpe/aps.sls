@@ -636,7 +636,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: 1. Etage B-Gebäude West
+    location: Auf Lager
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
@@ -709,4 +709,64 @@ cpe:
               LSzwuOSwP9ozjMD8RxfJ9ctfGTI4aJ8EcMJ6CAdbnMl0qrucTvlh/nZ/xNtzXplA
               is+jAuMF8Q==
               =MtC9
+              -----END PGP MESSAGE-----
+
+  ap21:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf9FStVXMrOYIRRbjSHz8Y7Ju/Ty0DigsiKSEYo0XrYhbo7
+      chHzdiVhOB9vtEzsdGeHg9boGp8Hl1ZmR2ovLn/RZRRZWgpzZrRBalDLYEaGq3/F
+      +XMs6Dtq56mseCuNcV4OYBhBkvf4I8bzsu/e8LYVCR7lBpfG1xyJRjayB77NZvI4
+      CEeGt1GnFrAytR9f2GxbKWkgCI0MXekYVyzY7GVxaVs26YNlYLBxRMsd1HzKZwWw
+      URyyHtaLQhwq/69ZJeNEeKYCIGoZLthdcyB/USFAr0VAKjuehvaNEkPx8jCxEeQa
+      xnn5YX7ZPbp160ykGKzVx4leTyiyNJD4mmPA0rLwi9JFAXztOqtGOqY+/p2qBksY
+      dNOOUW9B2uuBPn+JKi90SwmIX83oRIfvUt/UezkPkorpE1qjZW0LKrF0fM4sznWL
+      nfZjlJbn
+      =MC+3
+      -----END PGP MESSAGE-----
+    model: Ubnt-UniFi-AP-AC-LR
+    location: Haus B, 2. Etage, zum Innenhof
+    radios:
+      'platform/qca956x_wmac':
+        channel: 1
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+          'Restaurierung Wolf/Kober':
+            net: priv9
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/RO1FRAB4KQ55x6RUlE3A6kcvlfIZpS3C2luEHOJkR1rv
+              D2y2KqHxjevps1KxHph2Y9QCH7Kcvvf1CDk2ay/8FJvSLPEOa/VmxRMh0YXPmptU
+              vZS62f8z8Ho6P8ZuPDWeWOauH2+pq/a49xZhsJCDEJ+rJJST4wruPWV/o5wCza19
+              lFCJA3USuR7vGZ+i0O/28WG8Q5Bn51e3GTS99i5wWrVGxBPcnuu0vNO0Kp16Pf+c
+              kOiYsGlhM6csfB5TmNWxqm27A/3YdyiLqUK585NfcnlYovHKsNjyv23B1pUzwaPF
+              va+sbwbzQDAKHfh7WDIQayR0zpTsyApTrCiKqLGnZtJFAaBJ7+oqOLMVxlmB+/YP
+              dS/9UOmDV+BmsPwe/suIyHDn3bQ6LK5f10ZHnAtot9Ecf+X8o0ZvG1vYrHeSx16K
+              4o42SHID
+              =2Z0a
+              -----END PGP MESSAGE-----
+      'pci0000:00/0000:00:00.0':
+        channel: 36
+        htmode: VHT80
+        ssids:
+          'ZW public':
+            net: pub
+          'Restaurierung Wolf/Kober':
+            net: priv9
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/RO1FRAB4KQ55x6RUlE3A6kcvlfIZpS3C2luEHOJkR1rv
+              D2y2KqHxjevps1KxHph2Y9QCH7Kcvvf1CDk2ay/8FJvSLPEOa/VmxRMh0YXPmptU
+              vZS62f8z8Ho6P8ZuPDWeWOauH2+pq/a49xZhsJCDEJ+rJJST4wruPWV/o5wCza19
+              lFCJA3USuR7vGZ+i0O/28WG8Q5Bn51e3GTS99i5wWrVGxBPcnuu0vNO0Kp16Pf+c
+              kOiYsGlhM6csfB5TmNWxqm27A/3YdyiLqUK585NfcnlYovHKsNjyv23B1pUzwaPF
+              va+sbwbzQDAKHfh7WDIQayR0zpTsyApTrCiKqLGnZtJFAaBJ7+oqOLMVxlmB+/YP
+              dS/9UOmDV+BmsPwe/suIyHDn3bQ6LK5f10ZHnAtot9Ecf+X8o0ZvG1vYrHeSx16K
+              4o42SHID
+              =2Z0a
               -----END PGP MESSAGE-----

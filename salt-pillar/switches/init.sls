@@ -297,13 +297,14 @@ switches:
           - GigabitEthernet 1/0/22
           - GigabitEthernet 1/0/23
           - GigabitEthernet 1/0/24
-      ap18:
+      ap21:
         mode: trunk
         ports:
           - GigabitEthernet 1/0/18
         vlans:
           - mgmt
           - pub
+          - priv9
     password: |
       -----BEGIN PGP MESSAGE-----
 

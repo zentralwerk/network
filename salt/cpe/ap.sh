@@ -192,7 +192,7 @@ set network.{{ net }}.proto=static
 set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
 {%-   endfor %}
 
-{%- elif conf['model'] == 'TL-WA901NDv3' %}
+{%- elif conf['model'] == 'TL-WA901NDv3' or conf['model'] == 'Ubnt-UniFi-AP-AC-LR' %}
 {# Only eth0 exists, no switch #}
 
 {{ uci_network_mgmt('eth0.1') }}
