@@ -339,6 +339,11 @@ __SH__
 chmod a+rx /usr/sbin/wifi-on-link.sh
 /etc/init.d/cron restart
 
+for svc in dnsmasq uhttpd ; do
+  rm /etc/rc.d/*\$svc
+  /etc/init.d/\$svc stop
+done
+
 {%- if conf.get('firstboot') %}
 reboot
 {%- endif %}
