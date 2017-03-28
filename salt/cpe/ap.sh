@@ -325,7 +325,7 @@ else
         REACHABLE=n
 fi
 
-if [ "\\\$(cat /sys/class/net/wlan0/operstate)" == "up" ] ; then
+if [ "\\\$(cat /sys/class/net/wlan2-pub/operstate)" == "up" ] ; then
         UP=y
 else
         UP=n
