@@ -285,6 +285,11 @@ delete wireless.radio{{ radionum }}.disabled
 {%-   for ssid, ssidconf in radio['ssids'].items() %}
 {%-     set ifnum = ifnum + loop.index0 %}
 set wireless.wifi{{ ifnum }}=wifi-iface
+{%- if radio['channel'] < 15 %}
+set wireless.wifi{{ ifnum }}.ifname=wlan2-{{ ssidconf['net'] }}
+{%- else %}
+set wireless.wifi{{ ifnum }}.ifname=wlan5-{{ ssidconf['net'] }}
+{%- endif %}
 set wireless.wifi{{ ifnum }}.device=radio{{ radionum }}
 set wireless.wifi{{ ifnum }}.ssid='{{ ssid }}'
 set wireless.wifi{{ ifnum }}.mode=ap
