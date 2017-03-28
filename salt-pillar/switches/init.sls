@@ -27,6 +27,14 @@ switches:
           - priv6
           - priv7
           - priv8
+          - priv9
+          - priv10
+          - priv11
+          - priv12
+          - priv13
+          - priv14
+          - priv15
+          - priv16
       mgmt:
         mode: access
         ports:
@@ -225,6 +233,14 @@ switches:
           - priv6
           - priv7
           - priv8
+          - priv9
+          - priv10
+          - priv11
+          - priv12
+          - priv13
+          - priv14
+          - priv15
+          - priv16
       mgmt:
         mode: access
         ports:
