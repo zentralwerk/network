@@ -302,7 +302,6 @@ switches:
         ports:
           - GigabitEthernet 1/0/11
           - GigabitEthernet 1/0/12
-          - GigabitEthernet 1/0/13
           - GigabitEthernet 1/0/14
           - GigabitEthernet 1/0/15
           - GigabitEthernet 1/0/16
@@ -321,6 +320,13 @@ switches:
           - mgmt
           - pub
           - priv9
+      ap18:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/13
+        vlans:
+          - mgmt
+          - pub
     password: |
       -----BEGIN PGP MESSAGE-----
 

@@ -636,7 +636,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: Auf Lager
+    location: Auf Lager#fast schon verliehen
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
