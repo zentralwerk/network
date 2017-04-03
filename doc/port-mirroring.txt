@@ -1,0 +1,14 @@
+Manchmal ist es notwendig einen Port auf dem Switch auf einen anderen zu duplizieren. Es kann auch über vlan ganz woanders hingeschickt werden, aber hier ist die Variante um es auf einen anderen Port auf demselben Switch zu legen:
+
+#XX: eine numerische id
+#YY: das interface was monitored werden soll
+mirroring-group XX mirroring-port GigabitEthernet 1/0/YY both
+
+#ZZ: ist das interface auf dem der traffic des anderen ports erscheinen soll
+mirroring-group YY monitor-port GigabitEthernet 1/0/ZZ
+
+#ggfs. stp ausmachen
+interface GigabitEthernet 1/0/ZZ stp disable
+
+#danach aufräumen
+undo mirroring-group XX
