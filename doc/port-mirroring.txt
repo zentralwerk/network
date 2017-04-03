@@ -12,3 +12,6 @@ interface GigabitEthernet 1/0/ZZ stp disable
 
 #danach aufräumen
 undo mirroring-group XX
+
+
+Der monitor-port ist an sich noch funktional, er empfängt zB broadcasts der vlans, die auf ihm konfiguriert sind. Ggfs. die vlans deaktivieren, falls wirklich nur der Traffic des mirroring-port gesehen werden soll.
