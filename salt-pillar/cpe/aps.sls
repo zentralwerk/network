@@ -789,7 +789,7 @@ cpe:
     location: Turm C Erdgeschoss?
     lan-access: pub
     radios:
-      'platform/qca953x_wmac':
+      'platform/ar933x_wmac':
         channel: 11
         htmode: HT40-
         ssids:
