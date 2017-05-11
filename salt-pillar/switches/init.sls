@@ -79,6 +79,14 @@ switches:
           - mgmt
           - pub
           - c3d2
+      ap2-tmp:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/18
+        vlans:
+          - mgmt
+          - pub
+          - c3d2
       ap3:
         mode: trunk
         ports:
