@@ -776,17 +776,16 @@ cpe:
     password: |
       -----BEGIN PGP MESSAGE-----
       
-      hQEMA2PKcvDMvlKLAQf9F7poRfXff8fN2TwFGms3xsHsbSWJ6E9qHY9JFJFcXNHl
-      Oj9Q/gVOswnCp2SS1QLIR6vgwq8sZLyXqH9RRNx0hQdocf31siSY6H/9xVb+ZNPH
-      9wt4Z8iXD+TQ0ZC6jA7I6EDjQ+rx+KNBA2Yslx1/Pgg7F6yAlw46c0r16SBu+uEt
-      qaodWJDLccURGd22YMzsgjOlSWsoSezOsO73FhMFuA8KcYHxeYGt6YkqD0XTe83v
-      57WG8q58CKQuJiY2zV/sk8N+jXuzMGM1N1N9H0sIM2QvnQbPaDc0W/e2CmN8Z99A
-      +NOqn2QZhKecDww668OC7M1LS3MEoa4nB4LCpuzvk9JKAfQkgqYUTyqjsmzuSME+
-      3BaKQrUAL7IEbPEkErlG0xajyxO9TGFMFoIeS/uM5C/e6ro+bEa26nEioZbWbTTR
-      FSvjD9EhotSZf4I=
-      =zomB
+      hQEMA2PKcvDMvlKLAQf7BtlMgwf07JoaOJ6z5863c/FltqmwVdPQVv8+Bmo+Zlpa
+      QJTyB6vDzn5lnXjHtAv5rdYfhqCRcEAc6ocq/0njwGlDaNOfbwPn3rFVBxdmMhz+
+      i/reMrlfwE+Xs4DLxrL1zQB71up1+IKFYYiIboWvHHYSMW1Qbzk5r3Tjx944dl+z
+      dMGqXqd7Bx1TFNowpDF7iGRJqKKm3kolFP22ZG+ZYFOSitqJ2UOP3bbo6yM6uV8T
+      PcxcT4ZaWEASGOXyMjxGzm+It0bbFjZiPwEvm4brUeGPqDZ/ILfOwZtx8FAc30oz
+      1gIrU+p/4lON9GlaO56ImzkOiALEKtsVMLQSh0HcYtJJAb5HkkisiWBMAfEeiN7A
+      tFSHeOZ6Pj9Zn3WiT3M4L2KFBQhnGcopLrvKY+YDTFc+a7UU5kboCkHJ3rQgXo+h
+      0wbkaiNHsshKWw==
+      =MXwF
       -----END PGP MESSAGE-----
-
     model: TL-WR740N
     location: Turm C Erdgeschoss?
     lan-access: pub
