@@ -772,7 +772,6 @@ cpe:
               -----END PGP MESSAGE-----
 
   ap22:
-    firstboot: True
     password: |
       -----BEGIN PGP MESSAGE-----
       
