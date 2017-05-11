@@ -403,14 +403,6 @@ switches:
         mode: access
         ports: '6'
         nostp: true
-      up7:
-        mode: access
-        ports: '7'
-        nostp: true
-      up8:
-        mode: access
-        ports: '8'
-        nostp: true
       iso1:
         mode: access
         ports: '9'
@@ -453,6 +445,12 @@ switches:
       ap6:
         mode: trunk
         ports: 19
+        vlans:
+          - mgmt
+          - pub
+      ap22:
+        mode: trunk
+        ports: 7
         vlans:
           - mgmt
           - pub
