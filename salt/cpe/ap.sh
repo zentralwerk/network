@@ -192,6 +192,31 @@ set network.{{ net }}.proto=static
 set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
 {%-   endfor %}
 
+{%- elif conf['model'] == 'TL-WR740Nv4' %}
+{# Separate eth0/1 interfaces for LAN/WAN #}
+{# eth0 - Port 0: eth0, Port 2: LAN1, Port 3: LAN2, Port 4: LAN3, Port 1: LAN4 #}
+{# eth1 - WAN #}
+set network.@switch[0].reset=1
+set network.@switch[0].enable=1
+set network.@switch[0].enable_vlan=0
+
+{{ uci_network_mgmt('eth1.1') }}
+
+{%-   for net in bridges.keys() %}
+
+set network.{{ net }}=interface
+set network.{{ net }}.type=bridge
+set network.{{ net }}.proto=static
+{# Add WAN VLAN to bridge #}
+{%-     set ports = ['eth1.' ~ pillar['vlans'][net]] %}
+{# Add LAN ports to bridge #}
+{%-     if conf.get('lan-access') == net %}
+{%-       do ports.append('eth0') %}
+{%-     endif %}
+
+set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
+{%-   endfor %}
+
 {%- elif conf['model'] == 'TL-WA901NDv3' or conf['model'] == 'Ubnt-UniFi-AP-AC-LR' %}
 {# Only eth0 exists, no switch #}
 

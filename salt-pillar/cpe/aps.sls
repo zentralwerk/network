@@ -770,3 +770,30 @@ cpe:
               4o42SHID
               =2Z0a
               -----END PGP MESSAGE-----
+
+  ap22:
+    firstboot: True
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf9F7poRfXff8fN2TwFGms3xsHsbSWJ6E9qHY9JFJFcXNHl
+      Oj9Q/gVOswnCp2SS1QLIR6vgwq8sZLyXqH9RRNx0hQdocf31siSY6H/9xVb+ZNPH
+      9wt4Z8iXD+TQ0ZC6jA7I6EDjQ+rx+KNBA2Yslx1/Pgg7F6yAlw46c0r16SBu+uEt
+      qaodWJDLccURGd22YMzsgjOlSWsoSezOsO73FhMFuA8KcYHxeYGt6YkqD0XTe83v
+      57WG8q58CKQuJiY2zV/sk8N+jXuzMGM1N1N9H0sIM2QvnQbPaDc0W/e2CmN8Z99A
+      +NOqn2QZhKecDww668OC7M1LS3MEoa4nB4LCpuzvk9JKAfQkgqYUTyqjsmzuSME+
+      3BaKQrUAL7IEbPEkErlG0xajyxO9TGFMFoIeS/uM5C/e6ro+bEa26nEioZbWbTTR
+      FSvjD9EhotSZf4I=
+      =zomB
+      -----END PGP MESSAGE-----
+
+    model: TL-WR740N
+    location: Turm C Erdgeschoss?
+    lan-access: pub
+    radios:
+      'platform/qca953x_wmac':
+        channel: 11
+        htmode: HT40-
+        ssids:
+          'ZW public':
+            net: pub
