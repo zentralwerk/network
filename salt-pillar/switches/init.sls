@@ -356,6 +356,7 @@ switches:
     # Ports 2-20 gerade unten
     # (15, 16 gehen aktuell nach Haus A)
     # Ports 21-24 unten seitlich (optional optisch)
+    # Unused Port 7 geht aktuell nach Turm C Erdgeschoss
     ports:
       switch-b1:
         mode: bond
@@ -456,12 +457,6 @@ switches:
         vlans:
           - mgmt
           - pub
-      ap22:
-        mode: trunk
-        ports: 7
-        vlans:
-          - mgmt
-          - pub
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -476,13 +471,14 @@ switches:
       =XUUi
       -----END PGP MESSAGE-----
 
+  # Unused: 3
   switch-d1:
     model: 'TL-SG3210'
     location: Turm D Keller
     ports:
       switch-b1:
         mode: bond
-        ports: 1-2
+        ports: 1
         vlans:
           - mgmt
           - pub
@@ -506,6 +502,12 @@ switches:
           - mgmt
           - pub
           - priv7
+      ap22:
+        mode: trunk
+        ports: 2
+        vlans:
+          - mgmt
+          - pub
       pub:
         mode: access
         ports:

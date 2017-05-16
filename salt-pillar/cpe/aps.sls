@@ -786,7 +786,7 @@ cpe:
       =MXwF
       -----END PGP MESSAGE-----
     model: TL-WR740N
-    location: Turm C Erdgeschoss
+    location: Haus B Souterrain unter der Treppe an Turm D
     lan-access: pub
     radios:
       'platform/ar933x_wmac':
