@@ -1,3 +1,6 @@
+ifupdown:
+  pkg.installed: []
+
 /etc/network/interfaces.d/ipv6-tunnel.conf:
   file.managed:
     - source: salt://upstream/ipv6-tunnel.conf
