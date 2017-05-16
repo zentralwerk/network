@@ -38,6 +38,7 @@ base:
     - collectd
   'upstream2':
     - upstream.port-forwarding
+    - upstream.ipv6-tunnel
   'anon*':
     - no-ssh
     - forwarding

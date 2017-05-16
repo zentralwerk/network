@@ -57,3 +57,13 @@ Machine-readable here: [salt-pillar/subnets](./salt-pillar/subnets/init.sls)
 * fd23:42:c3d2:5cd::/64 PRIV14
 * fd23:42:c3d2:5ce::/64 PRIV15
 * fd23:42:c3d2:5cf::/64 PRIV16
+
+## Tunnelbroker.net
+
+* 2001:470:1f0b:12b1::/64
+* 2001:470:77fb::/48
+
+# Peer C3D2:
+
+* 172.22.99.0/24
+* 2001:470:6d:670::/64
