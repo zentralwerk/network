@@ -12,5 +12,5 @@ port-forwarding:
 
 ipv6-tunnel:
   endpoint: 216.66.80.30
-  address: 2001:470:1f0a:12b2::2
+  address: 2001:470:1f0a:12b2::2/64
   gateway: 2001:470:1f0a:12b2::1
