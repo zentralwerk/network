@@ -200,6 +200,11 @@ switches:
         ports:
           - GigabitEthernet1/0/23
         access: c3d2
+      rpi:
+        mode: trunk
+        ports:
+          - GigabitEthernet1/0/20
+        access: c3d2
     password: |
       -----BEGIN PGP MESSAGE-----
 
