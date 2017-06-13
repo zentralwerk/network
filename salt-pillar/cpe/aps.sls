@@ -795,3 +795,64 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+
+  ap23:
+    firstboot: True
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf7BtlMgwf07JoaOJ6z5863c/FltqmwVdPQVv8+Bmo+Zlpa
+      QJTyB6vDzn5lnXjHtAv5rdYfhqCRcEAc6ocq/0njwGlDaNOfbwPn3rFVBxdmMhz+
+      i/reMrlfwE+Xs4DLxrL1zQB71up1+IKFYYiIboWvHHYSMW1Qbzk5r3Tjx944dl+z
+      dMGqXqd7Bx1TFNowpDF7iGRJqKKm3kolFP22ZG+ZYFOSitqJ2UOP3bbo6yM6uV8T
+      PcxcT4ZaWEASGOXyMjxGzm+It0bbFjZiPwEvm4brUeGPqDZ/ILfOwZtx8FAc30oz
+      1gIrU+p/4lON9GlaO56ImzkOiALEKtsVMLQSh0HcYtJJAb5HkkisiWBMAfEeiN7A
+      tFSHeOZ6Pj9Zn3WiT3M4L2KFBQhnGcopLrvKY+YDTFc+a7UU5kboCkHJ3rQgXo+h
+      0wbkaiNHsshKWw==
+      =MXwF
+      -----END PGP MESSAGE-----
+    model: Ubnt-UniFi-AP-AC-LR
+    location: Seminarraum, Haus B
+    radios:
+      'platform/qca956x_wmac':
+        channel: 1
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+          'C3D2':
+            net: c3d2
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/SO/v+xhO1yOG83uCcAN2r5ixNf8+Ksp1dPwBKQHUViwJ
+              /KZHBAUzjTtGFIcpEy3exZcAorJ8SeGaB0hv1zw1HZuHN7Els8KKDu4G5u31Sp8w
+              EFtuwujlkFAt3t57jp02O0qvXBCIA14eNlakc9fcPypibTrIEGp2SCzw/kty4r3g
+              EGUwn1sMPjeQxon5Y4JY4OmZBXsnZkKMwTYjAbL+RS300xV1Nh/WWSTRfueAmT5f
+              xfyHj4NlOoBNBILgm1qlrOdgqJSvHM6rw47BoiDuxeVtgmyPqSbHmN8d7xExbuxB
+              tdcnI6HfSv47ZhLARH08BiI7nLaKNygwgy6yKr0zctJAAetIX8BADb4W4QgyM7VD
+              pYqAfy5Igg342W+ZSMyybiZccncchv4opsyDFTjuby9mqL8OwaMWkeNcNPALaT9v
+              rA==
+              =TEEI
+              -----END PGP MESSAGE-----
+      'pci0000:00/0000:00:00.0':
+        channel: 36
+        htmode: VHT80
+        ssids:
+          'ZW public':
+            net: pub
+          'C3D2':
+            net: c3d2
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/SO/v+xhO1yOG83uCcAN2r5ixNf8+Ksp1dPwBKQHUViwJ
+              /KZHBAUzjTtGFIcpEy3exZcAorJ8SeGaB0hv1zw1HZuHN7Els8KKDu4G5u31Sp8w
+              EFtuwujlkFAt3t57jp02O0qvXBCIA14eNlakc9fcPypibTrIEGp2SCzw/kty4r3g
+              EGUwn1sMPjeQxon5Y4JY4OmZBXsnZkKMwTYjAbL+RS300xV1Nh/WWSTRfueAmT5f
+              xfyHj4NlOoBNBILgm1qlrOdgqJSvHM6rw47BoiDuxeVtgmyPqSbHmN8d7xExbuxB
+              tdcnI6HfSv47ZhLARH08BiI7nLaKNygwgy6yKr0zctJAAetIX8BADb4W4QgyM7VD
+              pYqAfy5Igg342W+ZSMyybiZccncchv4opsyDFTjuby9mqL8OwaMWkeNcNPALaT9v
+              rA==
+              =TEEI
+              -----END PGP MESSAGE-----

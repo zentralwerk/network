@@ -103,6 +103,14 @@ switches:
           - mgmt
           - pub
           - c3d2
+      ap23:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/10
+        vlans:
+          - mgmt
+          - pub
+          - c3d2
       switch-c1:
         mode: bond
         ports:
