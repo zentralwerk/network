@@ -101,6 +101,9 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
+         'C3D2.eap':
+           net: c3d2
+           wpa-eap: yes
 
   ap3:
     password: |

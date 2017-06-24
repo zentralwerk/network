@@ -322,6 +322,10 @@ set wireless.wifi{{ ifnum }}.network={{ ssidconf['net'] }}
 {%-     if ssidconf.get('psk') %}
 set wireless.wifi{{ ifnum }}.encryption=psk2
 set wireless.wifi{{ ifnum }}.key='{{ ssidconf['psk'] }}'
+{%-     elif ssidconf.get('wpa-eap') %}
+set wireless.wifi({ ifnum }).encryption=wpa2
+set wireless.wifi({ ifnum }).server=radius.hq.c3d2.de
+set wireless.wifi({ ifnum }).port=1812
 {%-     else %}
 set wireless.wifi{{ ifnum }}.encryption=none
 {%-     endif %}
