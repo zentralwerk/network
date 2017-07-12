@@ -310,11 +310,17 @@ delete wireless.radio{{ radionum }}.disabled
 {%-   for ssid, ssidconf in radio['ssids'].items() %}
 {%-     set ifnum = ifnum + loop.index0 %}
 set wireless.wifi{{ ifnum }}=wifi-iface
-{%- if radio['channel'] < 15 %}
-set wireless.wifi{{ ifnum }}.ifname=wlan2-{{ ssidconf['net'] }}
-{%- else %}
-set wireless.wifi{{ ifnum }}.ifname=wlan5-{{ ssidconf['net'] }}
-{%- endif %}
+{%-     if radio['channel'] < 15 %}
+{%-       set ifprefix = 'wlan2-' %}
+{%-     else %}
+{%-       set ifprefix = 'wlan5-' %}
+{%-     endif %}
+{%-     if ssidconf.get('wpa-eap') %}
+{%-       set ifsuffix = '-eap' %}
+{%-     else %}
+{%-       set ifsuffix = '' %}
+{%-     endif %}
+set wireless.wifi{{ ifnum }}.ifname={{ ifprefix }}{{ ssidconf['net'] }}{{ ifsuffix }}
 set wireless.wifi{{ ifnum }}.device=radio{{ radionum }}
 set wireless.wifi{{ ifnum }}.ssid='{{ ssid }}'
 set wireless.wifi{{ ifnum }}.mode=ap
