@@ -168,6 +168,11 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
+         'C3D2.eap':
+           net: c3d2
+           wpa-eap:
+            server: radius.hq.c3d2.de
+            port: 1812
 
   ap4:
     password: |
