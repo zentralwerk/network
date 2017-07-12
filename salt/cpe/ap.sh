@@ -329,9 +329,9 @@ set wireless.wifi{{ ifnum }}.network={{ ssidconf['net'] }}
 set wireless.wifi{{ ifnum }}.encryption=psk2
 set wireless.wifi{{ ifnum }}.key='{{ ssidconf['psk'] }}'
 {%-     elif ssidconf.get('wpa-eap') %}
-set wireless.wifi({ ifnum }).encryption=wpa2
-set wireless.wifi({ ifnum }).server='{{ ssidconf['wpa-eap']['server'] }}'
-set wireless.wifi({ ifnum }).port='{{ ssidconf['wpa-eap']['port'] }}'
+set wireless.wifi{{ ifnum }}.encryption=wpa2
+set wireless.wifi{{ ifnum }}.server='{{ ssidconf['wpa-eap']['server'] }}'
+set wireless.wifi{{ ifnum }}.port='{{ ssidconf['wpa-eap']['port'] }}'
 {%-     else %}
 set wireless.wifi{{ ifnum }}.encryption=none
 {%-     endif %}
