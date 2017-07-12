@@ -294,22 +294,22 @@ set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
 
 {%- endif %}
 
-{%- set radionum = 0 %}
-{%- set ifnum = 0 %}
+{%- set index = { 'radio': 0, 'iface': 0 } %}
 {%- for path, radio in conf['radios'].items() %}
-set wireless.radio{{ radionum }}=wifi-device
-set wireless.radio{{ radionum }}.type=mac80211
-set wireless.radio{{ radionum }}.country=DE
-set wireless.radio{{ radionum }}.channel={{ radio['channel'] }}
-set wireless.radio{{ radionum }}.path={{ path }}
-set wireless.radio{{ radionum }}.hwmode={{ radio.get('hwmode') or '11n' }}
-set wireless.radio{{ radionum }}.htmode={{ radio.get('htmode') or 'HT20' }}
-set wireless.radio{{ radionum }}.noscan=1
-delete wireless.radio{{ radionum }}.disabled
+{%-   set x = index.update({ 'radio': index.radio + 1 }) %}
+set wireless.radio{{ index.radio }}=wifi-device
+set wireless.radio{{ index.radio }}.type=mac80211
+set wireless.radio{{ index.radio }}.country=DE
+set wireless.radio{{ index.radio }}.channel={{ radio['channel'] }}
+set wireless.radio{{ index.radio }}.path={{ path }}
+set wireless.radio{{ index.radio }}.hwmode={{ radio.get('hwmode') or '11n' }}
+set wireless.radio{{ index.radio }}.htmode={{ radio.get('htmode') or 'HT20' }}
+set wireless.radio{{ index.radio }}.noscan=1
+delete wireless.radio{{ index.radio }}.disabled
 
 {%-   for ssid, ssidconf in radio['ssids'].items() %}
-{%-     set ifnum = ifnum + loop.index0 %}
-set wireless.wifi{{ ifnum }}=wifi-iface
+{%-     set x = index.update({ 'iface': index.iface + 1 }) %}
+set wireless.wifi{{ index.iface }}=wifi-iface
 {%-     if radio['channel'] < 15 %}
 {%-       set ifprefix = 'wlan2-' %}
 {%-     else %}
@@ -320,27 +320,24 @@ set wireless.wifi{{ ifnum }}=wifi-iface
 {%-     else %}
 {%-       set ifsuffix = '' %}
 {%-     endif %}
-set wireless.wifi{{ ifnum }}.ifname={{ ifprefix }}{{ ssidconf['net'] }}{{ ifsuffix }}
-set wireless.wifi{{ ifnum }}.device=radio{{ radionum }}
-set wireless.wifi{{ ifnum }}.ssid='{{ ssid }}'
-set wireless.wifi{{ ifnum }}.mode=ap
-set wireless.wifi{{ ifnum }}.network={{ ssidconf['net'] }}
+set wireless.wifi{{ index.iface }}.ifname={{ ifprefix }}{{ ssidconf['net'] }}{{ ifsuffix }}
+set wireless.wifi{{ index.iface }}.device=radio{{ index.radio }}
+set wireless.wifi{{ index.iface }}.ssid='{{ ssid }}'
+set wireless.wifi{{ index.iface }}.mode=ap
+set wireless.wifi{{ index.iface }}.network={{ ssidconf['net'] }}
 {%-     if ssidconf.get('psk') %}
-set wireless.wifi{{ ifnum }}.encryption=psk2
-set wireless.wifi{{ ifnum }}.key='{{ ssidconf['psk'] }}'
+set wireless.wifi{{ index.iface }}.encryption=psk2
+set wireless.wifi{{ index.iface }}.key='{{ ssidconf['psk'] }}'
 {%-     elif ssidconf.get('wpa-eap') %}
-set wireless.wifi{{ ifnum }}.encryption=wpa2
-set wireless.wifi{{ ifnum }}.server='{{ ssidconf['wpa-eap']['server'] }}'
-set wireless.wifi{{ ifnum }}.port='{{ ssidconf['wpa-eap']['port'] }}'
+set wireless.wifi{{ index.iface }}.encryption=wpa2
+set wireless.wifi{{ index.iface }}.server='{{ ssidconf['wpa-eap']['server'] }}'
+set wireless.wifi{{ index.iface }}.port='{{ ssidconf['wpa-eap']['port'] }}'
 {%-     else %}
-set wireless.wifi{{ ifnum }}.encryption=none
+set wireless.wifi{{ index.iface }}.encryption=none
 {%-     endif %}
-set wireless.wifi{{ ifnum }}.mcast_rate=18000
+set wireless.wifi{{ index.iface }}.mcast_rate=18000
 
 {%-   endfor %}
-
-{%-   set ifnum = ifnum + radio['ssids'].items()|length %}
-{%-   set radionum = radionum + 1 %}
 {%- endfor %}
 
 commit
