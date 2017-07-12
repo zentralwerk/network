@@ -106,6 +106,7 @@ cpe:
             wpa-eap:
              server: radius.hq.c3d2.de
              port: 1812
+             secret: public
 
   ap3:
     password: |
@@ -173,6 +174,7 @@ cpe:
             wpa-eap:
              server: radius.hq.c3d2.de
              port: 1812
+             secret: public
 
   ap4:
     password: |

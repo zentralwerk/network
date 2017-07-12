@@ -330,6 +330,7 @@ set wireless.wifi{{ index.iface }}.key='{{ ssidconf['psk'] }}'
 set wireless.wifi{{ index.iface }}.encryption=wpa2
 set wireless.wifi{{ index.iface }}.server='{{ ssidconf['wpa-eap']['server'] }}'
 set wireless.wifi{{ index.iface }}.port='{{ ssidconf['wpa-eap']['port'] }}'
+set wireless.wifi{{ index.iface }}.port='{{ ssidconf['wpa-eap']['secret'] }}'
 {%-     else %}
 set wireless.wifi{{ index.iface }}.encryption=none
 {%-     endif %}
