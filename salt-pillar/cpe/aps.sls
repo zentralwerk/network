@@ -104,7 +104,7 @@ cpe:
           'C3D2.eap':
             net: c3d2
             wpa-eap:
-             server: radius.hq.c3d2.de
+             server: 172.22.99.22
              port: 1812
              secret: public
 
