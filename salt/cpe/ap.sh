@@ -296,7 +296,6 @@ set network.{{ net }}.ifname='{{ ' '.join(ports) }}'
 
 {%- set index = { 'radio': 0, 'iface': 0 } %}
 {%- for path, radio in conf['radios'].items() %}
-{%-   set x = index.update({ 'radio': index.radio + 1 }) %}
 set wireless.radio{{ index.radio }}=wifi-device
 set wireless.radio{{ index.radio }}.type=mac80211
 set wireless.radio{{ index.radio }}.country=DE
@@ -308,7 +307,6 @@ set wireless.radio{{ index.radio }}.noscan=1
 delete wireless.radio{{ index.radio }}.disabled
 
 {%-   for ssid, ssidconf in radio['ssids'].items() %}
-{%-     set x = index.update({ 'iface': index.iface + 1 }) %}
 set wireless.wifi{{ index.iface }}=wifi-iface
 {%-     if radio['channel'] < 15 %}
 {%-       set ifprefix = 'wlan2-' %}
@@ -337,7 +335,9 @@ set wireless.wifi{{ index.iface }}.encryption=none
 {%-     endif %}
 set wireless.wifi{{ index.iface }}.mcast_rate=18000
 
+{%-     set x = index.update({ 'iface': index.iface + 1 }) %}
 {%-   endfor %}
+{%-   set x = index.update({ 'radio': index.radio + 1 }) %}
 {%- endfor %}
 
 commit
