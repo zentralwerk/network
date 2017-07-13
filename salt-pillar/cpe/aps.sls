@@ -80,6 +80,12 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
+          'C3D2.eap':
+            net: c3d2
+            wpa-eap:
+             server: 172.22.99.22
+             port: 1812
+             secret: public
       'pci0000:01/0000:01:00.0':
         channel: 36
         htmode: VHT80
@@ -148,6 +154,12 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
+          'C3D2.eap':
+            net: c3d2
+            wpa-eap:
+             server: 172.22.99.22
+             port: 1812
+             secret: public
       'pci0000:00/0000:00:00.0':
         channel: 128
         htmode: HT40+
