@@ -115,10 +115,10 @@ containers:
         type: veth
         gw: anon1
         gw6: anon1
-        hwaddr: 0A:14:48:01:08:00
+        hwaddr: 0A:14:48:01:20:00
       priv9:
         type: phys
-        hwaddr: 0A:14:48:01:08:01
+        hwaddr: 0A:14:48:01:20:01
 
   upstream1:
     interfaces:
@@ -153,8 +153,10 @@ containers:
       core:
         type: veth
         gw: upstream1
+        hwaddr: 0A:14:48:01:21:00
       c3d2:
         type: veth
+        hwaddr: 0A:14:48:01:21:01
 
   c3d2-anon:
     interfaces:
@@ -172,8 +174,10 @@ containers:
       core:
         type: veth
         gw: upstream1
+        hwaddr: 0A:14:48:01:22:00
       c3d2:
         type: veth
+        hwaddr: 0A:14:48:01:22:01
 
   dns:
     interfaces:
@@ -181,6 +185,7 @@ containers:
         type: veth
         gw: serv-gw
         gw6: serv-gw
+        hwaddr: 0A:14:48:01:23:00
 
   stats:
     interfaces:
@@ -204,8 +209,10 @@ containers:
         type: veth
         gw: upstream1
         gw6: anon1
+        hwaddr: 0A:14:48:01:24:01
       mgmt:
         type: veth
+        hwaddr: 0A:14:48:01:24:00
 
   zeit:
     interfaces:
@@ -213,3 +220,4 @@ containers:
         type: veth
         gw: serv-gw
         gw6: serv-gw
+        hwaddr: 0A:14:48:01:25:00
