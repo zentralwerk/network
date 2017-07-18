@@ -6,5 +6,5 @@ F=/sys/class/net/$IFACE/bonding/slaves
 for slave in `cat "$F"`; do
     ip link set $slave up
     # Disable offloading as it interferes with shaping
-    ethtool -K gso off gro off tso off $slave
+    ethtool -K $slave gso off gro off tso off
 done
