@@ -124,6 +124,7 @@ containers:
     interfaces:
       core:
         type: veth
+        hwaddr: 0A:14:48:01:26:00
       up1:
         type: phys
         # Change (eg. auto-generation) requires reboot of the cable
@@ -134,6 +135,7 @@ containers:
     interfaces:
       core:
         type: veth
+        hwaddr: 0A:14:48:01:27:00
       up2:
         type: phys
         # Change (eg. auto-generation) requires reboot of the cable

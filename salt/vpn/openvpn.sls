@@ -9,7 +9,7 @@ hostroutes-{{ name }}:
     - routes:
 {%- for a in salt.dnsutil.A(conf['server']) %}
       - ipaddr: {{ a }}
-        netmask: 255.255.255.255
+        netmask: 255.255.224.0
         gateway: {{ pillar['hosts-inet']['core']['upstream2'] }}
 {%- endfor %}
   
