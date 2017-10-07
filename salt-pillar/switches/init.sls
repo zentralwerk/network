@@ -540,3 +540,54 @@ switches:
       J31/Ng==
       =e45t
       -----END PGP MESSAGE-----
+
+  switch-c3d2-main:
+    model: 'HP-procurve-2824'
+    location: C3D2
+    # Ports 1-19 ungerade oben
+    # Ports 2-20 gerade unten
+    # (15, 16 gehen aktuell nach Haus A)
+    # Ports 21-24 unten seitlich (optional optisch)
+    # Unused Port 7 geht aktuell nach Turm C Erdgeschoss
+    ports:
+      mgmt:
+        mode: access
+        ports: 1
+      switch-b1:
+        mode: bond
+        ports: 21-24
+        vlans:
+          - mgmt
+          - pub
+          - c3d2
+      ap2:
+        mode: trunk
+        ports: 2
+        vlans:
+          - mgmt
+          - pub
+          - c3d2
+      ap3:
+        mode: trunk
+        ports: 3
+        vlans:
+          - mgmt
+          - pub
+          - c3d2
+      c3d2:
+        mode: access
+        ports: '4-20'
+
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf+P65UkLF8x+pDNEoeSISflL8QTPih/D8lP5CK5gYTaL6x
+      0SoVanRYdXERiXdZ1FXw/zorg76Ofpa35k+88wRK7XxGDkP62TC26Qeu8ZbCX4kR
+      t+IQSlKk74YTCC15vBFF+pAa5PFCWPBiWcl5yKTxCNy7e/wHSVtusia6WcmvwJJy
+      M4cY8uPiKEtwLqwZ6hJIjNbjU8yFRI3EQ1irTcd/6WBErIoaaeQT5GpUvPQ6xa6R
+      lfw0OVmKK31Kmwgs+Wty/hiBlASMGdUQZDHVwsoLyFIpWejH+lfY4RMkdqz8BP2a
+      CFxQMWipc4lXMw1n4oXpkr5DPAYB0d2vDPL2sKV5KNJJAe9RC4rLlk+9uYqE4PyK
+      RswLCZhHuKqFa07ufkRpbFGyywAa70UXtbvPkbJb6G1mJ75ozXTS11JqhAdnHCBC
+      2i+VD94/nzLdvg==
+      =1SbG
+      -----END PGP MESSAGE-----

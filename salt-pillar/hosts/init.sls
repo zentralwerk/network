@@ -6,6 +6,7 @@ hosts-inet:
     switch-b2: 10.0.0.11
     switch-c1: 10.0.0.12
     switch-d1: 10.0.0.13
+    switch-c3d2-main: 10.0.0.14
     ap1: 10.0.0.41
     ap2: 10.0.0.42
     ap3: 10.0.0.43
@@ -156,6 +157,7 @@ hosts-inet6:
     switch-b2: fd23:42:c3d2:580::11
     switch-c1: fd23:42:c3d2:580::12
     switch-d1: fd23:42:c3d2:580::13
+    switch-c3d2-main: fd23:42:c3d2:580::14
     ap1: fd23:42:c3d2:580::4:1
     ap2: fd23:42:c3d2:580::4:2
     ap3: fd23:42:c3d2:580::4:3
