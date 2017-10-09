@@ -595,7 +595,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
-    location: Geborgt an B 4.04.01 anstelle ap20
+    location: 'Dekommissioniert?'
     lan-access: priv7
     radios:
       'platform/qca955x_wmac':
