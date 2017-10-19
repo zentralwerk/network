@@ -309,7 +309,7 @@ switches:
           - mgmt
           - priv6
           - pub
-      ap20:
+      ap16:
         mode: trunk
         ports:
           - GigabitEthernet 1/0/9
