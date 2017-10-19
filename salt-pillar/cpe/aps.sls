@@ -595,7 +595,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
-    location: 'Dekommissioniert?'
+    location: B 4.04.01
     lan-access: priv7
     radios:
       'platform/qca955x_wmac':
@@ -710,7 +710,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WA901NDv3
-    location: B 4.04.01
+    location: Dekomissioniert (B 4.04.01)
     lan-access: priv7
     radios:
       'platform/ar934x_wmac':
