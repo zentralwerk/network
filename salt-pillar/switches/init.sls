@@ -325,11 +325,14 @@ switches:
           - mgmt
           - priv8
           - pub
+      priv9:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/12
       pub:
         mode: access
         ports:
           - GigabitEthernet 1/0/11
-          - GigabitEthernet 1/0/12
           - GigabitEthernet 1/0/14
           - GigabitEthernet 1/0/15
           - GigabitEthernet 1/0/16
