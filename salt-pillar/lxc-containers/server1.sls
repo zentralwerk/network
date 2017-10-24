@@ -126,10 +126,10 @@ containers:
         type: veth
         gw: upstream2
         gw6: upstream2
-        hwaddr: 0A:14:48:01:21:00
+        hwaddr: 0A:14:48:01:13:02
       priv10:
         type: phys
-        hwaddr: 0A:14:48:01:21:01
+        hwaddr: 0A:14:48:01:13:03
 
   upstream1:
     interfaces:
