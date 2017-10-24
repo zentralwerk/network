@@ -325,7 +325,7 @@ switches:
           - mgmt
           - priv8
           - pub
-      priv9:
+      priv10:
         mode: access
         ports:
           - GigabitEthernet 1/0/12
