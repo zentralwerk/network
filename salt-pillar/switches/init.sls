@@ -329,11 +329,14 @@ switches:
         mode: access
         ports:
           - GigabitEthernet 1/0/12
+      priv11:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/14
       pub:
         mode: access
         ports:
           - GigabitEthernet 1/0/11
-          - GigabitEthernet 1/0/14
           - GigabitEthernet 1/0/15
           - GigabitEthernet 1/0/16
           - GigabitEthernet 1/0/17
