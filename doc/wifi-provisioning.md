@@ -26,6 +26,9 @@ Sofern der Router durch uns provisioniert wird (ansonsten siehe unten)
     7. `salt server1 state.apply cpe`
     8. `/root/apX.sh` zum Anwenden des Konfigurationsskripts
     9. Wenn Fehler gezeigt werden (entry not found ist nicht schlimm, invalid schon!) dann "commit" entfernen und den Fehler suchen.
+    10. collectd installieren wie beim Ende des letzten Skripts angezeigt
+    11. Falls noch Platz ist, ist das Paket `tcpdump` pratisch
+    12. EAP-Netze brauchen große Features: `opkg remove wpad-mini && opkg install wpad`
 
 4. Switch-Port konfigurieren in `salt-pillar/switches`
 
