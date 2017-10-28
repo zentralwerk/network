@@ -325,10 +325,14 @@ switches:
           - mgmt
           - priv8
           - pub
-      priv10:
-        mode: access
+      ap15:
+        mode: trunk
         ports:
           - GigabitEthernet 1/0/12
+        vlans:
+          - mgmt
+          - priv10
+          - pub
       priv11:
         mode: access
         ports:

@@ -570,8 +570,8 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
-    location: Auf Halde
-    lan-access: pub
+    location: B4.09.01
+    lan-access: priv10
     radios:
       'platform/qca955x_wmac':
         channel: 1
@@ -579,6 +579,9 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+          'TODO':
+            net: priv10
+            psk: 'TODO'
 
   ap16:
     password: |
