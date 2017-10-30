@@ -579,9 +579,21 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'TODO':
+          'etz250':
             net: priv10
-            psk: 'TODO'
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf+M+bC/x8XsGA7T+rmgDvA1DdLCGr5/dtO/IIGNJ2JxwNg
+              IMtIY2KVGnSvOyfIu4rVnyP5yWJK+XoAk3kxHRoUcNo2WZKOlYoXoErYVJfg32BU
+              aGqrrYyodMvE24ht8QLDkRG3mo5ppixv9SBDpGJjU0oVdYsQibLFfmTgJzNTHgqB
+              l/OBRqdTGYdeuvN/GMrczWd22wQtqS3Xx0PMzm1VHKr660nrS/tqgEoWXoh00tJT
+              iZ3LAal9zKdCsdhi/vI4BpWbwOWOywa9q5uUSs/aZ/HI4tKI9SaQk5X5uVkhznuw
+              D2TsOo2OpJVjI/r5o7o11k0JG2ypF2UmD38cMDibbdJDAQgsRB9HSugf4ew7BI86
+              pS7RMdHZCD9RWYXtGrghKj+ZLTPloLON5LS4oHpj+gMvHHaTdBb4IJxApgYxdbRg
+              fJjSiw==
+              =i4k7
+              -----END PGP MESSAGE-----
 
   ap16:
     password: |
