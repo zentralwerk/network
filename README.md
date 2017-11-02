@@ -55,3 +55,11 @@ eigentlich zu was anderem gehört.
 
 **Lösung:** Skript auf eigenen Computer kopieren, direkt ans *mgmt*
 hängen und ausführen.
+
+### pub-Netz läuft, aber kein DHCP+Internet darüber verfügbar
+
+Eventuell hat `uci` bei der ap-Konfiguration die Switch-Konfiguration
+für dieses VLAN nicht in `/etc/config/network` angelegt.
+
+* **Überprüfen**: `swconfig dev switch0 show`
+* **Beheben**: VLAN manuell in `/etc/config/network` anelegen
