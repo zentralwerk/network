@@ -14,10 +14,10 @@ base:
     - dhcp
     - bird.radv
     - bird.ospf
-  'pub-gw or serv-gw':
-    - bird.ospf
+  'pub-gw or serv-gw or radio-gw':
     - dhcp
     - bird.radv
+    - bird.ospf
   'c3d2-gw or c3d2-anon or mgmt-gw':
     - bird.ospf
   'bgp':

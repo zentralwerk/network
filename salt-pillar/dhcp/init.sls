@@ -155,3 +155,15 @@ dhcp:
       domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv11.zentralwerk.online
+
+  radio:
+    start: 172.20.73.130
+    end: 172.20.73.190
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: radio-gw.radio
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: radio.zentralwerk.online

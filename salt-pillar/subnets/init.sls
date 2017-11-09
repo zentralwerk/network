@@ -20,12 +20,14 @@ subnets-inet:
   priv16: 172.20.75.224/28
   c3d2: 172.22.99.0/24
   mgmt: 10.0.0.0/24
+  radio: 172.20.73.128/26
 
 subnets-inet6:
   mgmt: fd23:42:c3d2:580::/64
   core: fd23:42:c3d2:581::/64
   serv: fd23:42:c3d2:582::/64
   pub: fd23:42:c3d2:583::/64
+  radio: fd23:42:c3d2:586::/64
   priv1: fd23:42:c3d2:5c0::/64
   priv2: fd23:42:c3d2:5c1::/64
   priv3: fd23:42:c3d2:5c2::/64

@@ -7,7 +7,8 @@ Machine-readable here: [salt-pillar/subnets](./salt-pillar/subnets/init.sls)
 * 172.20.72.128/25
 * 172.20.73.0-172.20.73.63/26 SERVERS
 * 172.20.73.64/26 RESERVED FOR EXPANDING SERVERS
-* 172.20.73.128/25
+* 172.20.73.128/26 COLORADIO
+* 172.20.73.192/26
 * 172.20.74.0/24:
   * 172.20.74.0-172.20.74.15/28 PRIV1
   * 172.20.74.32-172.20.74.47/28 PRIV9

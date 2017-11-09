@@ -72,6 +72,7 @@ hosts-inet:
     priv16-gw: 172.20.72.26
     bgp: 172.20.72.27
     mgmt-gw: 172.20.72.28
+    radio-gw: 172.20.72.29
 
   pub:
     pub-gw: 172.20.76.1
@@ -143,6 +144,9 @@ hosts-inet:
 {%- endfor %}
   priv16:
     priv16-gw: 172.20.75.225
+
+  radio:
+    radio-gw: 172.20.73.129
 
   c3d2:
     c3d2-anon: 172.22.99.1
@@ -266,6 +270,9 @@ hosts-inet6:
     priv15-gw: fd23:42:c3d2:5ce::1
   priv16:
     priv16-gw: fd23:42:c3d2:5cf::1
+
+  radio:
+    radio-gw: fd23:42:c3d2:586::1
 
   c3d2:
     c3d2-anon: fd23:42:c3d2:523::c3d2:1

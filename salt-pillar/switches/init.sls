@@ -19,6 +19,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - radio
           - priv1
           - priv2
           - priv3
@@ -121,6 +122,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - radio
           - up1
           - up2
           - up3
@@ -167,6 +169,7 @@ switches:
           - core
           - serv
           - c3d2
+          - radio
           - up1
           - up2
           - up3
@@ -253,6 +256,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - radio
           - priv1
           - priv2
           - priv3

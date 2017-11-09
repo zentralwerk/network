@@ -243,3 +243,14 @@ containers:
         gw: serv-gw
         gw6: serv-gw
         hwaddr: 0A:14:48:01:25:00
+
+  radio-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: upstream2
+        gw6: upstream2
+        hwaddr: 0A:14:48:01:06:02
+      radio:
+        type: veth
+        hwaddr: 0A:14:48:01:06:00
