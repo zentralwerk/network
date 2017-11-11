@@ -15,7 +15,7 @@ containers:
       core:
         type: veth
         gw: upstream1
-        gw6: upstream1
+        gw6: anon1
         hwaddr: 0A:14:48:01:06:01
       serv:
         type: veth
@@ -37,7 +37,7 @@ containers:
       core:
         type: veth
         gw: upstream2
-        gw6: upstream2
+        gw6: anon1
         hwaddr: 0A:14:48:01:18:00
       priv2:
         type: phys
@@ -92,7 +92,7 @@ containers:
       core:
         type: veth
         gw: upstream2
-        gw6: upstream2
+        gw6: anon1
         hwaddr: 0A:14:48:01:10:00
       priv7:
         type: phys
@@ -103,7 +103,7 @@ containers:
       core:
         type: veth
         gw: upstream2
-        gw6: upstream2
+        gw6: anon1
         hwaddr: 0A:14:48:01:09:00
       priv8:
         type: phys
@@ -125,7 +125,7 @@ containers:
       core:
         type: veth
         gw: upstream2
-        gw6: upstream2
+        gw6: anon1
         hwaddr: 0A:14:48:01:13:02
       priv10:
         type: phys
@@ -136,7 +136,7 @@ containers:
       core:
         type: veth
         gw: upstream2
-        gw6: upstream2
+        gw6: anon1
         hwaddr: 0A:14:48:01:29:00
       priv11:
         type: phys
@@ -249,7 +249,7 @@ containers:
       core:
         type: veth
         gw: upstream2
-        gw6: upstream2
+        gw6: anon1
         hwaddr: 0A:14:48:01:06:02
       radio:
         type: veth
