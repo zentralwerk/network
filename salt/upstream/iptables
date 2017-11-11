@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
 if [ "$IFACE" = "{{ interface }}" ]; then
    iptables -A INPUT -i "$IFACE" -m state --state ESTABLISHED,RELATED -j ACCEPT
    iptables -A INPUT -i "$IFACE" -j DROP

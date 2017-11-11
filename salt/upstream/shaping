@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
 if [ "$IFACE" = "{{ iface }}" ]; then
    tc qdisc del dev $IFACE root    2> /dev/null >  /dev/null
    tc qdisc add dev $IFACE root       handle  1   hfsc default 1

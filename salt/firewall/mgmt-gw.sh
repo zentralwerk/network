@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
 IFACE=mgmt
 iptables -F FORWARD
 ip6tables -F FORWARD
