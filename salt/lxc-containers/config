@@ -42,7 +42,7 @@ lxc.network.ipv6={{ inet6_addr }}/{{ prefix6_len }}
 {%- endif %}
 {%- set gw6 = conf.get('gw6') %}
 {%- if gw6 %}
-lxc.network.ipv6.gateway={{ pillar['hosts-inet6'][net][gw] }}
+lxc.network.ipv6.gateway={{ pillar['hosts-inet6'][net][gw6] }}
 {%- endif %}
 
 {%- if conf['type'] == 'veth' %}
