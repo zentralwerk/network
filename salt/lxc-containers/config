@@ -55,10 +55,6 @@ lxc.network.name={{ net }}
 {%- set n = n + 1 %}
 {%- endfor %}
 
-{%- if id == 'mgmt-gw' %}
-lxc.network.script.up=/etc/network/if-pre-up.d/firewall
-{%- endif %}
-
 
 lxc.cap.drop = sys_module sys_time sys_nice sys_pacct sys_rawio sys_time mknod
 
