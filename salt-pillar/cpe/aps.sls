@@ -895,3 +895,129 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
+
+  ap24:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf/Q5T8CgZk1oFVn0dEhGhCC6bT1bNjddjruM3eFTTtz9H7
+      eDBDa0fMMGnI7f+MyizUSNXmaNnxwE/1Su6B02CKelxfKrYqgjjYnEUdYaH5lXNS
+      xvwoC1Jy72tcu42li+fvlNtuK4oZ9eqGrZEsQ4hzdxL2AFYmyVwGEEdjOppe/bMf
+      xJeqZ3wiDZigWRMXYBsX3e54bqZZiJUBkGyWQGDloTWvSTQ1TvMlFHxxzAOdrpOs
+      puxi3+AfYUF43/8KYxHVXLrVRl4tCHOa6L90skigKB2hh0gURlGLYgQHsF+BofCP
+      iMwCrRhI5aVz9Am+NUtenFfql0LjDtGNEuD65ziJK9JEASgdMCyDKYnXRl0fS8qG
+      dL4R8ZwMpP2L70RiMPPRGsa/MXDXg1YuK8unYUkQt2y+KLevqHrKe7hZ9xwIu5Zm
+      FvUs2Ms=
+      =nKEk
+      -----END PGP MESSAGE-----
+    model: TL-WR740N
+    location: Vorrat
+    lan-access: pub
+    radios:
+      'platform/ar933x_wmac':
+        channel: 11
+        htmode: HT40-
+        ssids:
+          'ZW public':
+            net: pub
+
+  ap25:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf+MAk8ac92dR6ZebVtC2MeuAiqIla9KADwA9Xx0g8x/B03
+      4LOt2SDGKq5L0hjDq1Ex8eQSNDwGyaXWu6BfF1yJnNbdXaBrzLArd7mQ+yvahZB1
+      S4NDPHyR19Mtjv0aUfgnmpA6q6+6Tmi8u3bMPDfKW/fiq7+m5TgCRb6XFeS3U+RF
+      wdbrMtvw1XoGhnJZ+kpM6TSceTae3Ttam0UzAVhS2n+UAf+pIU3hDLoa+xj3vA37
+      AqWAQZ6MqNUoMpcrSHI3hCMc0h2IBJ/DKNIR5Bjyo7SwrzWMIAcgLVr19XJZgGTQ
+      GkUxfjlFJeg7VkO3KNDWdhiR9vegP0CObC1TyMXf+NJEAfgYscLlFm57mSYa10mX
+      rNRqIYYlgp9E5JMoxDV5UbStKHQCpxHGb5BZ2MgfWsR28ow7U6Bu7iMbPzhUjBs+
+      rmWoaCk=
+      =Lj6m
+      -----END PGP MESSAGE-----
+    model: TL-WR740N
+    location: Vorrat
+    lan-access: pub
+    radios:
+      'platform/ar933x_wmac':
+        channel: 11
+        htmode: HT40-
+        ssids:
+          'ZW public':
+            net: pub
+
+  ap26:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf9EOhVrZ5rdUXxF8wLfkDsag+sgPkhZHffQuTbbtJT/kdZ
+      pT9po4TklwWBMQ+X8XqLN2EFxN5k2ViM9INoqOnWlP42whYu1Y3GWVv9RrrJrgDo
+      z4Bf+MLZ/1XudYQtfqCtVlEWwtz4UZCYWHkszuiCGPU4baTj0tKibUP63XkbVtpe
+      cqC53aMBN4ZSTbhzzoJeZiIHvl6I5hTQRvL38SSF4MTz6MqFqz1O7Ip1MCWFJHlO
+      XW4dsNhe6GYpFg+ei8bp//IvrfHhsRADZDKcUuNxrMkljOH9Z76y4wI7IONw9Acb
+      ZLFVC8alv0FQ8cVmIRL74zYMvZtys9/l7UbpZ4Cgu9JFAROwEUdGUXE5QFgQGGJQ
+      Esz/Ou+ovkApM9+AO/KBqKN5NsoncLvfIfWwfAxYO1Vfb3aC/iETh496s0MD12WI
+      lorv3GDp
+      =C8xr
+      -----END PGP MESSAGE-----
+    model: TL-WR740N
+    location: Vorrat
+    lan-access: pub
+    radios:
+      'platform/ar933x_wmac':
+        channel: 11
+        htmode: HT40-
+        ssids:
+          'ZW public':
+            net: pub
+
+  ap27:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf+OfzMobYnaGMzLr2H1RQaka2FcYsAiYuoP7/yNWppUGdY
+      2pZK+yhVInxTOMc3c40oBRfEPSL2yLKsHxJRKYNQKze+gsPgL4OSHIa4dfyNYr+Q
+      PlYoFf/xCdug6kKyLK9Ka/BLuVU/sOEAoLQlXvPy+67u40TFZi6P+KEcwsaF0+Cl
+      YghJ7vFQaMqOoFBmPUIXG/FBt2C9pEyTkRJGcJu2EnXNyUPxo5I2ufrESmZhFqEl
+      LRf0JMBjOadrGhBNWgwxIOFWbK5V+UJqYQP2irtHWNv7bcUtqyzUtLM5URDGthoR
+      U4e3G2JjVRqbGJwBL3NbbQz/hAQH0X6Ga67CtEeGIdJDAVqd/YvqMnibllu57Zcx
+      rdTX9iPbjkHmX/7HVSrdv0mDYEA3GAqxV6/C7gte0u5Yqz3lNVCdzrIX/7K0uPXO
+      8jprrw==
+      =dnNO
+      -----END PGP MESSAGE-----
+    model: TL-WR841N
+    location: Vorrat
+    lan-access: pub
+    radios:
+      'platform/qca953x_wmac':
+        channel: 6
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+
+
+  ap28:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf+KrhJQfg2IAJ2SHEL8x0iAAn1ZYJ4kFVGYkmoEbN6iM4O
+      d2/0f8/2voMHChSTheQ5Y+Vp8op5gzOhROOShfJG1khugiEPhza+4sV0WD8Oa6Vm
+      FPXTr1HJdF/LZkCAVBvJOgsUC1U1PrSiSeKp3ziZyByKw6Rox6Krw6fkR2miuixs
+      fV0EW/H9bIVGru7Dtrgw1zq4QopxuFikMp/YWbmX0TEff6ntFCVwrGRN8Iluyaoy
+      aLon/Wh4DW8KQkw+s0SWxq/lIkCdvXj8TnGY3h1HNSXEfPE4hWGgwGwhLgNcNGPb
+      MC3IYHbmy/640GGl/tmqSnKZFuCVebMdIQ/j2iLLM9JHAe57w79qwwXIlUZ4/0I8
+      gaGTRjFyub+6lP9cdR6nd4FuGZanXQAEND/bwIOQtt1+jgcrgaaF3uv3gWO6Mckl
+      BEELWgTZJzE=
+      =ECvx
+      -----END PGP MESSAGE-----
+    model: TL-WR841Nv8
+    location: Vorrat
+    lan-access: pub
+    radios:
+      'platform/qca953x_wmac':
+        channel: 6
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
