@@ -282,7 +282,7 @@ cpe:
       =Noqk
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: turm c 2. etage
+    location: Broken?
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
@@ -961,7 +961,7 @@ cpe:
       =C8xr
       -----END PGP MESSAGE-----
     model: TL-WR740N
-    location: Vorrat
+    location: Turm C, 2. Etage
     lan-access: pub
     radios:
       'platform/ar933x_wmac':

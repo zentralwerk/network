@@ -485,7 +485,7 @@ switches:
         vlans:
           - mgmt
           - pub
-      ap6:
+      ap26:
         mode: trunk
         ports: 19
         vlans:
