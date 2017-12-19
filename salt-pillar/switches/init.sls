@@ -467,7 +467,7 @@ switches:
       mgmt:
         mode: access
         ports: '20'
-      ap13:
+      ap27:
         mode: trunk
         ports: 18
         vlans:

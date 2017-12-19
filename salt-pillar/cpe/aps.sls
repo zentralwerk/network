@@ -282,7 +282,7 @@ cpe:
       =Noqk
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: Broken?
+    location: Broken flash
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
@@ -520,7 +520,7 @@ cpe:
       =ECvx
       -----END PGP MESSAGE-----
     model: DIR-615H1
-    location: Turm C 1. Etage
+    location: Stolen? (was: Turm C 1. Etage)
     lan-access: pub
     radios:
       'platform/10180000.wmac':
@@ -961,7 +961,7 @@ cpe:
       =C8xr
       -----END PGP MESSAGE-----
     model: TL-WR740N
-    location: Turm C, 2. Etage
+    location: Turm C, 3. Etage
     lan-access: pub
     radios:
       'pci0000:00/0000:00:00.0':
@@ -986,11 +986,11 @@ cpe:
       =dnNO
       -----END PGP MESSAGE-----
     model: TL-WR841N
-    location: Vorrat
+    location: Turm C, 1. Etage (EG)
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
-        channel: 6
+        channel: 1
         htmode: HT40+
         ssids:
           'ZW public':
