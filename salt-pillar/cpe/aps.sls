@@ -828,7 +828,7 @@ cpe:
     location: Haus B Souterrain unter der Treppe an Turm D
     lan-access: pub
     radios:
-      'platform/ar933x_wmac':
+      'pci0000:00/0000:00:00.0':
         channel: 11
         htmode: HT40-
         ssids:
@@ -914,7 +914,7 @@ cpe:
     location: Vorrat
     lan-access: pub
     radios:
-      'platform/ar933x_wmac':
+      'pci0000:00/0000:00:00.0':
         channel: 11
         htmode: HT40-
         ssids:
@@ -964,7 +964,7 @@ cpe:
     location: Turm C, 2. Etage
     lan-access: pub
     radios:
-      'platform/ar933x_wmac':
+      'pci0000:00/0000:00:00.0':
         channel: 11
         htmode: HT40-
         ssids:
