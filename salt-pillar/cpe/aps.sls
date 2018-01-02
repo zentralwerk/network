@@ -520,7 +520,7 @@ cpe:
       =ECvx
       -----END PGP MESSAGE-----
     model: DIR-615H1
-    location: Stolen? (was: Turm C 1. Etage)
+    location: 'Stolen? (was: Turm C 1. Etage)'
     lan-access: pub
     radios:
       'platform/10180000.wmac':
