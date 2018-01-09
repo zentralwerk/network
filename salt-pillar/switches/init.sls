@@ -200,21 +200,11 @@ switches:
           - GigabitEthernet1/0/11
           - GigabitEthernet1/0/12
         access: c3d2
-      c3d2-thinkbert:
-        mode: access
-        ports:
-          - GigabitEthernet1/0/35
-        access: c3d2
       c3d2-storage:
         mode: bond
         ports:
           - GigabitEthernet1/0/14
           - GigabitEthernet1/0/13
-        access: c3d2
-      server2:
-        mode: trunk
-        ports:
-          - GigabitEthernet1/0/23
         access: c3d2
       monit:
         mode: trunk
@@ -223,6 +213,11 @@ switches:
         vlans:
           - mgmt
           - c3d2
+      c3d2:
+        mode: access
+        ports:
+          - GigabitEthernet1/0/23
+          - GigabitEthernet1/0/35
     password: |
       -----BEGIN PGP MESSAGE-----
 
