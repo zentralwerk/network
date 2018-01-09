@@ -201,7 +201,7 @@ switches:
           - GigabitEthernet1/0/12
         access: c3d2
       c3d2-thinkbert:
-        mode: bond
+        mode: access
         ports:
           - GigabitEthernet1/0/35
         access: c3d2
