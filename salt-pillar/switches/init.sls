@@ -364,6 +364,15 @@ switches:
         vlans:
           - mgmt
           - pub
+      c3d2-server3:
+        mode: bond
+        ports:
+          - GigabitEthernet1/0/30
+          - GigabitEthernet1/0/31
+          - GigabitEthernet1/0/32
+          - GigabitEthernet1/0/33
+        access:
+          - c3d2
     password: |
       -----BEGIN PGP MESSAGE-----
 
