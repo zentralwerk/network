@@ -371,8 +371,7 @@ switches:
           - GigabitEthernet1/0/31
           - GigabitEthernet1/0/32
           - GigabitEthernet1/0/33
-        access:
-          - c3d2
+        access: c3d2
     password: |
       -----BEGIN PGP MESSAGE-----
 
