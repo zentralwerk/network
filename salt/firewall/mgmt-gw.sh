@@ -9,6 +9,9 @@ if [ "$IFACE" = "{{ interface }}" ]; then
     ip6tables -P FORWARD DROP
     iptables -A FORWARD -m state --state ESTABLISHED -j ACCEPT
     ip6tables -A FORWARD -m state --state ESTABLISHED -j ACCEPT
+    # loopback
+    iptables -A FORWARD -i lo -j ACCEPT
+    ip6tables -A FORWARD -i lo -j ACCEPT
     # DNS
     iptables -A FORWARD -i $IFACE -p udp --dport 53 -j ACCEPT
     ip6tables -A FORWARD -i $IFACE -p udp --dport 53 -j ACCEPT

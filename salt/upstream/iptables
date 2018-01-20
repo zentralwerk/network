@@ -2,8 +2,15 @@
 
 export PATH=/sbin:/bin:/usr/sbin:/usr/bin
 
+if [ "$IFACE" = "lo" ]; then
+   iptables -I INPUT -i lo -j ACCEPT
+   ip6tables -I INPUT -i lo -j ACCEPT
+fi
 if [ "$IFACE" = "{{ interface }}" ]; then
    iptables -A INPUT -i "$IFACE" -m state --state ESTABLISHED,RELATED -j ACCEPT
+   ip6tables -A INPUT -i "$IFACE" -m state --state ESTABLISHED,RELATED -j ACCEPT
    iptables -A INPUT -i "$IFACE" -j DROP
+   ip6tables -A INPUT -i "$IFACE" -j DROP
    iptables -P INPUT ACCEPT
+   ip6tables -P INPUT ACCEPT
 fi
