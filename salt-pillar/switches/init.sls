@@ -371,7 +371,10 @@ switches:
         ports:
           - GigabitEthernet1/0/30
           - GigabitEthernet1/0/31
-          - GigabitEthernet1/0/32
+        access: c3d2
+      c3d2-server4:
+        mode: trunk
+        ports:
           - GigabitEthernet1/0/33
         access: c3d2
     password: |
