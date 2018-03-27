@@ -149,7 +149,7 @@ containers:
         gw: anon1
         gw6: anon1
         hwaddr: 0A:14:48:01:2A:00
-      priv11:
+      priv12:
         type: phys
         hwaddr: 0A:14:48:01:2A:01
 
