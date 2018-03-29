@@ -911,15 +911,30 @@ cpe:
       =nKEk
       -----END PGP MESSAGE-----
     model: TL-WR740N
-    location: Vorrat
+    location: Farbwerk
     lan-access: pub
     radios:
       'pci0000:00/0000:00:00.0':
-        channel: 11
+        channel: 6
         htmode: HT40-
         ssids:
           'ZW public':
             net: pub
+          'farbwerk':
+            net: priv12
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf+IPiScue8N9DGdOEELn01o1UhcIbtAUvEQ/nGSvzTpp/w
+              0+h/i/TfaGsXmJh+RvuwactFWG416TKShAaHkintL6SU3hrxwRuFpSeoU7rIVm88
+              W7h/jr7FTXmGUka3UV8nCaGBOzXMZ6Vmn7zubr5q6v2bzPkAdG0RRhjyyRZSV/Ab
+              p73OyR8LNpjBlComlF8+/8+Q1bmqBYJrt3kKfP7LYLxk0PNZDSmVx3W/dXMPGBBx
+              5baGwT+Ab1QO2qApXN3IT3RT4ljyhhjLNNsonZjwhe14Tn3vhiJfB7GruSv3kVsc
+              mYDp/KPUJOSn99wu+d3TqbTQTC1QwxEFsYmfgHZVGdJGAS1NhkAXnuqox4K+ZIIN
+              YajjQ95DqiyNliNAyrvW9Lo948EekRksULkAQokvClg92Rjz7R8768ZGuSiBNy5Z
+              75+9TF3imA==
+              =eVje
+              -----END PGP MESSAGE-----
 
   ap25:
     password: |
@@ -936,15 +951,30 @@ cpe:
       =Lj6m
       -----END PGP MESSAGE-----
     model: TL-WR740N
-    location: Vorrat
+    location: Farbwerk
     lan-access: pub
     radios:
       'platform/ar933x_wmac':
-        channel: 11
+        channel: 6
         htmode: HT40-
         ssids:
           'ZW public':
             net: pub
+          'farbwerk':
+            net: priv12
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf+IPiScue8N9DGdOEELn01o1UhcIbtAUvEQ/nGSvzTpp/w
+              0+h/i/TfaGsXmJh+RvuwactFWG416TKShAaHkintL6SU3hrxwRuFpSeoU7rIVm88
+              W7h/jr7FTXmGUka3UV8nCaGBOzXMZ6Vmn7zubr5q6v2bzPkAdG0RRhjyyRZSV/Ab
+              p73OyR8LNpjBlComlF8+/8+Q1bmqBYJrt3kKfP7LYLxk0PNZDSmVx3W/dXMPGBBx
+              5baGwT+Ab1QO2qApXN3IT3RT4ljyhhjLNNsonZjwhe14Tn3vhiJfB7GruSv3kVsc
+              mYDp/KPUJOSn99wu+d3TqbTQTC1QwxEFsYmfgHZVGdJGAS1NhkAXnuqox4K+ZIIN
+              YajjQ95DqiyNliNAyrvW9Lo948EekRksULkAQokvClg92Rjz7R8768ZGuSiBNy5Z
+              75+9TF3imA==
+              =eVje
+              -----END PGP MESSAGE-----
 
   ap26:
     password: |
