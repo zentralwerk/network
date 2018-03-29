@@ -912,7 +912,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR740N
     location: Farbwerk
-    lan-access: pub
+    lan-access: priv12
     radios:
       'pci0000:00/0000:00:00.0':
         channel: 6
@@ -952,7 +952,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR740N
     location: Farbwerk
-    lan-access: pub
+    lan-access: priv12
     radios:
       'platform/ar933x_wmac':
         channel: 6
