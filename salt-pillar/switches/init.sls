@@ -377,6 +377,22 @@ switches:
         ports:
           - GigabitEthernet1/0/33
         access: c3d2
+      ap24:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/34
+        vlans:
+          - mgmt
+          - pub
+          - priv12
+      ap25:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/35
+        vlans:
+          - mgmt
+          - pub
+          - priv12
     password: |
       -----BEGIN PGP MESSAGE-----
 
