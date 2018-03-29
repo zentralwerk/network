@@ -914,7 +914,7 @@ cpe:
     location: Farbwerk
     lan-access: priv12
     radios:
-      'pci0000:00/0000:00:00.0':
+      'platform/ar933x_wmac':
         channel: 6
         htmode: HT40-
         ssids:
