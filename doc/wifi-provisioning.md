@@ -7,9 +7,12 @@ Sofern der Router durch uns provisioniert wird (ansonsten siehe unten)
 
    1. privX allokieren
    2. `privX-gw` in `salt-pillar/lxc-containers` anlegen
-   3. `salt server1 state.apply lxc-containers`
-   4. `salt-key -A`
-   5. `salt privX-gw state.apply`
+   3. Erweitere `salt-pillar/dhcp/init.sls` um das Netz anhand [der
+      Subnets](subnets.md). Erste IPv4-Adresse muss für den `privX-gw`
+      frei bleiben, siehe `salt-pillar/hosts/init.sls`
+   4. `salt server1 state.apply lxc-containers`
+   5. `salt-key -A`
+   6. `salt privX-gw state.apply`
 
 3. AP provisionieren in `salt-pillar/cpe/aps`
 
