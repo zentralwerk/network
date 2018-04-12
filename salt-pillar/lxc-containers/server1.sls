@@ -153,6 +153,17 @@ containers:
         type: phys
         hwaddr: 0A:14:48:01:2A:01
 
+  priv13-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+        hwaddr: 0A:14:48:01:2A:10
+      priv13:
+        type: phys
+        hwaddr: 0A:14:48:01:2A:11
+
   upstream1:
     interfaces:
       core:
@@ -264,4 +275,15 @@ containers:
         hwaddr: 0A:14:48:01:06:02
       radio:
         type: veth
+  priv12-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: anon1
+        gw6: anon1
+        hwaddr: 0A:14:48:01:2A:00
+      priv12:
+        type: phys
+        hwaddr: 0A:14:48:01:2A:01
+
         hwaddr: 0A:14:48:01:06:00
