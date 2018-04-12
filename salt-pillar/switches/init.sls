@@ -393,6 +393,14 @@ switches:
           - mgmt
           - pub
           - priv12
+      ap29:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/36
+        vlans:
+          - mgmt
+          - pub
+          - priv13
     password: |
       -----BEGIN PGP MESSAGE-----
 
