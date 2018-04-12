@@ -1056,7 +1056,7 @@ cpe:
     firstboot: true
     password: |
       -----BEGIN PGP MESSAGE-----
-
+      
       hQEMA2PKcvDMvlKLAQf+ILp1HB9Y8e9j2ZB8CCDcZVLPoG44lWrqUx9iBpL96voq
       V+meMGvnfwO2CJLKtGEN1CHngA7z273RlZRfIWLnDH2GPtuZ1yhijIzrzZVJEU8r
       ZAKvtv3r6CqJlWQerSskAewyMJrTcGDL/Y5bLIea7Q54insJWGw9S4p5hnd89gql
@@ -1081,7 +1081,7 @@ cpe:
             net: priv13
             psk: |
               -----BEGIN PGP MESSAGE-----
-
+      
               hQEMA2PKcvDMvlKLAQf/Vs+PSo+K0zA5dQz8zcQwsIqOn5ZL7JthytWOruNNAPlY
               aVyr/7yNIVD2WH4gEbE0ybHEekaQ1CPJHqr1VaV2Y9JFDVCeXEr1xQwRcWB8qQkL
               pBtthyhq56x6110/mdTeuXIZYvTckQx1hCdZBMxAiY9pSyaKjyLsmlE6oAIQC2zs
@@ -1092,6 +1092,7 @@ cpe:
               KG4bgv2L+n0w
               =Pjej
               -----END PGP MESSAGE-----
+
       'pci0000:01/0000:01:00.0':
         channel: 36
         htmode: VHT80
@@ -1102,7 +1103,7 @@ cpe:
             net: priv13
             psk: |
               -----BEGIN PGP MESSAGE-----
-
+      
               hQEMA2PKcvDMvlKLAQf/Vs+PSo+K0zA5dQz8zcQwsIqOn5ZL7JthytWOruNNAPlY
               aVyr/7yNIVD2WH4gEbE0ybHEekaQ1CPJHqr1VaV2Y9JFDVCeXEr1xQwRcWB8qQkL
               pBtthyhq56x6110/mdTeuXIZYvTckQx1hCdZBMxAiY9pSyaKjyLsmlE6oAIQC2zs
@@ -1113,3 +1114,4 @@ cpe:
               KG4bgv2L+n0w
               =Pjej
               -----END PGP MESSAGE-----
+
