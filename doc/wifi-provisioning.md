@@ -26,9 +26,15 @@ Sofern der Router durch uns provisioniert wird (ansonsten siehe unten)
         3. `psk` vom Benutzer eingeben lassen, verschlüsselt
            abspeichern
     6. Kanäle je nach Umgebung des Nachbars optimieren
-    7. `salt server1 state.apply cpe`
-    8. `/root/apX.sh` zum Anwenden des Konfigurationsskripts
-    9. Wenn Fehler gezeigt werden (entry not found ist nicht schlimm, invalid schon!) dann "commit" entfernen und den Fehler suchen.
+        * Ist der Nachbar auf Kanal 1 mag man eher zum Kanal 6
+        * als weitere Option gibt es noch Kanal 11
+    7. mit root@server1 `salt server1 state.apply cpe` ausführen
+        * das generiert `/root/apX.sh`
+    8. mit root@server1 `/root/apX.sh` ausführen zum Anwenden des Konfigurationsskripts
+    9. Wenn Fehler gezeigt werden
+        * `entry not found` ist nicht schlimm
+        * `invalid` hingegen schon!
+        * dann "commit" entfernen und den Fehler suchen.
     10. collectd installieren wie beim Ende des letzten Skripts angezeigt
     11. Falls noch Platz ist, ist das Paket `tcpdump` pratisch
     12. EAP-Netze brauchen große Features: `opkg remove wpad-mini && opkg install wpad`
@@ -39,7 +45,8 @@ Sofern der Router durch uns provisioniert wird (ansonsten siehe unten)
     2. Eintrag `apX` anlegen
     3. `mode: trunk`
     4. Der Port in welchen das Kabel gesteckt wird kommt unter `ports:`
-    5. `vlans:` immer *mgmt* und *pub*, auch das *privX*
+        * z.B.: `- GigabitEthernet 1/0/36`
+    5. `vlans:` immer *mgmt* und *pub*, sowie das *privX*
     6. `salt server1 state.apply switches`
     7. `/root/switch-X.sh` zum Anwenden des Konfigurationsskripts
 
