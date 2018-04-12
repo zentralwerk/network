@@ -30,6 +30,17 @@ Grundsätzlich erscheinen bisher folgende Fälle vorstellbar.
 1. Es kann dem Anschluss auch ein eigenes Netz zugeordnet werden. Mit einem solchen eigenen Netz wäre dann ein bewusstes Abtrennen vom allgemeinen Netz möglich. Ein Kommunizieren mit den Geräten im allgemeinen Netz ist weiterhin möglich.
 1. Bei einem eigenen Netz für den Anschluss kann auch das pauschale oder gezielte Abschotten von Verbindungen mit dem Netzwerk (eine Firewall) eingerichtet werden. Das ist der Fall, wenn du keine Dienste mit Anderen im Haus betreiben oder nutzen willst. Der Anschluss vom Computer wäre dann so isoliert, wie wenn er allein an einem alleinigen Zugang zum Internet angebunden wäre.
 
+### Kostet mich das was?
+
+Neue Hardware (Plasterouter, Netzwerkkabel) verschenken wir nicht,
+sondern verborgen nur gebrauchtes Zeug solange Vorrat reicht.
+
+Unser Arbeitsaufwand ist komplett freiwillig für die Verfolgung der
+oben genannten Ziele: ein tolles Netz zu haben. Im Gegenzug lasst ihr
+uns auf die WLAN-Router, so dass das öffentliche Gästenetz
+ausgestrahlt werden kann. Wir können keinen 24×7-Support bieten, sind
+aber offen für weitere Helfer.
+
 ## WLAN
 
 Du könntest irgendwelche Altgeräte weiter betreiben, aber eigentlich
@@ -79,6 +90,18 @@ Wege entscheiden:
 2. Alternativ versuchen wir einfach Kabelanschlüsse und WLAN direkt zu
    verbinden. Damit könnten wir entweder Gästenetz oder dein privates
    Netz auf WLAN und Kabelanschlüsse legen.
+
+
+### Abgabe bei Auszug
+
+Ohne die passende Netzwerkdose im Haus wird aus den WLAN-Routern
+blinkende Briefbeschwerer -- ziemlich schlechte noch dazu, denn sie
+haben Gehäuse aus Plastik.
+
+Bitte gebt uns ausgeliehene Hardware zurück.
+
+Wenn ihr uns eure eigene, gekaufte Hardware vorbeibringt, können wir
+versuchen die Original-Software darauf wiederherzustellen.
 
 
 ## Mehr Geschwindigkeit mit einem eigenen Internetanschluss
