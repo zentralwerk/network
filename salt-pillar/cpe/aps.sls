@@ -15,6 +15,7 @@ cpe:
       =QPF0
       -----END PGP MESSAGE-----
     model: TL-WR841N
+    version: release
     location: leihgabe
     lan-access: priv6
     radios:
@@ -56,6 +57,7 @@ cpe:
       -----END PGP MESSAGE-----
 
     model: TL-Archer-C7v2
+    version: release
     location: C3D2 Main
     lan-access: c3d2
     radios:
@@ -130,6 +132,7 @@ cpe:
       -----END PGP MESSAGE-----
 
     model: TL-WDR4300
+    version: release
     location: C3D2 Kammer
     lan-access: c3d2
     radios:
@@ -203,6 +206,7 @@ cpe:
       =JLKE
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
+    version: release
     location: Dresden School of Lindy Hop
     lan-access: priv4
     radios:
@@ -243,6 +247,7 @@ cpe:
       =JLKE
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
+    version: release
     location: a
     lan-access: priv5
     radios:
@@ -282,6 +287,7 @@ cpe:
       =Noqk
       -----END PGP MESSAGE-----
     model: TL-WR841N
+    version: release
     location: Broken flash
     lan-access: pub
     radios:
@@ -307,6 +313,7 @@ cpe:
       =Noqk
       -----END PGP MESSAGE-----
     model: TL-WR841N
+    version: release
     location: Turm D, 4. Etage
     lan-access: priv7
     radios:
@@ -346,6 +353,7 @@ cpe:
       =Noqk
       -----END PGP MESSAGE-----
     model: TL-WDR4300
+    version: release
     location: Poelzi
     lan-access: c3d2
     radios:
@@ -406,6 +414,7 @@ cpe:
       =QPF0
       -----END PGP MESSAGE-----
     model: TL-WR841N
+    version: release
     location: Turm D, 2. Etage
     lan-access: pub
     radios:
@@ -430,6 +439,7 @@ cpe:
       =QPF0
       -----END PGP MESSAGE-----
     model: TL-WR841N
+    version: release
     location: Turm D, 1. Etage
     lan-access: pub
     radios:
@@ -455,6 +465,7 @@ cpe:
       =8sEk
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
+    version: release
     location: B 2.03.04
     lan-access: priv8
     radios:
@@ -495,6 +506,7 @@ cpe:
       =ECvx
       -----END PGP MESSAGE-----
     model: TL-WR841Nv8
+    version: release
     location: Dekommissioniert, r/o flash
     lan-access: pub
     radios:
@@ -520,6 +532,7 @@ cpe:
       =ECvx
       -----END PGP MESSAGE-----
     model: DIR-615H1
+    version: release
     location: 'Stolen? (was: Turm C 1. Etage)'
     lan-access: pub
     radios:
@@ -545,6 +558,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
+    version: release
     location: Auf Halde
     lan-access: pub
     radios:
@@ -570,6 +584,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
+    version: release
     location: B4.09.01
     lan-access: priv10
     radios:
@@ -610,6 +625,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
+    version: release
     location: B 4.04.01
     lan-access: priv7
     radios:
@@ -650,6 +666,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR1043ND
+    version: release
     location: Saal A
     lan-access: pub
     radios:
@@ -675,6 +692,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR841N
+    version: release
     location: Auf Lager#fast schon verliehen
     lan-access: pub
     radios:
@@ -700,6 +718,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WR841N
+    version: release
     location: Turm C oberste Etage
     lan-access: pub
     radios:
@@ -725,6 +744,7 @@ cpe:
       =bGE5
       -----END PGP MESSAGE-----
     model: TL-WA901NDv3
+    version: release
     location: Dekomissioniert (B 4.04.01)
     lan-access: priv7
     radios:
@@ -765,6 +785,7 @@ cpe:
       =MC+3
       -----END PGP MESSAGE-----
     model: Ubnt-UniFi-AP-AC-LR
+    version: release
     location: Haus B, 2. Etage, zum Innenhof
     radios:
       'platform/qca956x_wmac':
@@ -825,6 +846,7 @@ cpe:
       =MXwF
       -----END PGP MESSAGE-----
     model: TL-WR740N
+    version: release
     location: Haus B Souterrain unter der Treppe an Turm D
     lan-access: pub
     radios:
@@ -851,6 +873,7 @@ cpe:
       =MXwF
       -----END PGP MESSAGE-----
     model: Ubnt-UniFi-AP-AC-LR
+    version: release
     location: Seminarraum, Haus B
     radios:
       'platform/qca956x_wmac':
@@ -911,6 +934,7 @@ cpe:
       =nKEk
       -----END PGP MESSAGE-----
     model: TL-WR740N
+    version: release
     location: Farbwerk
     lan-access: priv12
     radios:
@@ -951,6 +975,7 @@ cpe:
       =Lj6m
       -----END PGP MESSAGE-----
     model: TL-WR740N
+    version: release
     location: Farbwerk
     lan-access: priv12
     radios:
@@ -991,6 +1016,7 @@ cpe:
       =C8xr
       -----END PGP MESSAGE-----
     model: TL-WR740N
+    version: release
     location: Turm C, 3. Etage
     lan-access: pub
     radios:
@@ -1016,6 +1042,7 @@ cpe:
       =dnNO
       -----END PGP MESSAGE-----
     model: TL-WR841N
+    version: release
     location: Turm C, 1. Etage (EG)
     lan-access: pub
     radios:
@@ -1042,6 +1069,7 @@ cpe:
       =ECvx
       -----END PGP MESSAGE-----
     model: TL-WR841Nv8
+    version: release
     location: Vorrat
     lan-access: pub
     radios:
@@ -1068,6 +1096,7 @@ cpe:
       =NOEY
       -----END PGP MESSAGE-----
     model: TL-Archer-C7v2
+    version: nightly
     location: B1.05.07
     lan-access: priv13
     radios:

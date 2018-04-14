@@ -309,12 +309,24 @@ delete wireless.radio{{ index.radio }}.disabled
 {%-   for ssid, ssidconf in radio['ssids'].items() %}
 set wireless.wifi{{ index.iface }}=wifi-iface
 {%-     if radio['channel'] < 15 %}
-{%-       set ifprefix = 'wlan2-' %}
+{%-       if conf['version'] == "nightly %}
+{%-         set ifprefix = 'wlan2_' %}
+{%-       else %}
+{%-         set ifprefix = 'wlan2-' %}
+{%-       endif %}
 {%-     else %}
-{%-       set ifprefix = 'wlan5-' %}
+{%-       if conf['version'] == "nightly %}
+{%-         set ifprefix = 'wlan5_' %}
+{%-       else %}
+{%-         set ifprefix = 'wlan5-' %}
+{%-       endif %}
 {%-     endif %}
 {%-     if ssidconf.get('wpa-eap') %}
-{%-       set ifsuffix = '-eap' %}
+{%-       if conf['version'] == "nightly %}
+{%-         set ifsuffix = '_eap' %}
+{%-       else %}
+{%-         set ifsuffix = '-eap' %}
+{%-       endif %}
 {%-     else %}
 {%-       set ifsuffix = '' %}
 {%-     endif %}
