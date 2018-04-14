@@ -1071,7 +1071,7 @@ cpe:
     location: B1.05.07
     lan-access: priv13
     radios:
-      'platform/qca955x_wmac':
+      'platform/qca956x_wmac':
         channel: 6
         htmode: HT40+
         ssids:
@@ -1092,8 +1092,7 @@ cpe:
               KG4bgv2L+n0w
               =Pjej
               -----END PGP MESSAGE-----
-
-      'pci0000:01/0000:01:00.0':
+      'pci0000:00/0000:00:00.0':
         channel: 36
         htmode: VHT80
         ssids:
