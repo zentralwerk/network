@@ -2,7 +2,7 @@
 
 export PATH=/sbin:/bin:/usr/sbin:/usr/bin
 
-if [ echo "$IFACE" | grep priv >/dev/null ]; then
+if echo "$IFACE" | grep priv >/dev/null; then
     iptables -F FORWARD
     ip6tables -F FORWARD
     iptables -P FORWARD DROP
