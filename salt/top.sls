@@ -12,6 +12,8 @@ base:
     - forwarding
     - bird
     - dhcp
+  'priv13-gw':
+    - firewall.priv-stateful
   'pub-gw or serv-gw':
     - no-ssh
     - forwarding
