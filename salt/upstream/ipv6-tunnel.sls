@@ -1,6 +1,9 @@
 ifupdown:
   pkg.installed: []
 
+curl:
+  pkg.installed: []
+
 /etc/systemd/network/ipv6.netdev:
   file.append:
     - text: |
@@ -27,8 +30,27 @@ ifupdown:
         [Network]
         Tunnel=ipv6
 
+{%- if pillar['ipv6-tunnel'].get('tunnelbroker') -%}
+/etc/cron.hourly/ipv6-tunnel-update.sh
+  file.managed:
+    - source: salt://upstream/ipv6-tunnel-update.sh
+    - template: 'jinja'
+    - mode: 744
+    - context: {{ pillar['ipv6-tunnel']['tunnelbroker'] }}
+    - require:
+        - pkg: curl
+
+cron:
+  service:
+    - enabled
+    - running
+    - watch:
+        - file: /etc/cron.hourly/ipv6-tunnel-update.sh
+{%- endif -%}
+
 systemd-networkd:
   service:
+    - enabled
     - running
     - watch:
         - file: /etc/systemd/network/ipv6.netdev
