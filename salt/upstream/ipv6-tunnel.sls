@@ -30,8 +30,8 @@ curl:
         [Network]
         Tunnel=ipv6
 
-{%- if pillar['ipv6-tunnel'].get('tunnelbroker') -%}
-/etc/cron.hourly/ipv6-tunnel-update.sh
+{% if pillar['ipv6-tunnel'].get('tunnelbroker') %}
+/etc/cron.hourly/ipv6-tunnel-update.sh:
   file.managed:
     - source: salt://upstream/ipv6-tunnel-update.sh
     - template: 'jinja'
@@ -41,18 +41,17 @@ curl:
         - pkg: curl
 
 cron:
-  service:
-    - enabled
-    - running
+  service.running:
+    - enable: True
+    - reload: True
     - watch:
         - file: /etc/cron.hourly/ipv6-tunnel-update.sh
-{%- endif -%}
+{% endif %}
 
-systemd-networkd:
-  service:
-    - enabled
-    - running
-    - watch:
+autostart-systemd-networkd:
+  service.running:
+    - name: systemd-networkd
+      watch:
         - file: /etc/systemd/network/ipv6.netdev
         - file: /etc/systemd/network/ipv6.network
         - file: /etc/systemd/network/ipv6-up.network

@@ -1,3 +1,5 @@
+#!yaml|gpg
+
 upstream:
   interface: up2
   nat66-interface: up2
