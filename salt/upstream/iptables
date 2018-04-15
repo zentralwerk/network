@@ -9,6 +9,8 @@ fi
 if [ "$IFACE" = "{{ interface }}" ]; then
    iptables -A INPUT -i "$IFACE" -m state --state ESTABLISHED,RELATED -j ACCEPT
    ip6tables -A INPUT -i "$IFACE" -m state --state ESTABLISHED,RELATED -j ACCEPT
+   iptables -A INPUT -i "$IFACE" -p icmp -j ACCEPT
+   ip6tables -A INPUT -i "$IFACE" -p icmp -j ACCEPT
    iptables -A INPUT -i "$IFACE" -j DROP
    ip6tables -A INPUT -i "$IFACE" -j DROP
    iptables -P INPUT ACCEPT
