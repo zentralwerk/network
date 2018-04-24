@@ -157,7 +157,7 @@ containers:
     interfaces:
       core:
         type: veth
-        gw: anon1
+        gw: upstream2
         gw6: anon1
         hwaddr: 0A:14:48:01:2A:10
       priv13:
