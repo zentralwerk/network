@@ -1081,7 +1081,6 @@ cpe:
             net: pub
 
   ap29:
-    firstboot: true
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -1095,7 +1094,7 @@ cpe:
       Axz/Dd5jCt1Nmv2RUCF+vQ==
       =2Fj1
       -----END PGP MESSAGE-----
-    model: TL-Archer-C7v2
+    model: TL-Archer-C7v4
     version: nightly
     location: B1.05.07
     lan-access: priv13
