@@ -194,6 +194,7 @@ hosts-inet6:
     ap30: fd23:42:c3d2:580::4:1e
     ap31: fd23:42:c3d2:580::4:1f
     ap32: fd23:42:c3d2:580::4:20
+    monit: fd23:42:c3d2:580::250
     mgmt-gw: fd23:42:c3d2:580:ffff:ffff:ffff:ffff
 
   core:
