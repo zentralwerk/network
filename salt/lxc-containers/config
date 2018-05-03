@@ -58,7 +58,7 @@ lxc.network.name={{ net }}
 
 lxc.cap.drop = sys_module sys_time sys_nice sys_pacct sys_rawio sys_time mknod
 
-lxc.cgroup.memory.limit_in_bytes = 512M
+lxc.cgroup.memory.limit_in_bytes = 768M
 lxc.cgroup.memory.kmem.tcp.limit_in_bytes = 128M
 
 
