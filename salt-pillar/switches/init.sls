@@ -195,6 +195,12 @@ switches:
           - priv14
           - priv15
           - priv16
+      server5:
+        mode: trunk
+        ports:
+          - GigabitEthernet1/0/21
+          - GigabitEthernet1/0/22
+        access: c3d2
       c3d2-flatbert:
         mode: bond
         ports:
