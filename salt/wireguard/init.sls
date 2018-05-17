@@ -6,7 +6,7 @@ wireguard-tools:
     - source: salt://wireguard/wireguard.service
     - template: 'jinja'
     - context:
-        gateway: {{ pillar['hosts-inet']['core']['upstream2']
+        gateway: {{ pillar['hosts-inet']['core']['upstream2'] }}
         endpoints:
 {%- for instance, conf in pillar['wireguard-instances'].items() %}
   {%- for peer in conf['peers'] %}
