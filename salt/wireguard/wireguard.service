@@ -4,6 +4,9 @@ PartOf=wireguard.service
 
 [Service]
 Type=oneshot
+{%- for endpoint in endpoints %}
+ExecStart=-/bin/ip route add {{ endpoint }} via {{ gateway }}
+{%- endfor %}
 ExecStart=/usr/bin/wg-quick up /etc/wireguard/%i.conf
 ExecStop=/usr/bin/wg-quick down /etc/wireguard/%i.conf
 RemainAfterExit=true

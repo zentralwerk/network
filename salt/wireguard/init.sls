@@ -4,6 +4,15 @@ wireguard-tools:
 /etc/systemd/system/wireguard@.service:
   file.managed:
     - source: salt://wireguard/wireguard.service
+    - template: 'jinja'
+    - context:
+        gateway: {{ pillar['hosts-inet']['core']['upstream2']
+        endpoints:
+{%- for instance, conf in pillar['wireguard-instances'].items() %}
+  {%- for peer in conf['peers'] %}
+          - {{ peer['endpoint'] }}
+  {%- endfor %}
+{%- endfor %}
 
 {%- for instance, conf in pillar['wireguard-instances'].items() %}
 /etc/wireguard/{{ instance }}.conf:
