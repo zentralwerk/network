@@ -21,7 +21,7 @@ autostart-wg-{{ instance }}:
 
 start-wg-{{ instance }}:
   service.running:
-    - name: wireguard-{{ instance }}
+    - name: wireguard@{{ instance }}
       require:
         - service: autostart-wg-{{ instance }}
       watch:
