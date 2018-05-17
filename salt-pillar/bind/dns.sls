@@ -1,6 +1,6 @@
 bind:
-  root-domain: zentralwerk.online
-  master-ns: dns.serv.zentralwerk.online
+  root-domain: zentralwerk.org
+  master-ns: dns.serv.zentralwerk.org
   public-ns:
     - ns.c3d2.de
     - ns.spaceboyz.net

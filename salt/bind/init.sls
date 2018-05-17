@@ -16,7 +16,7 @@ bind9:
     - source: salt://bind/named.conf
     - template: 'jinja'
 
-# zentralwerk.online
+# zentralwerk.org
 /etc/bind/{{ pillar['bind']['root-domain'] }}.zone:
   file.managed:
     - source: salt://bind/root-domain.zone
@@ -24,7 +24,7 @@ bind9:
     - context:
         domain: {{ pillar['bind']['root-domain'] }}
 
-# *.zentralwerk.online
+# *.zentralwerk.org
 {%- for net, subnet4 in pillar['subnets-inet'].items() %}
 {%- set domain = net ~ '.' ~ pillar['bind']['root-domain'] %}
 /etc/bind/{{ domain }}.zone:
@@ -37,7 +37,7 @@ bind9:
 
 {%- endfor %}
 
-# dyn.zentralwerk.online
+# dyn.zentralwerk.org
 {%- set domain = 'dyn.' ~ pillar['bind']['root-domain'] %}
 /etc/bind/{{ domain }}.zone:
   file.managed:

@@ -9,7 +9,7 @@ dhcp:
       routers: serv-gw.serv
       domain-name-servers: upstream1.core
     string-opts:
-      domain-name: serv.zentralwerk.online
+      domain-name: serv.zentralwerk.org
 
   pub:
     start: 172.20.76.2
@@ -22,7 +22,7 @@ dhcp:
       routers: pub-gw.pub
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: pub.zentralwerk.online
+      domain-name: pub.zentralwerk.org
 
   priv1:
     start: 172.20.74.2
@@ -34,7 +34,7 @@ dhcp:
       routers: priv1-gw.priv1
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv1.zentralwerk.online
+      domain-name: priv1.zentralwerk.org
 
   priv2:
     start: 172.20.75.2
@@ -46,7 +46,7 @@ dhcp:
       routers: priv2-gw.priv2
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv2.zentralwerk.online
+      domain-name: priv2.zentralwerk.org
 
   priv3:
     start: 172.20.74.130
@@ -58,7 +58,7 @@ dhcp:
       routers: priv3-gw.priv3
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv3.zentralwerk.online
+      domain-name: priv3.zentralwerk.org
 
   priv4:
     start: 172.20.75.130
@@ -70,7 +70,7 @@ dhcp:
       routers: priv4-gw.priv4
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv4.zentralwerk.online
+      domain-name: priv4.zentralwerk.org
 
   priv5:
     start: 172.20.74.66
@@ -82,7 +82,7 @@ dhcp:
       routers: priv5-gw.priv5
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv5.zentralwerk.online
+      domain-name: priv5.zentralwerk.org
 
   priv6:
     start: 172.20.74.194
@@ -94,7 +94,7 @@ dhcp:
       routers: priv6-gw.priv6
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv6.zentralwerk.online
+      domain-name: priv6.zentralwerk.org
 
   priv7:
     start: 172.20.75.66
@@ -106,7 +106,7 @@ dhcp:
       routers: priv7-gw.priv7
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv7.zentralwerk.online
+      domain-name: priv7.zentralwerk.org
 
   priv8:
     start: 172.20.75.194
@@ -118,7 +118,7 @@ dhcp:
       routers: priv8-gw.priv8
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv8.zentralwerk.online
+      domain-name: priv8.zentralwerk.org
 
   priv9:
     start: 172.20.74.34
@@ -130,7 +130,7 @@ dhcp:
       routers: priv9-gw.priv9
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv9.zentralwerk.online
+      domain-name: priv9.zentralwerk.org
 
   priv10:
     start: 172.20.74.98
@@ -142,7 +142,7 @@ dhcp:
       routers: priv10-gw.priv10
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv10.zentralwerk.online
+      domain-name: priv10.zentralwerk.org
 
   priv11:
     start: 172.20.74.162
@@ -154,7 +154,7 @@ dhcp:
       routers: priv11-gw.priv11
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv11.zentralwerk.online
+      domain-name: priv11.zentralwerk.org
 
   priv12:
     start: 172.20.74.226
@@ -166,7 +166,7 @@ dhcp:
       routers: priv12-gw.priv12
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv12.zentralwerk.online
+      domain-name: priv12.zentralwerk.org
 
   priv13:
     start: 172.20.75.34
@@ -178,7 +178,7 @@ dhcp:
       routers: priv13-gw.priv13
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: priv13.zentralwerk.online
+      domain-name: priv13.zentralwerk.org
 
   radio:
     start: 172.20.73.130
@@ -190,4 +190,4 @@ dhcp:
       routers: radio-gw.radio
       domain-name-servers: upstream2.core
     string-opts:
-      domain-name: radio.zentralwerk.online
+      domain-name: radio.zentralwerk.org
