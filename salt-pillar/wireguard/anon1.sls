@@ -1,3 +1,4 @@
+#!yaml|gpg
 wireguard-instances:
   'mullvad-de1':
     private_key: |
