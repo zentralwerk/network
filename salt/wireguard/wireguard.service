@@ -4,8 +4,8 @@ PartOf=wireguard.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/wg-quick up /etc/wg/%i.conf
-ExecStop=/usr/bin/wg-quick down /etc/wg/%i.conf
+ExecStart=/usr/bin/wg-quick up /etc/wireguard/%i.conf
+ExecStop=/usr/bin/wg-quick down /etc/wireguard/%i.conf
 
 [Install]
 WantedBy=multi-user.target
