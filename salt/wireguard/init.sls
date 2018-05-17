@@ -1,7 +1,7 @@
 wireguard-tools:
   pkg.installed: []
 
-/etc/systemd/system/wireguard.service:
+/etc/systemd/system/wireguard@.service:
   file.managed:
     - source: salt://wireguard/wireguard.service
 
