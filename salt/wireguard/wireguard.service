@@ -1,0 +1,11 @@
+[Unit]
+Description=Call wg-quick
+PartOf=wireguard.service
+
+[Service]
+Type=oneshot
+ExecStart=wg-quick up /etc/wg/%i.conf
+ExecStop=wg-quick down /etc/wg/%i.conf
+
+[Install]
+WantedBy=multi-user.target

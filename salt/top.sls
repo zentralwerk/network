@@ -45,7 +45,7 @@ base:
     - no-ssh
     - forwarding
     - bird
-    - vpn.openvpn
+    - wireguard
     - upstream.masquerade
     - upstream.shaping
     - upstream.nat66

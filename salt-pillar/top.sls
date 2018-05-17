@@ -36,7 +36,7 @@ base:
     - bind.dyndns.upstream2
   'anon*':
     - bird.ospf
-    - vpn.anon1
+    - wireguard.anon1
     - upstream.anon1
     - collectd.upstream
     - bind.dyndns.anon1
