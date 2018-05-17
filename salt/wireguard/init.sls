@@ -6,7 +6,7 @@ wireguard-tools:
     - source: salt://wireguard/wireguard.service
 
 {%- for instance, conf in pillar['wireguard-instances'].items() %}
-/etc/wg/{{ instance }}.conf:
+/etc/wireguard/{{ instance }}.conf:
   file.managed:
     - source: salt://wireguard/wireguard.conf
     - template: 'jinja'
@@ -17,7 +17,7 @@ autostart-wg-{{ instance }}:
   service.enabled:
     - name: wireguard@{{ instance }}
       require:
-        - file: /etc/wg/{{ instance }}.conf
+        - file: /etc/wireguard/{{ instance }}.conf
 
 start-wg-{{ instance }}:
   service.running:
@@ -25,5 +25,5 @@ start-wg-{{ instance }}:
       require:
         - service: autostart-wg-{{ instance }}
       watch:
-        - file: /etc/wg/{{ instance }}.conf
+        - file: /etc/wireguard/{{ instance }}.conf
 {%- endfor %}
