@@ -1,6 +1,6 @@
 #!yaml|gpg
 wireguard-instances:
-  'mullvad-de1':
+  'mullvad':
     private_key: |
       -----BEGIN PGP MESSAGE-----
       
