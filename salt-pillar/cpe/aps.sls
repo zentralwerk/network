@@ -1141,3 +1141,44 @@ cpe:
               LVsy0MzUu8I=
               =ftGp
               -----END PGP MESSAGE-----
+
+  ap30:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf9G0ynEQDNAY6br4qp/6srXJEDxfyZ4tA6RBOkBk3sLz+4
+      yIjBnAfDlV0Lq9X45LAAROLr+ZxLTpYY1fUsmq0Zqb1MpLr5e57w9WLVw7q8gcoy
+      4MWVMsdcmgiC1E8BF4xynqDecRoBt7JWivVx9JT6mRh0mDcmLt3vxnMe4mCPpRQC
+      6/XKgGOb0d1ASkgnr+S9YoaUwuU8ovk8xvT2IN5kvApt1+ujKpYBTEnxLVqk2zPT
+      lUSLAOEGbui1cwUN/Kmysgjg8XoTWo7WRD3rA8KI/V8MfwNdAW7yYqG93rLAJ+rL
+      lzFOxYXCIEuNfwrmW5AZ/Nk1EUZgc9LCg3wJKCrhjtJJAaIT/ki/jCAlyUXyZfhp
+      XfBaSRZGf1n3+u9m5EeRRaMlHzgT63axf3Gl7ApgEP9V+/iW9ccvBFmNI8d7IhHU
+      ZBOMWyH63lKB+g==
+      =ugCM
+      -----END PGP MESSAGE-----
+    model: TL-WR1043ND
+    version: release
+    location: B 4.02
+    lan-access: priv14
+    radios:
+      'platform/qca955x_wmac':
+        channel: 1
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+          'WLANb0402':
+            net: priv14
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQgAgK74O2Hpbeshm4Brauu2PKxMvPThNdq9t5m3/73R2rCq
+              4BPlsX4DR/gshv9wlbAR7cE6HTKzRH0nQqLgxrm/0CAkBEe3tinqxCdvcXD5hR4w
+              kXz4B+JcT+mGncbTnmiBY00QBN3noMgJvLmm8F/wzMVvCyHcORtib/vkbDC32nXi
+              CtXrrwFWal93ST56PFoEwc9T1e4gyERh1/EyON3sF3Wi56rcK51c0UbcpvJt9UIJ
+              w1EjZn50hexFW6fpfX1X3r9tX/Od1Mwtp/B1iDuAZMvM06pBLyBuiXOFbqDKKgzQ
+              jUAOp5hY7rvY4BtWT1ltX5tn9k9t/2h8oEjwnvtKBdJEASoHROtUUYzYb5/SjBjj
+              tbKDbjS8SURaWuL/sz6Nwo5snTSlnOF6ZpIeO8J6BTwqIS9CAS8RLllhctUZZI/o
+              2cCO5M8=
+              =e3at
+              -----END PGP MESSAGE-----
