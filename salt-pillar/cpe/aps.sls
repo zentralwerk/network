@@ -1156,7 +1156,7 @@ cpe:
       ZBOMWyH63lKB+g==
       =ugCM
       -----END PGP MESSAGE-----
-    model: TL-WR1043ND
+    model: TL-WR1043NDv4
     version: release
     location: B 4.02
     lan-access: priv14

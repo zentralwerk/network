@@ -204,6 +204,41 @@ set network.{{ net }}.proto=static
 set network.{{ net }}.ifname='eth0.{{ pillar['vlans'][net] }}'
 {%- endfor %}
 
+{%- elif conf['model'] == 'TL-WR1043NDv4' %}
+set network.@switch[0]=switch
+set network.@switch[0].reset=1
+set network.@switch[0].enable=1
+set network.@switch[0].enable_vlan=1
+set network.@switch[0].name=switch0
+set network.@switch_vlan[0]=switch_vlan
+set network.@switch_vlan[0].device='switch0'
+set network.@switch_vlan[0].vlan='1'
+set network.@switch_vlan[0].ports='0t 1t'
+set network.@switch_vlan[0].comment='mgmt'
+{%    set switchnum = 1 %}
+{%-   for net in bridges.keys() %}
+set network.@switch_vlan[{{ switchnum }}]=switch_vlan
+set network.@switch_vlan[{{ switchnum }}].device='switch0'
+set network.@switch_vlan[{{ switchnum }}].vlan='{{ pillar['vlans'][net] }}'
+# 0: eth0; 1-4: LAN ports; 5: WAN port
+{%-     if conf.get('lan-access') == net %}
+set network.@switch_vlan[{{ switchnum }}].ports='0t 1 2 3 4 5t'
+{%-     else %}
+set network.@switch_vlan[{{ switchnum }}].ports='0t 5t'
+{%-     endif %}
+set network.@switch_vlan[{{ switchnum }}].comment='{{ net }}'
+{%    set switchnum = switchnum + 1 %}
+{%- endfor %}
+
+{{ uci_network_mgmt('eth0.1') }}
+
+{%- for net in bridges.keys() %}
+set network.{{ net }}=interface
+set network.{{ net }}.type=bridge
+set network.{{ net }}.proto=static
+set network.{{ net }}.ifname='eth0.{{ pillar['vlans'][net] }}'
+{%- endfor %}
+
 {%- elif conf['model'] == 'TL-WR841Nv8' %}
 {# Like v9 but with eth0/1 switched #}
 set network.@switch[0].reset=1
