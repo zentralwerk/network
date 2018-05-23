@@ -1161,7 +1161,7 @@ cpe:
     location: B 4.02
     lan-access: priv14
     radios:
-      'platform/qca955x_wmac':
+      'platform/qca956x_wmac':
         channel: 1
         htmode: HT40+
         ssids:
