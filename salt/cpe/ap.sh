@@ -213,7 +213,7 @@ set network.@switch[0].name=switch0
 set network.@switch_vlan[0]=switch_vlan
 set network.@switch_vlan[0].device='switch0'
 set network.@switch_vlan[0].vlan='1'
-set network.@switch_vlan[0].ports='0t 1t'
+set network.@switch_vlan[0].ports='0t 5t'
 set network.@switch_vlan[0].comment='mgmt'
 {%    set switchnum = 1 %}
 {%-   for net in bridges.keys() %}
