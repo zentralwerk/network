@@ -124,6 +124,7 @@ switches:
           - mgmt
           - pub
           - radio
+          - c3d2-mgmt1
           - up1
           - up2
           - up3
@@ -171,6 +172,7 @@ switches:
           - serv
           - c3d2
           - radio
+          - c3d2-mgmt1
           - up1
           - up2
           - up3
@@ -443,6 +445,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - c3d2-mgmt1
           - up1
           - up2
           - up3
