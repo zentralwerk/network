@@ -536,6 +536,9 @@ switches:
         vlans:
           - mgmt
           - pub
+      c3d2-mgmt1:
+        mode: access
+        ports: 13
     password: |
       -----BEGIN PGP MESSAGE-----
       
