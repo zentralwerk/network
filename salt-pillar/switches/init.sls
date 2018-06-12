@@ -582,7 +582,8 @@ switches:
           - pub
       ap7:
         mode: trunk
-        ports: 7
+        # Turm D, 5. Etage
+        ports: 8
         vlans:
           - mgmt
           - pub
@@ -596,7 +597,8 @@ switches:
       pub:
         mode: access
         ports:
-          - 8
+          # Turm D, 4. Etage
+          - 7
     password: |
       -----BEGIN PGP MESSAGE-----
       

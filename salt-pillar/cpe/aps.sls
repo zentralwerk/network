@@ -314,7 +314,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR841N
     version: release
-    location: Turm D, 4. Etage
+    location: Turm D, 5. Etage
     lan-access: priv7
     radios:
       'platform/qca953x_wmac':
