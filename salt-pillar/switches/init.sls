@@ -570,6 +570,8 @@ switches:
           - mgmt
           - pub
           - priv7
+          - priv15
+          - priv16
       ap9:
         mode: trunk
         ports: 5
