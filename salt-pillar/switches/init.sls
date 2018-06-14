@@ -158,6 +158,8 @@ switches:
           - mgmt
           - pub
           - priv7
+          - priv15
+          - priv16
       server1:
         mode: bond
         ports:
