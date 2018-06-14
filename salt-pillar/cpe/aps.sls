@@ -424,6 +424,22 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+          'Herzzbuehne':
+            net: priv16
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf+MX9YP8AE1LCPvzz+OEO2uc8lzWWoS5+3C76VAydTvKCY
+              vHtGt+U+mrngsxQ9jzJEvEiZo2d/ShTNvN+/x6ByngSB1eGMtsja0a8ioQxcUW5m
+              DV+Gj3+Uau5EAcrdM95Nt1rRvSqHHyyCczCArBWD3y8vuTXt3gSClC+aI8I8Mn7U
+              tol7RRBpFHd2XZAQ4ZgzRXcLsG2WSx7cdQBr0QYq/EdfJltAF9zQ+ixkMUnumEz5
+              m74wwJqNAjLMNyy03wpZEESzNwjlvyuswAEwNt3F3DFn+ugNfErBUasFPiK8Dvcv
+              LLL9J5mjaWTzXNkx9hzEZUfxhrxGZtfl0k4mcXX7CdJHARHFrC6ID8HSDQYZhr8m
+              GcNW8jG9RU+Uytj5dlsJotaVaj1U7OMTPebzT3jN5TMTdTuQBxWp9u2MOFgSJQLM
+              o2Zk+iNuyVA=
+              =4fHK
+              -----END PGP MESSAGE-----
+
   ap10:
     password: |
       -----BEGIN PGP MESSAGE-----
@@ -449,6 +465,21 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+          'iz-dresden.org':
+            net: priv15
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/crEJm7A1i9PaPCKuZK+07Vm0uax71xsgNwiUYst1EkQZ
+              MGPi2VvESjmBfiZieZ+bC6iofMHB2U/jMyr3X9bl6o1pwPm1Shsn9pBxf75iG8xt
+              ENDuXyP8+vOVdsOU0liZuWhxQqfwf8XdUcz4fGXUYNl9bEVw8MK8qywOLjjLPKjq
+              4AtIrUjpLAF2QUlsWR2nhd/u5CGJ2pA82WXC6NrnlAFJjMeU7DLG1d6efdbnYAjY
+              wiTmguXCnGRFNY5Th8TK5Ra0aO94nXb1luv5iSyK5r5VfXW2kkS6yHJ80/C8miM/
+              eqo/e8t54jjBoepG/3mN13sk9fHl9N+8bdDIX8XqJdJEAbBfLWOY07fpR3Kg3sU2
+              6sDSssbV9iY/PhJrbTVExeb3dCiWRKsrxQphEgXc6oD5ywnCUs3ru7oTPU2gh6WV
+              u8ztziA=
+              =xY9t
+              -----END PGP MESSAGE-----
 
   ap11:
     password: |

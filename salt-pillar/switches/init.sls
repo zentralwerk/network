@@ -574,12 +574,14 @@ switches:
         vlans:
           - mgmt
           - pub
+          - priv16
       ap10:
         mode: trunk
         ports: 4
         vlans:
           - mgmt
           - pub
+          - priv15
       ap7:
         mode: trunk
         # Turm D, 5. Etage

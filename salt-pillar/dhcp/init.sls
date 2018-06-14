@@ -192,6 +192,30 @@ dhcp:
     string-opts:
       domain-name: priv14.zentralwerk.org
 
+  priv15:
+    start: 172.20.75.162
+    end: 172.20.75.174
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv15-gw.priv15
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv15.zentralwerk.org
+
+  priv16:
+    start: 172.20.75.226
+    end: 172.20.75.238
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv16-gw.priv16
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv16.zentralwerk.org
+
   radio:
     start: 172.20.73.130
     end: 172.20.73.190
