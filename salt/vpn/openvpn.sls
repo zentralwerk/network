@@ -10,7 +10,7 @@ hostroutes-{{ name }}:
 {%- for a in salt.dnsutil.A(conf['server']) %}
       - ipaddr: {{ a }}
         netmask: 255.255.224.0
-        gateway: {{ pillar['hosts-inet']['core']['upstream2'] }}
+        gateway: {{ pillar['hosts-inet']['core']['upstream1'] }}
 {%- endfor %}
   
 /etc/openvpn/{{ name }}.conf:
