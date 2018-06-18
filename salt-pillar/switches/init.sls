@@ -152,6 +152,7 @@ switches:
       switch-d1:
         mode: bond
         ports:
+          # 33 is not currently plugged
           - GigabitEthernet1/0/33
           - GigabitEthernet1/0/34
         vlans:

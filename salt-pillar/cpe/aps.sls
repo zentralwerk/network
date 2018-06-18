@@ -419,7 +419,7 @@ cpe:
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
-        channel: 11
+        channel: 1
         htmode: HT40+
         ssids:
           'ZW public':
@@ -724,7 +724,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR841N
     version: release
-    location: Auf Lager#fast schon verliehen
+    location: Auf Lager
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
