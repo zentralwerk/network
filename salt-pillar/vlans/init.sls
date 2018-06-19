@@ -10,8 +10,6 @@ vlans:
   # C3D2 home network
   c3d2: 5
   radio: 6
-  # C3D2 Fritz!box
-  c3d2-mgmt1: 7
   # Modems
   up1: 10
   up2: 11
