@@ -42,6 +42,7 @@ base:
     - upstream.port-forwarding
     - upstream.ipv6-tunnel
   'upstream1':
+    - upstream.6slac
     - upstream.dhcp6
   'anon*':
     - no-ssh
