@@ -11,6 +11,8 @@ if [ "$IFACE" = "{{ interface }}" ]; then
    ip6tables -A INPUT -i "$IFACE" -m state --state ESTABLISHED,RELATED -j ACCEPT
    iptables -A INPUT -i "$IFACE" -p icmp -j ACCEPT
    ip6tables -A INPUT -i "$IFACE" -p icmp -j ACCEPT
+   # DHCPv6
+   ip6tables -A INPUT -i "$IFACE" -p udp --sport 547 --dport 546 -j ACCEPT
    iptables -A INPUT -i "$IFACE" -j DROP
    ip6tables -A INPUT -i "$IFACE" -j DROP
    iptables -P INPUT ACCEPT
