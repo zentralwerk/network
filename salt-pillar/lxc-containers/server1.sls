@@ -230,6 +230,7 @@ containers:
       core:
         type: veth
         gw: upstream1
+        gw6: upstream1
         hwaddr: 0A:14:48:01:21:00
       c3d2:
         type: veth
@@ -251,6 +252,7 @@ containers:
       core:
         type: veth
         gw: upstream1
+        gw6: upstream1
         hwaddr: 0A:14:48:01:22:00
       c3d2:
         type: veth
