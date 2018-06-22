@@ -7,13 +7,13 @@ set network.mgmt.proto=static
 set network.mgmt.ipaddr={{ pillar['hosts-inet']['mgmt'][hostname] }}
 set network.mgmt.netmask=255.255.255.0
 set network.mgmt.gateway={{ pillar['hosts-inet']['mgmt']['mgmt-gw'] }}
-set network.mgmt.ip6addr={{ pillar['hosts-inet6']['mgmt'][hostname] }}/64
-set network.mgmt.ip6gw={{ pillar['hosts-inet6']['mgmt']['mgmt-gw'] }}
+set network.mgmt.ip6addr={{ pillar['hosts-inet6']['dn42']['mgmt'][hostname] }}/64
+set network.mgmt.ip6gw={{ pillar['hosts-inet6']['dn42']['mgmt']['mgmt-gw'] }}
 delete network.mgmt.dns
 add_list network.mgmt.dns={{ pillar['hosts-inet']['core']['upstream1'] }}
-add_list network.mgmt.dns={{ pillar['hosts-inet6']['core']['upstream1'] }}
+add_list network.mgmt.dns={{ pillar['hosts-inet6']['dn42']['core']['upstream1'] }}
 add_list network.mgmt.dns={{ pillar['hosts-inet']['core']['upstream2'] }}
-add_list network.mgmt.dns={{ pillar['hosts-inet6']['core']['upstream2'] }}
+add_list network.mgmt.dns={{ pillar['hosts-inet6']['dn42']['core']['upstream2'] }}
 {%- endmacro %}
 
 {%- if conf.get('firstboot') %}

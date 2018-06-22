@@ -19,7 +19,7 @@ $TTL 10M
 {%-   endfor %}
 {%- endfor %}
 
-{%- for net, hosts in pillar['hosts-inet6'].items() %}
+{%- for net, hosts in pillar['hosts-inet6']['dn42'].items() %}
 {%-   for host, aaaa in hosts.items() %}
 {%-     set reverse = salt['network.reverse_ip'](aaaa) %}
 {%-     if reverse.endswith(domain) %}

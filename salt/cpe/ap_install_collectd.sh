@@ -22,7 +22,7 @@ LoadPlugin interface
 LoadPlugin iwinfo
 LoadPlugin network
 <Plugin network>
-        Server "{{ pillar['hosts-inet6']['serv']['stats']  }}" "25826"
+        Server "{{ pillar['hosts-inet6']['dn42']['serv']['stats']  }}" "25826"
 </Plugin>
 
 EOF

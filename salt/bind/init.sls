@@ -34,6 +34,7 @@ bind9:
     - context:
         domain: {{ domain }}
         net: {{ net }}
+        ctx: dn42
 
 {%- endfor %}
 

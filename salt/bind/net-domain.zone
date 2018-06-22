@@ -18,7 +18,7 @@ $TTL 10M
 {%-   endfor %}
 {%- endif %}
 
-{%- if pillar['hosts-inet6'].get(net) %}
+{%- if pillar['hosts-inet6'][ctx].get(net) %}
 {%-   for name, aaaa in pillar['hosts-inet6'][net].items() %}
 {{ name }}	IN AAAA	{{ aaaa }}
 {%-   endfor %}

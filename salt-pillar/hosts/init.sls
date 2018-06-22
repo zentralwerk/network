@@ -154,128 +154,213 @@ hosts-inet:
     bgp: 172.22.99.250
 
 hosts-inet6:
-  mgmt:
-    server1: fd23:42:c3d2:580::1
-    server2: fd23:42:c3d2:580::2
-    switch-b1: fd23:42:c3d2:580::10
-    switch-b2: fd23:42:c3d2:580::11
-    switch-c1: fd23:42:c3d2:580::12
-    switch-d1: fd23:42:c3d2:580::13
-    switch-c3d2-main: fd23:42:c3d2:580::14
-    ap1: fd23:42:c3d2:580::4:1
-    ap2: fd23:42:c3d2:580::4:2
-    ap3: fd23:42:c3d2:580::4:3
-    ap4: fd23:42:c3d2:580::4:4
-    ap5: fd23:42:c3d2:580::4:5
-    ap6: fd23:42:c3d2:580::4:6
-    ap7: fd23:42:c3d2:580::4:7
-    ap8: fd23:42:c3d2:580::4:8
-    ap9: fd23:42:c3d2:580::4:9
-    ap10: fd23:42:c3d2:580::4:a
-    ap11: fd23:42:c3d2:580::4:b
-    ap12: fd23:42:c3d2:580::4:c
-    ap13: fd23:42:c3d2:580::4:d
-    ap14: fd23:42:c3d2:580::4:e
-    ap15: fd23:42:c3d2:580::4:f
-    ap16: fd23:42:c3d2:580::4:10
-    ap17: fd23:42:c3d2:580::4:11
-    ap18: fd23:42:c3d2:580::4:12
-    ap19: fd23:42:c3d2:580::4:13
-    ap20: fd23:42:c3d2:580::4:14
-    ap21: fd23:42:c3d2:580::4:15
-    ap22: fd23:42:c3d2:580::4:16
-    ap23: fd23:42:c3d2:580::4:17
-    ap24: fd23:42:c3d2:580::4:18
-    ap25: fd23:42:c3d2:580::4:19
-    ap26: fd23:42:c3d2:580::4:1a
-    ap27: fd23:42:c3d2:580::4:1b
-    ap28: fd23:42:c3d2:580::4:1c
-    ap29: fd23:42:c3d2:580::4:1d
-    ap30: fd23:42:c3d2:580::4:1e
-    ap31: fd23:42:c3d2:580::4:1f
-    ap32: fd23:42:c3d2:580::4:20
-    monit: fd23:42:c3d2:580::250
-    mgmt-gw: fd23:42:c3d2:580:ffff:ffff:ffff:ffff
+  dn42:
+    mgmt:
+      server1: fd23:42:c3d2:580::1
+      server2: fd23:42:c3d2:580::2
+      switch-b1: fd23:42:c3d2:580::10
+      switch-b2: fd23:42:c3d2:580::11
+      switch-c1: fd23:42:c3d2:580::12
+      switch-d1: fd23:42:c3d2:580::13
+      switch-c3d2-main: fd23:42:c3d2:580::14
+      ap1: fd23:42:c3d2:580::4:1
+      ap2: fd23:42:c3d2:580::4:2
+      ap3: fd23:42:c3d2:580::4:3
+      ap4: fd23:42:c3d2:580::4:4
+      ap5: fd23:42:c3d2:580::4:5
+      ap6: fd23:42:c3d2:580::4:6
+      ap7: fd23:42:c3d2:580::4:7
+      ap8: fd23:42:c3d2:580::4:8
+      ap9: fd23:42:c3d2:580::4:9
+      ap10: fd23:42:c3d2:580::4:a
+      ap11: fd23:42:c3d2:580::4:b
+      ap12: fd23:42:c3d2:580::4:c
+      ap13: fd23:42:c3d2:580::4:d
+      ap14: fd23:42:c3d2:580::4:e
+      ap15: fd23:42:c3d2:580::4:f
+      ap16: fd23:42:c3d2:580::4:10
+      ap17: fd23:42:c3d2:580::4:11
+      ap18: fd23:42:c3d2:580::4:12
+      ap19: fd23:42:c3d2:580::4:13
+      ap20: fd23:42:c3d2:580::4:14
+      ap21: fd23:42:c3d2:580::4:15
+      ap22: fd23:42:c3d2:580::4:16
+      ap23: fd23:42:c3d2:580::4:17
+      ap24: fd23:42:c3d2:580::4:18
+      ap25: fd23:42:c3d2:580::4:19
+      ap26: fd23:42:c3d2:580::4:1a
+      ap27: fd23:42:c3d2:580::4:1b
+      ap28: fd23:42:c3d2:580::4:1c
+      ap29: fd23:42:c3d2:580::4:1d
+      ap30: fd23:42:c3d2:580::4:1e
+      ap31: fd23:42:c3d2:580::4:1f
+      ap32: fd23:42:c3d2:580::4:20
+      monit: fd23:42:c3d2:580::250
+      mgmt-gw: fd23:42:c3d2:580:ffff:ffff:ffff:ffff
 
-  core:
-    server1: fd23:42:c3d2:581::1
-    server2: fd23:42:c3d2:581::102
+    core:
+      server1: fd23:42:c3d2:581::1
+      server2: fd23:42:c3d2:581::102
 
-    anon1: fd23:42:c3d2:581::9:1
-    serv-gw: fd23:42:c3d2:581::8:1
-    pub-gw: fd23:42:c3d2:581::8:2
-    c3d2-gw: fd23:42:c3d2:581::c3d2:1
-    c3d2-anon: fd23:42:c3d2:581::c3d2:a
-    bgp: fd23:42:c3d2:581::c3d2:b
-    mgmt-gw: fd23:42:c3d2:581::8:3
+      anon1: fd23:42:c3d2:581::9:1
+      serv-gw: fd23:42:c3d2:581::8:1
+      pub-gw: fd23:42:c3d2:581::8:2
+      c3d2-gw: fd23:42:c3d2:581::c3d2:1
+      c3d2-anon: fd23:42:c3d2:581::c3d2:a
+      bgp: fd23:42:c3d2:581::c3d2:b
+      mgmt-gw: fd23:42:c3d2:581::8:3
 
-    upstream1: fd23:42:c3d2:581::b:0
-    upstream2: fd23:42:c3d2:581::b:1
-    upstream3: fd23:42:c3d2:581::b:2
-    upstream4: fd23:42:c3d2:581::b:3
+      upstream1: fd23:42:c3d2:581::b:0
+      upstream2: fd23:42:c3d2:581::b:1
+      upstream3: fd23:42:c3d2:581::b:2
+      upstream4: fd23:42:c3d2:581::b:3
 
-    priv1-gw: fd23:42:c3d2:581::c:0
-    priv2-gw: fd23:42:c3d2:581::c:1
-    priv3-gw: fd23:42:c3d2:581::c:2
-    priv4-gw: fd23:42:c3d2:581::c:3
-    priv5-gw: fd23:42:c3d2:581::c:4
-    priv6-gw: fd23:42:c3d2:581::c:5
-    priv7-gw: fd23:42:c3d2:581::c:6
-    priv8-gw: fd23:42:c3d2:581::c:7
-    priv9-gw: fd23:42:c3d2:581::c:8
-    priv10-gw: fd23:42:c3d2:581::c:9
-    priv11-gw: fd23:42:c3d2:581::c:a
-    priv12-gw: fd23:42:c3d2:581::c:b
-    priv13-gw: fd23:42:c3d2:581::c:c
-    priv14-gw: fd23:42:c3d2:581::c:d
-    priv15-gw: fd23:42:c3d2:581::c:e
-    priv16-gw: fd23:42:c3d2:581::c:d
+      priv1-gw: fd23:42:c3d2:581::c:0
+      priv2-gw: fd23:42:c3d2:581::c:1
+      priv3-gw: fd23:42:c3d2:581::c:2
+      priv4-gw: fd23:42:c3d2:581::c:3
+      priv5-gw: fd23:42:c3d2:581::c:4
+      priv6-gw: fd23:42:c3d2:581::c:5
+      priv7-gw: fd23:42:c3d2:581::c:6
+      priv8-gw: fd23:42:c3d2:581::c:7
+      priv9-gw: fd23:42:c3d2:581::c:8
+      priv10-gw: fd23:42:c3d2:581::c:9
+      priv11-gw: fd23:42:c3d2:581::c:a
+      priv12-gw: fd23:42:c3d2:581::c:b
+      priv13-gw: fd23:42:c3d2:581::c:c
+      priv14-gw: fd23:42:c3d2:581::c:d
+      priv15-gw: fd23:42:c3d2:581::c:e
+      priv16-gw: fd23:42:c3d2:581::c:d
 
-  serv:
-    serv-gw: fd23:42:c3d2:582::1
-    dns: fd23:42:c3d2:582:2:0:0:2
-    stats: fd23:42:c3d2:582:2:0:0:3
-    radius: fd23:42:c3d2:582:2:0:0:4
-    zeit: fd23:42:c3d2:582:2:0:0:5
-  pub:
-    pub-gw: fd23:42:c3d2:583::1
-  priv1:
-    priv1-gw: fd23:42:c3d2:5c0::1
-  priv2:
-    priv2-gw: fd23:42:c3d2:5c1::1
-  priv3:
-    priv3-gw: fd23:42:c3d2:5c2::1
-  priv4:
-    priv4-gw: fd23:42:c3d2:5c3::1
-  priv5:
-    priv5-gw: fd23:42:c3d2:5c4::1
-  priv6:
-    priv6-gw: fd23:42:c3d2:5c5::1
-  priv7:
-    priv7-gw: fd23:42:c3d2:5c6::1
-  priv8:
-    priv8-gw: fd23:42:c3d2:5c7::1
-  priv9:
-    priv9-gw: fd23:42:c3d2:5c8::1
-  priv10:
-    priv10-gw: fd23:42:c3d2:5c9::1
-  priv11:
-    priv11-gw: fd23:42:c3d2:5ca::1
-  priv12:
-    priv12-gw: fd23:42:c3d2:5cb::1
-  priv13:
-    priv13-gw: fd23:42:c3d2:5cc::1
-  priv14:
-    priv14-gw: fd23:42:c3d2:5cd::1
-  priv15:
-    priv15-gw: fd23:42:c3d2:5ce::1
-  priv16:
-    priv16-gw: fd23:42:c3d2:5cf::1
+    serv:
+      serv-gw: fd23:42:c3d2:582::1
+      dns: fd23:42:c3d2:582:2:0:0:2
+      stats: fd23:42:c3d2:582:2:0:0:3
+      radius: fd23:42:c3d2:582:2:0:0:4
+      zeit: fd23:42:c3d2:582:2:0:0:5
+    pub:
+      pub-gw: fd23:42:c3d2:583::1
+    priv1:
+      priv1-gw: fd23:42:c3d2:5c0::1
+    priv2:
+      priv2-gw: fd23:42:c3d2:5c1::1
+    priv3:
+      priv3-gw: fd23:42:c3d2:5c2::1
+    priv4:
+      priv4-gw: fd23:42:c3d2:5c3::1
+    priv5:
+      priv5-gw: fd23:42:c3d2:5c4::1
+    priv6:
+      priv6-gw: fd23:42:c3d2:5c5::1
+    priv7:
+      priv7-gw: fd23:42:c3d2:5c6::1
+    priv8:
+      priv8-gw: fd23:42:c3d2:5c7::1
+    priv9:
+      priv9-gw: fd23:42:c3d2:5c8::1
+    priv10:
+      priv10-gw: fd23:42:c3d2:5c9::1
+    priv11:
+      priv11-gw: fd23:42:c3d2:5ca::1
+    priv12:
+      priv12-gw: fd23:42:c3d2:5cb::1
+    priv13:
+      priv13-gw: fd23:42:c3d2:5cc::1
+    priv14:
+      priv14-gw: fd23:42:c3d2:5cd::1
+    priv15:
+      priv15-gw: fd23:42:c3d2:5ce::1
+    priv16:
+      priv16-gw: fd23:42:c3d2:5cf::1
 
-  radio:
-    radio-gw: fd23:42:c3d2:586::1
+    radio:
+      radio-gw: fd23:42:c3d2:586::1
 
-  c3d2:
-    c3d2-anon: fd23:42:c3d2:523::c3d2:1
-    c3d2-gw: fd23:42:c3d2:523::c3d2:4
-    bgp: fd23:42:c3d2:523::c3d2:ff0b
+    c3d2:
+      c3d2-anon: fd23:42:c3d2:523::c3d2:1
+      c3d2-gw: fd23:42:c3d2:523::c3d2:4
+      bgp: fd23:42:c3d2:523::c3d2:ff0b
+
+  up1:
+    core:
+      server1: 2a02:8106:208:5281::1
+      server2: 2a02:8106:208:5281::102
+
+      anon1: 2a02:8106:208:5281::9:1
+      serv-gw: 2a02:8106:208:5281::8:1
+      pub-gw: 2a02:8106:208:5281::8:2
+      c3d2-gw: 2a02:8106:208:5281::c3d2:1
+      c3d2-anon: 2a02:8106:208:5281::c3d2:a
+      bgp: 2a02:8106:208:5281::c3d2:b
+      mgmt-gw: 2a02:8106:208:5281::8:3
+
+      upstream1: 2a02:8106:208:5281::b:0
+      upstream2: 2a02:8106:208:5281::b:1
+      upstream3: 2a02:8106:208:5281::b:2
+      upstream4: 2a02:8106:208:5281::b:3
+
+      priv1-gw: 2a02:8106:208:5281::c:0
+      priv2-gw: 2a02:8106:208:5281::c:1
+      priv3-gw: 2a02:8106:208:5281::c:2
+      priv4-gw: 2a02:8106:208:5281::c:3
+      priv5-gw: 2a02:8106:208:5281::c:4
+      priv6-gw: 2a02:8106:208:5281::c:5
+      priv7-gw: 2a02:8106:208:5281::c:6
+      priv8-gw: 2a02:8106:208:5281::c:7
+      priv9-gw: 2a02:8106:208:5281::c:8
+      priv10-gw: 2a02:8106:208:5281::c:9
+      priv11-gw: 2a02:8106:208:5281::c:a
+      priv12-gw: 2a02:8106:208:5281::c:b
+      priv13-gw: 2a02:8106:208:5281::c:c
+      priv14-gw: 2a02:8106:208:5281::c:d
+      priv15-gw: 2a02:8106:208:5281::c:e
+      priv16-gw: 2a02:8106:208:5281::c:d
+
+    serv:
+      serv-gw: 2a02:8106:208:5282::1
+      dns: 2a02:8106:208:5282:2:0:0:2
+      stats: 2a02:8106:208:5282:2:0:0:3
+      radius: 2a02:8106:208:5282:2:0:0:4
+      zeit: 2a02:8106:208:5282:2:0:0:5
+    pub:
+      pub-gw: 2a02:8106:208:5283::1
+    priv1:
+      priv1-gw: 2a02:8106:208:52c0::1
+    priv2:
+      priv2-gw: 2a02:8106:208:52c1::1
+    priv3:
+      priv3-gw: 2a02:8106:208:52c2::1
+    priv4:
+      priv4-gw: 2a02:8106:208:52c3::1
+    priv5:
+      priv5-gw: 2a02:8106:208:52c4::1
+    priv6:
+      priv6-gw: 2a02:8106:208:52c5::1
+    priv7:
+      priv7-gw: 2a02:8106:208:52c6::1
+    priv8:
+      priv8-gw: 2a02:8106:208:52c7::1
+    priv9:
+      priv9-gw: 2a02:8106:208:52c8::1
+    priv10:
+      priv10-gw: 2a02:8106:208:52c9::1
+    priv11:
+      priv11-gw: 2a02:8106:208:52ca::1
+    priv12:
+      priv12-gw: 2a02:8106:208:52cb::1
+    priv13:
+      priv13-gw: 2a02:8106:208:52cc::1
+    priv14:
+      priv14-gw: 2a02:8106:208:52cd::1
+    priv15:
+      priv15-gw: 2a02:8106:208:52ce::1
+    priv16:
+      priv16-gw: 2a02:8106:208:52cf::1
+
+    radio:
+      radio-gw: 2a02:8106:208:5286::1
+
+    c3d2:
+      c3d2-anon: 2a02:8106:208:5201::c3d2:1
+      c3d2-gw: 2a02:8106:208:5201::c3d2:4
+      bgp: 2a02:8106:208:5201::c3d2:ff0b
