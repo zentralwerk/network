@@ -10,7 +10,7 @@ $TTL 10M
 			)
 		IN NS	{{ pillar['bind']['master-ns'] }}.
 
-{%- if ctx == 'dn42' %]
+{%- if ctx == 'dn42' %}
 {%-   for net, hosts in pillar['hosts-inet'].items() %}
 {%-     for host, aaaa in hosts.items() %}
 {%-       set reverse = salt['network.reverse_ip'](aaaa) %}
