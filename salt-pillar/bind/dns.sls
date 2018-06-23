@@ -7,7 +7,6 @@ bind:
     up1: dns.serv.zentralwerk.org
   public-ns:
     - ns.c3d2.de
-    - ns.spaceboyz.net
   slaves:
     # bind.wetu.c3d2.de
     - 172.22.100.9
