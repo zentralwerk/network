@@ -58,7 +58,7 @@ bind9:
     - template: 'jinja'
     - context:
         domain: {{ domain }}
-        ctx: {{ ctx }}
+        ctx: dn42
 {%- endfor %}
 
 # IPv6 reverse
