@@ -8,9 +8,9 @@ bind:
   public-ns:
     - ns.c3d2.de
   slaves:
-    # bind.wetu.c3d2.de
-    - 172.22.100.9
-    - fd23:42:c3d2::1
+    # ns.c3d2.de
+    - 217.197.84.53
+    - 2001:67c:1400:2240::a
     # dns.spaceboyz.net
     - 172.22.24.4
     - 2a01:4f8:a0:33d0::4
