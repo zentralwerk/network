@@ -16,17 +16,19 @@ bind9:
     - source: salt://bind/named.conf
     - template: 'jinja'
 
+{%- for ctx, root_domain in pillar['bind']['root-domain'].items() %}
 # zentralwerk.org
-/etc/bind/{{ pillar['bind']['root-domain'] }}.zone:
+/etc/bind/{{ root_domain }}.zone:
   file.managed:
     - source: salt://bind/root-domain.zone
     - template: 'jinja'
     - context:
-        domain: {{ pillar['bind']['root-domain'] }}
+        domain: {{ root_domain }}
+        ctx: {{ ctx }}
 
 # *.zentralwerk.org
-{%- for net, subnet4 in pillar['subnets-inet'].items() %}
-{%- set domain = net ~ '.' ~ pillar['bind']['root-domain'] %}
+{%-   for net, subnet4 in pillar['subnets-inet'].items() %}
+{%-     set domain = net ~ '.' ~ root_domain %}
 /etc/bind/{{ domain }}.zone:
   file.managed:
     - source: salt://bind/net-domain.zone
@@ -34,12 +36,13 @@ bind9:
     - context:
         domain: {{ domain }}
         net: {{ net }}
-        ctx: dn42
+        ctx: {{ ctx }}
 
+{%-   endfor %}
 {%- endfor %}
 
 # dyn.zentralwerk.org
-{%- set domain = 'dyn.' ~ pillar['bind']['root-domain'] %}
+{%- set domain = 'dyn.' ~ pillar['bind']['root-domain']['up1'] %}
 /etc/bind/{{ domain }}.zone:
   file.managed:
     - source: salt://bind/dyn-domain.zone
@@ -55,16 +58,20 @@ bind9:
     - template: 'jinja'
     - context:
         domain: {{ domain }}
+        ctx: {{ ctx }}
 {%- endfor %}
 
 # IPv6 reverse
-{%- for domain in pillar['bind']['reverse-zones-inet6'] %}
+{%- for ctx, domains in pillar['bind']['reverse-zones-inet6'].items() %}
+{%-   for domain in domains %}
 /etc/bind/{{ domain }}.zone:
   file.managed:
     - source: salt://bind/reverse.zone
     - template: 'jinja'
     - context:
         domain: {{ domain }}
+        ctx: {{ ctx }}
+{%-   endfor %}
 {%- endfor %}
 
 rndc reload:

@@ -1,6 +1,10 @@
 bind:
-  root-domain: zentralwerk.org
-  master-ns: dns.serv.zentralwerk.org
+  root-domain:
+    dn42: zentralwerk.dn42
+    up1: zentralwerk.org
+  master-ns:
+    dn42: dns.serv.zentralwerk.dn42
+    up1: dns.serv.zentralwerk.org
   public-ns:
     - ns.c3d2.de
     - ns.spaceboyz.net
@@ -11,7 +15,7 @@ bind:
     # dns.spaceboyz.net
     - 172.22.24.4
     - 2a01:4f8:a0:33d0::4
-  serial: 2017031210
+  serial: 2018062300
   
   reverse-zones-inet:
     - 72.20.172.in-addr.arpa
@@ -24,5 +28,9 @@ bind:
     - 79.20.172.in-addr.arpa
   
   reverse-zones-inet6:
-    - 8.5.0.2.d.3.c.2.4.0.0.3.2.d.f.ip6.arpa
-    - c.5.0.2.d.3.c.2.4.0.0.3.2.d.f.ip6.arpa
+    dn42:
+      - 8.5.0.2.d.3.c.2.4.0.0.3.2.d.f.ip6.arpa
+      - c.5.0.2.d.3.c.2.4.0.0.3.2.d.f.ip6.arpa
+    up1:
+      - 8.2.5.8.0.2.0.6.0.1.8.2.0.a.2.ip6.arpa
+      - c.2.5.8.0.2.0.6.0.1.8.2.0.a.2.ip6.arpa

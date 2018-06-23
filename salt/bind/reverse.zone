@@ -1,7 +1,7 @@
 $ORIGIN {{ domain }}.
 $TTL 10M
 
-@		IN SOA	{{ pillar['bind']['master-ns'] }}. astro.spaceboyz.net. (
+@		IN SOA	{{ pillar['bind']['master-ns'][ctx] }}. astro.spaceboyz.net. (
 				{{ pillar['bind']['serial'] }} ; serial
 				1H ; refresh
 				1M ; retry
@@ -10,20 +10,22 @@ $TTL 10M
 			)
 		IN NS	{{ pillar['bind']['master-ns'] }}.
 
-{%- for net, hosts in pillar['hosts-inet'].items() %}
-{%-   for host, aaaa in hosts.items() %}
-{%-     set reverse = salt['network.reverse_ip'](aaaa) %}
-{%-     if reverse.endswith(domain) %}
-{{ reverse.replace('.' ~ domain, '') }}	IN PTR	{{ host }}.{{ net }}.{{ pillar['bind']['root-domain'] }}.
-{%-     endif %}
+{%- if ctx == 'dn42' %]
+{%-   for net, hosts in pillar['hosts-inet'].items() %}
+{%-     for host, aaaa in hosts.items() %}
+{%-       set reverse = salt['network.reverse_ip'](aaaa) %}
+{%-       if reverse.endswith(domain) %}
+{{ reverse.replace('.' ~ domain, '') }}	IN PTR	{{ host }}.{{ net }}.{{ pillar['bind']['root-domain'][ctx] }}.
+{%-       endif %}
+{%-     endfor %}
 {%-   endfor %}
-{%- endfor %}
+{%- endif %}
 
-{%- for net, hosts in pillar['hosts-inet6']['dn42'].items() %}
+{%- for net, hosts in pillar['hosts-inet6'][ctx].items() %}
 {%-   for host, aaaa in hosts.items() %}
 {%-     set reverse = salt['network.reverse_ip'](aaaa) %}
 {%-     if reverse.endswith(domain) %}
-{{ reverse.replace('.' ~ domain, '') }}	IN PTR	{{ host }}.{{ net }}.{{ pillar['bind']['root-domain'] }}.
+{{ reverse.replace('.' ~ domain, '') }}	IN PTR	{{ host }}.{{ net }}.{{ pillar['bind']['root-domain'][ctx] }}.
 {%-     endif %}
 {%-   endfor %}
 {%- endfor %}
