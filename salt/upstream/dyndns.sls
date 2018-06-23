@@ -6,7 +6,7 @@
     - template: 'jinja'
     - context:
         interface: {{ conf['interface'] }}
-        hostname: {{ salt['grains.get']('id') }}.dyn.{{ pillar['bind']['root-domain'] }}
+        hostname: {{ salt['grains.get']('id') }}.dyn.{{ pillar['bind']['root-domain']['up1'] }}
     - mode: 755
     - require:
         - pkg: dnsutils
