@@ -241,7 +241,7 @@ containers:
       core:
         type: veth
         gw: anon1
-        gw6: upstream1
+        gw6: anon1
         hwaddr: 0A:14:48:01:07:01
       c3d2:
         type: veth
