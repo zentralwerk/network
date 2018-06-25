@@ -374,6 +374,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - priv17
       c3d2-server3:
         mode: bond
         ports:
