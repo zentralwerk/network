@@ -733,21 +733,6 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'Woarbouf':
-            net: priv17
-            psk: |
-            -----BEGIN PGP MESSAGE-----
-            
-            hQEMA2PKcvDMvlKLAQf/W22cuyEAFGNyk6jlq6ysrWFIFkihHwrMMIdTDX8i+4V/
-            juUX0r70xpVL41dD/Rnbbju9hJ2TgxfDKOzBjfc1sOjc0fUGNzYT5Km1775xPU+I
-            H/r9+91bq23/gQCVMkQvDTWwNTiVHtB1h77aRXcaAWFg1XMOuEKU+hNyjZcstLME
-            /zkHT79Y7thJKMVKq60z5USKomzOle+NpD/awLrhUgcMICqO6Os4mIDff853Z0bD
-            tA2Fj1jY20+Mux7jq9Pcz88fYzB0+Uag+/ylJdSSSr+p9n0rLVlquxWuF0EDHOui
-            7PS65SMLbCPfmd/WNE0AJvLEtp80KBLRUwGwH2p/idJNAT29X5kFpfxxnC2lETCv
-            fvanDEpsWkVLITcyA9zF9WXGdDZ3bdyjoQJR9W/S7kCuT5+FZevZ4rZ701+ld/bs
-            b0wpfgtfmGVRXe3IGO4=
-            =t3qs
-            -----END PGP MESSAGE-----
 
   ap19:
     password: |

@@ -370,14 +370,10 @@ switches:
           - mgmt
           - pub
           - priv9
-      ap18:
-        mode: trunk
+      priv17:
+        mode: access
         ports:
           - GigabitEthernet 1/0/13
-        vlans:
-          - mgmt
-          - pub
-          - priv17
       c3d2-server3:
         mode: bond
         ports:
