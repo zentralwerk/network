@@ -2,12 +2,12 @@ $ORIGIN {{ domain }}.
 $TTL 10M
 
 @		IN SOA	{{ pillar['bind']['master-ns']['up1'] }}. astro.spaceboyz.net. (
-				2  ; serial
+				3  ; serial
 				1H ; refresh
 				1M ; retry
 				2H ; expire
 				5M ; minimum
 			)
-{%- for ns in pillar['bind']['public-ns'] %}
+{%- for ns in pillar['bind']['public-ns']['up1'] %}
 		IN NS	{{ ns }}.
 {%- endfor %}

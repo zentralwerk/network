@@ -8,7 +8,7 @@ $TTL 10M
 				2H ; expire
 				5M ; minimum
 			)
-{%- for ns in pillar['bind']['public-ns'] %}
+{%- for ns in pillar['bind']['public-ns'][ctx] %}
 		IN NS	{{ ns }}.
 {%- endfor %}
 

@@ -6,7 +6,10 @@ bind:
     dn42: dns.serv.zentralwerk.dn42
     up1: dns.serv.zentralwerk.org
   public-ns:
-    - ns.c3d2.de
+    dn42:
+      - dns.serv.zentralwerk.dn42
+    up1:
+      - ns.c3d2.de
   slaves:
     # ns.c3d2.de
     - 217.197.84.53

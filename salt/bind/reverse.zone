@@ -8,7 +8,7 @@ $TTL 10M
 				2H ; expire
 				5M ; minimum
 			)
-		IN NS	{{ pillar['bind']['master-ns'][ctx] }}.
+		IN NS	{{ pillar['bind']['public-ns'][ctx] }}.
 
 {%- if ctx == 'dn42' %}
 {%-   for net, hosts in pillar['hosts-inet'].items() %}
