@@ -107,3 +107,51 @@ radv:
         - upstream2.core
       dnssl:
         - priv16.zentralwerk.org
+  priv17-gw:
+    priv17:
+      rdnss:
+        - upstream2.core
+      dnssl:
+        - priv17.zentralwerk.org
+  priv18-gw:
+    priv18:
+      rdnss:
+        - upstream2.core
+      dnssl:
+        - priv18.zentralwerk.org
+  priv19-gw:
+    priv19:
+      rdnss:
+        - upstream2.core
+      dnssl:
+        - priv19.zentralwerk.org
+  priv20-gw:
+    priv20:
+      rdnss:
+        - upstream2.core
+      dnssl:
+        - priv20.zentralwerk.org
+  priv21-gw:
+    priv21:
+      rdnss:
+        - upstream2.core
+      dnssl:
+        - priv21.zentralwerk.org
+  priv22-gw:
+    priv22:
+      rdnss:
+        - upstream2.core
+      dnssl:
+        - priv22.zentralwerk.org
+  priv23-gw:
+    priv23:
+      rdnss:
+        - upstream2.core
+      dnssl:
+        - priv23.zentralwerk.org
+  priv24-gw:
+    priv24:
+      rdnss:
+        - upstream2.core
+      dnssl:
+        - priv24.zentralwerk.org
