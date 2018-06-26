@@ -37,6 +37,13 @@ vlans:
   priv15: 54
   priv16: 55
   priv17: 56
+  priv18: 57
+  priv19: 58
+  priv20: 59
+  priv21: 60
+  priv22: 61
+  priv23: 62
+  priv24: 63
   # Isolated neighbors directly connection with their modems
   iso1: 101
   iso2: 102

@@ -73,6 +73,14 @@ hosts-inet:
     bgp: 172.20.72.27
     mgmt-gw: 172.20.72.28
     radio-gw: 172.20.72.29
+    priv17-gw: 172.20.72.30
+    priv18-gw: 172.20.72.31
+    priv19-gw: 172.20.72.32
+    priv20-gw: 172.20.72.33
+    priv21-gw: 172.20.72.34
+    priv22-gw: 172.20.72.35
+    priv23-gw: 172.20.72.36
+    priv24-gw: 172.20.72.37
 
   pub:
     pub-gw: 172.20.76.1
@@ -95,6 +103,9 @@ hosts-inet:
 {%- endfor %}
   priv9:
     priv9-gw: 172.20.74.33
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 33 + i }}
+{%- endfor %}
   priv5:
     priv5-gw: 172.20.74.65
 {%- for i in range(1, 14) %}
@@ -102,6 +113,9 @@ hosts-inet:
 {%- endfor %}
   priv10:
     priv10-gw: 172.20.74.97
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 97 + i }}
+{%- endfor %}
   priv3:
     priv3-gw: 172.20.74.129
 {%- for i in range(1, 14) %}
@@ -109,6 +123,9 @@ hosts-inet:
 {%- endfor %}
   priv11:
     priv11-gw: 172.20.74.161
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 161 + i }}
+{%- endfor %}
   priv6:
     priv6-gw: 172.20.74.193
 {%- for i in range(1, 14) %}
@@ -116,6 +133,9 @@ hosts-inet:
 {%- endfor %}
   priv12:
     priv12-gw: 172.20.74.225
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 225 + i }}
+{%- endfor %}
   priv2:
     priv2-gw: 172.20.75.1
 {%- for i in range(1, 31) %}
@@ -123,6 +143,9 @@ hosts-inet:
 {%- endfor %}
   priv13:
     priv13-gw: 172.20.75.33
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.75.{{ 33 + i }}
+{%- endfor %}
   priv7:
     priv7-gw: 172.20.75.65
 {%- for i in range(1, 14) %}
@@ -130,6 +153,9 @@ hosts-inet:
 {%- endfor %}
   priv14:
     priv14-gw: 172.20.75.97
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.75.{{ 97 + i }}
+{%- endfor %}
   priv4:
     priv4-gw: 172.20.75.129
 {%- for i in range(1, 14) %}
@@ -137,6 +163,9 @@ hosts-inet:
 {%- endfor %}
   priv15:
     priv15-gw: 172.20.75.161
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.75.{{ 161 + i }}
+{%- endfor %}
   priv8:
     priv8-gw: 172.20.75.193
 {%- for i in range(1, 14) %}
@@ -144,6 +173,49 @@ hosts-inet:
 {%- endfor %}
   priv16:
     priv16-gw: 172.20.75.225
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.75.{{ 225 + i }}
+{%- endfor %}
+  priv17:
+    priv17-gw: 172.20.74.17
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 17 + i }}
+{%- endfor %}
+  priv18:
+    priv18-gw: 172.20.74.49
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 49 + i }}
+{%- endfor %}
+  priv19:
+    priv19-gw: 172.20.74.81
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 81 + i }}
+{%- endfor %}
+  priv20:
+    priv20-gw: 172.20.74.113
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 113 + i }}
+{%- endfor %}
+  priv21:
+    priv21-gw: 172.20.74.145
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 145 + i }}
+{%- endfor %}
+  priv22:
+    priv22-gw: 172.20.74.177
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 177 + i }}
+{%- endfor %}
+  priv23:
+    priv23-gw: 172.20.74.209
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 209 + i }}
+{%- endfor %}
+  priv24:
+    priv24-gw: 172.20.74.241
+{%- for i in range(1, 14) %}
+    dhcp{{ i }}: 172.20.74.{{ 241 + i }}
+{%- endfor %}
 
   radio:
     radio-gw: 172.20.73.129
@@ -230,7 +302,15 @@ hosts-inet6:
       priv13-gw: fd23:42:c3d2:581::c:c
       priv14-gw: fd23:42:c3d2:581::c:d
       priv15-gw: fd23:42:c3d2:581::c:e
-      priv16-gw: fd23:42:c3d2:581::c:d
+      priv16-gw: fd23:42:c3d2:581::c:f
+      priv17-gw: fd23:42:c3d2:581::c:10
+      priv18-gw: fd23:42:c3d2:581::c:11
+      priv19-gw: fd23:42:c3d2:581::c:12
+      priv20-gw: fd23:42:c3d2:581::c:13
+      priv21-gw: fd23:42:c3d2:581::c:14
+      priv22-gw: fd23:42:c3d2:581::c:15
+      priv23-gw: fd23:42:c3d2:581::c:16
+      priv24-gw: fd23:42:c3d2:581::c:17
 
     serv:
       serv-gw: fd23:42:c3d2:582::1
@@ -272,6 +352,22 @@ hosts-inet6:
       priv15-gw: fd23:42:c3d2:5ce::1
     priv16:
       priv16-gw: fd23:42:c3d2:5cf::1
+    priv17:
+      priv17-gw: fd23:42:c3d2:5d0::1
+    priv18:
+      priv18-gw: fd23:42:c3d2:5d1::1
+    priv19:
+      priv19-gw: fd23:42:c3d2:5d2::1
+    priv20:
+      priv20-gw: fd23:42:c3d2:5d3::1
+    priv21:
+      priv21-gw: fd23:42:c3d2:5d4::1
+    priv22:
+      priv22-gw: fd23:42:c3d2:5d5::1
+    priv23:
+      priv23-gw: fd23:42:c3d2:5d6::1
+    priv24:
+      priv24-gw: fd23:42:c3d2:5d7::1
 
     radio:
       radio-gw: fd23:42:c3d2:586::1
@@ -314,7 +410,15 @@ hosts-inet6:
       priv13-gw: 2a02:8106:208:5281::c:c
       priv14-gw: 2a02:8106:208:5281::c:d
       priv15-gw: 2a02:8106:208:5281::c:e
-      priv16-gw: 2a02:8106:208:5281::c:d
+      priv16-gw: 2a02:8106:208:5281::c:f
+      priv17-gw: 2a02:8106:208:5281::c:10
+      priv18-gw: 2a02:8106:208:5281::c:11
+      priv19-gw: 2a02:8106:208:5281::c:12
+      priv20-gw: 2a02:8106:208:5281::c:13
+      priv21-gw: 2a02:8106:208:5281::c:14
+      priv22-gw: 2a02:8106:208:5281::c:15
+      priv23-gw: 2a02:8106:208:5281::c:16
+      priv24-gw: 2a02:8106:208:5281::c:17
 
     serv:
       serv-gw: 2a02:8106:208:5282::1
@@ -356,6 +460,22 @@ hosts-inet6:
       priv15-gw: 2a02:8106:208:52ce::1
     priv16:
       priv16-gw: 2a02:8106:208:52cf::1
+    priv17:
+      priv17-gw: 2a02:8106:208:52d0::1
+    priv18:
+      priv18-gw: 2a02:8106:208:52d1::1
+    priv19:
+      priv19-gw: 2a02:8106:208:52d2::1
+    priv20:
+      priv20-gw: 2a02:8106:208:52d3::1
+    priv21:
+      priv21-gw: 2a02:8106:208:52d4::1
+    priv22:
+      priv22-gw: 2a02:8106:208:52d5::1
+    priv23:
+      priv23-gw: 2a02:8106:208:52d6::1
+    priv24:
+      priv24-gw: 2a02:8106:208:52d7::1
 
     radio:
       radio-gw: 2a02:8106:208:5286::1
