@@ -37,6 +37,7 @@ switches:
           - priv14
           - priv15
           - priv16
+          - priv17
       mgmt:
         mode: access
         ports:
@@ -198,6 +199,7 @@ switches:
           - priv14
           - priv15
           - priv16
+          - priv17
       server5:
         mode: trunk
         ports:
@@ -279,6 +281,7 @@ switches:
           - priv14
           - priv15
           - priv16
+          - priv17
       mgmt:
         mode: access
         ports:
@@ -374,6 +377,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - priv17
       c3d2-server3:
         mode: bond
         ports:
