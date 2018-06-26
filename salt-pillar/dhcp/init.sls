@@ -217,7 +217,7 @@ dhcp:
       domain-name: priv16.zentralwerk.org
 
   priv17:
-    start: 172.20.74.16
+    start: 172.20.74.18
     end: 172.20.74.30
     time: 120
     max-time: 86400
