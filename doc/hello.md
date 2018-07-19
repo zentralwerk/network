@@ -143,10 +143,7 @@ erreichen wenn du einen der von uns konfigurierten Router nutzt.
 
 ## Statische IPv6-Adressen
 
-Du willst weltweit erreichbar sein mit dem Internet-Protokoll der
-Zukunft? Kein Problem: wir verfügen über eine Menge statischer
-IPv6-Adressen über den Tunnel-Broker [SixXS](https://www.sixxs.net/)
-mit mehreren schnellen Zugangspunkten in geographischer Nähe.
+Du bist weltweit erreichbar mit dem Internet-Protokoll der Zukunft!
 
 
 # Alternative: Isolation
