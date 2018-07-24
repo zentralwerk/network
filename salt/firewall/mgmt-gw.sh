@@ -24,6 +24,8 @@ if [ "$IFACE" = "{{ interface }}" ]; then
     # downloads.lede-project.org
     iptables -A FORWARD -i $IFACE --dest 148.251.78.235 -j ACCEPT
     ip6tables -A FORWARD -i $IFACE --dest 2a01:4f8:202:43ea::3 -j ACCEPT
+    # archive.openwrt.org
+    iptables -A FORWARD -i $IFACE --dest 81.0.124.218 -j ACCEPT
     # radius.hq.c3d2.de
     iptables -A FORWARD -i $IFACE --dest 172.22.99.22 -j ACCEPT
     # Deny by default
