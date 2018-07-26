@@ -74,6 +74,7 @@ switches:
         mode: access
         ports:
           - GigabitEthernet 1/0/9
+      # TODO: Move to c3d2-switch-main
       ap2:
         mode: trunk
         ports:
@@ -82,14 +83,7 @@ switches:
           - mgmt
           - pub
           - c3d2
-      ap2-tmp:
-        mode: trunk
-        ports:
-          - GigabitEthernet 1/0/18
-        vlans:
-          - mgmt
-          - pub
-          - c3d2
+      # TODO: Move to c3d2-switch-main
       ap3:
         mode: trunk
         ports:
@@ -230,6 +224,17 @@ switches:
         ports:
           - GigabitEthernet1/0/23
           - GigabitEthernet1/0/35
+      switch-c3d2-main:
+        mode: bond
+        ports:
+          - GigabitEthernet 1/0/41
+          - GigabitEthernet 1/0/42
+          - GigabitEthernet 1/0/43
+          - GigabitEthernet 1/0/44
+        vlans:
+          - mgmt
+          - pub
+          - c3d2
     password: |
       -----BEGIN PGP MESSAGE-----
 
