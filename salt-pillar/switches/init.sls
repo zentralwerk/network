@@ -74,24 +74,6 @@ switches:
         mode: access
         ports:
           - GigabitEthernet 1/0/9
-      # TODO: Move to c3d2-switch-main
-      ap2:
-        mode: trunk
-        ports:
-          - GigabitEthernet 1/0/17
-        vlans:
-          - mgmt
-          - pub
-          - c3d2
-      # TODO: Move to c3d2-switch-main
-      ap3:
-        mode: trunk
-        ports:
-          - GigabitEthernet 1/0/15
-        vlans:
-          - mgmt
-          - pub
-          - c3d2
       ap8:
         mode: trunk
         ports:
