@@ -176,7 +176,14 @@ switches:
           - priv15
           - priv16
           - priv17
-      server5:
+      c3d2-server4:
+        mode: bond
+        ports:
+          - GigabitEthernet1/0/38
+          - GigabitEthernet1/0/39
+          - GigabitEthernet1/0/40
+        access: c3d2
+      c3d2-server5:
         mode: trunk
         ports:
           - GigabitEthernet1/0/21
@@ -366,11 +373,6 @@ switches:
         ports:
           - GigabitEthernet1/0/30
           - GigabitEthernet1/0/31
-        access: c3d2
-      c3d2-server4:
-        mode: trunk
-        ports:
-          - GigabitEthernet1/0/33
         access: c3d2
       ap24:
         mode: trunk
