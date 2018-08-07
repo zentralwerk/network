@@ -636,9 +636,23 @@ switches:
           - mgmt
           - pub
           - c3d2
+      ap31:
+        mode: trunk
+        ports: 4
+        vlans:
+          - mgmt
+          - pub
+          - c3d2
+      ap32:
+        mode: trunk
+        ports: 5
+        vlans:
+          - mgmt
+          - pub
+          - c3d2
       c3d2:
         mode: access
-        ports: '4-20'
+        ports: '6-20'
 
     password: |
       -----BEGIN PGP MESSAGE-----
