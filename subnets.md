@@ -35,7 +35,7 @@ Machine-readable here: [salt-pillar/subnets](./salt-pillar/subnets/init.sls)
   * 172.20.75.160-172.20.75.175/28 PRIV15
   * 172.20.75.192-172.20.75.207/28 PRIV8
   * 172.20.75.224-172.20.75.239/28 PRIV16
-* 172.20.76.0-172.20.77.255/23 PUBLIC
+* 172.20.76.0-172.20.79.255/22 PUBLIC
 * 172.20.78.0-172.20.79.255/23 RESERVED FOR EXPANDING PUBLIC
 
 ## RFC 1918: non-routed

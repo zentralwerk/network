@@ -13,7 +13,7 @@ dhcp:
 
   pub:
     start: 172.20.76.2
-    end: 172.20.77.254
+    end: 172.20.79.254
     time: 300
     max-time: 3600
     lower-max-time: 50
