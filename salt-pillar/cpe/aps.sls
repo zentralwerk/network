@@ -913,7 +913,7 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'C3D2':
+          'C3D2 legacy':
             net: c3d2
             psk: |
               -----BEGIN PGP MESSAGE-----
@@ -1239,7 +1239,7 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'C3D2':
+          'C3D2 legacy':
             net: c3d2
             psk: |
               -----BEGIN PGP MESSAGE-----
