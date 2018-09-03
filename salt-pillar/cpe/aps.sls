@@ -724,7 +724,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR841N
     version: release
-    location: Auf Lager
+    location: Haus B, 2. Etage, zum Innenhof
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
@@ -733,6 +733,21 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+          'Restaurierung Wolff/Kober':
+            net: priv9
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/RO1FRAB4KQ55x6RUlE3A6kcvlfIZpS3C2luEHOJkR1rv
+              D2y2KqHxjevps1KxHph2Y9QCH7Kcvvf1CDk2ay/8FJvSLPEOa/VmxRMh0YXPmptU
+              vZS62f8z8Ho6P8ZuPDWeWOauH2+pq/a49xZhsJCDEJ+rJJST4wruPWV/o5wCza19
+              lFCJA3USuR7vGZ+i0O/28WG8Q5Bn51e3GTS99i5wWrVGxBPcnuu0vNO0Kp16Pf+c
+              kOiYsGlhM6csfB5TmNWxqm27A/3YdyiLqUK585NfcnlYovHKsNjyv23B1pUzwaPF
+              va+sbwbzQDAKHfh7WDIQayR0zpTsyApTrCiKqLGnZtJFAaBJ7+oqOLMVxlmB+/YP
+              dS/9UOmDV+BmsPwe/suIyHDn3bQ6LK5f10ZHnAtot9Ecf+X8o0ZvG1vYrHeSx16K
+              4o42SHID
+              =2Z0a
+              -----END PGP MESSAGE-----
 
   ap19:
     password: |
@@ -817,7 +832,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: Ubnt-UniFi-AP-AC-LR
     version: release
-    location: Haus B, 2. Etage, zum Innenhof
+    location: Lager
     radios:
       'platform/qca956x_wmac':
         channel: 1
@@ -825,20 +840,20 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'Restaurierung Wolff/Kober':
-            net: priv9
+          'C3D2 legacy':
+            net: c3d2
             psk: |
               -----BEGIN PGP MESSAGE-----
               
-              hQEMA2PKcvDMvlKLAQf/RO1FRAB4KQ55x6RUlE3A6kcvlfIZpS3C2luEHOJkR1rv
-              D2y2KqHxjevps1KxHph2Y9QCH7Kcvvf1CDk2ay/8FJvSLPEOa/VmxRMh0YXPmptU
-              vZS62f8z8Ho6P8ZuPDWeWOauH2+pq/a49xZhsJCDEJ+rJJST4wruPWV/o5wCza19
-              lFCJA3USuR7vGZ+i0O/28WG8Q5Bn51e3GTS99i5wWrVGxBPcnuu0vNO0Kp16Pf+c
-              kOiYsGlhM6csfB5TmNWxqm27A/3YdyiLqUK585NfcnlYovHKsNjyv23B1pUzwaPF
-              va+sbwbzQDAKHfh7WDIQayR0zpTsyApTrCiKqLGnZtJFAaBJ7+oqOLMVxlmB+/YP
-              dS/9UOmDV+BmsPwe/suIyHDn3bQ6LK5f10ZHnAtot9Ecf+X8o0ZvG1vYrHeSx16K
-              4o42SHID
-              =2Z0a
+              hQEMA2PKcvDMvlKLAQf/SO/v+xhO1yOG83uCcAN2r5ixNf8+Ksp1dPwBKQHUViwJ
+              /KZHBAUzjTtGFIcpEy3exZcAorJ8SeGaB0hv1zw1HZuHN7Els8KKDu4G5u31Sp8w
+              EFtuwujlkFAt3t57jp02O0qvXBCIA14eNlakc9fcPypibTrIEGp2SCzw/kty4r3g
+              EGUwn1sMPjeQxon5Y4JY4OmZBXsnZkKMwTYjAbL+RS300xV1Nh/WWSTRfueAmT5f
+              xfyHj4NlOoBNBILgm1qlrOdgqJSvHM6rw47BoiDuxeVtgmyPqSbHmN8d7xExbuxB
+              tdcnI6HfSv47ZhLARH08BiI7nLaKNygwgy6yKr0zctJAAetIX8BADb4W4QgyM7VD
+              pYqAfy5Igg342W+ZSMyybiZccncchv4opsyDFTjuby9mqL8OwaMWkeNcNPALaT9v
+              rA==
+              =TEEI
               -----END PGP MESSAGE-----
       'pci0000:00/0000:00:00.0':
         channel: 36
@@ -846,20 +861,20 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'Restaurierung Wolff/Kober':
-            net: priv9
+          'C3D2':
+            net: c3d2
             psk: |
               -----BEGIN PGP MESSAGE-----
               
-              hQEMA2PKcvDMvlKLAQf/RO1FRAB4KQ55x6RUlE3A6kcvlfIZpS3C2luEHOJkR1rv
-              D2y2KqHxjevps1KxHph2Y9QCH7Kcvvf1CDk2ay/8FJvSLPEOa/VmxRMh0YXPmptU
-              vZS62f8z8Ho6P8ZuPDWeWOauH2+pq/a49xZhsJCDEJ+rJJST4wruPWV/o5wCza19
-              lFCJA3USuR7vGZ+i0O/28WG8Q5Bn51e3GTS99i5wWrVGxBPcnuu0vNO0Kp16Pf+c
-              kOiYsGlhM6csfB5TmNWxqm27A/3YdyiLqUK585NfcnlYovHKsNjyv23B1pUzwaPF
-              va+sbwbzQDAKHfh7WDIQayR0zpTsyApTrCiKqLGnZtJFAaBJ7+oqOLMVxlmB+/YP
-              dS/9UOmDV+BmsPwe/suIyHDn3bQ6LK5f10ZHnAtot9Ecf+X8o0ZvG1vYrHeSx16K
-              4o42SHID
-              =2Z0a
+              hQEMA2PKcvDMvlKLAQf/SO/v+xhO1yOG83uCcAN2r5ixNf8+Ksp1dPwBKQHUViwJ
+              /KZHBAUzjTtGFIcpEy3exZcAorJ8SeGaB0hv1zw1HZuHN7Els8KKDu4G5u31Sp8w
+              EFtuwujlkFAt3t57jp02O0qvXBCIA14eNlakc9fcPypibTrIEGp2SCzw/kty4r3g
+              EGUwn1sMPjeQxon5Y4JY4OmZBXsnZkKMwTYjAbL+RS300xV1Nh/WWSTRfueAmT5f
+              xfyHj4NlOoBNBILgm1qlrOdgqJSvHM6rw47BoiDuxeVtgmyPqSbHmN8d7xExbuxB
+              tdcnI6HfSv47ZhLARH08BiI7nLaKNygwgy6yKr0zctJAAetIX8BADb4W4QgyM7VD
+              pYqAfy5Igg342W+ZSMyybiZccncchv4opsyDFTjuby9mqL8OwaMWkeNcNPALaT9v
+              rA==
+              =TEEI
               -----END PGP MESSAGE-----
 
   ap22:
