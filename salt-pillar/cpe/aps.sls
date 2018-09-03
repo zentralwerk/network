@@ -904,7 +904,6 @@ cpe:
             net: pub
 
   ap23:
-    firstboot: True
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -1230,7 +1229,6 @@ cpe:
               -----END PGP MESSAGE-----
 
   ap31:
-    firstboot: True
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -1292,7 +1290,6 @@ cpe:
               -----END PGP MESSAGE-----
 
   ap32:
-    firstboot: True
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -1354,7 +1351,6 @@ cpe:
               -----END PGP MESSAGE-----
 
   ap33:
-    firstboot: True
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -1416,7 +1412,6 @@ cpe:
               -----END PGP MESSAGE-----
 
   ap34:
-    firstboot: True
     password: |
       -----BEGIN PGP MESSAGE-----
       
