@@ -725,7 +725,7 @@ cpe:
     model: TL-WR841N
     version: release
     location: Haus B, 2. Etage, zum Innenhof
-    lan-access: pub
+    lan-access: priv9
     radios:
       'platform/qca953x_wmac':
         channel: 1
