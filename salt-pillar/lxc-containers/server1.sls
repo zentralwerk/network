@@ -208,6 +208,28 @@ containers:
         type: phys
         hwaddr: 0A:14:48:01:2A:19
 
+  priv18-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: upstream2
+        gw6: upstream1
+        hwaddr: 0A:14:48:01:2A:1A
+      priv18:
+        type: phys
+        hwaddr: 0A:14:48:01:2A:1B
+
+  priv19-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: upstream1
+        gw6: upstream1
+        hwaddr: 0A:14:48:01:2A:1C
+      priv19:
+        type: phys
+        hwaddr: 0A:14:48:01:2A:1D
+
   upstream1:
     interfaces:
       core:
