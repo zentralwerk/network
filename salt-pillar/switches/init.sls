@@ -179,6 +179,8 @@ switches:
           - priv15
           - priv16
           - priv17
+          - priv18
+          - priv19
       c3d2-server4:
         mode: bond
         ports:
