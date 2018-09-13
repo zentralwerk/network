@@ -355,7 +355,6 @@ switches:
           - GigabitEthernet 1/0/19
           - GigabitEthernet 1/0/20
           - GigabitEthernet 1/0/21
-          - GigabitEthernet 1/0/23
           - GigabitEthernet 1/0/24
       ap21:
         mode: trunk
@@ -407,6 +406,14 @@ switches:
           - mgmt
           - pub
           - priv14
+      ap35:
+        mode: trunk
+        ports:
+          - GigabitEthernet 1/0/23
+        vlans:
+          - mgmt
+          - pub
+          - priv18
     password: |
       -----BEGIN PGP MESSAGE-----
 
