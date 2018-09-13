@@ -204,7 +204,7 @@ set network.{{ net }}.proto=static
 set network.{{ net }}.ifname='eth0.{{ pillar['vlans'][net] }}'
 {%- endfor %}
 
-{%- elif conf['model'] == 'TL-WR1043NDv4' %}
+{%- elif conf['model'] == 'TL-WR1043NDv4' or conf['model'] == 'TL-WR1043NDv5' %}
 set network.@switch[0]=switch
 set network.@switch[0].reset=1
 set network.@switch[0].enable=1
