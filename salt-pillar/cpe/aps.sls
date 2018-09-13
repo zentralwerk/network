@@ -1088,7 +1088,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR841N
     version: release
-    location: Turm C, 1. Etage (EG)
+    location: "Weg?"
     lan-access: pub
     radios:
       'platform/qca953x_wmac':
@@ -1472,6 +1472,8 @@ cpe:
               =TEEI
               -----END PGP MESSAGE-----
 
+  # eth0: b0:4e:26:b0:7c:34
+  # wlan2: b0:4e:26:b0:7c:34
   ap35:
     password: |
       -----BEGIN PGP MESSAGE-----
@@ -1513,9 +1515,9 @@ cpe:
               =3kAl
               -----END PGP MESSAGE-----
 
-  # f8:d1:11:ba:ac:0f
-  # f8:d1:11:ba:ac:11
-  # f8:d1:11:ba:ac:10
+  # eth0: f8:d1:11:ba:ac:0f
+  # eth1: f8:d1:11:ba:ac:11
+  # wlan2: f8:d1:11:ba:ac:10
   ap36:
     password: |
       -----BEGIN PGP MESSAGE-----

@@ -506,12 +506,6 @@ switches:
       mgmt:
         mode: access
         ports: '20'
-      ap27:
-        mode: trunk
-        ports: 18
-        vlans:
-          - mgmt
-          - pub
       ap17:
         mode: trunk
         ports: 16
@@ -526,10 +520,17 @@ switches:
           - pub
       ap26:
         mode: trunk
+        ports: 18
+        vlans:
+          - mgmt
+          - pub
+      ap36:
+        mode: trunk
         ports: 19
         vlans:
           - mgmt
           - pub
+          - c3d2
     password: |
       -----BEGIN PGP MESSAGE-----
       
