@@ -1488,7 +1488,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR1043NDv5
     version: release
-    location: TODO
+    location: B 4.08
     lan-access: priv18
     radios:
       'platform/qca956x_wmac':
@@ -1497,10 +1497,25 @@ cpe:
         ssids:
           'ZW public':
             net: pub
-          'TODO':
+          'Koch':
             net: priv18
-            psk: secret
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf9GeIyJqIyaJ8RucXPw3n0O7/5R/eumJ8iVUUXkxJIeX5R
+              4HvE5Zhtg0e1dl+Daghm1cgB901KGfW9Q/olxK+Q1rQSutktNzJRPo8BUbxDf+xD
+              a/DtBAsuo0ykQ4ZVaTcV6gck5PCjr9ehlywj6mKpVxhfwtv0ySgmBpyA0LWkWHfG
+              8OQ7ByWLBTGniDFePnk+QJNCx2iRK/Te+A6u9klmrb+yZVnkTUQXksGkxgR7xZkQ
+              L7//q/9gq/7gzhKfaYoIo2qwu7/9LFjd1XO32gkh7FcCyfOhEdZ3110GKhtgJJSX
+              IkodOyePLUXDbBwNZ3Ffuj3zY51/SKfw2RaJvJ6eL9JKAexcDnn3OvCx1QVM8HxM
+              Q8eOkoJrowsVEP6mLd9VPUyrDu2F9BH+I3ZtbgI6LjXIqiRwl/17ZfZ1OcLvnCcN
+              ItIJpBtex7yCdYc=
+              =3kAl
+              -----END PGP MESSAGE-----
 
+  # f8:d1:11:ba:ac:0f
+  # f8:d1:11:ba:ac:11
+  # f8:d1:11:ba:ac:10
   ap36:
     password: |
       -----BEGIN PGP MESSAGE-----
@@ -1520,7 +1535,7 @@ cpe:
     location: Turm C, 2. Etage
     lan-access: pub
     radios:
-      'pci0000:00/0000:00:00.0':
+      'platform/ar933x_wmac':
         channel: 5
         htmode: HT40+
         ssids:
