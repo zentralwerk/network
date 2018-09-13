@@ -1471,3 +1471,73 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
+
+  ap35:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf9G0ynEQDNAY6br4qp/6srXJEDxfyZ4tA6RBOkBk3sLz+4
+      yIjBnAfDlV0Lq9X45LAAROLr+ZxLTpYY1fUsmq0Zqb1MpLr5e57w9WLVw7q8gcoy
+      4MWVMsdcmgiC1E8BF4xynqDecRoBt7JWivVx9JT6mRh0mDcmLt3vxnMe4mCPpRQC
+      6/XKgGOb0d1ASkgnr+S9YoaUwuU8ovk8xvT2IN5kvApt1+ujKpYBTEnxLVqk2zPT
+      lUSLAOEGbui1cwUN/Kmysgjg8XoTWo7WRD3rA8KI/V8MfwNdAW7yYqG93rLAJ+rL
+      lzFOxYXCIEuNfwrmW5AZ/Nk1EUZgc9LCg3wJKCrhjtJJAaIT/ki/jCAlyUXyZfhp
+      XfBaSRZGf1n3+u9m5EeRRaMlHzgT63axf3Gl7ApgEP9V+/iW9ccvBFmNI8d7IhHU
+      ZBOMWyH63lKB+g==
+      =ugCM
+      -----END PGP MESSAGE-----
+    model: TL-WR1043NDv5
+    version: release
+    location: TODO
+    lan-access: priv18
+    radios:
+      'platform/qca956x_wmac':
+        channel: 1
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+          'TODO':
+            net: priv18
+            psk: secret
+
+  ap36:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf9EOhVrZ5rdUXxF8wLfkDsag+sgPkhZHffQuTbbtJT/kdZ
+      pT9po4TklwWBMQ+X8XqLN2EFxN5k2ViM9INoqOnWlP42whYu1Y3GWVv9RrrJrgDo
+      z4Bf+MLZ/1XudYQtfqCtVlEWwtz4UZCYWHkszuiCGPU4baTj0tKibUP63XkbVtpe
+      cqC53aMBN4ZSTbhzzoJeZiIHvl6I5hTQRvL38SSF4MTz6MqFqz1O7Ip1MCWFJHlO
+      XW4dsNhe6GYpFg+ei8bp//IvrfHhsRADZDKcUuNxrMkljOH9Z76y4wI7IONw9Acb
+      ZLFVC8alv0FQ8cVmIRL74zYMvZtys9/l7UbpZ4Cgu9JFAROwEUdGUXE5QFgQGGJQ
+      Esz/Ou+ovkApM9+AO/KBqKN5NsoncLvfIfWwfAxYO1Vfb3aC/iETh496s0MD12WI
+      lorv3GDp
+      =C8xr
+      -----END PGP MESSAGE-----
+    model: TL-WR740N
+    version: release
+    location: Turm C, 2. Etage
+    lan-access: pub
+    radios:
+      'pci0000:00/0000:00:00.0':
+        channel: 5
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
+          'C3D2 legacy':
+            net: c3d2
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/SO/v+xhO1yOG83uCcAN2r5ixNf8+Ksp1dPwBKQHUViwJ
+              /KZHBAUzjTtGFIcpEy3exZcAorJ8SeGaB0hv1zw1HZuHN7Els8KKDu4G5u31Sp8w
+              EFtuwujlkFAt3t57jp02O0qvXBCIA14eNlakc9fcPypibTrIEGp2SCzw/kty4r3g
+              EGUwn1sMPjeQxon5Y4JY4OmZBXsnZkKMwTYjAbL+RS300xV1Nh/WWSTRfueAmT5f
+              xfyHj4NlOoBNBILgm1qlrOdgqJSvHM6rw47BoiDuxeVtgmyPqSbHmN8d7xExbuxB
+              tdcnI6HfSv47ZhLARH08BiI7nLaKNygwgy6yKr0zctJAAetIX8BADb4W4QgyM7VD
+              pYqAfy5Igg342W+ZSMyybiZccncchv4opsyDFTjuby9mqL8OwaMWkeNcNPALaT9v
+              rA==
+              =TEEI
+              -----END PGP MESSAGE-----
