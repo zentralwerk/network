@@ -1,5 +1,5 @@
 {%- import_yaml "netmasks.yaml" as netmasks -%}
-{% set bond_slaves = ['eno1', 'eno2', 'eno3', 'eno4', 'ens3f0', 'ens3f1'] %}
+{% set bond_slaves = ['enp3s0f0', 'enp3s0f1', 'enp4s0f0', 'enp4s0f1'] %}
 
 /etc/modules-load.d/server1.conf:
   file.managed:
