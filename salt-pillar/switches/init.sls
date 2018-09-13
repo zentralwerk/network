@@ -100,6 +100,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - c3d2
           - radio
           - up1
           - up2
@@ -435,6 +436,7 @@ switches:
         vlans:
           - mgmt
           - pub
+          - c3d2
           - up1
           - up2
           - up3
