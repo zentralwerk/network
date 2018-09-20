@@ -106,7 +106,7 @@ set network.@switch_vlan[0].comment='mgmt'
 set network.@switch_vlan[{{ switchnum }}]=switch_vlan
 set network.@switch_vlan[{{ switchnum }}].device='switch0'
 set network.@switch_vlan[{{ switchnum }}].vlan='{{ pillar['vlans'][net] }}'
-# 0: eth1; 1-4: LAN ports; 5: WAN port; 6: eth0
+# 0: eth1; 1-4: LAN ports in reverse; 5: WAN port; 6: eth0
 {%-     if conf.get('lan-access') == net %}
 set network.@switch_vlan[{{ switchnum }}].ports='0 1 2 3 4 5t'
 {%-     else %}
