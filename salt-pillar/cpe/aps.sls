@@ -58,7 +58,7 @@ cpe:
 
     model: TL-Archer-C7v2
     version: release
-    location: C3D2 Main
+    location: C3D2 Backstage
     lan-access: c3d2
     radios:
       'platform/qca955x_wmac':
@@ -82,7 +82,7 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
-          'C3D2.eap':
+          'C3D2.eap legacy':
             net: c3d2
             wpa-eap:
              server: 172.22.99.22
@@ -133,7 +133,7 @@ cpe:
 
     model: TL-WDR4300
     version: release
-    location: C3D2 Kammer
+    location: Auf Lager (C3D2 Keller)
     lan-access: c3d2
     radios:
       'platform/ar934x_wmac':
@@ -157,7 +157,7 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
-          'C3D2.eap':
+          'C3D2.eap legacy':
             net: c3d2
             wpa-eap:
              server: 172.22.99.22
@@ -1244,7 +1244,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: Ubnt-UniFi-AP-AC-LR
     version: release
-    location: C3D2
+    location: C3D2 Assembly
     radios:
       'platform/qca956x_wmac':
         channel: 5
@@ -1267,9 +1267,16 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
+          'C3D2.eap legacy':
+            net: c3d2
+            wpa-eap:
+             server: 172.22.99.22
+             port: 1812
+             secret: public
       'pci0000:00/0000:00:00.0':
-        channel: 52
+        channel: 149
         htmode: VHT80
+        hwmode: "11a"
         ssids:
           'ZW public':
             net: pub
@@ -1288,6 +1295,12 @@ cpe:
               rA==
               =TEEI
               -----END PGP MESSAGE-----
+          'C3D2.eap':
+            net: c3d2
+            wpa-eap:
+             server: 172.22.99.22
+             port: 1812
+             secret: public
 
   ap32:
     password: |
