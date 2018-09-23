@@ -91,8 +91,6 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv19
-          - c3d2
       switch-c1:
         mode: bond
         ports:
@@ -129,7 +127,6 @@ switches:
           - iso14
           - iso15
           - iso16
-          - priv19
       switch-d1:
         mode: bond
         ports:
@@ -476,7 +473,6 @@ switches:
           - iso14
           - iso15
           - iso16
-          - priv19
       up1:
         mode: access
         ports: '1'
@@ -528,7 +524,6 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv19
           - c3d2
       ap17:
         mode: trunk
@@ -536,7 +531,6 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv19
           - c3d2
       ap19:
         mode: trunk
