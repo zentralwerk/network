@@ -538,10 +538,10 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR841Nv8
     version: release
-    location: Dekommissioniert, r/o flash
+    location: Turm D, D16
     lan-access: pub
     radios:
-      'platform/qca953x_wmac':
+      'platform/ar934x_wmac':
         channel: 6
         htmode: HT40+
         ssids:
