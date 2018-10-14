@@ -538,7 +538,7 @@ cpe:
       -----END PGP MESSAGE-----
     model: TL-WR841Nv8
     version: release
-    location: Turm D, D16
+    location: Turm D, 4. Etage
     lan-access: pub
     radios:
       'platform/ar934x_wmac':

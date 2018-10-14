@@ -607,11 +607,12 @@ switches:
         vlans:
           - mgmt
           - pub
-      pub:
-        mode: access
-        ports:
-          # Turm D, 4. Etage
-          - 7
+      ap12:
+        mode: trunk
+        ports: 7
+        vlans:
+          - mgmt
+          - pub
     password: |
       -----BEGIN PGP MESSAGE-----
       
