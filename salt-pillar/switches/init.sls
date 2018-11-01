@@ -419,6 +419,11 @@ switches:
           - mgmt
           - pub
           - priv18
+      priv19:
+        mode: access
+        ports:
+          - GigabitEthernet 1/0/39
+          - GigabitEthernet 1/0/40
     password: |
       -----BEGIN PGP MESSAGE-----
 
