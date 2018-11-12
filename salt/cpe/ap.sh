@@ -169,7 +169,7 @@ set network.{{ net }}.ifname='eth0.{{ pillar['vlans'][net] }}'
 {%-   endif %}
 {%- endfor %}
 
-{%- elif conf['model'] == 'TL-Archer-C7v4' %}
+{%- elif conf['model'] == 'TL-Archer-C7v4' or conf['model'] == 'TL-Archer-C7v5' %}
 set network.@switch[0]=switch
 set network.@switch[0].reset=1
 set network.@switch[0].enable=1
