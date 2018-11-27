@@ -452,7 +452,7 @@ switches:
     # Ports 2-20 gerade unten
     # (15, 16 gehen aktuell nach Haus A)
     # Ports 21-24 unten seitlich (optional optisch)
-    # Unused Port 7 geht aktuell nach Turm C Erdgeschoss
+    # Port 7 geht aktuell nach Turm C Erdgeschoss und dadurch zur Ecce
     ports:
       switch-b1:
         mode: bond
@@ -563,6 +563,13 @@ switches:
           - mgmt
           - pub
           - c3d2
+      ap38:
+        mode: trunk
+        ports: 7
+        vlans:
+          - mgmt
+          - pub
+          - priv20
     password: |
       -----BEGIN PGP MESSAGE-----
       
