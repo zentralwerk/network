@@ -1619,7 +1619,7 @@ cpe:
           'ZW public':
             net: pub
           'hechtfilm.de':
-            net: priv19
+            net: priv21
             psk: |
               -----BEGIN PGP MESSAGE-----
               
