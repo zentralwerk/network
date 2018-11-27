@@ -1633,3 +1633,64 @@ cpe:
               6mGfqgQ=
               =M+pM
               -----END PGP MESSAGE-----
+  ap38:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQf/dLJCwQlVlTHvp2DiTMBpYF4b6iWGGk4xVpLkN8UUlcQG
+      +BcuQl6kNyBnx21jG0o8xYyFT9GbTPnzLIOtrf4U3fJW0agpLv/cOjERqQpDU5Yd
+      v6bST+1yRU8mzfpOYK1+vh7O8aGtcaJXdeeFsKfY+QPpQeqQ3RjmfHV5IjAKUBTk
+      xrf/ISQ0Wk+Bwscqp+PVdAV2nUxAfcyjIuzkpvD2zQ3Q70joJTdg7aKNFXzjok9S
+      EltI6ekt8ICuHxvZaf2L7IXjVt84nzNz05rmbKXWqnFQDxSYJWNAvUr1fFJ8D+l+
+      kZ7PRZxKEr+OyC6dk78gnbH8Rhxjtl4JxM9Yw1Ht5tJHAV4qZ5VMjOhkPFxANXf0
+      +saZ9oV5GaJ2qNPSs05QL8AymA5z0JPCn7U7Vg8XWNkCp3+bDI7HcYNXSfCVetMk
+      GYuZOJTS2vY=
+      =Uy9e
+      -----END PGP MESSAGE-----
+    model: TL-Archer-C7v4
+    version: 18.06.1
+    location: ECCE-Raum
+    lan-access: priv20
+    radios:
+      'platform/qca956x_wmac':
+        channel: 11
+        htmode: HT40-
+        ssids:
+          'ZW public':
+            net: pub
+          'plop':
+            net: priv20
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/YMr0DE44x9GtdDlbFy84ScY4QW9EDxo6i/Qe1awsSc3W
+              lFd6S4UJoGRE+19PfiIuSvzR1XyAetVncCkOQ29Zb50YX0UghYICSX42Jdgisiyz
+              s5U70ifFW+MQgSR0Nz3TNkv+EChl27j0S8WQ3gpuyel/tIknF1JGYpXihRdzamGE
+              zu6+N/Gi/vZMiN6ensKM1/WGVlv28IGQf+wssM3cM4lty67eut289xBr3vbASbbU
+              zmL1wViGubzIvCPjoPoxz4OFE87LJf9g6OplCax33SR3FZg4tOQbPNicopJ5232m
+              dC8s/xwLlgkG09LV1u4LIQD+XrTdDq4UNdMrcJhypdJHAZ2qXa9ByIco3kqs/qs6
+              xrCm6tsAnrIg+YVWR+1WvhJ+7j3ri3KqnOGfafGszynlQANE0JwsiyAzpTprWVbP
+              HOgoE+WsqUs=
+              =JG+0
+              -----END PGP MESSAGE-----
+      'pci0000:00/0000:00:00.0':
+        channel: 36
+        htmode: VHT80
+        ssids:
+          'ZW public':
+            net: pub
+          'plop':
+            net: priv20
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/YMr0DE44x9GtdDlbFy84ScY4QW9EDxo6i/Qe1awsSc3W
+              lFd6S4UJoGRE+19PfiIuSvzR1XyAetVncCkOQ29Zb50YX0UghYICSX42Jdgisiyz
+              s5U70ifFW+MQgSR0Nz3TNkv+EChl27j0S8WQ3gpuyel/tIknF1JGYpXihRdzamGE
+              zu6+N/Gi/vZMiN6ensKM1/WGVlv28IGQf+wssM3cM4lty67eut289xBr3vbASbbU
+              zmL1wViGubzIvCPjoPoxz4OFE87LJf9g6OplCax33SR3FZg4tOQbPNicopJ5232m
+              dC8s/xwLlgkG09LV1u4LIQD+XrTdDq4UNdMrcJhypdJHAZ2qXa9ByIco3kqs/qs6
+              xrCm6tsAnrIg+YVWR+1WvhJ+7j3ri3KqnOGfafGszynlQANE0JwsiyAzpTprWVbP
+              HOgoE+WsqUs=
+              =JG+0
+              -----END PGP MESSAGE-----
