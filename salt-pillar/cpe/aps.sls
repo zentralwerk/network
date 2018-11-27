@@ -1634,6 +1634,7 @@ cpe:
               =M+pM
               -----END PGP MESSAGE-----
   ap38:
+    firstboot: true
     password: |
       -----BEGIN PGP MESSAGE-----
       
