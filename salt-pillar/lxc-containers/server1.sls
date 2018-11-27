@@ -248,7 +248,7 @@ containers:
         gw: upstream2
         gw6: upstream1
         hwaddr: 0A:14:48:01:2A:20
-      priv20:
+      priv21:
         type: phys
         hwaddr: 0A:14:48:01:2A:21
 
