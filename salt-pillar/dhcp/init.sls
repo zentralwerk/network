@@ -252,6 +252,18 @@ dhcp:
     string-opts:
       domain-name: priv19.zentralwerk.org
 
+  priv20:
+    start: 172.20.74.112
+    end: 172.20.74.126
+    time: 120
+    max-time: 86400
+    opts:
+    host-opts:
+      routers: priv20-gw.priv20
+      domain-name-servers: upstream2.core
+    string-opts:
+      domain-name: priv20.zentralwerk.org
+
   radio:
     start: 172.20.73.130
     end: 172.20.73.190
