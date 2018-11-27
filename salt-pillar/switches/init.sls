@@ -40,6 +40,7 @@ switches:
           - priv17
           - priv18
           - priv19
+          - priv21
       mgmt:
         mode: access
         ports:
@@ -284,6 +285,7 @@ switches:
           - priv17
           - priv18
           - priv19
+          - priv21
       mgmt:
         mode: access
         ports:
@@ -432,7 +434,7 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv19
+          - priv21
     password: |
       -----BEGIN PGP MESSAGE-----
 

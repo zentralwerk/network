@@ -1589,7 +1589,7 @@ cpe:
     model: TL-Archer-C7v5
     version: 18.06.1
     location: B3.11.01
-    lan-access: priv19
+    lan-access: priv21
     radios:
       'platform/qca956x_wmac':
         channel: 11
@@ -1598,7 +1598,7 @@ cpe:
           'ZW public':
             net: pub
           'hechtfilm.de':
-            net: priv19
+            net: priv21
             psk: |
               -----BEGIN PGP MESSAGE-----
               

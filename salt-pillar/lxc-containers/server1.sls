@@ -241,6 +241,17 @@ containers:
         type: phys
         hwaddr: 0A:14:48:01:2A:1F
 
+  priv21-gw:
+    interfaces:
+      core:
+        type: veth
+        gw: upstream2
+        gw6: upstream1
+        hwaddr: 0A:14:48:01:2A:20
+      priv20:
+        type: phys
+        hwaddr: 0A:14:48:01:2A:21
+
   upstream1:
     interfaces:
       core:
