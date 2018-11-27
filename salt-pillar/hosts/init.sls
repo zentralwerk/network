@@ -113,6 +113,7 @@ hosts-inet:
     priv22-gw: 172.20.72.35
     priv23-gw: 172.20.72.36
     priv24-gw: 172.20.72.37
+    priv25-gw: 172.20.72.32
 
   pub:
     pub-gw: 172.20.76.1
@@ -219,9 +220,9 @@ hosts-inet:
     dhcp{{ i }}: 172.20.74.{{ 49 + i }}
 {%- endfor %}
   priv19:
-    priv19-gw: 172.20.74.81
-{%- for i in range(1, 14) %}
-    dhcp{{ i }}: 172.20.74.{{ 81 + i }}
+    priv19-gw: 172.20.73.193
+{%- for i in range(1, 61) %}
+    dhcp{{ i }}: 172.20.74.{{ 193 + i }}
 {%- endfor %}
   priv20:
     priv20-gw: 172.20.74.113

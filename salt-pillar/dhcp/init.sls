@@ -241,10 +241,11 @@ dhcp:
       domain-name: priv18.zentralwerk.org
 
   priv19:
-    start: 172.20.74.82
-    end: 172.20.74.94
+    start: 172.20.73.194
+    end: 172.20.73.254
     time: 120
-    max-time: 86400
+    # 30 days
+    max-time: 2592000
     opts:
     host-opts:
       routers: priv19-gw.priv19
