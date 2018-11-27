@@ -183,6 +183,7 @@ switches:
           - priv18
           - priv19
           - priv20
+          - priv21
       c3d2-server4:
         mode: bond
         ports:
