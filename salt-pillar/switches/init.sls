@@ -111,6 +111,7 @@ switches:
           - up6
           - up7
           - up8
+          - priv20
           - iso1
           - iso2
           - iso3
@@ -180,6 +181,7 @@ switches:
           - priv17
           - priv18
           - priv19
+          - priv20
       c3d2-server4:
         mode: bond
         ports:
@@ -485,6 +487,7 @@ switches:
           - iso14
           - iso15
           - iso16
+          - priv20
       up1:
         mode: access
         ports: '1'
