@@ -1634,7 +1634,6 @@ cpe:
               =M+pM
               -----END PGP MESSAGE-----
   ap38:
-    firstboot: true
     password: |
       -----BEGIN PGP MESSAGE-----
       
@@ -1651,7 +1650,7 @@ cpe:
     model: TL-Archer-C7v4
     version: 18.06.1
     location: ECCE-Raum
-    lan-access: priv20
+    lan-access: pub
     radios:
       'platform/qca956x_wmac':
         channel: 11
