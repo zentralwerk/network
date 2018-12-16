@@ -1592,7 +1592,7 @@ cpe:
     lan-access: priv19
     radios:
       'platform/qca956x_wmac':
-        channel: 11
+        channel: 6
         htmode: HT40-
         ssids:
           'ZW public':
@@ -1613,7 +1613,7 @@ cpe:
               =M+pM
               -----END PGP MESSAGE-----
       'pci0000:00/0000:00:00.0':
-        channel: 36
+        channel: 128
         htmode: VHT80
         ssids:
           'ZW public':
