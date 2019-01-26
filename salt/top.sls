@@ -7,6 +7,7 @@ base:
     - switches
     - cpe
     - collectd
+    - 'fixes.lxc-inotify'
   'priv*-gw':
     - no-ssh
     - forwarding
