@@ -641,47 +641,6 @@ cpe:
               =Vpo/
               -----END PGP MESSAGE-----
 
-  ap16:
-    password: |
-      -----BEGIN PGP MESSAGE-----
-      
-      hQEMA2PKcvDMvlKLAQf/couJwoTRzTEycGB3t2aa4NTjOxKmh/Q7ScvHbxEX1VhX
-      sg0bW+CXQag+zy00oAbXlK/vOSP+NvOlt7vn8X50kmYTHlcZtelry4tAZeBJyw29
-      Vb/VvrR6F8nft1q2hpiGzAWgy8rkyncAKwCdLfsdOC/A4/QH5jis9fMnkDLbwUb+
-      cruIIe977BlE1jC5s09F7ZSeHUby2lMhcsxuyS+DTsBIc37Qp/Tpeq/sY7wtbrE2
-      MbP4mZjtBOgUCCtvauONtKjt2Zg92scob8lHm4m77qh6b4rxJ3lEW+oapelHQGId
-      ULxd5KM48AqV3AVexmTXNVlU0ppIdPvjxV4WR5VQt9JJAevANNiEBSPbsQwF0QNO
-      4M1Fl6WH1WTjVf0WQPMmUowiH0hyJuSx46sju9bEJJCaueJtIhCvUbOeOURwZaVe
-      ZLBzZVhVZJoO9Q==
-      =bGE5
-      -----END PGP MESSAGE-----
-    model: TL-WR1043ND
-    version: release
-    location: B 4.04.01
-    lan-access: priv7
-    radios:
-      'platform/qca955x_wmac':
-        channel: 1
-        htmode: HT40+
-        ssids:
-          'ZW public':
-            net: pub
-          'Zippi':
-            net: priv7
-            psk: |
-              -----BEGIN PGP MESSAGE-----
-              
-              hQEMA2PKcvDMvlKLAQgAjnmaVwPChe6mDZI1yBKyBhsbuGabre05JWYYIReV4rnG
-              SJEp6Ei7kbm+2iEhrlXyhu9Ke2gILUFXbopRoaytOjvT9VcnBhWLPA4EuqsGLep5
-              t32XyK94BLTY3vRhZrvcloZAjXlaGnaEyAQ9Wk5IVoQu1S+TeVd2VOS67BQeeCLr
-              xFE7mzY8FQR01jBC0QEOXRdfwZ83Zm4JzwTm4ba6CABElmQoBbAPP86ydbNxl1n7
-              R/n6y/A6GjgR8HRLaISO0x6Vy6XCWBEhMPbGC8/7qF+1BdVo9qe9IyQBZAyfBQ2b
-              nTDna1wB4y7CSOEnVC5WRgmjrHr4+JB3/gPPqR6gddJGAYkw7BkNct7Xd8bWaOJP
-              LSzwuOSwP9ozjMD8RxfJ9ctfGTI4aJ8EcMJ6CAdbnMl0qrucTvlh/nZ/xNtzXplA
-              is+jAuMF8Q==
-              =MtC9
-              -----END PGP MESSAGE-----
-
   ap17:
     password: |
       -----BEGIN PGP MESSAGE-----
