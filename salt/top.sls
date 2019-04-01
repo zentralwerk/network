@@ -45,6 +45,7 @@ base:
   'upstream1':
     - upstream.6slac
     - upstream.dhcp6
+    - upstream.routes
   'anon*':
     - no-ssh
     - forwarding
