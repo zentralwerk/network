@@ -38,9 +38,9 @@ base:
     - upstream.dhcp
     - upstream.shaping
     - upstream.dyndns
+    - upstream.port-forwarding
     - collectd
   'upstream2':
-    - upstream.port-forwarding
     - upstream.ipv6-tunnel
   'upstream1':
     - upstream.6slac
