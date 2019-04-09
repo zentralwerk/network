@@ -140,6 +140,7 @@ switches:
           - priv7
           - priv15
           - priv16
+          - priv21
       server1:
         mode: bond
         ports:
@@ -602,6 +603,7 @@ switches:
           - priv7
           - priv15
           - priv16
+          - priv21
       ap9:
         mode: trunk
         ports: 5
@@ -616,6 +618,7 @@ switches:
           - mgmt
           - pub
           - priv15
+          - priv21
       ap7:
         mode: trunk
         # Turm D, 5. Etage

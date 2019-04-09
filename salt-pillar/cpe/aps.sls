@@ -480,6 +480,21 @@ cpe:
               u8ztziA=
               =xY9t
               -----END PGP MESSAGE-----
+          'Ebs 2000':
+            net: priv21
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf/Ze6TPDw77lWUhvPfLdzFjocDakmJwZCDNZKia4nman7x
+              84HivOueYa31/2lryKJkOk/pRDXNf4Ma6QO56dAdSXqeZI/gRHGnxIiAaa0IYIgA
+              /Zn2Z2n0uk7SNDMc3W1ZzuKtMZ3liLBTYQ5TecS92HY3q5hC35BtiHrudec465Wd
+              PrseyB3NzNQ7VcV72lO8zaE3Ai3dKGoGQyxDe28KBKnhpYQVas6M/fbicFW6gRWo
+              5wQCLrVJgNIeXvAwtWpQwMRDuGGmu56Wm4opsghhdbmD7YMuhkoHQ3s6eCKrjj04
+              T+QxYazc5SOBzR1YO5SvrPcbh3eK3OWaNBDc+pLvLdJHAdBCiae8F/FBB0SdSPaG
+              0nFFanDJ+XQb83ZvTgtGfNR2J9JAXuYG+/xZUVOas6iusX/np6p9A2rz9+1IGRP8
+              KpXsIskBE2U=
+              =pUz/
+              -----END PGP MESSAGE-----
 
   ap11:
     password: |
