@@ -137,7 +137,6 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv7
           - priv15
           - priv16
           - priv21
@@ -600,7 +599,6 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv7
           - priv15
           - priv16
           - priv21
@@ -626,7 +624,6 @@ switches:
         vlans:
           - mgmt
           - pub
-          - priv7
       ap22:
         mode: trunk
         ports: 2
