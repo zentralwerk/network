@@ -1685,6 +1685,7 @@ cpe:
       =Sc0n
       -----END PGP MESSAGE-----
     model: DIR-615D4
+    version: 18.06.1
     location: 'private'
     lan-access: pub
     radios:
