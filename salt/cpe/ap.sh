@@ -301,7 +301,8 @@ set network.{{ net }}.proto=static
 set network.{{ net }}.ifname='{{ 'eth0.' ~ pillar['vlans'][net] }}'
 {%-   endfor %}
 
-{%- elif conf['model'] == 'DIR-615H1' %}
+{%- elif conf['model'] == 'DIR-615H1' or conf['model'] == 'DIR-615D4' %}
+{# All DIR-615 share the same port layout #}
 delete network.lan_dev
 delete network.wan_dev
 {# switch is cpu port 6, wan:cpu port 4, lan port 1 is cpu port 3, lan port 2 is 2 etc #}

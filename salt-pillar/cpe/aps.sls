@@ -1668,3 +1668,29 @@ cpe:
               HOgoE+WsqUs=
               =JG+0
               -----END PGP MESSAGE-----
+
+  ap39:
+    firstboot: True
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQgAh6taDhAQqdz/2KjAXIQ1KOC3mHDvQx1zZxgBis62WSTI
+      0k4bKx0cmJ7YOGQN8Qn24b8INJTZelXOLDA704ykp1rK+8w5ceE+jh/PoxqO3NAi
+      vOv9IaXwOLSx2amR5M725spxUZ/GYLZDLgHYA6f39fTdkTp4M+40KThih6GsK6qC
+      No+V3XdBzZAxiBp0fzy5jQxMUy+g0Kccmzs5cOjBuDgrRLzx4XFG/+Jmm9/jEW2P
+      Vn0jzhh6vF4tx9ibUSbfYRDOK+YC/JNiO3tfwHq+ANfu+rdB2N6AnRYv0jb1NElG
+      5OnJCHP1MHaCeKnDmCVL1WS+ew4swZTh2zOKFdcb39JDAUBSHfDFC9aY9o+kMqyM
+      TJ48n+TS4wEn/M/BaMfdAxA3B4kztJs/mfTOFi1ToJFOP1D3OSyE41wQhuuugUaR
+      dq+HHA==
+      =Sc0n
+      -----END PGP MESSAGE-----
+    model: DIR-615D4
+    location: 'private'
+    lan-access: pub
+    radios:
+      'platform/10180000.wmac':
+        channel: 9
+        htmode: HT40+
+        ssids:
+          'ZW public':
+            net: pub
