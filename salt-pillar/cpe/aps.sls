@@ -1630,7 +1630,7 @@ cpe:
       =Sc0n
       -----END PGP MESSAGE-----
     model: DIR-615D4
-    version: 18.06.1
+    version: nightly
     location: 'private'
     lan-access: pub
     radios:
@@ -1640,3 +1640,18 @@ cpe:
         ssids:
           'ZW public':
             net: pub
+          'EckiTino':
+            net: priv7
+            psk: |
+              -----BEGIN PGP MESSAGE-----
+              
+              hQEMA2PKcvDMvlKLAQf+POzQ98GnCDwpFBXaEsZa4z7vMcak7UsrTeiMYe+31e1y
+              2MX1C0XEbltHUm3Fx0FydjNlKmQPok2eDI1uNzKTz96ZJRwFgf4nK+qsS4xbnRed
+              9RIiADv9oIZnMYo7FuR4Z0IF9BmotnzekqFeHRSywT/QZGvz0X30oXbUJoAwD8Ws
+              YHJSgC2a7UpZEI+s3vCpalsVXgpkll0dOb+ijrMBoSDMFwp1flWrE5yrpLhF90Aa
+              YqezhUxNpjgpde8ivcs0umvJyFbZY6tBzolsSZjr/wmdRJpGANz4rGn93Sulp9tB
+              SfnUCt3dghWU4sZvms6W859eN5IYdm05Xo1TO1atftJDAVg6qQbKAgLAaWWbUIta
+              Tk1XLxGPPn3X9eFh15PsfdRZL/8+ONb/96jiw/GZiY6YC1ikGOGsoFaj9CXL4h+l
+              q9HzqQ==
+              =lpzh
+         -----END PGP MESSAGE-----
