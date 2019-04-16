@@ -249,7 +249,7 @@ dhcp:
     opts:
     host-opts:
       routers: priv19-gw.priv19
-      domain-name-servers: upstream1.core
+      domain-name-servers: upstream2.core
     string-opts:
       domain-name: priv19.zentralwerk.org
 
