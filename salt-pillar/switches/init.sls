@@ -56,26 +56,6 @@ switches:
         mode: access
         ports:
           - GigabitEthernet 1/0/4
-      iso4:
-        mode: access
-        ports:
-          - GigabitEthernet 1/0/5
-      iso5:
-        mode: access
-        ports:
-          - GigabitEthernet 1/0/6
-      iso6:
-        mode: access
-        ports:
-          - GigabitEthernet 1/0/7
-      iso7:
-        mode: access
-        ports:
-          - GigabitEthernet 1/0/8
-      iso8:
-        mode: access
-        ports:
-          - GigabitEthernet 1/0/9
       ap8:
         mode: trunk
         ports:
@@ -193,8 +173,14 @@ switches:
       c3d2-server5:
         mode: trunk
         ports:
-          - GigabitEthernet1/0/21
-          - GigabitEthernet1/0/22
+          - GigabitEthernet1/0/5
+          - GigabitEthernet1/0/6
+        access: c3d2
+      c3d2-server6:
+        mode: trunk
+        ports:
+          - GigabitEthernet1/0/7
+          - GigabitEthernet1/0/8
         access: c3d2
       c3d2-flatbert:
         mode: bond
