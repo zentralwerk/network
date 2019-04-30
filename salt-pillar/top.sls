@@ -20,6 +20,8 @@ base:
     - bird.ospf
   'c3d2-gw or c3d2-anon or mgmt-gw':
     - bird.ospf
+  'c3d2-gw':
+    - bird.radv
   'bgp':
     - bird.ospf
     - bird.bgp

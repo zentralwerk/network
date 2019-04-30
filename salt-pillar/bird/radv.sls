@@ -11,6 +11,12 @@ radv:
         - upstream1.core
       dnssl:
         - serv.zentralwerk.org
+  c3d2-gw:
+    c3d2:
+      rdnss:
+        - upstream1.core
+      dnssl:
+        - hq.c3d2.de
   priv1-gw:
     priv1:
       rdnss:
