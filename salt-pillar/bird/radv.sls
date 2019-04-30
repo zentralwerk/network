@@ -2,7 +2,7 @@ radv:
   pub-gw:
     pub:
       rdnss:
-        - upstream2.core
+        - upstream1.core
       dnssl:
         - pub.zentralwerk.org
   serv-gw:
