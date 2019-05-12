@@ -194,13 +194,21 @@ switches:
           - GigabitEthernet1/0/14
           - GigabitEthernet1/0/13
         access: c3d2
-      monit:
+      c3d2-server2:
         mode: trunk
         ports:
           - GigabitEthernet1/0/20
-        vlans:
-          - mgmt
-          - c3d2
+        access: c3d2
+      c3d2-server2-monit1:
+        mode: trunk
+        ports:
+          - GigabitEthernet1/0/21
+        access: mgmt
+      c3d2-server2-monit2:
+        mode: trunk
+        ports:
+          - GigabitEthernet1/0/45
+        access: c3d2
       c3d2:
         mode: access
         ports:
