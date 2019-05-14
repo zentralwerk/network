@@ -720,47 +720,56 @@ switches:
       -----END PGP MESSAGE-----
 
   switch-a1:
-    model: "Ubiquiti UniFi Switch-8"
+    model: 'TL-SG3210'
     location: Saal A
     ports:
       mgmt:
         mode: access
-        ports: 0/1
+        ports: 1
       switch-c1:
         mode: trunk
-        ports: 0/7,0/8
+        ports: 7,8
         vlans:
           - mgmt
           - pub
           - priv7
       priv7:
         mode: access
-        ports: 0/2
+        ports: 2
       ap32:
         mode: trunk
-        ports: 0/3
-        poe: passive24v
+        ports: 3
         vlans:
           - mgmt
           - pub
       ap33:
         mode: trunk
-        ports: 0/4
-        poe: passive24v
+        ports: 4
         vlans:
           - mgmt
           - pub
       ap34:
         mode: trunk
-        ports: 0/5
-        poe: passive24v
+        ports: 5
         vlans:
           - mgmt
           - pub
       apTODO:
         mode: trunk
-        ports: 0/6
-        poe: passive24v
+        ports: 6
         vlans:
           - mgmt
           - pub
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hQEMA2PKcvDMvlKLAQgAkS9jHdnqPPary/yduPsA3Ya1rrERxfZxJnvicexUKl7b
+      eJlLe8e1BQE3BTaqkvLcBrGztBBvrgnv+kzmSTCd5jbL2/fFOdhedBsNjWpYtA7A
+      o6PPfYHka/Km4J/MihzVac9XUbBFhN0ETGYbGi0upPHHEKht3bUNzqkzvHxhQ8lJ
+      D7dDPs3vJXx3Ey8taZawdLJ9IcthvSojt8Un5A/SpdroW2CF4u0Gubuz+9D5i0T5
+      vXDqDQqEewu7pofxZ8TR4PY9PNHT9kmHyI2sIq1AkqP0Mn8wKP7dJVrUS3Z+xBUt
+      /f0B+8a0EJDuQBB2p7yRlBcg5d58TGB59pptmLpQ39JDAbZxHQymPKy3R14k1wKa
+      fYvaMBkaGtcu/foCb1r3xfAZOJSF5MT754wjvxB1bl/iizqJQm+WN3YAkja/Gwh+
+      J31/Ng==
+      =e45t
+      -----END PGP MESSAGE-----
