@@ -735,7 +735,8 @@ switches:
           - priv7
       priv7:
         mode: access
-        ports: 2
+        ports:
+          - 2
       ap32:
         mode: trunk
         ports: 3
