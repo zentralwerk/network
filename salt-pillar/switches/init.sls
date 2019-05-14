@@ -731,7 +731,7 @@ switches:
         ports: 1
       switch-c1:
         mode: trunk
-        ports: 7,8
+        ports: 7,1/0/8
         vlans:
           - mgmt
           - pub
