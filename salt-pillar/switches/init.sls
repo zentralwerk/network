@@ -534,9 +534,12 @@ switches:
       iso6:
         mode: access
         ports: '14'
-      mgmt:
-        mode: access
-        ports: '20'
+      ap34:
+        mode: trunk
+        ports: 20
+        vlans:
+          - mgmt
+          - pub
       ap3:
         mode: trunk
         ports: 15
