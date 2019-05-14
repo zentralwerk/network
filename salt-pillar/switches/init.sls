@@ -542,9 +542,9 @@ switches:
           - mgmt
           - pub
           - c3d2
-      ap17:
-        mode: trunk
-        ports: 16
+      switch-a1:
+        mode: bond
+        ports: 15-16
         vlans:
           - mgmt
           - pub
@@ -691,7 +691,7 @@ switches:
           - mgmt
           - pub
           - c3d2
-      ap32:
+      ap32old:
         mode: trunk
         ports: 5
         vlans:
@@ -715,3 +715,49 @@ switches:
       2i+VD94/nzLdvg==
       =1SbG
       -----END PGP MESSAGE-----
+
+  switch-a1:
+    model: "Ubiquiti UniFi Switch-8"
+    location: Saal A
+    ports:
+      mgmt:
+        mode: access
+        ports: 0/1
+      switch-c1:
+        mode: trunk
+        ports: 0/7,0/8
+        vlans:
+          - mgmt
+          - pub
+          - privTODO
+      priv7:
+        mode: access
+        ports: 0/2
+      ap32:
+        mode: trunk
+        ports: 0/3
+        poe: passive24v
+        vlans:
+          - mgmt
+          - pub
+      ap33:
+        mode: trunk
+        ports: 0/4
+        poe: passive24v
+        vlans:
+          - mgmt
+          - pub
+      ap34:
+        mode: trunk
+        ports: 0/5
+        poe: passive24v
+        vlans:
+          - mgmt
+          - pub
+      apTODO:
+        mode: trunk
+        ports: 0/6
+        poe: passive24v
+        vlans:
+          - mgmt
+          - pub

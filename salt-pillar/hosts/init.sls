@@ -7,6 +7,7 @@ hosts-inet:
     switch-c1: 10.0.0.12
     switch-d1: 10.0.0.13
     switch-c3d2-main: 10.0.0.14
+    switch-a1: 10.0.0.15
     ap1: 10.0.0.41
     ap2: 10.0.0.42
     ap3: 10.0.0.43
