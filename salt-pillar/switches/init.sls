@@ -91,6 +91,7 @@ switches:
           - up6
           - up7
           - up8
+          - priv7
           - priv20
           - iso1
           - iso2
@@ -489,6 +490,7 @@ switches:
           - iso14
           - iso15
           - iso16
+          - priv7
           - priv20
       up1:
         mode: access
@@ -549,6 +551,7 @@ switches:
           - mgmt
           - pub
           - c3d2
+          - priv7
       ap19:
         mode: trunk
         ports: 17
@@ -729,7 +732,7 @@ switches:
         vlans:
           - mgmt
           - pub
-          - privTODO
+          - priv7
       priv7:
         mode: access
         ports: 0/2
