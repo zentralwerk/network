@@ -492,61 +492,63 @@ hosts-inet6:
       stats: 2a02:8106:208:5282:2:0:0:3
       radius: 2a02:8106:208:5282:2:0:0:4
       zeit: 2a02:8106:208:5282:2:0:0:5
-    pub:
-      pub-gw: 2a02:8106:208:5283::1
-    priv1:
-      priv1-gw: 2a02:8106:208:52c0::1
-    priv2:
-      priv2-gw: 2a02:8106:208:52c1::1
-    priv3:
-      priv3-gw: 2a02:8106:208:52c2::1
-    priv4:
-      priv4-gw: 2a02:8106:208:52c3::1
-    priv5:
-      priv5-gw: 2a02:8106:208:52c4::1
-    priv6:
-      priv6-gw: 2a02:8106:208:52c5::1
-    priv7:
-      priv7-gw: 2a02:8106:208:52c6::1
-    priv8:
-      priv8-gw: 2a02:8106:208:52c7::1
-    priv9:
-      priv9-gw: 2a02:8106:208:52c8::1
-    priv10:
-      priv10-gw: 2a02:8106:208:52c9::1
-    priv11:
-      priv11-gw: 2a02:8106:208:52ca::1
-    priv12:
-      priv12-gw: 2a02:8106:208:52cb::1
-    priv13:
-      priv13-gw: 2a02:8106:208:52cc::1
-    priv14:
-      priv14-gw: 2a02:8106:208:52cd::1
-    priv15:
-      priv15-gw: 2a02:8106:208:52ce::1
-    priv16:
-      priv16-gw: 2a02:8106:208:52cf::1
-    priv17:
-      priv17-gw: 2a02:8106:208:52d0::1
-    priv18:
-      priv18-gw: 2a02:8106:208:52d1::1
-    priv19:
-      priv19-gw: 2a02:8106:208:52d2::1
-    priv20:
-      priv20-gw: 2a02:8106:208:52d3::1
-    priv21:
-      priv21-gw: 2a02:8106:208:52d4::1
-    priv22:
-      priv22-gw: 2a02:8106:208:52d5::1
-    priv23:
-      priv23-gw: 2a02:8106:208:52d6::1
-    priv24:
-      priv24-gw: 2a02:8106:208:52d7::1
-
-    radio:
-      radio-gw: 2a02:8106:208:5286::1
 
     c3d2:
       c3d2-anon: 2a02:8106:208:5201::c3d2:1
       c3d2-gw: 2a02:8106:208:5201::c3d2:4
       bgp: 2a02:8106:208:5201::c3d2:ff0b
+
+  up2:
+    pub:
+      pub-gw: 2a02:8106:211:e983::1
+    radio:
+      radio-gw: 2a02:8106:208:5286::1
+
+    priv1:
+      priv1-gw: 2a02:8106:211:e9c0::1
+    priv2:
+      priv2-gw: 2a02:8106:211:e9c1::1
+    priv3:
+      priv3-gw: 2a02:8106:211:e9c2::1
+    priv4:
+      priv4-gw: 2a02:8106:211:e9c3::1
+    priv5:
+      priv5-gw: 2a02:8106:211:e9c4::1
+    priv6:
+      priv6-gw: 2a02:8106:211:e9c5::1
+    priv7:
+      priv7-gw: 2a02:8106:211:e9c6::1
+    priv8:
+      priv8-gw: 2a02:8106:211:e9c7::1
+    priv9:
+      priv9-gw: 2a02:8106:211:e9c8::1
+    priv10:
+      priv10-gw: 2a02:8106:211:e9c9::1
+    priv11:
+      priv11-gw: 2a02:8106:211:e9ca::1
+    priv12:
+      priv12-gw: 2a02:8106:211:e9cb::1
+    priv13:
+      priv13-gw: 2a02:8106:211:e9cc::1
+    priv14:
+      priv14-gw: 2a02:8106:211:e9cd::1
+    priv15:
+      priv15-gw: 2a02:8106:211:e9ce::1
+    priv16:
+      priv16-gw: 2a02:8106:211:e9cf::1
+    priv17:
+      priv17-gw: 2a02:8106:211:e9d0::1
+    priv18:
+      priv18-gw: 2a02:8106:211:e9d1::1
+    priv19:
+      priv19-gw: 2a02:8106:211:e9d2::1
+    priv20:
+      priv20-gw: 2a02:8106:211:e9d3::1
+    priv21:
+      priv21-gw: 2a02:8106:211:e9d4::1
+    priv22:
+      priv22-gw: 2a02:8106:211:e9d5::1
+    priv23:
+      priv23-gw: 2a02:8106:211:e9d6::1
+    priv24:
+      priv24-gw: 2a02:8106:211:e9d7::1
