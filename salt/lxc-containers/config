@@ -37,8 +37,9 @@ lxc.network.ipv4.gateway={{ pillar['hosts-inet'][net][gw] }}
 {%- for ctx, hosts in pillar['hosts-inet6'].items() %}
 {%-   set hosts6 = hosts.get(net) %}
 {%-   set inet6_addr = hosts6 and hosts6.get(id) %}
-{%-   if inet6_addr %}
-{%-     set prefix6_len = pillar['subnets-inet6'][ctx][net].split('/')[1] %}
+{%-   set prefix6 = pillar['subnets-inet6'][ctx].get(net) %}
+{%-   if inet6_addr and prefix6 %}
+{%-     set prefix6_len = prefix6.split('/')[1] %}
 lxc.network.ipv6={{ inet6_addr }}/{{ prefix6_len }}
 {%-   endif %}
 {%-   set gw6 = conf.get('gw6') %}
