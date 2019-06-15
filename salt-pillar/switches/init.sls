@@ -44,6 +44,7 @@ switches:
         mode: access
         ports:
           - GigabitEthernet1/0/1
+          - GigabitEthernet1/0/21
       iso1:
         mode: access
         ports:
@@ -195,11 +196,6 @@ switches:
           - GigabitEthernet1/0/14
           - GigabitEthernet1/0/13
         access: c3d2
-      c3d2-monit1:
-        mode: trunk
-        ports:
-          - GigabitEthernet1/0/21
-        access: mgmt
       c3d2-monit2:
         mode: trunk
         ports:
