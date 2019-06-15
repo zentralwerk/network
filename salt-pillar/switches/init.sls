@@ -536,13 +536,6 @@ switches:
         vlans:
           - mgmt
           - pub
-      ap3:
-        mode: trunk
-        ports: 15
-        vlans:
-          - mgmt
-          - pub
-          - c3d2
       switch-a1:
         mode: bond
         ports: 15-16
