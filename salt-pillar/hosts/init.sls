@@ -130,6 +130,7 @@ hosts-inet:
     stats: 172.20.73.3
     radius: 172.20.73.4
     zeit: 172.20.73.5
+    minecraft: 172.20.73.6
   priv1:
     priv1-gw: 172.20.74.1
 {%- for i in range(1, 14) %}
