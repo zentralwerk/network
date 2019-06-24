@@ -171,19 +171,25 @@ switches:
           - GigabitEthernet1/0/38
           - GigabitEthernet1/0/39
           - GigabitEthernet1/0/40
-        access: c3d2
+        vlans:
+          - c3d2
+          - serv
       c3d2-server5:
-        mode: trunk
+        mode: bond
         ports:
           - GigabitEthernet1/0/5
           - GigabitEthernet1/0/6
-        access: c3d2
+        vlans:
+          - c3d2
+          - serv
       c3d2-server6:
-        mode: trunk
+        mode: bond
         ports:
           - GigabitEthernet1/0/7
           - GigabitEthernet1/0/8
-        access: c3d2
+        vlans:
+          - c3d2
+          - serv
       c3d2-flatbert:
         mode: bond
         ports:
@@ -367,7 +373,9 @@ switches:
         ports:
           - GigabitEthernet1/0/30
           - GigabitEthernet1/0/31
-        access: c3d2
+        vlans:
+          - c3d2
+          - serv
       ap24:
         mode: trunk
         ports:
