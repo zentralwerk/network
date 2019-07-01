@@ -20,7 +20,7 @@ dhcp:
     opts:
     host-opts:
       routers: pub-gw.pub
-      domain-name-servers: upstream2.core
+      domain-name-servers: upstream1.core
     string-opts:
       domain-name: pub.zentralwerk.org
 
