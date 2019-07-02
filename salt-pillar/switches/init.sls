@@ -44,7 +44,6 @@ switches:
         mode: access
         ports:
           - GigabitEthernet1/0/1
-          - GigabitEthernet1/0/21
       iso1:
         mode: access
         ports:
@@ -190,26 +189,25 @@ switches:
         vlans:
           - c3d2
           - serv
-      c3d2-flatbert:
-        mode: bond
-        ports:
-          - GigabitEthernet1/0/11
-          - GigabitEthernet1/0/12
-        access: c3d2
-      c3d2-storage:
-        mode: bond
-        ports:
-          - GigabitEthernet1/0/14
-          - GigabitEthernet1/0/13
-        access: c3d2
-      c3d2-monit2:
+#      c3d2-server7:
+#      c3d2-server8:
+      c3d2-unknown:
         mode: trunk
         ports:
+          - GigabitEthernet1/0/12
+        access: c3d2
+      c3d2-monit:
+        mode: trunk
+        ports:
+          - GigabitEthernet1/0/21
           - GigabitEthernet1/0/45
         access: c3d2
       c3d2:
         mode: access
         ports:
+          - GigabitEthernet1/0/11
+          - GigabitEthernet1/0/13
+          - GigabitEthernet1/0/14
           - GigabitEthernet1/0/20
           - GigabitEthernet1/0/23
           - GigabitEthernet1/0/35
